@@ -188,6 +188,272 @@ body {
     font-size: 0.8rem;
 }
 
+/* ========== 深度解读板块 ========== */
+.analysis-layout { max-width: 900px; margin: 0 auto; }
+
+.analysis-featured { margin-bottom: 40px; }
+
+.analysis-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    transition: var(--transition);
+}
+
+.analysis-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 4px 24px rgba(139, 92, 246, 0.08);
+}
+
+.analysis-card.featured {
+    border-left: 4px solid var(--primary);
+}
+
+.analysis-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.analysis-tag {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.analysis-tag.tag-breaking {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.analysis-tag.tag-tech {
+    background: rgba(99, 102, 241, 0.1);
+    color: #6366f1;
+}
+
+.analysis-tag.tag-industry {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+}
+
+.analysis-date {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.analysis-card h2 {
+    font-size: 1.4rem;
+    color: var(--text);
+    margin-bottom: 16px;
+    line-height: 1.4;
+}
+
+.analysis-card h3 {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin: 20px 0 12px;
+    font-weight: 600;
+}
+
+.analysis-summary {
+    background: var(--primary-soft);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    border-left: 3px solid var(--primary);
+}
+
+.analysis-summary p {
+    color: var(--text);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.analysis-body {
+    margin-bottom: 20px;
+}
+
+.analysis-section {
+    margin-bottom: 24px;
+}
+
+.analysis-section p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.analysis-section.highlight {
+    background: rgba(139, 92, 246, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+.analysis-section.highlight p {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.analysis-points {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.point {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.point-num {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.point-content strong {
+    display: block;
+    color: var(--text);
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.point-content p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.analysis-data {
+    margin: 24px 0;
+}
+
+.data-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.data-item {
+    text-align: center;
+    padding: 16px;
+    background: var(--surface-hover);
+    border-radius: 12px;
+}
+
+.data-value {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.data-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.analysis-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.analysis-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.analysis-source {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* 更多解读列表 */
+.analysis-list {
+    margin-top: 40px;
+}
+
+.analysis-list .section-header {
+    margin-bottom: 24px;
+}
+
+.analysis-card.compact {
+    padding: 24px;
+    margin-bottom: 16px;
+}
+
+.analysis-card.compact h3 {
+    font-size: 1.1rem;
+    margin: 12px 0;
+}
+
+.analysis-excerpt {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    margin: 0 0 12px;
+}
+
+.analysis-footer-compact {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .analysis-card {
+        padding: 20px;
+    }
+    
+    .analysis-card h2 {
+        font-size: 1.15rem;
+    }
+    
+    .analysis-card h3 {
+        font-size: 0.95rem;
+    }
+    
+    .point {
+        gap: 8px;
+    }
+    
+    .point-num {
+        font-size: 1rem;
+    }
+    
+    .data-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .data-value {
+        font-size: 1.1rem;
+    }
+    
+    .analysis-footer {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}
+
 /* ========== 新闻两栏布局 ========== */
 .news-layout {
     display: flex;

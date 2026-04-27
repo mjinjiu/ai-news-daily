@@ -5,23 +5,42 @@
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
 
+    function switchSection(targetId) {
+        // 更新导航状态
+        navLinks.forEach(l => {
+            l.classList.remove('active');
+            if (l.dataset.section === targetId) {
+                l.classList.add('active');
+            }
+        });
+        
+        // 切换板块
+        sections.forEach(s => s.classList.remove('active'));
+        const targetSection = document.getElementById(targetId + 'Section');
+        if (targetSection) {
+            targetSection.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
-            const target = link.dataset.section;
-            
-            // 更新导航状态
-            navLinks.forEach(l => l.classList.remove('active'));
-            link.classList.add('active');
-            
-            // 切换板块
-            sections.forEach(s => s.classList.remove('active'));
-            document.getElementById(target + 'Section').classList.add('active');
-            
-            // 滚动到顶部
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            switchSection(link.dataset.section);
         });
     });
+
+    // 处理URL hash导航
+    window.addEventListener('hashchange', () => {
+        const hash = window.location.hash.slice(1);
+        if (hash) switchSection(hash);
+    });
+    
+    // 页面加载时检查hash
+    if (window.location.hash) {
+        const hash = window.location.hash.slice(1);
+        switchSection(hash);
+    }
 
     // ========== 语言切换（页面内） ==========
     let currentLang = 'zh';
