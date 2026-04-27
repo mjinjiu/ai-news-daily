@@ -1,85 +1,122 @@
-// AI前线 - 网站交互脚本
+// AI前线 v2.0 — 板块切换 + 语言切换 + 广告位控制
 
-// 更新时间显示
-function updateTime() {
-    const now = new Date();
-    const timeString = now.toLocaleString('zh-CN', {
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
+(function() {
+    // ========== 板块切换 ==========
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('.section');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const target = link.dataset.section;
+            
+            // 更新导航状态
+            navLinks.forEach(l => l.classList.remove('active'));
+            link.classList.add('active');
+            
+            // 切换板块
+            sections.forEach(s => s.classList.remove('active'));
+            document.getElementById(target + 'Section').classList.add('active');
+            
+            // 滚动到顶部
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
     });
-    
-    const updateElement = document.querySelector('.update-time');
-    if (updateElement) {
-        updateElement.textContent = `最后更新：${timeString}`;
-    }
-}
 
-// 新闻卡片动画
-function animateCards() {
-    const cards = document.querySelectorAll('.news-card');
+    // ========== 语言切换 ==========
+    let currentLang = 'zh';
+    const langToggle = document.getElementById('langToggle');
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        
+        // 切换所有带 data-zh / data-en 的元素
+        document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+            el.textContent = el.getAttribute('data-' + currentLang);
+        });
+        
+        // 更新按钮文本
+        langToggle.textContent = currentLang === 'zh' ? 'EN/中' : '中/EN';
+        
+        // 更新页面标题
+        document.title = currentLang === 'zh' 
+            ? 'AI前线 - AI News & API Pricing'
+            : 'AI Frontline - AI News & API Pricing';
+    }
+
+    langToggle.addEventListener('click', toggleLanguage);
+
+    // ========== 广告位控制 ==========
+    // 预留：根据用户配置显示/隐藏广告位
+    const adConfig = {
+        top: false,      // 顶部横幅
+        sidebar: false,  // 侧边栏
+        infeed: false,   // 信息流
+        bottom: false    // 底部
+    };
+
+    function initAds(config) {
+        Object.assign(adConfig, config);
+        
+        if (adConfig.top) {
+            document.getElementById('adTop').classList.add('ad-active');
+            document.getElementById('adTop').querySelector('.ad-placeholder').style.display = 'none';
+        }
+        if (adConfig.sidebar) {
+            document.getElementById('sidebarAd').classList.add('ad-active');
+            document.getElementById('sidebarAd').querySelector('.ad-placeholder').style.display = 'none';
+        }
+        if (adConfig.infeed) {
+            document.getElementById('adInfeed').classList.add('ad-active');
+            document.getElementById('adInfeed').querySelector('.ad-placeholder').style.display = 'none';
+        }
+        if (adConfig.bottom) {
+            document.getElementById('adBottom').classList.add('ad-active');
+            document.getElementById('adBottom').querySelector('.ad-placeholder').style.display = 'none';
+        }
+    }
+
+    // 将广告初始化函数暴露到全局，供后续配置调用
+    window.AIFrontline = { initAds };
+
+    // ========== 卡片渐入动画 ==========
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, index) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                setTimeout(() => {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }, index * 100);
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.05 });
 
-    cards.forEach(card => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(card);
+    document.querySelectorAll('.card, .stat-item, .plan-card').forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(12px)';
+        el.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        observer.observe(el);
     });
-}
 
-// 搜索功能（可扩展）
-function initSearch() {
-    // 预留搜索功能接口
-    console.log('搜索功能已准备就绪');
-}
+    // Fallback: 确保所有卡片在2秒内显示（IntersectionObserver未触发时）
+    setTimeout(() => {
+        document.querySelectorAll('.card, .stat-item, .plan-card').forEach(el => {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        });
+    }, 1500);
 
-// 标签筛选功能
-function filterByTag(tag) {
-    const cards = document.querySelectorAll('.news-card');
-    cards.forEach(card => {
-        const cardTag = card.querySelector('.news-tag');
-        if (tag === 'all' || cardTag.classList.contains(`tag-${tag}`)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-// 页面加载完成后执行
-document.addEventListener('DOMContentLoaded', () => {
-    updateTime();
-    animateCards();
-    initSearch();
-    
-    // 每5分钟更新时间
-    setInterval(updateTime, 300000);
-});
-
-// 添加滚动效果
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('header');
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > 100) {
-        header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.3)';
-    } else {
-        header.style.boxShadow = 'none';
+    // ========== 更新时间 ==========
+    function updateTime() {
+        const now = new Date();
+        const timeStr = now.toLocaleString('zh-CN', {
+            year: 'numeric', month: '2-digit', day: '2-digit',
+            hour: '2-digit', minute: '2-digit'
+        });
+        const el = document.querySelector('.update-time');
+        if (el) el.textContent = 'Updated: ' + timeStr;
     }
-    
-    lastScroll = currentScroll;
-});
+    updateTime();
+    setInterval(updateTime, 300000); // 每5分钟更新
+
+    console.log('✅ AI前线 v2.0 已加载 · AI Frontline initialized');
+})();
