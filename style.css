@@ -94,6 +94,27 @@ body {
 
 .lang-toggle:hover { border-color: var(--primary); color: var(--primary); }
 
+.site-switch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 0.9rem;
+    margin-left: 6px;
+    transition: var(--transition);
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.site-switch:hover {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+    transform: scale(1.1);
+}
+
 /* ========== 广告位 ========== */
 .ad-banner, .ad-bottom, .ad-infeed {
     background: var(--surface);

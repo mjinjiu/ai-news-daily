@@ -1,4 +1,4 @@
-// AI前线 v3.0 — 双站点运营 · 板块切换 + 广告位控制
+// AI前线 v3.1 — 双站点运营 · 板块切换 + 语言切换 + 站点跳转 + 广告位控制
 
 (function() {
     // ========== 板块切换 ==========
@@ -22,6 +22,39 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     });
+
+    // ========== 语言切换（页面内） ==========
+    let currentLang = 'zh';
+    const langToggle = document.getElementById('langToggle');
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'zh' ? 'en' : 'zh';
+        
+        // 切换所有带 data-zh / data-en 的元素（包括导航栏）
+        document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+            const newText = el.getAttribute('data-' + currentLang);
+            if (el.classList.contains('nav-link')) {
+                // 导航链接需要保留emoji前缀
+                const emoji = el.textContent.match(/^[^\w\s]+/);
+                el.textContent = (emoji ? emoji[0] : '') + newText.replace(/^[^\w\s]+/, '');
+            } else {
+                el.textContent = newText;
+            }
+        });
+        
+        // 更新按钮文本和视觉状态
+        langToggle.textContent = currentLang === 'zh' ? 'EN' : '中';
+        langToggle.style.background = currentLang === 'en' ? 'var(--primary-soft)' : '';
+        langToggle.style.color = currentLang === 'en' ? 'var(--primary)' : '';
+        langToggle.style.borderColor = currentLang === 'en' ? 'var(--primary)' : '';
+        
+        // 更新页面标题
+        document.title = currentLang === 'zh' 
+            ? 'AI前线 - AI News & API Pricing'
+            : 'AI Frontline - AI News & API Pricing';
+    }
+
+    langToggle.addEventListener('click', toggleLanguage);
 
     // ========== 广告位控制 ==========
     const adConfig = {
@@ -93,5 +126,5 @@
     updateTime();
     setInterval(updateTime, 300000);
 
-    console.log('✅ AI前线 v3.0 已加载 · 中文版 · https://mjinjiu.github.io/ai-news-daily/');
+    console.log('✅ AI前线 v3.1 已加载 · 中文版 · https://mjinjiu.github.io/ai-news-daily/');
 })();
