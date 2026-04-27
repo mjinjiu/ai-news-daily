@@ -14,24 +14,27 @@
         .archive-meta span { font-size: 0.8rem; color: var(--text-muted); background: var(--surface-hover); padding: 4px 10px; border-radius: 12px; }
         .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); text-decoration: none; font-size: 0.9rem; margin-bottom: 16px; padding: 6px 12px; border-radius: 8px; transition: background 0.2s; }
         .back-link:hover { background: var(--primary-soft); }
+        .archive-list-full { display: flex; flex-direction: column; gap: 20px; }
         .archive-list-full .news-item {
-            padding: 16px 0;
-            border-bottom: 1px solid var(--border);
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
             cursor: pointer;
             position: relative;
             transition: var(--transition);
         }
-        .archive-list-full .news-item:last-child { border-bottom: none; }
         .archive-list-full .news-item:hover {
-            padding-left: 12px;
-            background: var(--primary-soft);
+            border-color: var(--primary);
+            box-shadow: 0 4px 20px rgba(139,92,246,0.1);
+            transform: translateY(-2px);
         }
         .archive-list-full .news-item::after {
             content: "↗";
             position: absolute;
-            top: 16px;
-            right: 12px;
-            font-size: 0.85rem;
+            top: 24px;
+            right: 24px;
+            font-size: 0.9rem;
             color: var(--text-muted);
             opacity: 0;
             transition: opacity 0.2s;
@@ -40,9 +43,9 @@
             opacity: 1;
             color: var(--primary);
         }
-        .archive-list-full h3 { font-size: 1.05rem; margin-bottom: 8px; color: var(--text); }
-        .archive-list-full .news-excerpt { color: var(--text-secondary); font-size: 0.85rem; line-height: 1.6; margin-bottom: 8px; }
-        .archive-list-full .news-footer { font-size: 0.75rem; }
+        .archive-list-full h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--text); line-height: 1.4; padding-right: 28px; }
+        .archive-list-full .news-excerpt { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 12px; }
+        .archive-list-full .news-footer { font-size: 0.78rem; display: flex; align-items: center; gap: 10px; }
         .no-more { text-align: center; padding: 40px 0; color: var(--text-muted); }
         .no-more-icon { font-size: 2rem; margin-bottom: 12px; }
     </style>
