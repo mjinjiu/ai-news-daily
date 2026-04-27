@@ -59,9 +59,26 @@
     // ========== 新闻点击跳转 ==========
     document.querySelectorAll('.news-item[data-source-url]').forEach(item => {
         item.addEventListener('click', (e) => {
-            // Don't navigate if clicking a link inside the item
             if (e.target.closest('a')) return;
             const url = item.dataset.sourceUrl;
+            if (url) window.open(url, '_blank', 'noopener,noreferrer');
+        });
+    });
+
+    // 重磅卡片点击跳转
+    document.querySelectorAll('.card.featured[data-source-url]').forEach(card => {
+        card.addEventListener('click', (e) => {
+            if (e.target.closest('a')) return;
+            const url = card.dataset.sourceUrl;
+            if (url) window.open(url, '_blank', 'noopener,noreferrer');
+        });
+    });
+
+    // 本周回顾新闻点击跳转
+    document.querySelectorAll('.day-list li[data-source-url]').forEach(li => {
+        li.addEventListener('click', (e) => {
+            if (e.target.closest('a')) return;
+            const url = li.dataset.sourceUrl;
             if (url) window.open(url, '_blank', 'noopener,noreferrer');
         });
     });
