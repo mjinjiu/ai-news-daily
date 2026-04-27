@@ -1,0 +1,13 @@
+{
+  "name": "ai-news-daily",
+  "version": "1.0.0",
+  "description": "AI前线 - 每日AI新闻自动聚合",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "update": "python3 update.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/你的用户名/ai-news-daily.git"
+  }
+}
