@@ -920,12 +920,57 @@ body {
     .main-container { padding: 0 12px; }
     .content-area { padding: 20px 0; }
     .page-header h1 { font-size: 1.4rem; }
+    .page-header .subtitle { font-size: 0.85rem; }
+    
+    /* 重磅卡片 */
+    .featured-row { grid-template-columns: 1fr; gap: 16px; }
     .card.featured { padding: 18px; }
     .card.featured h2 { font-size: 1.15rem; }
-    .plan-cards { grid-template-columns: 1fr; }
-    .news-layout { flex-direction: column; }
-    .news-sidebar { width: 100%; }
-    .news-excerpt { -webkit-line-clamp: 1; }
-    .news-footer { gap: 6px; }
+    .card-meta { font-size: 0.75rem; }
+    
+    /* 新闻列表 */
+    .news-item { padding: 14px 0; }
+    .news-bar { width: 3px; height: 40px; }
+    .news-title { font-size: 0.9rem; }
+    .news-excerpt { 
+        -webkit-line-clamp: 1; 
+        font-size: 0.8rem;
+    }
+    .news-footer { gap: 6px; flex-wrap: wrap; }
     .news-date { margin-left: 0; }
+    .news-tag { padding: 2px 6px; font-size: 0.7rem; }
+    
+    /* 布局 */
+    .news-layout { flex-direction: column; gap: 24px; }
+    .news-main { min-width: 100%; }
+    .news-sidebar { 
+        width: 100%; 
+        order: 2; /* 边栏放主内容下面 */
+    }
+    .sidebar-ad { margin: 0; }
+    
+    /* 今日新闻网格 */
+    .news-grid { grid-template-columns: 1fr; gap: 12px; }
+    
+    /* API定价 */
+    .plan-cards { grid-template-columns: 1fr; gap: 16px; }
+    .pricing-table { font-size: 0.8rem; }
+    .pricing-table th, .pricing-table td { padding: 8px; }
+    
+    /* 本周回顾 */
+    .week-timeline { gap: 20px; }
+    .day-group { padding: 12px; }
+    .day-header { flex-wrap: wrap; gap: 4px; }
+    .day-list li { padding: 6px 10px; font-size: 0.8rem; }
+    
+    /* 归档 */
+    .archive-list-full .news-item { padding: 16px; }
+    .archive-list-full h3 { font-size: 1rem; padding-right: 20px; }
+    .archive-list-full .news-item::after { top: 16px; right: 16px; }
+    
+    /* 广告位 */
+    .ad-banner, .ad-infeed, .ad-bottom { padding: 12px; font-size: 0.75rem; }
+    
+    /* 页脚 */
+    .footer-container { padding: 0 12px; }
 }
