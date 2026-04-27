@@ -612,6 +612,8 @@ body {
     background: var(--primary-soft);
     border-color: var(--primary);
     color: var(--primary);
+}
+
 .source-list {
     display: flex;
     flex-wrap: wrap;
