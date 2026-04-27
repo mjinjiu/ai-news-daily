@@ -416,11 +416,122 @@ body {
     flex-wrap: wrap;
 }
 
+.analysis-section.debate {
+    background: var(--surface);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.debate-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 12px;
+}
+
+.debate-side {
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.debate-side.pro {
+    background: rgba(34, 197, 94, 0.08);
+    border-left: 3px solid #22c55e;
+}
+
+.debate-side.con {
+    background: rgba(239, 68, 68, 0.08);
+    border-left: 3px solid #ef4444;
+}
+
+.debate-side h4 {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+.debate-side ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.debate-side li {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.6;
+}
+
+.debate-side li:last-child {
+    border-bottom: none;
+}
+
+.analysis-section.prediction {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(99, 102, 241, 0.05) 100%);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px dashed var(--primary);
+}
+
+.prediction-box {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 12px;
+}
+
+.prediction-box p {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.7;
+    margin: 0 0 12px;
+}
+
+.prediction-note {
+    font-size: 0.8rem !important;
+    color: var(--text-muted) !important;
+    font-style: italic;
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+    margin-top: 12px !important;
+}
+
+.surface-vs-insight {
+    margin-top: 8px;
+}
+
+.surface-vs-insight .surface {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    padding-left: 12px;
+    border-left: 2px solid var(--border);
+}
+
+.surface-vs-insight .insight {
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 12px;
+    background: rgba(139, 92, 246, 0.06);
+    border-radius: 8px;
+    border-left: 3px solid var(--primary);
+}
+
 /* 移动端适配 */
 @media (max-width: 768px) {
+    .debate-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    
     .analysis-card {
         padding: 20px;
     }
+}
     
     .analysis-card h2 {
         font-size: 1.15rem;
