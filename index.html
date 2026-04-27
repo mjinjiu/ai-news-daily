@@ -32,13 +32,6 @@
 
     <!-- 主内容区 -->
     <main class="main-container">
-        <!-- 侧边栏广告（桌面端显示） -->
-        <aside class="sidebar-ad" id="sidebarAd">
-            <div class="ad-placeholder sidebar">
-                <span>📢 侧边广告位<br>300×600 / 300×250</span>
-            </div>
-        </aside>
-
         <div class="content-area">
             <!-- ========== AI新闻板块 ========== -->
             <section id="newsSection" class="section active">
@@ -48,102 +41,298 @@
                     <p class="update-time">Updated: 2026-04-27</p>
                 </header>
 
-                <!-- 头条区 -->
-                <div class="featured-row">
-                    <article class="card featured">
-                        <div class="card-tag tag-breaking">重磅 Breaking</div>
-                        <h2 data-zh="马斯克诉OpenAI「世纪诉讼」正式开庭" data-en="Musk's 'Lawsuit of the Century' Against OpenAI Begins">马斯克诉OpenAI「世纪诉讼」正式开庭</h2>
-                        <p class="card-meta">2026-04-27 · Reuters</p>
-                        <p class="card-summary" data-zh="马斯克指控OpenAI背弃非营利使命，提出五项诉求包括追缴全部不法获利、撤销营利化转型和解除阿尔特曼职务。若胜诉，OpenAI融资、合作网络将重构，近6万亿元AI产业链或受冲击。" data-en="Musk accuses OpenAI of abandoning its non-profit mission. If he wins, OpenAI's funding and partnerships could be restructured, impacting the ~$840B AI industry.">马斯克指控OpenAI背弃非营利使命，提出五项诉求包括追缴全部不法获利、撤销营利化转型和解除阿尔特曼职务。若胜诉，OpenAI融资、合作网络将重构，近6万亿元AI产业链或受冲击。</p>
-                    </article>
-                    <article class="card featured">
-                        <div class="card-tag tag-breaking">重磅 Breaking</div>
-                        <h2 data-zh="DeepSeek携手华为昇腾，推理成本暴降99%" data-en="DeepSeek + Huawei Ascent: Inference Cost Drops 99%">DeepSeek携手华为昇腾，推理成本暴降99%</h2>
-                        <p class="card-meta">2026-04-27 · 芯智讯</p>
-                        <p class="card-summary" data-zh="DeepSeek历时5个月完成与华为昇腾国产芯片的深度适配。华为CloudMatrix 384通过集群方式总性能反超英伟达NVL72达1.7倍，国产算力正从「能用」迈向「好用」。" data-en="DeepSeek completed deep adaptation with Huawei Ascent chips. CloudMatrix 384 outperforms NVIDIA NVL72 by 1.7x via clustering.">DeepSeek历时5个月完成与华为昇腾国产芯片的深度适配。华为CloudMatrix 384通过集群方式总性能反超英伟达NVL72达1.7倍，国产算力正从「能用」迈向「好用」。</p>
-                    </article>
-                </div>
+                <div class="news-layout">
+                    <!-- 左侧：主内容 -->
+                    <div class="news-main">
+                        <!-- 头条区 -->
+                        <div class="featured-row">
+                            <article class="card featured">
+                                <div class="card-tag tag-breaking">重磅 Breaking</div>
+                                <h2 data-zh="马斯克诉OpenAI「世纪诉讼」正式开庭" data-en="Musk's 'Lawsuit of the Century' Against OpenAI Begins">马斯克诉OpenAI「世纪诉讼」正式开庭</h2>
+                                <p class="card-meta">2026-04-27 · Reuters</p>
+                                <p class="card-summary" data-zh="马斯克指控OpenAI背弃非营利使命，提出五项诉求包括追缴全部不法获利、撤销营利化转型和解除阿尔特曼职务。若胜诉，OpenAI融资、合作网络将重构，近6万亿元AI产业链或受冲击。" data-en="Musk accuses OpenAI of abandoning its non-profit mission. If he wins, OpenAI's funding and partnerships could be restructured, impacting the ~$840B AI industry.">马斯克指控OpenAI背弃非营利使命，提出五项诉求包括追缴全部不法获利、撤销营利化转型和解除阿尔特曼职务。若胜诉，OpenAI融资、合作网络将重构，近6万亿元AI产业链或受冲击。</p>
+                            </article>
+                            <article class="card featured">
+                                <div class="card-tag tag-breaking">重磅 Breaking</div>
+                                <h2 data-zh="DeepSeek携手华为昇腾，推理成本暴降99%" data-en="DeepSeek + Huawei Ascent: Inference Cost Drops 99%">DeepSeek携手华为昇腾，推理成本暴降99%</h2>
+                                <p class="card-meta">2026-04-27 · 芯智讯</p>
+                                <p class="card-summary" data-zh="DeepSeek历时5个月完成与华为昇腾国产芯片的深度适配。华为CloudMatrix 384通过集群方式总性能反超英伟达NVL72达1.7倍，国产算力正从「能用」迈向「好用」。" data-en="DeepSeek completed deep adaptation with Huawei Ascent chips. CloudMatrix 384 outperforms NVIDIA NVL72 by 1.7x via clustering.">DeepSeek历时5个月完成与华为昇腾国产芯片的深度适配。华为CloudMatrix 384通过集群方式总性能反超英伟达NVL72达1.7倍，国产算力正从「能用」迈向「好用」。</p>
+                            </article>
+                        </div>
 
-                <!-- 新闻网格 -->
-                <div class="news-grid">
-                    <article class="card">
-                        <div class="card-tag tag-tech">技术 Tech</div>
-                        <h3 data-zh="地平线发布「星空」芯片，迈入整车智能体时代" data-en="Horizon Robotics Releases 'Starry' Chip">地平线发布「星空」芯片，迈入整车智能体时代</h3>
-                        <p class="card-meta">2026-04-27 · Sina Tech</p>
-                        <p class="card-summary" data-zh="中国首款舱驾融合整车智能体芯片，完成从芯片到软件的整车计算平台全覆盖。" data-en="China's first cabin-drive integrated vehicle intelligence chip.">中国首款舱驾融合整车智能体芯片，完成从芯片到软件的整车计算平台全覆盖。</p>
-                    </article>
-                    <article class="card">
-                        <div class="card-tag tag-industry">行业 Industry</div>
-                        <h3 data-zh="Meta大规模部署AWS Graviton处理器发力代理AI" data-en="Meta Deploys AWS Graviton at Scale for Agentic AI">Meta大规模部署AWS Graviton处理器发力代理AI</h3>
-                        <p class="card-meta">2026-04-27 · Bloomberg</p>
-                        <p class="card-summary" data-zh="Meta与亚马逊AWS签署合作协议，大规模部署Graviton处理器支持新一代AI系统。" data-en="Meta signs deal with AWS to deploy Graviton processors for next-gen AI systems.">Meta与亚马逊AWS签署合作协议，大规模部署Graviton处理器支持新一代AI系统。</p>
-                    </article>
-                    <article class="card">
-                        <div class="card-tag tag-policy">政策 Policy</div>
-                        <h3 data-zh="内蒙古启动「人工智能+制造」三年专项行动" data-en="Inner Mongolia Launches 'AI + Manufacturing' 3-Year Plan">内蒙古启动「人工智能+制造」三年专项行动</h3>
-                        <p class="card-meta">2026-04-27 · Gov.cn</p>
-                        <p class="card-summary" data-zh="围绕冶金、装备制造、煤化工等领域推进智能化改造。" data-en="Smart transformation in metallurgy, equipment manufacturing, coal chemical industry.">围绕冶金、装备制造、煤化工等领域推进智能化改造。</p>
-                    </article>
-                    <article class="card">
-                        <div class="card-tag tag-industry">行业 Industry</div>
-                        <h3 data-zh="深圳AI规上企业超2600家，核心产业营收2200亿元" data-en="Shenzhen: 2,600+ AI Enterprises, ¥220B Revenue">深圳AI规上企业超2600家，核心产业营收2200亿元</h3>
-                        <p class="card-meta">2026-04-27 · 21st Century Biz</p>
-                        <p class="card-summary" data-zh="累计发布5批近300个「城市+AI」应用场景清单。" data-en="Released ~300 city-level AI application scenarios across 5 batches.">累计发布5批近300个「城市+AI」应用场景清单。</p>
-                    </article>
-                    <article class="card">
-                        <div class="card-tag tag-tech">技术 Tech</div>
-                        <h3 data-zh="3D DRAM验证成功，AI内存将迎来革命" data-en="3D DRAM Validation Success: AI Memory Revolution">3D DRAM验证成功，AI内存将迎来革命</h3>
-                        <p class="card-meta">2026-04-23-27 · 芯智讯</p>
-                        <p class="card-summary" data-zh="NEO Semiconductor 3D X-DRAM技术完成概念验证，可利用现有3D NAND生产线。" data-en="NEO Semiconductor's 3D X-DRAM PoC validated, can use existing 3D NAND lines.">NEO Semiconductor 3D X-DRAM技术完成概念验证，可利用现有3D NAND生产线。</p>
-                    </article>
-                    <article class="card">
-                        <div class="card-tag tag-industry">行业 Industry</div>
-                        <h3 data-zh="联想牵手作业帮发布教育行业首款Claw AI一体机" data-en="Lenovo & Zuoyebang Launch Claw AI一体机 for Education">联想牵手作业帮发布教育行业首款Claw AI一体机</h3>
-                        <p class="card-meta">2026-04-26-27 · DoNews</p>
-                        <p class="card-summary" data-zh="出厂预装学情分析Skills，教师无需配置即可上手。" data-en="Pre-installed learning analytics skills, teachers can use out-of-the-box.">出厂预装学情分析Skills，教师无需配置即可上手。</p>
-                    </article>
-                    <article class="card">
-                        <div class="card-tag tag-policy">政策 Policy</div>
-                        <h3 data-zh="中国AI专利量质齐升：占全球约60%" data-en="China Holds ~60% of Global AI Patents">中国AI专利量质齐升：占全球约60%</h3>
-                        <p class="card-meta">2026-04-26 · China Women's Network</p>
-                        <p class="card-summary" data-zh="高价值发明专利229.2万件，其中七成属于战略性新兴产业。" data-en="2.29M high-value invention patents, 70% in strategic emerging industries.">高价值发明专利229.2万件，其中七成属于战略性新兴产业。</p>
-                    </article>
-                    <article class="card">
-                        <div class="card-tag tag-tech">技术 Tech</div>
-                        <h3 data-zh="商汤提出「AI Token Factory」概念" data-en="SenseTime Proposes 'AI Token Factory' Concept">商汤提出「AI Token Factory」概念</h3>
-                        <p class="card-meta">2026-04-27 · Tech Daily</p>
-                        <p class="card-summary" data-zh="Token开始替代Flops成为新度量衡，人机交互逐步让位于机机交互。" data-en="Token replaces Flops as new metric; human-AI interaction shifts to agent-agent.">Token开始替代Flops成为新度量衡，人机交互逐步让位于机机交互。</p>
-                    </article>
-                </div>
+                        <!-- 今日新闻列表 -->
+                        <div class="news-today">
+                            <div class="section-header">
+                                <div class="header-left">
+                                    <h2 data-zh="📰 今日新闻" data-en="📰 Today's News">📰 今日新闻</h2>
+                                    <span class="date-badge">4月27日</span>
+                                </div>
+                                <span class="count" data-zh="8 条" data-en="8 articles">8 条</span>
+                            </div>
+                            <div class="news-list">
+                                <div class="news-item" data-category="tech">
+                                    <div class="news-bar tech"></div>
+                                    <div class="news-body">
+                                        <h3 data-zh="地平线发布「星空」芯片，迈入整车智能体时代" data-en="Horizon Robotics Releases 'Starry' Chip">地平线发布「星空」芯片，迈入整车智能体时代</h3>
+                                        <p class="news-excerpt" data-zh="中国首款舱驾融合整车智能体芯片，完成从芯片到软件的整车计算平台全覆盖。" data-en="China's first cabin-drive integrated vehicle intelligence chip.">中国首款舱驾融合整车智能体芯片，完成从芯片到软件的整车计算平台全覆盖。</p>
+                                        <div class="news-footer">
+                                            <span class="news-tag tag-tech">技术 Tech</span>
+                                            <span class="news-source">Sina Tech</span>
+                                            <span class="news-date">04-27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-item" data-category="industry">
+                                    <div class="news-bar industry"></div>
+                                    <div class="news-body">
+                                        <h3 data-zh="Meta大规模部署AWS Graviton处理器发力代理AI" data-en="Meta Deploys AWS Graviton at Scale for Agentic AI">Meta大规模部署AWS Graviton处理器发力代理AI</h3>
+                                        <p class="news-excerpt" data-zh="Meta与亚马逊AWS签署合作协议，大规模部署Graviton处理器支持新一代AI系统。" data-en="Meta signs deal with AWS to deploy Graviton processors for next-gen AI systems.">Meta与亚马逊AWS签署合作协议，大规模部署Graviton处理器支持新一代AI系统。</p>
+                                        <div class="news-footer">
+                                            <span class="news-tag tag-industry">行业 Industry</span>
+                                            <span class="news-source">Bloomberg</span>
+                                            <span class="news-date">04-27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-item" data-category="policy">
+                                    <div class="news-bar policy"></div>
+                                    <div class="news-body">
+                                        <h3 data-zh="内蒙古启动「人工智能+制造」三年专项行动" data-en="Inner Mongolia Launches 'AI + Manufacturing' 3-Year Plan">内蒙古启动「人工智能+制造」三年专项行动</h3>
+                                        <p class="news-excerpt" data-zh="围绕冶金、装备制造、煤化工等领域推进智能化改造。" data-en="Smart transformation in metallurgy, equipment manufacturing, coal chemical industry.">围绕冶金、装备制造、煤化工等领域推进智能化改造。</p>
+                                        <div class="news-footer">
+                                            <span class="news-tag tag-policy">政策 Policy</span>
+                                            <span class="news-source">Gov.cn</span>
+                                            <span class="news-date">04-27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-item" data-category="industry">
+                                    <div class="news-bar industry"></div>
+                                    <div class="news-body">
+                                        <h3 data-zh="深圳AI规上企业超2600家，核心产业营收2200亿元" data-en="Shenzhen: 2,600+ AI Enterprises, ¥220B Revenue">深圳AI规上企业超2600家，核心产业营收2200亿元</h3>
+                                        <p class="news-excerpt" data-zh="累计发布5批近300个「城市+AI」应用场景清单。" data-en="Released ~300 city-level AI application scenarios across 5 batches.">累计发布5批近300个「城市+AI」应用场景清单。</p>
+                                        <div class="news-footer">
+                                            <span class="news-tag tag-industry">行业 Industry</span>
+                                            <span class="news-source">21st Century Biz</span>
+                                            <span class="news-date">04-27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-item" data-category="tech">
+                                    <div class="news-bar tech"></div>
+                                    <div class="news-body">
+                                        <h3 data-zh="3D DRAM验证成功，AI内存将迎来革命" data-en="3D DRAM Validation Success: AI Memory Revolution">3D DRAM验证成功，AI内存将迎来革命</h3>
+                                        <p class="news-excerpt" data-zh="NEO Semiconductor 3D X-DRAM技术完成概念验证，可利用现有3D NAND生产线。" data-en="NEO Semiconductor's 3D X-DRAM PoC validated, can use existing 3D NAND lines.">NEO Semiconductor 3D X-DRAM技术完成概念验证，可利用现有3D NAND生产线。</p>
+                                        <div class="news-footer">
+                                            <span class="news-tag tag-tech">技术 Tech</span>
+                                            <span class="news-source">芯智讯</span>
+                                            <span class="news-date">04-23~27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-item" data-category="industry">
+                                    <div class="news-bar industry"></div>
+                                    <div class="news-body">
+                                        <h3 data-zh="联想牵手作业帮发布教育行业首款Claw AI一体机" data-en="Lenovo & Zuoyebang Launch Claw AI一体机 for Education">联想牵手作业帮发布教育行业首款Claw AI一体机</h3>
+                                        <p class="news-excerpt" data-zh="出厂预装学情分析Skills，教师无需配置即可上手。" data-en="Pre-installed learning analytics skills, teachers can use out-of-the-box.">出厂预装学情分析Skills，教师无需配置即可上手。</p>
+                                        <div class="news-footer">
+                                            <span class="news-tag tag-industry">行业 Industry</span>
+                                            <span class="news-source">DoNews</span>
+                                            <span class="news-date">04-26~27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-item" data-category="policy">
+                                    <div class="news-bar policy"></div>
+                                    <div class="news-body">
+                                        <h3 data-zh="中国AI专利量质齐升：占全球约60%" data-en="China Holds ~60% of Global AI Patents">中国AI专利量质齐升：占全球约60%</h3>
+                                        <p class="news-excerpt" data-zh="高价值发明专利229.2万件，其中七成属于战略性新兴产业。" data-en="2.29M high-value invention patents, 70% in strategic emerging industries.">高价值发明专利229.2万件，其中七成属于战略性新兴产业。</p>
+                                        <div class="news-footer">
+                                            <span class="news-tag tag-policy">政策 Policy</span>
+                                            <span class="news-source">China Women's Network</span>
+                                            <span class="news-date">04-26</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="news-item" data-category="tech">
+                                    <div class="news-bar tech"></div>
+                                    <div class="news-body">
+                                        <h3 data-zh="商汤提出「AI Token Factory」概念" data-en="SenseTime Proposes 'AI Token Factory' Concept">商汤提出「AI Token Factory」概念</h3>
+                                        <p class="news-excerpt" data-zh="Token开始替代Flops成为新度量衡，人机交互逐步让位于机机交互。" data-en="Token replaces Flops as new metric; human-AI interaction shifts to agent-agent.">Token开始替代Flops成为新度量衡，人机交互逐步让位于机机交互。</p>
+                                        <div class="news-footer">
+                                            <span class="news-tag tag-tech">技术 Tech</span>
+                                            <span class="news-source">Tech Daily · 极客公园</span>
+                                            <span class="news-date">04-27</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <!-- 文章中广告位 -->
-                <div class="ad-infeed" id="adInfeed">
-                    <div class="ad-placeholder">
-                        <span>📢 信息流广告位（文章之间）</span>
+                        <!-- 信息流广告位 -->
+                        <div class="ad-infeed" id="adInfeed">
+                            <div class="ad-placeholder">
+                                <span>📢 信息流广告位（文章之间）</span>
+                            </div>
+                        </div>
+
+                        <!-- 本周回顾 -->
+                        <div class="weekly-review">
+                            <div class="section-header">
+                                <h2 data-zh="📅 本周回顾" data-en="📅 Weekly Review">📅 本周回顾</h2>
+                                <span class="range">4.21 — 4.27</span>
+                            </div>
+                            <div class="week-timeline">
+                                <div class="day-group">
+                                    <div class="day-header">
+                                        <span class="day-name" data-zh="周日" data-en="Sun">周日</span>
+                                        <span class="day-date">04-27</span>
+                                        <span class="day-count">8 条</span>
+                                    </div>
+                                    <ul class="day-list">
+                                        <li><span class="dot breaking"></span><a href="#">马斯克诉OpenAI「世纪诉讼」正式开庭</a></li>
+                                        <li><span class="dot breaking"></span><a href="#">DeepSeek携手华为昇腾，推理成本暴降99%</a></li>
+                                        <li><span class="dot tech"></span><a href="#">地平线发布「星空」芯片</a></li>
+                                        <li><span class="dot industry"></span><a href="#">Meta大规模部署AWS Graviton处理器</a></li>
+                                        <li><span class="dot policy"></span><a href="#">内蒙古启动「AI+制造」三年行动</a></li>
+                                        <li><span class="dot industry"></span><a href="#">深圳AI规上企业超2600家</a></li>
+                                        <li><span class="dot tech"></span><a href="#">商汤提出「AI Token Factory」概念</a></li>
+                                        <li><span class="dot tech"></span><a href="#">3D DRAM验证成功</a></li>
+                                    </ul>
+                                </div>
+                                <div class="day-group">
+                                    <div class="day-header">
+                                        <span class="day-name" data-zh="周六" data-en="Sat">周六</span>
+                                        <span class="day-date">04-26</span>
+                                        <span class="day-count">2 条</span>
+                                    </div>
+                                    <ul class="day-list">
+                                        <li><span class="dot policy"></span><a href="#">中国AI专利量质齐升：占全球约60%</a></li>
+                                        <li><span class="dot industry"></span><a href="#">联想牵手作业帮发布Claw AI一体机</a></li>
+                                    </ul>
+                                </div>
+                                <div class="day-group">
+                                    <div class="day-header">
+                                        <span class="day-name" data-zh="周五" data-en="Fri">周五</span>
+                                        <span class="day-date">04-25</span>
+                                        <span class="day-count">—</span>
+                                    </div>
+                                    <ul class="day-list">
+                                        <li class="empty" data-zh="暂无新闻" data-en="No news">暂无新闻</li>
+                                    </ul>
+                                </div>
+                                <div class="day-group">
+                                    <div class="day-header">
+                                        <span class="day-name" data-zh="周四" data-en="Thu">周四</span>
+                                        <span class="day-date">04-24</span>
+                                        <span class="day-count">—</span>
+                                    </div>
+                                    <ul class="day-list">
+                                        <li class="empty" data-zh="暂无新闻" data-en="No news">暂无新闻</li>
+                                    </ul>
+                                </div>
+                                <div class="day-group">
+                                    <div class="day-header">
+                                        <span class="day-name" data-zh="周三" data-en="Wed">周三</span>
+                                        <span class="day-date">04-23</span>
+                                        <span class="day-count">1 条</span>
+                                    </div>
+                                    <ul class="day-list">
+                                        <li><span class="dot tech"></span><a href="#">3D DRAM验证成功（持续报道）</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 统计速览 -->
+                        <section class="stats-section">
+                            <h2 data-zh="📊 今日AI圈速览" data-en="📊 Today's AI Snapshot">📊 今日AI圈速览</h2>
+                            <div class="stats-row">
+                                <div class="stat-item"><span class="stat-num">99%</span><span class="stat-label" data-zh="DeepSeek推理成本降幅" data-en="DeepSeek Cost Drop">DeepSeek推理成本降幅</span></div>
+                                <div class="stat-item"><span class="stat-num">2600+</span><span class="stat-label" data-zh="深圳AI规上企业" data-en="Shenzhen AI Firms">深圳AI规上企业</span></div>
+                                <div class="stat-item"><span class="stat-num">60%</span><span class="stat-label" data-zh="中国占全球AI专利" data-en="China's Global AI Patents">中国占全球AI专利</span></div>
+                                <div class="stat-item"><span class="stat-num">1.7x</span><span class="stat-label" data-zh="华为CM384超NV72" data-en="Huawei CM384 vs NV72">华为CM384超NV72</span></div>
+                            </div>
+                        </section>
                     </div>
-                </div>
 
-                <!-- 统计速览 -->
-                <section class="stats-section">
-                    <h2 data-zh="📊 今日AI圈速览" data-en="📊 Today's AI Snapshot">📊 今日AI圈速览</h2>
-                    <div class="stats-row">
-                        <div class="stat-item"><span class="stat-num">99%</span><span class="stat-label" data-zh="DeepSeek推理成本降幅" data-en="DeepSeek Cost Drop">DeepSeek推理成本降幅</span></div>
-                        <div class="stat-item"><span class="stat-num">2600+</span><span class="stat-label" data-zh="深圳AI规上企业" data-en="Shenzhen AI Firms">深圳AI规上企业</span></div>
-                        <div class="stat-item"><span class="stat-num">60%</span><span class="stat-label" data-zh="中国占全球AI专利" data-en="China's Global AI Patents">中国占全球AI专利</span></div>
-                        <div class="stat-item"><span class="stat-num">1.7x</span><span class="stat-label" data-zh="华为CM384超NV72" data-en="Huawei CM384 vs NV72">华为CM384超NV72</span></div>
-                    </div>
-                </section>
+                    <!-- 右侧边栏 -->
+                    <aside class="news-sidebar">
+                        <div class="widget hot-topics">
+                            <h3 data-zh="🔥 本周热榜" data-en="🔥 Weekly Hot">🔥 本周热榜</h3>
+                            <ol class="hot-list">
+                                <li><a href="#" data-zh="DeepSeek推理成本暴降99%" data-en="DeepSeek Cost Drops 99%">DeepSeek推理成本暴降99%</a></li>
+                                <li><a href="#" data-zh="马斯克诉OpenAI正式开庭" data-en="Musk Sues OpenAI">马斯克诉OpenAI正式开庭</a></li>
+                                <li><a href="#" data-zh="地平线发布「星空」芯片" data-en="Horizon 'Starry' Chip">地平线发布「星空」芯片</a></li>
+                                <li><a href="#" data-zh="中国AI专利占全球60%" data-en="China 60% Global AI Patents">中国AI专利占全球60%</a></li>
+                                <li><a href="#" data-zh="Meta部署Graviton发力代理AI" data-en="Meta Graviton Agentic AI">Meta部署Graviton发力代理AI</a></li>
+                                <li><a href="#" data-zh="深圳AI企业超2600家" data-en="Shenzhen 2600+ AI Firms">深圳AI企业超2600家</a></li>
+                                <li><a href="#" data-zh="3D DRAM验证成功" data-en="3D DRAM Validation">3D DRAM验证成功</a></li>
+                                <li><a href="#" data-zh="联想作业帮Claw AI一体机" data-en="Lenovo Claw AI一体机">联想作业帮Claw AI一体机</a></li>
+                            </ol>
+                        </div>
+
+                        <div class="widget tag-cloud">
+                            <h3 data-zh="🏷️ 热门标签" data-en="🏷️ Hot Tags">🏷️ 热门标签</h3>
+                            <div class="tags">
+                                <span class="tag">DeepSeek</span>
+                                <span class="tag">华为</span>
+                                <span class="tag">OpenAI</span>
+                                <span class="tag">马斯克</span>
+                                <span class="tag">地平线</span>
+                                <span class="tag">Meta</span>
+                                <span class="tag">芯片</span>
+                                <span class="tag">3D DRAM</span>
+                                <span class="tag">专利</span>
+                                <span class="tag">深圳</span>
+                                <span class="tag">教育AI</span>
+                                <span class="tag">Token</span>
+                            </div>
+                        </div>
+
+                        <!-- 侧边栏广告 -->
+                        <div class="widget ad-widget" id="sidebarAd">
+                            <div class="ad-placeholder sidebar">
+                                <span>📢 侧边广告位<br>300×600 / 300×250</span>
+                            </div>
+                        </div>
+
+                        <div class="widget archive">
+                            <h3 data-zh="📂 历史归档" data-en="📂 Archive">📂 历史归档</h3>
+                            <ul class="archive-list">
+                                <li><a href="#"><span class="archive-week">2026.04 第三周</span><span class="archive-count">10 条</span></a></li>
+                                <li><a href="#"><span class="archive-week">2026.04 第二周</span><span class="archive-count">12 条</span></a></li>
+                                <li><a href="#"><span class="archive-week">2026.04 第一周</span><span class="archive-count">8 条</span></a></li>
+                                <li><a href="#"><span class="archive-week">2026.03 第四周</span><span class="archive-count">15 条</span></a></li>
+                            </ul>
+                        </div>
+
+                        <div class="widget sources">
+                            <h3 data-zh="📡 信源" data-en="📡 Sources">📡 信源</h3>
+                            <div class="source-list">
+                                <span class="source-tag">Reuters</span>
+                                <span class="source-tag">Bloomberg</span>
+                                <span class="source-tag">芯智讯</span>
+                                <span class="source-tag">极客公园</span>
+                                <span class="source-tag">Tech Daily</span>
+                                <span class="source-tag">Sina Tech</span>
+                                <span class="source-tag">Gov.cn</span>
+                                <span class="source-tag">DoNews</span>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
             </section>
 
             <!-- ========== API定价板块 ========== -->
             <section id="pricingSection" class="section">
+                <!-- API定价内容保持不变 -->
                 <header class="page-header">
                     <h1 data-zh="💰 主流大模型API定价对比" data-en="💰 LLM API Pricing Comparison">💰 主流大模型API定价对比</h1>
                     <p class="subtitle" data-zh="每百万Token计价 · 数据截至2026年4月 · 仅供参考" data-en="Per million tokens · Updated Apr 2026 · For reference only">每百万Token计价 · 数据截至2026年4月 · 仅供参考</p>
                     <p class="note" data-zh="* 价格随时可能变动，请以各平台官方文档为准" data-en="* Prices subject to change; verify with official docs">* 价格随时可能变动，请以各平台官方文档为准</p>
                 </header>
 
-                <!-- 国际模型 -->
                 <div class="pricing-group">
                     <h2 class="group-title">🌍 国际模型 International Models</h2>
                     <div class="pricing-table-wrapper">
@@ -158,82 +347,21 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="tier-flagship">
-                                    <td><strong>Claude Opus 4.6</strong><br><span class="vendor">Anthropic</span></td>
-                                    <td>$5.00</td>
-                                    <td>$25.00</td>
-                                    <td>1M</td>
-                                    <td><span class="badge low">低</span></td>
-                                </tr>
-                                <tr class="tier-high">
-                                    <td><strong>Claude Sonnet 4.6</strong><br><span class="vendor">Anthropic</span></td>
-                                    <td>$3.00</td>
-                                    <td>$15.00</td>
-                                    <td>1M</td>
-                                    <td><span class="badge mid">中</span></td>
-                                </tr>
-                                <tr class="tier-low">
-                                    <td><strong>Claude Haiku 4.5</strong><br><span class="vendor">Anthropic</span></td>
-                                    <td>$1.00</td>
-                                    <td>$5.00</td>
-                                    <td>200K</td>
-                                    <td><span class="badge high">高</span></td>
-                                </tr>
-                                <tr class="tier-high">
-                                    <td><strong>GPT-5.4</strong><br><span class="vendor">OpenAI</span></td>
-                                    <td>$2.50</td>
-                                    <td>$15.00</td>
-                                    <td>272K</td>
-                                    <td><span class="badge mid">中</span></td>
-                                </tr>
-                                <tr class="tier-mid">
-                                    <td><strong>GPT-4o</strong><br><span class="vendor">OpenAI</span></td>
-                                    <td>$2.50</td>
-                                    <td>$10.00</td>
-                                    <td>128K</td>
-                                    <td><span class="badge mid">中</span></td>
-                                </tr>
-                                <tr class="tier-mid">
-                                    <td><strong>GPT-4.1</strong><br><span class="vendor">OpenAI</span></td>
-                                    <td>$2.00</td>
-                                    <td>$8.00</td>
-                                    <td>1M</td>
-                                    <td><span class="badge high">高</span></td>
-                                </tr>
-                                <tr class="tier-low">
-                                    <td><strong>GPT-4.1 mini</strong><br><span class="vendor">OpenAI</span></td>
-                                    <td>$0.40</td>
-                                    <td>$1.60</td>
-                                    <td>1M</td>
-                                    <td><span class="badge high">高</span></td>
-                                </tr>
-                                <tr class="tier-mid">
-                                    <td><strong>Gemini 2.5 Pro</strong><br><span class="vendor">Google</span></td>
-                                    <td>$1.25</td>
-                                    <td>$10.00</td>
-                                    <td>1M</td>
-                                    <td><span class="badge high">高</span></td>
-                                </tr>
-                                <tr class="tier-budget">
-                                    <td><strong>Gemini 2.5 Flash</strong><br><span class="vendor">Google</span></td>
-                                    <td>$0.30</td>
-                                    <td>$2.50</td>
-                                    <td>1M</td>
-                                    <td><span class="badge very-high">超高</span></td>
-                                </tr>
-                                <tr class="tier-budget">
-                                    <td><strong>Gemini 2.5 Flash-Lite</strong><br><span class="vendor">Google</span></td>
-                                    <td>$0.10</td>
-                                    <td>$0.40</td>
-                                    <td>1M</td>
-                                    <td><span class="badge very-high">超高</span></td>
-                                </tr>
+                                <tr class="tier-flagship"><td><strong>Claude Opus 4.6</strong><br><span class="vendor">Anthropic</span></td><td>$5.00</td><td>$25.00</td><td>1M</td><td><span class="badge low">低</span></td></tr>
+                                <tr class="tier-high"><td><strong>Claude Sonnet 4.6</strong><br><span class="vendor">Anthropic</span></td><td>$3.00</td><td>$15.00</td><td>1M</td><td><span class="badge mid">中</span></td></tr>
+                                <tr class="tier-low"><td><strong>Claude Haiku 4.5</strong><br><span class="vendor">Anthropic</span></td><td>$1.00</td><td>$5.00</td><td>200K</td><td><span class="badge high">高</span></td></tr>
+                                <tr class="tier-high"><td><strong>GPT-5.4</strong><br><span class="vendor">OpenAI</span></td><td>$2.50</td><td>$15.00</td><td>272K</td><td><span class="badge mid">中</span></td></tr>
+                                <tr class="tier-mid"><td><strong>GPT-4o</strong><br><span class="vendor">OpenAI</span></td><td>$2.50</td><td>$10.00</td><td>128K</td><td><span class="badge mid">中</span></td></tr>
+                                <tr class="tier-mid"><td><strong>GPT-4.1</strong><br><span class="vendor">OpenAI</span></td><td>$2.00</td><td>$8.00</td><td>1M</td><td><span class="badge high">高</span></td></tr>
+                                <tr class="tier-low"><td><strong>GPT-4.1 mini</strong><br><span class="vendor">OpenAI</span></td><td>$0.40</td><td>$1.60</td><td>1M</td><td><span class="badge high">高</span></td></tr>
+                                <tr class="tier-mid"><td><strong>Gemini 2.5 Pro</strong><br><span class="vendor">Google</span></td><td>$1.25</td><td>$10.00</td><td>1M</td><td><span class="badge high">高</span></td></tr>
+                                <tr class="tier-budget"><td><strong>Gemini 2.5 Flash</strong><br><span class="vendor">Google</span></td><td>$0.30</td><td>$2.50</td><td>1M</td><td><span class="badge very-high">超高</span></td></tr>
+                                <tr class="tier-budget"><td><strong>Gemini 2.5 Flash-Lite</strong><br><span class="vendor">Google</span></td><td>$0.10</td><td>$0.40</td><td>1M</td><td><span class="badge very-high">超高</span></td></tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <!-- 国产模型 -->
                 <div class="pricing-group">
                     <h2 class="group-title">🇨🇳 国产模型 China Models (人民币 RMB)</h2>
                     <div class="pricing-table-wrapper">
@@ -248,75 +376,20 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="tier-mid">
-                                    <td><strong>DeepSeek-V4 Pro</strong><br><span class="vendor">DeepSeek</span></td>
-                                    <td>¥2.00</td>
-                                    <td>¥3.00</td>
-                                    <td>1M</td>
-                                    <td><span class="badge very-high">超高</span></td>
-                                </tr>
-                                <tr class="tier-budget">
-                                    <td><strong>DeepSeek-V4 Flash</strong><br><span class="vendor">DeepSeek</span></td>
-                                    <td>¥0.50</td>
-                                    <td>¥1.00</td>
-                                    <td>1M</td>
-                                    <td><span class="badge very-high">超高</span></td>
-                                </tr>
-                                <tr class="tier-mid">
-                                    <td><strong>Kimi K2.6</strong><br><span class="vendor">Moonshot</span></td>
-                                    <td>~¥3.00</td>
-                                    <td>~¥12.00</td>
-                                    <td>1M</td>
-                                    <td><span class="badge high">高</span></td>
-                                </tr>
-                                <tr class="tier-mid">
-                                    <td><strong>Qwen-Max</strong><br><span class="vendor">Alibaba</span></td>
-                                    <td>~¥2.00</td>
-                                    <td>¥9.60</td>
-                                    <td>128K</td>
-                                    <td><span class="badge mid">中</span></td>
-                                </tr>
-                                <tr class="tier-budget">
-                                    <td><strong>Qwen-Plus</strong><br><span class="vendor">Alibaba</span></td>
-                                    <td>~¥0.50</td>
-                                    <td>¥2.00</td>
-                                    <td>128K</td>
-                                    <td><span class="badge very-high">超高</span></td>
-                                </tr>
-                                <tr class="tier-budget">
-                                    <td><strong>Qwen-Turbo</strong><br><span class="vendor">Alibaba</span></td>
-                                    <td>~¥0.20</td>
-                                    <td>¥0.70</td>
-                                    <td>128K</td>
-                                    <td><span class="badge very-high">超高</span></td>
-                                </tr>
-                                <tr class="tier-free">
-                                    <td><strong>Qwen-Flash</strong><br><span class="vendor">Alibaba</span></td>
-                                    <td>免费</td>
-                                    <td>免费</td>
-                                    <td>128K</td>
-                                    <td><span class="badge very-high">免费</span></td>
-                                </tr>
-                                <tr class="tier-budget">
-                                    <td><strong>豆包 Pro</strong><br><span class="vendor">ByteDance</span></td>
-                                    <td>~¥0.20</td>
-                                    <td>~¥0.80</td>
-                                    <td>200K</td>
-                                    <td><span class="badge very-high">超高</span></td>
-                                </tr>
-                                <tr class="tier-mid">
-                                    <td><strong>GLM-5.1</strong><br><span class="vendor">Zhipu AI</span></td>
-                                    <td>~¥1.00</td>
-                                    <td>~¥5.00</td>
-                                    <td>128K</td>
-                                    <td><span class="badge high">高</span></td>
-                                </tr>
+                                <tr class="tier-mid"><td><strong>DeepSeek-V4 Pro</strong><br><span class="vendor">DeepSeek</span></td><td>¥2.00</td><td>¥3.00</td><td>1M</td><td><span class="badge very-high">超高</span></td></tr>
+                                <tr class="tier-budget"><td><strong>DeepSeek-V4 Flash</strong><br><span class="vendor">DeepSeek</span></td><td>¥0.50</td><td>¥1.00</td><td>1M</td><td><span class="badge very-high">超高</span></td></tr>
+                                <tr class="tier-mid"><td><strong>Kimi K2.6</strong><br><span class="vendor">Moonshot</span></td><td>~¥3.00</td><td>~¥12.00</td><td>1M</td><td><span class="badge high">高</span></td></tr>
+                                <tr class="tier-mid"><td><strong>Qwen-Max</strong><br><span class="vendor">Alibaba</span></td><td>~¥2.00</td><td>¥9.60</td><td>128K</td><td><span class="badge mid">中</span></td></tr>
+                                <tr class="tier-budget"><td><strong>Qwen-Plus</strong><br><span class="vendor">Alibaba</span></td><td>~¥0.50</td><td>¥2.00</td><td>128K</td><td><span class="badge very-high">超高</span></td></tr>
+                                <tr class="tier-budget"><td><strong>Qwen-Turbo</strong><br><span class="vendor">Alibaba</span></td><td>~¥0.20</td><td>¥0.70</td><td>128K</td><td><span class="badge very-high">超高</span></td></tr>
+                                <tr class="tier-free"><td><strong>Qwen-Flash</strong><br><span class="vendor">Alibaba</span></td><td>免费</td><td>免费</td><td>128K</td><td><span class="badge free">免费</span></td></tr>
+                                <tr class="tier-budget"><td><strong>豆包 Pro</strong><br><span class="vendor">ByteDance</span></td><td>~¥0.20</td><td>~¥0.80</td><td>200K</td><td><span class="badge very-high">超高</span></td></tr>
+                                <tr class="tier-mid"><td><strong>GLM-5.1</strong><br><span class="vendor">Zhipu AI</span></td><td>~¥1.00</td><td>~¥5.00</td><td>128K</td><td><span class="badge high">高</span></td></tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <!-- 订阅方案对比 -->
                 <div class="pricing-group">
                     <h2 class="group-title" data-zh="🎫 订阅方案对比" data-en="🎫 Subscription Plans">🎫 订阅方案对比</h2>
                     <div class="plan-cards">
