@@ -772,6 +772,32 @@ body {
 }
 .plan-features li:last-child { border-bottom: none; }
 
+/* 站点切换 widget */
+.site-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.site-link {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--primary-soft);
+    border: 1px solid var(--primary);
+    border-radius: var(--radius-sm);
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.site-link:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
 /* ========== Footer ========== */
 .site-footer {
     background: var(--surface);
