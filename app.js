@@ -56,6 +56,16 @@
 
     langToggle.addEventListener('click', toggleLanguage);
 
+    // ========== 新闻点击跳转 ==========
+    document.querySelectorAll('.news-item[data-source-url]').forEach(item => {
+        item.addEventListener('click', (e) => {
+            // Don't navigate if clicking a link inside the item
+            if (e.target.closest('a')) return;
+            const url = item.dataset.sourceUrl;
+            if (url) window.open(url, '_blank', 'noopener,noreferrer');
+        });
+    });
+
     // ========== 广告位控制 ==========
     const adConfig = {
         top: false,
