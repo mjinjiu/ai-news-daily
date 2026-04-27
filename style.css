@@ -612,40 +612,6 @@ body {
     background: var(--primary-soft);
     border-color: var(--primary);
     color: var(--primary);
-}
-
-/* 归档 */
-.archive-list {
-    list-style: none;
-}
-
-.archive-list li {
-    padding: 6px 0;
-    border-bottom: 1px solid var(--border);
-}
-
-.archive-list li:last-child { border-bottom: none; }
-
-.archive-list li a {
-    display: flex;
-    justify-content: space-between;
-    color: var(--text);
-    text-decoration: none;
-    font-size: 0.85rem;
-    transition: var(--transition);
-}
-
-.archive-list li a:hover { color: var(--primary); }
-
-.archive-count {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    background: var(--bg);
-    padding: 1px 6px;
-    border-radius: 10px;
-}
-
-/* 信源 */
 .source-list {
     display: flex;
     flex-wrap: wrap;
@@ -807,6 +773,19 @@ body {
     color: var(--text-muted);
     margin-top: 4px;
 }
+
+/* ========== 历史归档 ========== */
+.archive-list { list-style: none; }
+.archive-list li { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.archive-list li:last-child { border-bottom: none; }
+.archive-list a { display: flex; justify-content: space-between; align-items: center; width: 100%; color: var(--text-primary); text-decoration: none; padding: 4px 8px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
+.archive-list a:hover { background: var(--primary-soft); color: var(--primary); }
+.archive-list .archive-week { font-size: 0.85rem; color: var(--text-primary); }
+.archive-list .archive-count { font-size: 0.75rem; color: var(--text-secondary); background: var(--surface-2); padding: 2px 8px; border-radius: 10px; }
+.archive-list li.archive-empty { display: flex; justify-content: space-between; align-items: center; padding: 6px 8px; }
+.archive-list li.archive-empty .archive-week { font-size: 0.85rem; color: var(--text-tertiary); }
+.archive-list li.archive-empty .archive-count { font-size: 0.75rem; color: var(--text-tertiary); background: transparent; padding: 2px 8px; border-radius: 10px; }
+.archive-hint { font-size: 0.75rem; color: var(--text-tertiary); margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
 
 /* ========== 响应式 ========== */
 @media (min-width: 1024px) {
