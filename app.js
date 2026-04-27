@@ -1,4 +1,4 @@
-// AI前线 v2.0 — 板块切换 + 语言切换 + 广告位控制
+// AI前线 v2.1 — 板块切换 + 语言切换 + 广告位控制
 
 (function() {
     // ========== 板块切换 ==========
@@ -30,13 +30,23 @@
     function toggleLanguage() {
         currentLang = currentLang === 'zh' ? 'en' : 'zh';
         
-        // 切换所有带 data-zh / data-en 的元素
+        // 切换所有带 data-zh / data-en 的元素（包括导航栏）
         document.querySelectorAll('[data-zh][data-en]').forEach(el => {
-            el.textContent = el.getAttribute('data-' + currentLang);
+            const newText = el.getAttribute('data-' + currentLang);
+            if (el.classList.contains('nav-link')) {
+                // 导航链接需要保留emoji前缀
+                const emoji = el.textContent.match(/^[^\w\s]+/);
+                el.textContent = (emoji ? emoji[0] : '') + newText.replace(/^[^\w\s]+/, '');
+            } else {
+                el.textContent = newText;
+            }
         });
         
-        // 更新按钮文本
-        langToggle.textContent = currentLang === 'zh' ? 'EN/中' : '中/EN';
+        // 更新按钮文本和视觉状态
+        langToggle.textContent = currentLang === 'zh' ? 'EN' : '中';
+        langToggle.style.background = currentLang === 'en' ? 'var(--primary-soft)' : '';
+        langToggle.style.color = currentLang === 'en' ? 'var(--primary)' : '';
+        langToggle.style.borderColor = currentLang === 'en' ? 'var(--primary)' : '';
         
         // 更新页面标题
         document.title = currentLang === 'zh' 
@@ -47,12 +57,11 @@
     langToggle.addEventListener('click', toggleLanguage);
 
     // ========== 广告位控制 ==========
-    // 预留：根据用户配置显示/隐藏广告位
     const adConfig = {
-        top: false,      // 顶部横幅
-        sidebar: false,  // 侧边栏
-        infeed: false,   // 信息流
-        bottom: false    // 底部
+        top: false,
+        sidebar: false,
+        infeed: false,
+        bottom: false
     };
 
     function initAds(config) {
@@ -76,7 +85,6 @@
         }
     }
 
-    // 将广告初始化函数暴露到全局，供后续配置调用
     window.AIFrontline = { initAds };
 
     // ========== 卡片渐入动画 ==========
@@ -97,7 +105,7 @@
         observer.observe(el);
     });
 
-    // Fallback: 确保所有卡片在2秒内显示（IntersectionObserver未触发时）
+    // Fallback: 确保所有卡片在2秒内显示
     setTimeout(() => {
         document.querySelectorAll('.card, .stat-item, .plan-card').forEach(el => {
             el.style.opacity = '1';
@@ -116,7 +124,7 @@
         if (el) el.textContent = 'Updated: ' + timeStr;
     }
     updateTime();
-    setInterval(updateTime, 300000); // 每5分钟更新
+    setInterval(updateTime, 300000);
 
-    console.log('✅ AI前线 v2.0 已加载 · AI Frontline initialized');
+    console.log('✅ AI前线 v2.1 已加载 · Light theme active');
 })();
