@@ -156,11 +156,27 @@ const Renderer = (function () {
 
   // ===== 8. 渲染深度解读 =====
   var analysisPage = 0;
-  var analysisPerPage = 3;
+  var analysisPerPage = 8;
   var analysisItems = [];
+
+  function parseDate(d) {
+    if (!d) return 0;
+    var parts = d.split(/[-\/]/);
+    if (parts.length === 2) {
+      return new Date(2026, parseInt(parts[0]) - 1, parseInt(parts[1])).getTime();
+    }
+    if (parts.length >= 3) {
+      return new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])).getTime();
+    }
+    return 0;
+  }
 
   function renderAnalysis(containerId, items) {
     analysisItems = items || [];
+    // 按日期排序：新→旧
+    analysisItems.sort(function (a, b) {
+      return parseDate(b.date) - parseDate(a.date);
+    });
     var container = document.getElementById(containerId);
     if (!container) return;
     updateAnalysisPage();
@@ -224,7 +240,7 @@ const Renderer = (function () {
       var tagsHtml = (item.tags || []).map(function (t) { return '<span class="tag">' + escapeHtml(t) + '</span>'; }).join('');
 
       return (
-        '<article class="analysis-card featured anim-fade-up" data-id="' + item.id + '">' +
+        '<article class="analysis-card featured anim-fade-up collapsed" data-id="' + item.id + '" data-index="' + (start + idx) + '">' +
           '<div class="analysis-header">' +
             '<span class="analysis-tag tag-breaking">' + item.grade + '\u7ea7\u00b7\u4ee3\u8868\u4f5c</span>' +
             '<span class="analysis-date">' + escapeHtml(item.date) + '</span>' +
@@ -232,6 +248,10 @@ const Renderer = (function () {
           '<h2>' + escapeHtml(getText(item, 'title')) + '</h2>' +
           '<div class="analysis-summary">' +
             '<p>' + escapeHtml(getText(item, 'summary')) + '</p>' +
+          '</div>' +
+          '<div class="analysis-fold-hint">' +
+            '<span class="fold-icon">▼</span>' +
+            '<span class="fold-text">' + I18N.t('clickToExpand') + '</span>' +
           '</div>' +
           '<div class="analysis-body">' +
             '<div class="analysis-section">' +
@@ -256,6 +276,15 @@ const Renderer = (function () {
     if (prevBtn) prevBtn.disabled = analysisPage <= 0;
     if (nextBtn) nextBtn.disabled = analysisPage >= totalPages - 1;
     if (pageNum) pageNum.textContent = (analysisPage + 1) + ' / ' + totalPages;
+
+    // 绑定折叠点击事件
+    container.querySelectorAll('.analysis-card.collapsed').forEach(function(card) {
+      card.addEventListener('click', function(e) {
+        if (e.target.closest('a')) return;
+        card.classList.toggle('collapsed');
+        card.classList.toggle('expanded');
+      });
+    });
   }
 
   function nextAnalysisPage() {

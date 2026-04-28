@@ -406,6 +406,49 @@ body {
   color: var(--text-muted);
 }
 
+/* ========== 深度解读：折叠 + 展开 ========== */
+.analysis-card.collapsed .analysis-body,
+.analysis-card.collapsed .analysis-footer {
+    display: none;
+}
+
+.analysis-card .analysis-fold-hint {
+    display: none;
+}
+
+.analysis-card.collapsed .analysis-fold-hint {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: var(--primary-soft);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.analysis-card.collapsed .analysis-fold-hint:hover {
+    background: rgba(79, 70, 229, 0.12);
+}
+
+.analysis-card.expanded .analysis-fold-hint {
+    display: none;
+}
+
+.analysis-card.expanded .analysis-body,
+.analysis-card.expanded .analysis-footer {
+    display: block;
+    animation: fadeInExpand 0.3s ease;
+}
+
+@keyframes fadeInExpand {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
 /* 更多解读列表 */
 .analysis-list { margin-top: 40px; }
 
