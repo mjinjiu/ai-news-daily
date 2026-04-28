@@ -1,0 +1,201 @@
+{
+  "meta": {
+    "date": "2026-04-28",
+    "updatedAt": "2026-04-28T15:02:00+08:00",
+    "total": 8
+  },
+  "breaking": [
+    {
+      "id": "news-001",
+      "title_zh": "微软与OpenAI重组合作：结束独家云伙伴，OpenAI获运营独立",
+      "title_en": "Microsoft and OpenAI Rework Deal: Exclusivity Ends, OpenAI Gains Independence",
+      "summary_zh": "微软宣布结束与OpenAI的独家云服务伙伴关系，同时终止此前约定的营收分成安排。OpenAI产品将可部署至任何云平台。微软保留IP授权至2032年，持股价值超$1350亿。",
+      "summary_en": "Microsoft ends exclusive cloud partnership with OpenAI, terminates revenue sharing. OpenAI products can now deploy on any cloud platform. Microsoft retains IP licensing until 2032, with stake valued over $135B.",
+      "date": "04-27~28",
+      "source": "Decrypt / Reuters",
+      "category": "breaking",
+      "url": "https://decrypt.co/365630/microsoft-openai-rework-ai-deal-cutting-exclusivity-agi-provisions"
+    },
+    {
+      "id": "news-002",
+      "title_zh": "DeepMind元老创业获11亿美元种子轮，剑指超级智能",
+      "title_en": "DeepMind Veteran Raises $1.1B Seed Round Targeting Superintelligence",
+      "summary_zh": "前DeepMind核心研究员David Silver为其新公司Ineffable Intelligence筹集11亿美元种子资金，成为欧洲史上最大种子轮。由红杉、光速联合领投，NVIDIA与Google参投。估值51亿美元，专注超级智能研究。",
+      "summary_en": "Former DeepMind researcher David Silver raises $1.1B seed funding for Ineffable Intelligence, Europe's largest seed round ever. Led by Sequoia and Lightspeed, with NVIDIA and Google participating. Valued at $5.1B, focused on superintelligence research.",
+      "date": "04-28",
+      "source": "Sina Finance",
+      "category": "breaking",
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-28/doc-inhvyvau7495063.shtml"
+    }
+  ],
+  "daily": [
+    {
+      "id": "news-003",
+      "title_zh": "微软Copilot北美服务突发异常，响应延迟超30秒",
+      "title_en": "Microsoft Copilot North America Service Outage, Response Delay Exceeds 30s",
+      "excerpt_zh": "北美东部时间4月28日早7时，微软Copilot服务突发异常，影响美国与加拿大用户。Web端页面加载迟缓，Windows客户端插件出现无响应或闪退。Azure AI基础设施未受波及，官方已启动紧急排查。",
+      "excerpt_en": "On April 28 at 7 AM ET, Microsoft Copilot experienced service disruptions affecting US and Canada users. Web pages loaded slowly, Windows client plugins crashed. Azure AI infrastructure unaffected, emergency investigation underway.",
+      "date": "04-28",
+      "source": "TMT Post",
+      "category": "industry",
+      "url": "https://www.tmtpost.com/7969276.html"
+    },
+    {
+      "id": "news-004",
+      "title_zh": "Claude自主完成186笔真实交易，Anthropic试水电商引震动",
+      "title_en": "Claude Completes 186 Real Transactions Autonomously, Anthropic Tests E-commerce",
+      "excerpt_zh": "Anthropic内部实验\"Project Deal\"中，Claude模型成功完成186笔交易总额超4000美元，无需人工介入的完整谈判流程。消息发布后eBay股价单日重挫4.5%，市场担忧AI自主定价颠覆电商平台。",
+      "excerpt_en": "In Anthropic's internal 'Project Deal' experiment, Claude successfully completed 186 transactions totaling over $4,000 with zero human intervention. eBay shares dropped 4.5% on the news as markets fear AI autonomous pricing will disrupt e-commerce.",
+      "date": "04-28",
+      "source": "TMT Post",
+      "category": "tech",
+      "url": "https://www.tmtpost.com/7969276.html"
+    },
+    {
+      "id": "news-005",
+      "title_zh": "亚马逊Bedrock集成OpenAI模型，部署成本降20%",
+      "title_en": "Amazon Bedrock Integrates OpenAI Models, Deployment Costs Drop 20%",
+      "excerpt_zh": "AWS宣布在Amazon Bedrock平台集成OpenAI模型（GPT-4、GPT-3.5-turbo），通过有状态运行时环境保留对话上下文。官方数据显示可减少约30% API调用数据量并降低20%部署成本。",
+      "excerpt_en": "AWS announces integration of OpenAI models (GPT-4, GPT-3.5-turbo) on Amazon Bedrock platform, using stateful runtime to preserve conversation context. Official data shows ~30% reduction in API call data volume and 20% lower deployment costs.",
+      "date": "04-28",
+      "source": "TMT Post",
+      "category": "industry",
+      "url": "https://www.tmtpost.com/7969276.html"
+    },
+    {
+      "id": "news-006",
+      "title_zh": "OpenAI进军手机硬件：与联发科高通合作开发专用处理器",
+      "title_en": "OpenAI Enters Mobile Hardware: Partners with MediaTek and Qualcomm on Custom Chip",
+      "excerpt_zh": "据天风国际分析师郭明錤报告，OpenAI正与高通、联发科合作开发专用手机处理器，并与立讯精密合作制造，预计2028年量产。旨在构建\"软件-硬件\"闭环，完全掌控AI Agent服务生态。",
+      "excerpt_en": "According to TF International analyst Ming-Chi Kuo, OpenAI is partnering with Qualcomm and MediaTek to develop a dedicated mobile processor, with Luxshare Precision manufacturing. Expected mass production in 2028, aiming for full control of AI Agent ecosystem.",
+      "date": "04-28",
+      "source": "TMT Post",
+      "category": "tech",
+      "url": "https://www.tmtpost.com/7969276.html"
+    },
+    {
+      "id": "news-007",
+      "title_zh": "谷歌逾580名员工联署请愿，拒绝承接美军机密AI业务",
+      "title_en": "Over 580 Google Employees Petition Against Classified AI Work for US Military",
+      "excerpt_zh": "谷歌内部掀起抗议浪潮，逾580名AI研究人员联署公开信，要求CEO Sundar Pichai拒绝将AI系统用于美国国防部涉密任务。签署者包含超过20名总监及副总裁级别高管，以及DeepMind多名高级员工。",
+      "excerpt_en": "Internal protests at Google as 580+ AI researchers sign open letter urging CEO Sundar Pichai to refuse using AI systems for classified US Department of Defense missions. Signatories include 20+ directors, VPs, and senior DeepMind staff.",
+      "date": "04-28",
+      "source": "Sina Finance",
+      "category": "policy",
+      "url": "https://finance.sina.com.cn/stock/t/2026-04-28/doc-inhvyvas8704958.shtml"
+    },
+    {
+      "id": "news-008",
+      "title_zh": "广东AI核心产业规模突破3000亿元，占全国约1/4",
+      "title_en": "Guangdong AI Core Industry Exceeds ¥300 Billion, About 1/4 of National Total",
+      "excerpt_zh": "广东省人工智能应用对接大会透露，2025年全省人工智能核心产业规模预计突破3000亿元、同比增长超40%，规模约占全国1/4。深圳拥有全省最多AI企业，\"广深双核引领\"格局成型。",
+      "excerpt_en": "Guangdong AI Application Conference reveals the province's AI core industry is expected to exceed ¥300 billion in 2025, up 40%+ YoY, accounting for about 1/4 of China's total. Shenzhen has the most AI enterprises, forming a 'Guangzhou-Shenzhen dual-core' pattern.",
+      "date": "04-28",
+      "source": "Sina Finance",
+      "category": "policy",
+      "url": "https://finance.sina.com.cn/jjxw/2026-04-28/doc-inhvyquq8797372.shtml"
+    },
+    {
+      "id": "news-009",
+      "title_zh": "埃森哲为74.3万名员工全面部署Copilot AI助手",
+      "title_en": "Accenture Deploys Copilot AI Assistant to All 743,000 Employees",
+      "excerpt_zh": "微软宣布埃森哲正为其全部约74.3万名员工部署Copilot人工智能助手。这是目前全球最大规模的企业级AI助手部署案例之一，标志着AI助手从试点走向大规模商用。",
+      "excerpt_en": "Microsoft announces Accenture is deploying Copilot AI assistant to all ~743,000 employees. One of the world's largest enterprise AI assistant deployments, marking the transition from pilot to large-scale commercial use.",
+      "date": "04-28",
+      "source": "Sina Finance",
+      "category": "industry",
+      "url": "https://finance.sina.com.cn/7x24/2026-04-28/doc-inhvyquu8795258.shtml"
+    },
+    {
+      "id": "news-010",
+      "title_zh": "DeepSeek V4系列API大幅降价：Pro限时2.5折，Flash缓存命中降至1/10",
+      "title_en": "DeepSeek V4 Series API Prices Slashed: Pro at 75% Off, Flash Cache Hit 1/10th",
+      "excerpt_zh": "DeepSeek宣布V4-Pro模型API限时2.5折，V4全系列输入缓存命中价格降至原有1/10。Pro模型每百万tokens输入缓存命中仅0.025元，Flash仅0.02元。国产大模型价格战再掀高潮。",
+      "excerpt_en": "DeepSeek announces V4-Pro API limited-time 75% discount, V4 series input cache hit prices drop to 1/10 of original. Pro model at ¥0.025 per million tokens cache hit, Flash at ¥0.02. Domestic LLM price war heats up again.",
+      "date": "04-25~28",
+      "source": "Sina Tech",
+      "category": "tech",
+      "url": "https://k.sina.com.cn/article_5952915705_162d248f906702un02.html"
+    }
+  ],
+  "weekly": [
+    {
+      "day": "周一",
+      "day_en": "Mon",
+      "date": "04-28",
+      "count": 8,
+      "items": [
+        {"title_zh": "微软与OpenAI重组合作", "title_en": "Microsoft-OpenAI Deal Restructured", "category": "breaking", "url": "https://decrypt.co/365630/microsoft-openai-rework-ai-deal-cutting-exclusivity-agi-provisions"},
+        {"title_zh": "DeepMind元老11亿美元种子轮", "title_en": "DeepMind Vet $1.1B Seed Round", "category": "breaking", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-28/doc-inhvyvau7495063.shtml"},
+        {"title_zh": "Claude自主完成186笔交易", "title_en": "Claude Completes 186 Transactions", "category": "tech", "url": "https://www.tmtpost.com/7969276.html"},
+        {"title_zh": "亚马逊Bedrock集成OpenAI", "title_en": "Amazon Bedrock Integrates OpenAI", "category": "industry", "url": "https://www.tmtpost.com/7969276.html"},
+        {"title_zh": "谷歌员工抗议军方AI", "title_en": "Google Staff Protest Military AI", "category": "policy", "url": "https://finance.sina.com.cn/stock/t/2026-04-28/doc-inhvyvas8704958.shtml"},
+        {"title_zh": "广东AI产业突破3000亿", "title_en": "Guangdong AI Industry ¥300B+", "category": "policy", "url": "https://finance.sina.com.cn/jjxw/2026-04-28/doc-inhvyquq8797372.shtml"},
+        {"title_zh": "埃森哲74.3万人部署Copilot", "title_en": "Accenture 743K Copilot Deploy", "category": "industry", "url": "https://finance.sina.com.cn/7x24/2026-04-28/doc-inhvyquu8795258.shtml"},
+        {"title_zh": "DeepSeek V4大幅降价", "title_en": "DeepSeek V4 Price Cut", "category": "tech", "url": "https://k.sina.com.cn/article_5952915705_162d248f906702un02.html"}
+      ]
+    },
+    {
+      "day": "周日",
+      "day_en": "Sun",
+      "date": "04-27",
+      "count": 8,
+      "items": [
+        {"title_zh": "马斯克诉OpenAI正式开庭", "title_en": "Musk vs OpenAI Trial Begins", "category": "breaking", "url": "https://www.reuters.com/technology/"},
+        {"title_zh": "DeepSeek携手华为昇腾", "title_en": "DeepSeek Partners with Huawei Ascend", "category": "tech", "url": "https://www.icsmart.cn/"},
+        {"title_zh": "地平线发布「星空」芯片", "title_en": "Horizon Robotics Unveils 'Star' Chip", "category": "tech", "url": "https://tech.sina.com.cn/ai/"},
+        {"title_zh": "Meta大规模部署AWS Graviton", "title_en": "Meta Deploys AWS Graviton at Scale", "category": "industry", "url": "https://www.bloomberg.com/news/technology"},
+        {"title_zh": "内蒙古启动AI+制造行动", "title_en": "Inner Mongolia AI+Manufacturing Initiative", "category": "policy", "url": "https://www.gov.cn/zhengce/zhengceku/"},
+        {"title_zh": "深圳AI规上企业超2600家", "title_en": "Shenzhen 2600+ AI Enterprises", "category": "industry", "url": "https://tech.sina.com.cn/ai/"},
+        {"title_zh": "商汤提出AI Token Factory", "title_en": "SenseTime Proposes AI Token Factory", "category": "tech", "url": "https://www.icsmart.cn/"},
+        {"title_zh": "3D DRAM验证成功", "title_en": "3D DRAM Verification Success", "category": "tech", "url": "https://www.donews.com/"}
+      ]
+    },
+    {
+      "day": "周六",
+      "day_en": "Sat",
+      "date": "04-26",
+      "count": 2,
+      "items": [
+        {"title_zh": "中国AI专利量质齐升", "title_en": "China AI Patents Rise in Quantity and Quality", "category": "tech", "url": "https://tech.sina.com.cn/ai/"},
+        {"title_zh": "联想牵手作业帮发布Claw AI一体机", "title_en": "Lenovo & Zuoyebang Launch Claw AI PC", "category": "industry", "url": "https://www.geekpark.net/"}
+      ]
+    },
+    {
+      "day": "周五",
+      "day_en": "Fri",
+      "date": "04-25",
+      "count": 0,
+      "items": []
+    },
+    {
+      "day": "周四",
+      "day_en": "Thu",
+      "date": "04-24",
+      "count": 0,
+      "items": []
+    }
+  ],
+  "stats": [
+    {"num": "$135B+", "label_zh": "微软持股OpenAI估值", "label_en": "Microsoft's OpenAI Stake Valuation"},
+    {"num": "$1.1B", "label_zh": "Ineffable种子轮金额", "label_en": "Ineffable Seed Round"},
+    {"num": "¥3000亿", "label_zh": "广东AI产业规模", "label_en": "Guangdong AI Industry Scale"},
+    {"num": "74.3万", "label_zh": "埃森哲Copilot部署人数", "label_en": "Accenture Copilot Deployed"},
+    {"num": "2600+", "label_zh": "深圳AI规上企业", "label_en": "Shenzhen AI Enterprises"},
+    {"num": "60%", "label_zh": "中国占全球AI专利", "label_en": "China's Share of Global AI Patents"}
+  ],
+  "hotList": [
+    {"title_zh": "微软与OpenAI重组合作", "title_en": "Microsoft-OpenAI Deal Restructured", "url": "https://decrypt.co/365630/microsoft-openai-rework-ai-deal-cutting-exclusivity-agi-provisions"},
+    {"title_zh": "DeepMind元老11亿美元种子轮", "title_en": "DeepMind Vet $1.1B Seed Round", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-28/doc-inhvyvau7495063.shtml"},
+    {"title_zh": "Claude自主完成186笔交易", "title_en": "Claude Completes 186 Transactions", "url": "https://www.tmtpost.com/7969276.html"},
+    {"title_zh": "谷歌员工抗议军方AI合作", "title_en": "Google Staff Protest Military AI", "url": "https://finance.sina.com.cn/stock/t/2026-04-28/doc-inhvyvas8704958.shtml"},
+    {"title_zh": "OpenAI进军手机芯片", "title_en": "OpenAI Enters Mobile Chips", "url": "https://www.tmtpost.com/7969276.html"},
+    {"title_zh": "埃森哲74.3万人部署Copilot", "title_en": "Accenture 743K Copilot Deploy", "url": "https://finance.sina.com.cn/7x24/2026-04-28/doc-inhvyquu8795258.shtml"},
+    {"title_zh": "DeepSeek V4大幅降价", "title_en": "DeepSeek V4 Price Cut", "url": "https://k.sina.com.cn/article_5952915705_162d248f906702un02.html"},
+    {"title_zh": "广东AI产业突破3000亿", "title_en": "Guangdong AI Industry ¥300B+", "url": "https://finance.sina.com.cn/jjxw/2026-04-28/doc-inhvyquq8797372.shtml"}
+  ],
+  "tags": [
+    "DeepSeek", "华为", "OpenAI", "马斯克", "地平线", "Meta", "芯片", "3D DRAM", "专利", "深圳", "教育AI", "Token", "Microsoft", "AWS", "AI战略", "Amazon"
+  ],
+  "sources": ["云头条", "Reuters", "Bloomberg", "芯智讯", "极客公园", "Tech Daily", "Sina Tech", "Gov.cn", "DoNews"]
+}

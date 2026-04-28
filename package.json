@@ -1,0 +1,16 @@
+{
+  "name": "ai-news-daily",
+  "version": "4.1.0",
+  "description": "AI前线 - 每日AI新闻自动聚合网站（数据驱动渲染版）",
+  "scripts": {
+    "serve": "python3 -m http.server 8080",
+    "deploy": "bash deploy.sh"
+  },
+  "keywords": ["AI", "news", "daily", "aggregation", "frontline"],
+  "author": "mjinjiu",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjinjiu/ai-news-daily.git"
+  }
+}

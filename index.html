@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ========== SEO / 社交分享 (Issue #11) ========== -->
+  <title>AI前线 - AI News & API Pricing</title>
+  <meta name="description" content="AI前线 - 每日追踪人工智能最新动态、深度解读与API定价对比。聚合全球AI新闻，提供行业洞察与趋势判断。">
+  <meta name="keywords" content="AI新闻,人工智能,大模型,OpenAI,DeepSeek,API定价,AI前沿">
+  <meta name="author" content="AI前线">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://mjinjiu.github.io/ai-news-daily/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mjinjiu.github.io/ai-news-daily/">
+  <meta property="og:title" content="AI前线 - 每日AI新闻聚合">
+  <meta property="og:description" content="追踪人工智能最新动态与行业趋势，提供深度解读与API定价对比。">
+  <meta property="og:image" content="https://mjinjiu.github.io/ai-news-daily/images/og-cover.png">
+  <meta property="og:locale" content="zh_CN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AI前线 - 每日AI新闻聚合">
+  <meta name="twitter:description" content="追踪人工智能最新动态与行业趋势，提供深度解读与API定价对比。">
+  <meta name="twitter:image" content="https://mjinjiu.github.io/ai-news-daily/images/og-cover.png">
+
+  <!-- Google Analytics 4 — 请替换 G-PLACEHOLDER 为您的真实Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6EWLPV4J4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-C6EWLPV4J4');
+  </script>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Skip Link (可访问性 Issue #12) -->
+  <a href="#mainContent" class="skip-link">跳转到主要内容</a>
+
+  <!-- ========== 顶部导航 (可访问性增强) ========== -->
+  <nav class="navbar" role="navigation" aria-label="主导航">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo" aria-label="AI前线首页">AI前线</a>
+      <div class="nav-links">
+        <a href="#news" class="nav-link active" data-section="news" aria-current="page">📰 AI新闻</a>
+        <a href="#analysis" class="nav-link" data-section="analysis" aria-current="false">🔍 深度解读</a>
+        <a href="#pricing" class="nav-link" data-section="pricing" aria-current="false">💰 API定价</a>
+        <button class="lang-toggle" id="langToggle" aria-label="切换语言" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 广告位：顶部横幅 -->
+  <div class="ad-banner" id="adTop">
+    <div class="ad-placeholder">
+      <span data-i18n="adTopPlaceholder">📢 广告位：此处可挂载 Google AdSense / 百度联盟等广告</span>
+    </div>
+  </div>
+
+  <!-- ========== 主内容区 ========== -->
+  <main class="main-container" id="mainContent" role="main">
+    <div class="content-area">
+
+      <!-- ========== AI新闻板块 ========== -->
+      <section id="newsSection" class="main-section active" aria-labelledby="newsHeading">
+        <header class="page-header">
+          <h1 id="newsHeading">⚡ 每日AI前线</h1>
+          <p class="subtitle">追踪人工智能最新动态与行业趋势</p>
+          <p class="update-time">更新于：2026-04-28</p>
+        </header>
+
+        <div class="news-layout">
+          <!-- 左侧：主内容 -->
+          <div class="news-main">
+            <!-- 头条区 — 由 renderer.js 填充 -->
+            <div class="featured-row" id="featuredRow">
+              <!-- dynamic -->
+            </div>
+
+            <!-- 今日新闻列表 — 由 renderer.js 填充 -->
+            <div class="news-today">
+              <div class="section-header">
+                <div class="header-left">
+                  <h2>📰 今日新闻</h2>
+                  <span class="date-badge">4月28日</span>
+                </div>
+                <span class="count news-count">8 条</span>
+              </div>
+              <div class="news-list" id="newsList">
+                <!-- dynamic -->
+              </div>
+            </div>
+
+            <!-- 信息流广告位 -->
+            <div class="ad-infeed" id="adInfeed">
+              <div class="ad-placeholder">
+                <span data-i18n="adInfeedPlaceholder">📢 信息流广告位（文章之间）</span>
+              </div>
+            </div>
+
+            <!-- 本周回顾 — 由 renderer.js 填充 -->
+            <div class="weekly-review">
+              <div class="section-header">
+                <h2>📅 本周回顾</h2>
+                <span class="range">4.21 — 4.28</span>
+              </div>
+              <div class="week-timeline" id="weekTimeline">
+                <!-- dynamic -->
+              </div>
+            </div>
+
+            <!-- 统计速览 — 由 renderer.js 填充 -->
+            <section class="stats-section" aria-labelledby="statsHeading">
+              <h2 id="statsHeading">📊 今日AI圈速览</h2>
+              <div class="stats-row" id="statsRow">
+                <!-- dynamic -->
+              </div>
+            </section>
+          </div>
+
+          <!-- 右侧边栏 — 由 renderer.js 填充 -->
+          <aside class="news-sidebar" role="complementary" aria-label="侧边栏">
+            <div class="widget hot-topics">
+              <h3>🔥 本周热榜</h3>
+              <ol class="hot-list" id="hotList">
+                <!-- dynamic -->
+              </ol>
+            </div>
+
+            <div class="widget tag-cloud">
+              <h3>🏷️ 热门标签</h3>
+              <div class="tags" id="tagCloud">
+                <!-- dynamic -->
+              </div>
+            </div>
+
+            <!-- 侧边栏广告 -->
+            <div class="widget ad-widget" id="sidebarAd">
+              <div class="ad-placeholder sidebar">
+                <span data-i18n="adSidebarPlaceholder">📢 侧边广告位<br>300×600 / 300×250</span>
+              </div>
+            </div>
+
+            <div class="widget archive">
+              <h3>📂 历史归档</h3>
+              <ul class="archive-list" id="archiveList">
+                <li><a href="#"><span class="archive-week">2026.04 第三周</span><span class="archive-count">10 条</span></a></li>
+                <li class="archive-empty"><span class="archive-week">2026.04 第二周</span><span class="archive-count">—</span></li>
+                <li class="archive-empty"><span class="archive-week">2026.04 第一周</span><span class="archive-count">—</span></li>
+                <li class="archive-empty"><span class="archive-week">2026.03 第四周</span><span class="archive-count">—</span></li>
+              </ul>
+              <p class="archive-hint">💡 暂无更早归档，新数据将在每周日自动归档</p>
+            </div>
+
+            <div class="widget sources">
+              <h3>📡 信源</h3>
+              <div class="source-list" id="sourceList">
+                <!-- dynamic -->
+              </div>
+            </div>
+
+            <div class="widget site-widget">
+              <h3>🌍 国际版</h3>
+              <p class="site-desc">专为海外读者打造的英文版AI前线</p>
+              <a href="https://mjinjiu.github.io/ai-news-daily-en/" class="site-link" target="_blank" rel="noopener noreferrer">👉 访问 AI Frontline →</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========== 深度解读板块 ========== -->
+      <section id="analysisSection" class="main-section" aria-labelledby="analysisHeading">
+        <header class="page-header">
+          <h1 id="analysisHeading">🔍 AI前线深度解读</h1>
+          <p class="subtitle">不止于新闻，更提供行业洞察与趋势判断</p>
+          <p class="update-time">更新于：2026-04-28</p>
+        </header>
+
+        <div class="analysis-layout">
+          <div class="analysis-featured" id="analysisFeatured">
+            <!-- 由 renderer.js 填充 -->
+          </div>
+          <div class="pagination" role="navigation" aria-label="深度解读分页">
+            <button data-analysis-action="prev" id="analysisPrev">← 上一页</button>
+            <span class="page-num" id="analysisPageNum">1 / 1</span>
+            <button data-analysis-action="next" id="analysisNext">下一页 →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== API定价板块 ========== -->
+      <section id="pricingSection" class="main-section" aria-labelledby="pricingHeading">
+        <header class="page-header">
+          <h1 id="pricingHeading">💰 主流大模型API定价对比</h1>
+          <p class="subtitle">每百万Token计价 · 数据截至2026年4月 · 仅供参考</p>
+          <p class="note">* 价格随时可能变动，请以各平台官方文档为准</p>
+        </header>
+
+        <div class="pricing-group">
+          <h2 class="group-title">🌍 国际模型 International Models</h2>
+          <div class="pricing-table-wrapper">
+            <table class="pricing-table" role="table" aria-label="国际模型API定价">
+              <thead>
+                <tr role="row">
+                  <th role="columnheader">模型</th>
+                  <th role="columnheader">输入 Input</th>
+                  <th role="columnheader">输出 Output</th>
+                  <th role="columnheader">上下文</th>
+                  <th role="columnheader">性价比</th>
+                </tr>
+              </thead>
+              <tbody id="pricingIntlBody">
+                <!-- 由 renderer.js 填充 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pricing-group">
+          <h2 class="group-title">🇨🇳 国产模型 China Models (人民币 RMB)</h2>
+          <div class="pricing-table-wrapper">
+            <table class="pricing-table" role="table" aria-label="国产模型API定价">
+              <thead>
+                <tr role="row">
+                  <th role="columnheader">模型</th>
+                  <th role="columnheader">输入 Input</th>
+                  <th role="columnheader">输出 Output</th>
+                  <th role="columnheader">上下文</th>
+                  <th role="columnheader">性价比</th>
+                </tr>
+              </thead>
+              <tbody id="pricingChinaBody">
+                <!-- 由 renderer.js 填充 -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="pricing-group">
+          <h2 class="group-title">🎫 订阅方案对比</h2>
+          <div class="plan-cards" id="pricingPlans">
+            <!-- 由 renderer.js 填充 -->
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- 底部广告 -->
+  <div class="ad-bottom" id="adBottom">
+    <div class="ad-placeholder">
+      <span data-i18n="adBottomPlaceholder">📢 底部广告位 · 728×90 / 970×90</span>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <p>AI前线 © 2026 · AI Frontline · 每日更新</p>
+      <p class="footer-note">数据来源：公开网络资讯整理 · 广告收入用于维持服务器运营</p>
+    </div>
+  </footer>
+
+  <!-- ========== 脚本加载 ========== -->
+  <script src="js/i18n.js"></script>
+  <script src="js/renderer.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

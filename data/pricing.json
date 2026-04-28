@@ -1,0 +1,34 @@
+{
+  "updatedAt": "2026-04",
+  "note_zh": "价格随时可能变动，请以各平台官方文档为准",
+  "note_en": "Prices are subject to change. Please refer to official documentation.",
+  "international": [
+    {"model": "Claude Opus 4.6", "vendor": "Anthropic", "input": "$5.00", "output": "$25.00", "context": "1M", "tier": "flagship", "badge_zh": "💎 旗舰", "badge_en": "💎 Flagship"},
+    {"model": "Claude Sonnet 4.6", "vendor": "Anthropic", "input": "$3.00", "output": "$15.00", "context": "1M", "tier": "high", "badge_zh": "⚖️ 均衡", "badge_en": "⚖️ Balanced"},
+    {"model": "Claude Haiku 4.5", "vendor": "Anthropic", "input": "$1.00", "output": "$5.00", "context": "200K", "tier": "low", "badge_zh": "🏆 推荐", "badge_en": "🏆 Recommended"},
+    {"model": "GPT-5.4", "vendor": "OpenAI", "input": "$2.50", "output": "$15.00", "context": "272K", "tier": "high", "badge_zh": "⚖️ 均衡", "badge_en": "⚖️ Balanced"},
+    {"model": "GPT-4o", "vendor": "OpenAI", "input": "$2.50", "output": "$10.00", "context": "128K", "tier": "mid", "badge_zh": "⚖️ 均衡", "badge_en": "⚖️ Balanced"},
+    {"model": "GPT-4.1", "vendor": "OpenAI", "input": "$2.00", "output": "$8.00", "context": "1M", "tier": "mid", "badge_zh": "🏆 推荐", "badge_en": "🏆 Recommended"},
+    {"model": "GPT-4.1 mini", "vendor": "OpenAI", "input": "$0.40", "output": "$1.60", "context": "1M", "tier": "low", "badge_zh": "🏷️ 超值", "badge_en": "🏷️ Best Value"},
+    {"model": "Gemini 2.5 Pro", "vendor": "Google", "input": "$1.25", "output": "$10.00", "context": "1M", "tier": "mid", "badge_zh": "🏆 推荐", "badge_en": "🏆 Recommended"},
+    {"model": "Gemini 2.5 Flash", "vendor": "Google", "input": "$0.30", "output": "$2.50", "context": "1M", "tier": "budget", "badge_zh": "🏷️ 超值", "badge_en": "🏷️ Best Value"},
+    {"model": "Gemini 2.5 Flash-Lite", "vendor": "Google", "input": "$0.10", "output": "$0.40", "context": "1M", "tier": "budget", "badge_zh": "🏷️ 超值", "badge_en": "🏷️ Best Value"}
+  ],
+  "china": [
+    {"model": "DeepSeek-V4 Pro", "vendor": "DeepSeek", "input": "¥2.00", "output": "¥3.00", "context": "1M", "tier": "mid", "badge_zh": "🏷️ 超值", "badge_en": "🏷️ Best Value"},
+    {"model": "DeepSeek-V4 Flash", "vendor": "DeepSeek", "input": "¥0.50", "output": "¥1.00", "context": "1M", "tier": "budget", "badge_zh": "🏷️ 超值", "badge_en": "🏷️ Best Value"},
+    {"model": "Kimi K2.6", "vendor": "Moonshot", "input": "~¥3.00", "output": "~¥12.00", "context": "1M", "tier": "mid", "badge_zh": "🏆 推荐", "badge_en": "🏆 Recommended"},
+    {"model": "Qwen-MAX", "vendor": "Alibaba", "input": "~¥2.00", "output": "¥9.60", "context": "128K", "tier": "mid", "badge_zh": "⚖️ 均衡", "badge_en": "⚖️ Balanced"},
+    {"model": "Qwen-Plus", "vendor": "Alibaba", "input": "~¥0.50", "output": "¥2.00", "context": "128K", "tier": "budget", "badge_zh": "🏷️ 超值", "badge_en": "🏷️ Best Value"},
+    {"model": "Qwen-Turbo", "vendor": "Alibaba", "input": "~¥0.20", "output": "¥0.70", "context": "128K", "tier": "budget", "badge_zh": "🏷️ 超值", "badge_en": "🏷️ Best Value"},
+    {"model": "Qwen-Flash", "vendor": "Alibaba", "input": "免费", "output": "免费", "context": "128K", "tier": "free", "badge_zh": "免费", "badge_en": "Free"},
+    {"model": "豆包 Pro", "vendor": "ByteDance", "input": "~¥0.20", "output": "~¥0.80", "context": "200K", "tier": "budget", "badge_zh": "🏷️ 超值", "badge_en": "🏷️ Best Value"},
+    {"model": "GLM-5.1", "vendor": "Zhipu AI", "input": "~¥1.00", "output": "~¥5.00", "context": "128K", "tier": "mid", "badge_zh": "🏆 推荐", "badge_en": "🏆 Recommended"}
+  ],
+  "plans": [
+    {"name_zh": "ChatGPT Plus", "name_en": "ChatGPT Plus", "price": "$20", "period_zh": "/月", "period_en": "/mo", "features_zh": ["GPT-4o 无限制", "GPT-5.4 有限额度"], "features_en": ["GPT-4o unlimited", "GPT-5.4 limited quota"], "highlight": false},
+    {"name_zh": "Claude Pro", "name_en": "Claude Pro", "price": "$20", "period_zh": "/月", "period_en": "/mo", "features_zh": ["Sonnet 4 无限制", "Opus 4 有限额度"], "features_en": ["Sonnet 4 unlimited", "Opus 4 limited quota"], "highlight": true},
+    {"name_zh": "Gemini Advanced", "name_en": "Gemini Advanced", "price": "$20", "period_zh": "/月", "period_en": "/mo", "features_zh": ["Gemini 2.5 Pro 无限制", "多模态优先体验"], "features_en": ["Gemini 2.5 Pro unlimited", "Early multimodal access"], "highlight": false},
+    {"name_zh": "国内免费方案", "name_en": "China Free Plans", "price_zh": "免费", "price_en": "Free", "period_zh": "", "period_en": "", "features_zh": ["Kimi 大量免费额度", "豆包 完全免费", "DeepSeek 充足免费额度", "Qwen-Flash 免费"], "features_en": ["Kimi generous free quota", "Doubao completely free", "DeepSeek ample free quota", "Qwen-Flash free"], "highlight": false, "isFree": true}
+  ]
+}
