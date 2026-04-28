@@ -1,0 +1,70 @@
+name: AI前线 - 每日自动更新
+
+on:
+  # 每天北京时间 08:00 运行（UTC 00:00）
+  schedule:
+    - cron: '0 0 * * *'
+  # 允许手动触发
+  workflow_dispatch:
+    inputs:
+      debug_mode:
+        description: '调试模式'
+        required: false
+        default: 'false'
+
+jobs:
+  update-news:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: |
+          pip install -r scripts/requirements.txt
+
+      - name: 运行更新脚本
+        env:
+          KIMI_API_KEY: ${{ secrets.KIMI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          DEBUG_MODE: ${{ github.event.inputs.debug_mode || 'false' }}
+        run: |
+          python scripts/update.py
+
+      - name: 检查是否有变更
+        id: check_changes
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "✅ 没有新内容需要更新"
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: 提交并推送
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config user.name "AI前线 Bot"
+          git config user.email "bot@ai-frontline.com"
+          git commit -m "🤖 Auto-update: $(date +%Y-%m-%d) [skip ci]"
+          git push origin master
+
+      - name: 部署状态通知
+        if: always()
+        run: |
+          if [ "${{ job.status }}" = "success" ]; then
+            echo "✅ 自动更新完成：$(date +%Y-%m-%d)"
+          else
+            echo "❌ 自动更新失败，请检查 Actions 日志"
+          fi
