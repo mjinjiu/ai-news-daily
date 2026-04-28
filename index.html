@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI前线 - AI News & API Pricing</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Google Analytics 4 — 请替换 G-PLACEHOLDER 为您的真实Measurement ID -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-C6EWLPV4J4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,17 +17,11 @@
     <!-- 顶部导航 -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo" data-zh="AI前线" data-en="AI Frontline">AI前线</a>
+            <a href="index.html" class="nav-logo">AI前线</a>
             <div class="nav-links">
-                <a href="#news" class="nav-link active" data-section="news"
-                   data-zh="📰 AI新闻" data-en="📰 AI News"
-                   >📰 AI新闻</a>
-                <a href="#analysis" class="nav-link" data-section="analysis"
-                   data-zh="🔍 深度解读" data-en="🔍 Deep Analysis"
-                   >🔍 深度解读</a>
-                <a href="#pricing" class="nav-link" data-section="pricing"
-                   data-zh="💰 API定价" data-en="💰 API Pricing"
-                   >💰 API定价</a>
+                <a href="#news" class="nav-link active" data-section="news">📰 AI新闻</a>
+                <a href="#analysis" class="nav-link" data-section="analysis">🔍 深度解读</a>
+                <a href="#pricing" class="nav-link" data-section="pricing">💰 API定价</a>
                 <button class="lang-toggle" id="langToggle">EN</button>
             </div>
         </div>
@@ -47,9 +40,9 @@
             <!-- ========== AI新闻板块 ========== -->
             <section id="newsSection" class="section active">
                 <header class="page-header">
-                    <h1 data-zh="⚡ 每日AI前线" data-en="⚡ AI Frontline Daily">⚡ 每日AI前线</h1>
-                    <p class="subtitle" data-zh="追踪人工智能最新动态与行业趋势" data-en="Tracking the latest AI news and industry trends">追踪人工智能最新动态与行业趋势</p>
-                    <p class="update-time" data-zh="更新于：2026-04-27" data-en="Updated: 2026-04-27">更新于：2026-04-27</p>
+                    <h1>⚡ 每日AI前线</h1>
+                    <p class="subtitle">追踪人工智能最新动态与行业趋势</p>
+                    <p class="update-time">更新于：2026-04-27</p>
                 </header>
 
                 <div class="news-layout">
@@ -57,212 +50,46 @@
                     <div class="news-main">
                         <!-- 头条区 -->
                         <div class="featured-row">
-                            <article class="card featured" data-source-url="https://www.reuters.com/technology/">
-                                <div class="card-tag tag-breaking" data-zh="重磅" data-en="Breaking">重磅 Breaking</div>
-                                <h2 data-zh="马斯克诉OpenAI「世纪诉讼」正式开庭" data-en="Musk's 'Lawsuit of the Century' Against OpenAI Begins">马斯克诉OpenAI「世纪诉讼」正式开庭</h2>
-                                <p class="card-meta">2026-04-27 · Reuters</p>
-                                <p class="card-summary" data-zh="马斯克指控OpenAI背弃非营利使命，提出五项诉求包括追缴全部不法获利、撤销营利化转型和解除阿尔特曼职务。若胜诉，OpenAI融资、合作网络将重构，近6万亿元AI产业链或受冲击。" data-en="Musk accuses OpenAI of abandoning its non-profit mission. If he wins, OpenAI's funding and partnerships could be restructured, impacting the ~$840B AI industry.">马斯克指控OpenAI背弃非营利使命，提出五项诉求包括追缴全部不法获利、撤销营利化转型和解除阿尔特曼职务。若胜诉，OpenAI融资、合作网络将重构，近6万亿元AI产业链或受冲击。</p>
-                            </article>
-                            <article class="card featured" data-source-url="https://www.icsmart.cn/">
-                                <div class="card-tag tag-breaking" data-zh="重磅" data-en="Breaking">重磅 Breaking</div>
-                                <h2 data-zh="DeepSeek携手华为昇腾，推理成本暴降99%" data-en="DeepSeek + Huawei Ascent: Inference Cost Drops 99%">DeepSeek携手华为昇腾，推理成本暴降99%</h2>
-                                <p class="card-meta">2026-04-27 · 芯智讯</p>
-                                <p class="card-summary" data-zh="DeepSeek历时5个月完成与华为昇腾国产芯片的深度适配。华为CloudMatrix 384通过集群方式总性能反超英伟达NVL72达1.7倍，国产算力正从「能用」迈向「好用」。" data-en="DeepSeek completed deep adaptation with Huawei Ascent chips. CloudMatrix 384 outperforms NVIDIA NVL72 by 1.7x via clustering.">DeepSeek历时5个月完成与华为昇腾国产芯片的深度适配。华为CloudMatrix 384通过集群方式总性能反超英伟达NVL72达1.7倍，国产算力正从「能用」迈向「好用」。</p>
-                            </article>
+                            <!-- 由 renderer.js 填充 -->
                         </div>
 
                         <!-- 今日新闻列表 -->
                         <div class="news-today">
                             <div class="section-header">
                                 <div class="header-left">
-                                    <h2 data-zh="📰 今日新闻" data-en="📰 Today's News">📰 今日新闻</h2>
-                                    <span class="date-badge" data-zh="4月27日" data-en="Apr 27">4月27日</span>
+                                    <h2>📰 今日新闻</h2>
+                                    <span class="date-badge">4月27日</span>
                                 </div>
-                                <span class="count" data-zh="8 条" data-en="8 articles">8 条</span>
+                                <span class="count">8 条</span>
                             </div>
                             <div class="news-list">
-                                <div class="news-item" data-category="tech" data-source-url="https://tech.sina.com.cn/">
-                                    <div class="news-bar tech"></div>
-                                    <div class="news-body">
-                                        <h3 data-zh="地平线发布「星空」芯片，迈入整车智能体时代" data-en="Horizon Robotics Releases 'Starry' Chip">地平线发布「星空」芯片，迈入整车智能体时代</h3>
-                                        <p class="news-excerpt" data-zh="中国首款舱驾融合整车智能体芯片，完成从芯片到软件的整车计算平台全覆盖。" data-en="China's first cabin-drive integrated vehicle intelligence chip.">中国首款舱驾融合整车智能体芯片，完成从芯片到软件的整车计算平台全覆盖。</p>
-                                        <div class="news-footer">
-                                            <span class="news-tag tag-tech" data-zh="技术" data-en="Tech">技术 Tech</span>
-                                            <span class="news-source">Sina Tech</span>
-                                            <span class="news-date">04-27</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-item" data-category="industry" data-source-url="https://www.bloomberg.com/">
-                                    <div class="news-bar industry"></div>
-                                    <div class="news-body">
-                                        <h3 data-zh="Meta大规模部署AWS Graviton处理器发力代理AI" data-en="Meta Deploys AWS Graviton at Scale for Agentic AI">Meta大规模部署AWS Graviton处理器发力代理AI</h3>
-                                        <p class="news-excerpt" data-zh="Meta与亚马逊AWS签署合作协议，大规模部署Graviton处理器支持新一代AI系统。" data-en="Meta signs deal with AWS to deploy Graviton processors for next-gen AI systems.">Meta与亚马逊AWS签署合作协议，大规模部署Graviton处理器支持新一代AI系统。</p>
-                                        <div class="news-footer">
-                                            <span class="news-tag tag-industry" data-zh="行业" data-en="Industry">行业 Industry</span>
-                                            <span class="news-source">Bloomberg</span>
-                                            <span class="news-date">04-27</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-item" data-category="policy" data-source-url="https://www.gov.cn/">
-                                    <div class="news-bar policy"></div>
-                                    <div class="news-body">
-                                        <h3 data-zh="内蒙古启动「人工智能+制造」三年专项行动" data-en="Inner Mongolia Launches 'AI + Manufacturing' 3-Year Plan">内蒙古启动「人工智能+制造」三年专项行动</h3>
-                                        <p class="news-excerpt" data-zh="围绕冶金、装备制造、煤化工等领域推进智能化改造。" data-en="Smart transformation in metallurgy, equipment manufacturing, coal chemical industry.">围绕冶金、装备制造、煤化工等领域推进智能化改造。</p>
-                                        <div class="news-footer">
-                                            <span class="news-tag tag-policy" data-zh="政策" data-en="Policy">政策 Policy</span>
-                                            <span class="news-source">Gov.cn</span>
-                                            <span class="news-date">04-27</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-item" data-category="industry" data-source-url="https://tech.sina.com.cn/">
-                                    <div class="news-bar industry"></div>
-                                    <div class="news-body">
-                                        <h3 data-zh="深圳AI规上企业超2600家，核心产业营收2200亿元" data-en="Shenzhen: 2,600+ AI Enterprises, ¥220B Revenue">深圳AI规上企业超2600家，核心产业营收2200亿元</h3>
-                                        <p class="news-excerpt" data-zh="累计发布5批近300个「城市+AI」应用场景清单。" data-en="Released ~300 city-level AI application scenarios across 5 batches.">累计发布5批近300个「城市+AI」应用场景清单。</p>
-                                        <div class="news-footer">
-                                            <span class="news-tag tag-industry" data-zh="行业" data-en="Industry">行业 Industry</span>
-                                            <span class="news-source">21st Century Biz</span>
-                                            <span class="news-date">04-27</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-item" data-category="tech" data-source-url="https://www.icsmart.cn/">
-                                    <div class="news-bar tech"></div>
-                                    <div class="news-body">
-                                        <h3 data-zh="3D DRAM验证成功，AI内存将迎来革命" data-en="3D DRAM Validation Success: AI Memory Revolution">3D DRAM验证成功，AI内存将迎来革命</h3>
-                                        <p class="news-excerpt" data-zh="NEO Semiconductor 3D X-DRAM技术完成概念验证，可利用现有3D NAND生产线。" data-en="NEO Semiconductor's 3D X-DRAM PoC validated, can use existing 3D NAND lines.">NEO Semiconductor 3D X-DRAM技术完成概念验证，可利用现有3D NAND生产线。</p>
-                                        <div class="news-footer">
-                                            <span class="news-tag tag-tech" data-zh="技术" data-en="Tech">技术 Tech</span>
-                                            <span class="news-source">芯智讯</span>
-                                            <span class="news-date">04-23~27</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-item" data-category="industry" data-source-url="https://www.donews.com/">
-                                    <div class="news-bar industry"></div>
-                                    <div class="news-body">
-                                        <h3 data-zh="联想牵手作业帮发布教育行业首款Claw AI一体机" data-en="Lenovo & Zuoyebang Launch Claw AI一体机 for Education">联想牵手作业帮发布教育行业首款Claw AI一体机</h3>
-                                        <p class="news-excerpt" data-zh="出厂预装学情分析Skills，教师无需配置即可上手。" data-en="Pre-installed learning analytics skills, teachers can use out-of-the-box.">出厂预装学情分析Skills，教师无需配置即可上手。</p>
-                                        <div class="news-footer">
-                                            <span class="news-tag tag-industry" data-zh="行业" data-en="Industry">行业 Industry</span>
-                                            <span class="news-source">DoNews</span>
-                                            <span class="news-date">04-26~27</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-item" data-category="policy" data-source-url="https://tech.sina.com.cn/">
-                                    <div class="news-bar policy"></div>
-                                    <div class="news-body">
-                                        <h3 data-zh="中国AI专利量质齐升：占全球约60%" data-en="China Holds ~60% of Global AI Patents">中国AI专利量质齐升：占全球约60%</h3>
-                                        <p class="news-excerpt" data-zh="高价值发明专利229.2万件，其中七成属于战略性新兴产业。" data-en="2.29M high-value invention patents, 70% in strategic emerging industries.">高价值发明专利229.2万件，其中七成属于战略性新兴产业。</p>
-                                        <div class="news-footer">
-                                            <span class="news-tag tag-policy" data-zh="政策" data-en="Policy">政策 Policy</span>
-                                            <span class="news-source">China Women's Network</span>
-                                            <span class="news-date">04-26</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="news-item" data-category="tech" data-source-url="https://www.geekpark.net/">
-                                    <div class="news-bar tech"></div>
-                                    <div class="news-body">
-                                        <h3 data-zh="商汤提出「AI Token Factory」概念" data-en="SenseTime Proposes 'AI Token Factory' Concept">商汤提出「AI Token Factory」概念</h3>
-                                        <p class="news-excerpt" data-zh="Token开始替代Flops成为新度量衡，人机交互逐步让位于机机交互。" data-en="Token replaces Flops as new metric; human-AI interaction shifts to agent-agent.">Token开始替代Flops成为新度量衡，人机交互逐步让位于机机交互。</p>
-                                        <div class="news-footer">
-                                            <span class="news-tag tag-tech" data-zh="技术" data-en="Tech">技术 Tech</span>
-                                            <span class="news-source">Tech Daily · 极客公园</span>
-                                            <span class="news-date">04-27</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <!-- 由 renderer.js 填充 -->
                             </div>
                         </div>
 
                         <!-- 信息流广告位 -->
                         <div class="ad-infeed" id="adInfeed">
                             <div class="ad-placeholder">
-                                <span data-zh="📢 信息流广告位（文章之间）" data-en="📢 In-feed Ad (Between Articles)">📢 信息流广告位（文章之间）</span>
+                                <span>📢 信息流广告位（文章之间）</span>
                             </div>
                         </div>
 
                         <!-- 本周回顾 -->
                         <div class="weekly-review">
                             <div class="section-header">
-                                <h2 data-zh="📅 本周回顾" data-en="📅 Weekly Review">📅 本周回顾</h2>
-                                <span class="range" data-zh="4.21 — 4.27" data-en="Apr 21-27">4.21 — 4.27</span>
+                                <h2>📅 本周回顾</h2>
+                                <span class="range">4.21 — 4.27</span>
                             </div>
                             <div class="week-timeline">
-                                <div class="day-group">
-                                    <div class="day-header">
-                                        <span class="day-name" data-zh="周日" data-en="Sun">周日</span>
-                                        <span class="day-date">04-27</span>
-                                        <span class="day-count" data-zh="8 条" data-en="8 articles">8 条</span>
-                                    </div>
-                                    <ul class="day-list">
-                                        <li><span class="dot breaking"></span><a href="https://www.reuters.com/technology/" target="_blank" rel="noopener" data-zh="马斯克诉OpenAI「世纪诉讼」正式开庭" data-en="Musk Sues OpenAI: 'Lawsuit of the Century' Begins">马斯克诉OpenAI「世纪诉讼」正式开庭</a></li>
-                                        <li><span class="dot breaking"></span><a href="https://www.icsmart.cn/" target="_blank" rel="noopener" data-zh="DeepSeek携手华为昇腾，推理成本暴降99%" data-en="DeepSeek + Huawei: 99% Cost Drop">DeepSeek携手华为昇腾，推理成本暴降99%</a></li>
-                                        <li ><span class="dot tech"></span><a href="https://tech.sina.com.cn/ai/" target="_blank" rel="noopener" data-zh="地平线发布「星空」芯片" data-en="Horizon 'Starry' Chip Released">地平线发布「星空」芯片</a></li>
-                                        <li ><span class="dot industry"></span><a href="https://www.bloomberg.com/news/technology" target="_blank" rel="noopener" data-zh="Meta大规模部署AWS Graviton处理器" data-en="Meta Deploys AWS Graviton at Scale">Meta大规模部署AWS Graviton处理器</a></li>
-                                        <li ><span class="dot policy"></span><a href="https://www.gov.cn/zhengce/zhengceku/" target="_blank" rel="noopener" data-zh="内蒙古启动「AI+制造」三年行动" data-en="Inner Mongolia AI+Manufacturing Initiative">内蒙古启动「AI+制造」三年行动</a></li>
-                                        <li ><span class="dot industry"></span><a href="https://tech.sina.com.cn/ai/" target="_blank" rel="noopener" data-zh="深圳AI规上企业超2600家" data-en="Shenzhen 2600+ AI Firms">深圳AI规上企业超2600家</a></li>
-                                        <li ><span class="dot tech"></span><a href="https://www.icsmart.cn/" target="_blank" rel="noopener" data-zh="商汤提出「AI Token Factory」概念" data-en="SenseTime Proposes 'AI Token Factory'">商汤提出「AI Token Factory」概念</a></li>
-                                        <li ><span class="dot tech"></span><a href="https://www.donews.com/" target="_blank" rel="noopener" data-zh="3D DRAM验证成功" data-en="3D DRAM Validation Success">3D DRAM验证成功</a></li>
-                                    </ul>
-                                </div>
-                                <div class="day-group">
-                                    <div class="day-header">
-                                        <span class="day-name" data-zh="周六" data-en="Sat">周六</span>
-                                        <span class="day-date">04-26</span>
-                                        <span class="day-count" data-zh="2 条" data-en="2 articles">2 条</span>
-                                    </div>
-                                    <ul class="day-list">
-                                        <li ><span class="dot policy"></span><a href="https://tech.sina.com.cn/ai/" target="_blank" rel="noopener" data-zh="中国AI专利量质齐升：占全球约60%" data-en="China AI Patents Rise: ~60% Global">中国AI专利量质齐升：占全球约60%</a></li>
-                                        <li ><span class="dot industry"></span><a href="https://www.geekpark.net/" target="_blank" rel="noopener" data-zh="联想牵手作业帮发布Claw AI一体机" data-en="Lenovo & Zuoyebang Claw AI All-in-One">联想牵手作业帮发布Claw AI一体机</a></li>
-                                    </ul>
-                                </div>
-                                <div class="day-group">
-                                    <div class="day-header">
-                                        <span class="day-name" data-zh="周五" data-en="Fri">周五</span>
-                                        <span class="day-date">04-25</span>
-                                        <span class="day-count">—</span>
-                                    </div>
-                                    <ul class="day-list">
-                                        <li class="empty" data-zh="暂无新闻" data-en="No news">暂无新闻</li>
-                                    </ul>
-                                </div>
-                                <div class="day-group">
-                                    <div class="day-header">
-                                        <span class="day-name" data-zh="周四" data-en="Thu">周四</span>
-                                        <span class="day-date">04-24</span>
-                                        <span class="day-count">—</span>
-                                    </div>
-                                    <ul class="day-list">
-                                        <li class="empty" data-zh="暂无新闻" data-en="No news">暂无新闻</li>
-                                    </ul>
-                                </div>
-                                <div class="day-group">
-                                    <div class="day-header">
-                                        <span class="day-name" data-zh="周三" data-en="Wed">周三</span>
-                                        <span class="day-date">04-23</span>
-                                        <span class="day-count" data-zh="1 条" data-en="1 article">1 条</span>
-                                    </div>
-                                    <ul class="day-list">
-                                        <li ><span class="dot tech"></span><a href="https://www.donews.com/" target="_blank" rel="noopener" data-zh="3D DRAM验证成功（持续报道）" data-en="3D DRAM Validation (Ongoing)">3D DRAM验证成功（持续报道）</a></li>
-                                    </ul>
-                                </div>
+                                <!-- 由 renderer.js 填充 -->
                             </div>
                         </div>
 
                         <!-- 统计速览 -->
                         <section class="stats-section">
-                            <h2 data-zh="📊 今日AI圈速览" data-en="📊 Today's AI Snapshot">📊 今日AI圈速览</h2>
+                            <h2>📊 今日AI圈速览</h2>
                             <div class="stats-row">
-                                <div class="stat-item"><span class="stat-num">99%</span><span class="stat-label" data-zh="DeepSeek推理成本降幅" data-en="DeepSeek Cost Drop">DeepSeek推理成本降幅</span></div>
-                                <div class="stat-item"><span class="stat-num">2600+</span><span class="stat-label" data-zh="深圳AI规上企业" data-en="Shenzhen AI Firms">深圳AI规上企业</span></div>
-                                <div class="stat-item"><span class="stat-num">60%</span><span class="stat-label" data-zh="中国占全球AI专利" data-en="China's Global AI Patents">中国占全球AI专利</span></div>
-                                <div class="stat-item"><span class="stat-num">1.7x</span><span class="stat-label" data-zh="华为CM384超NV72" data-en="Huawei CM384 vs NV72">华为CM384超NV72</span></div>
+                                <!-- 由 renderer.js 填充 -->
                             </div>
                         </section>
                     </div>
@@ -270,34 +97,16 @@
                     <!-- 右侧边栏 -->
                     <aside class="news-sidebar">
                         <div class="widget hot-topics">
-                            <h3 data-zh="🔥 本周热榜" data-en="🔥 Weekly Hot">🔥 本周热榜</h3>
+                            <h3>🔥 本周热榜</h3>
                             <ol class="hot-list">
-                                <li><a href="https://www.icsmart.cn/" target="_blank" rel="noopener" data-zh="DeepSeek推理成本暴降99%" data-en="DeepSeek Cost Drops 99%">DeepSeek推理成本暴降99%</a></li>
-                                <li><a href="https://www.reuters.com/technology/" target="_blank" rel="noopener" data-zh="马斯克诉OpenAI正式开庭" data-en="Musk Sues OpenAI">马斯克诉OpenAI正式开庭</a></li>
-                                <li><a href="https://tech.sina.com.cn/ai/" target="_blank" rel="noopener" data-zh="地平线发布「星空」芯片" data-en="Horizon 'Starry' Chip">地平线发布「星空」芯片</a></li>
-                                <li><a href="https://tech.sina.com.cn/ai/" target="_blank" rel="noopener" data-zh="中国AI专利占全球60%" data-en="China 60% Global AI Patents">中国AI专利占全球60%</a></li>
-                                <li><a href="https://www.bloomberg.com/news/technology" target="_blank" rel="noopener" data-zh="Meta部署Graviton发力代理AI" data-en="Meta Graviton Agentic AI">Meta部署Graviton发力代理AI</a></li>
-                                <li><a href="https://tech.sina.com.cn/ai/" target="_blank" rel="noopener" data-zh="深圳AI企业超2600家" data-en="Shenzhen 2600+ AI Firms">深圳AI企业超2600家</a></li>
-                                <li><a href="https://www.donews.com/" target="_blank" rel="noopener" data-zh="3D DRAM验证成功" data-en="3D DRAM Validation">3D DRAM验证成功</a></li>
-                                <li><a href="https://www.geekpark.net/" target="_blank" rel="noopener" data-zh="联想作业帮Claw AI一体机" data-en="Lenovo Claw AI一体机">联想作业帮Claw AI一体机</a></li>
+                                <!-- 由 renderer.js 填充 -->
                             </ol>
                         </div>
 
                         <div class="widget tag-cloud">
-                            <h3 data-zh="🏷️ 热门标签" data-en="🏷️ Hot Tags">🏷️ 热门标签</h3>
+                            <h3>🏷️ 热门标签</h3>
                             <div class="tags">
-                                <span class="tag">DeepSeek</span>
-                                <span class="tag" data-zh="华为" data-en="Huawei">华为</span>
-                                <span class="tag">OpenAI</span>
-                                <span class="tag" data-zh="马斯克" data-en="Musk">马斯克</span>
-                                <span class="tag" data-zh="地平线" data-en="Horizon">地平线</span>
-                                <span class="tag">Meta</span>
-                                <span class="tag" data-zh="芯片" data-en="Chip">芯片</span>
-                                <span class="tag">3D DRAM</span>
-                                <span class="tag" data-zh="专利" data-en="Patent">专利</span>
-                                <span class="tag" data-zh="深圳" data-en="Shenzhen">深圳</span>
-                                <span class="tag" data-zh="教育AI" data-en="EdAI">教育AI</span>
-                                <span class="tag">Token</span>
+                                <!-- 由 renderer.js 填充 -->
                             </div>
                         </div>
 
@@ -309,37 +118,27 @@
                         </div>
 
                         <div class="widget archive">
-                            <h3 data-zh="📂 历史归档" data-en="📂 Archive">📂 历史归档</h3>
+                            <h3>📂 历史归档</h3>
                             <ul class="archive-list">
-                                <li><a href="archive/2026-04-W3.html"><span class="archive-week" data-zh="2026.04 第三周" data-en="2026.04 Week 3">2026.04 第三周</span><span class="archive-count" data-zh="10 条" data-en="10 articles">10 条</span></a></li>
-                                <li class="archive-empty"><span class="archive-week" data-zh="2026.04 第二周" data-en="2026.04 Week 2">2026.04 第二周</span><span class="archive-count" data-zh="—" data-en="—">—</span></li>
-                                <li class="archive-empty"><span class="archive-week" data-zh="2026.04 第一周" data-en="2026.04 Week 1">2026.04 第一周</span><span class="archive-count" data-zh="—" data-en="—">—</span></li>
-                                <li class="archive-empty"><span class="archive-week" data-zh="2026.03 第四周" data-en="2026.03 Week 4">2026.03 第四周</span><span class="archive-count" data-zh="—" data-en="—">—</span></li>
+                                <!-- 由 renderer.js 填充 -->
                             </ul>
-                            <p class="archive-hint" style="font-size:0.75rem;color:var(--text-tertiary);margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);" data-zh="💡 暂无更早归档，新数据将在每周日自动归档" data-en="💡 No earlier archives yet; new data auto-archived every Sunday">💡 暂无更早归档，新数据将在每周日自动归档</p>
+                            <p class="archive-hint" style="font-size:0.75rem;color:var(--text-tertiary);margin-top:8px;padding-top:8px;border-top:1px dashed var(--border);">
+                                💡 暂无更早归档，新数据将在每周日自动归档
+                            </p>
                         </div>
 
                         <div class="widget sources">
-                            <h3 data-zh="📡 信源" data-en="📡 Sources">📡 信源</h3>
+                            <h3>📡 信源</h3>
                             <div class="source-list">
-                                <span class="source-tag">云头条</span>
-                                <span class="source-tag">Reuters</span>
-                                <span class="source-tag">Bloomberg</span>
-                                <span class="source-tag">芯智讯</span>
-                                <span class="source-tag">极客公园</span>
-                                <span class="source-tag">Tech Daily</span>
-                                <span class="source-tag">Sina Tech</span>
-                                <span class="source-tag">Gov.cn</span>
-                                <span class="source-tag">DoNews</span>
+                                <!-- 由 renderer.js 填充 -->
                             </div>
                         </div>
-                        <div class="widget site-widget">
-                            <h3 data-zh="🌍 国际版" data-en="🌍 International">🌍 国际版</h3>
-                            <p class="site-desc" data-zh="专为海外读者打造的英文版AI前线" data-en="English version for global readers">专为海外读者打造的英文版AI前线</p>
-                            <a href="https://mjinjiu.github.io/ai-news-daily-en/" class="site-link"
-                               data-zh="👉 访问 AI Frontline →" data-en="👉 Visit AI Frontline →">👉 访问 AI Frontline →</a>
-                        </div>
 
+                        <div class="widget site-widget">
+                            <h3>🌍 国际版</h3>
+                            <p class="site-desc">专为海外读者打造的英文版AI前线</p>
+                            <a href="https://mjinjiu.github.io/ai-news-daily-en/" class="site-link">👉 访问 AI Frontline →</a>
+                        </div>
                     </aside>
                 </div>
             </section>
@@ -347,210 +146,37 @@
             <!-- ========== 深度解读板块 ========== -->
             <section id="analysisSection" class="section">
                 <header class="page-header">
-                    <h1 data-zh="🔍 AI前线深度解读" data-en="🔍 AI Frontline Deep Analysis">🔍 AI前线深度解读</h1>
-                    <p class="subtitle" data-zh="不止于新闻，更提供行业洞察与趋势判断" data-en="Beyond news — industry insights and trend analysis">不止于新闻，更提供行业洞察与趋势判断</p>
-                    <p class="update-time" data-zh="更新于：2026-04-27" data-en="Updated: 2026-04-27">更新于：2026-04-27</p>
+                    <h1>🔍 AI前线深度解读</h1>
+                    <p class="subtitle">不止于新闻，更提供行业洞察与趋势判断</p>
+                    <p class="update-time">更新于：2026-04-27</p>
                 </header>
 
                 <div class="analysis-layout">
                     <div class="analysis-featured">
-                        <div class="analysis-card featured">
-                            <div class="analysis-header">
-                                <span class="analysis-tag tag-breaking">A级·代表作</span>
-                                <span class="analysis-date">04-27</span>
-                            </div>
-                            <h2 data-zh="马斯克诉OpenAI：一场改写规则的世纪诉讼" data-en="Musk vs OpenAI: A Lawsuit That Could Rewrite the Rules"
-                               >马斯克诉OpenAI：一场改写规则的世纪诉讼</h2>
-                            <div class="analysis-summary">
-                                <p data-zh="马斯克正式起诉OpenAI，指控其背弃非营利使命。表面上是要'夺回初心'——但如果告诉你，他最不想看到的结局恰恰是OpenAI真的变回非营利，这个故事就更有趣了。" data-en="Musk formally sues OpenAI for abandoning its non-profit mission. On the surface, he wants to 'reclaim the original vision'—but what if his worst-case scenario is actually OpenAI going back to non-profit?"
-                                   >马斯克正式起诉OpenAI，指控其背弃非营利使命。表面上是要"夺回初心"——但如果告诉你，他最不想看到的结局恰恰是OpenAI真的变回非营利，这个故事就更有趣了。</p>
-                            </div>
-                            <div class="analysis-body">
-                                <div class="analysis-section">
-                                    <h3 data-zh="📌 事件摘要" data-en="📌 Event Summary"
-                                       >📌 事件摘要</h3>
-                                    <p data-zh="马斯克要求五项救济：没收非法利润、撤销营利转换、罢免Altman等。OpenAI估值$860亿，微软投资$130亿，2000+生态伙伴牵扯其中。诉讼预计耗时2-3年。" data-en="Musk demands five remedies: disgorgement of profits, reversal of for-profit conversion, removal of Altman, etc. OpenAI valued at $86B, Microsoft invested $13B, 2000+ partners involved. Lawsuit expected to take 2-3 years."
-                                       >马斯克要求五项救济：没收非法利润、撤销营利转换、罢免Altman等。OpenAI估值$860亿，微软投资$130亿，2000+生态伙伴牵扯其中。诉讼预计耗时2-3年。</p>
-                                </div>
-                                <div class="analysis-section">
-                                    <h3 data-zh="🔍 深度分析：三个维度的表面与反直觉" data-en="🔍 Deep Analysis: Surface vs Counter-Intuitive Across Three Dimensions"
-                                       >🔍 深度分析：三个维度的表面与反直觉</h3>
-                                    <div class="analysis-points">
-                                        <div class="point">
-                                            <span class="point-num">1️⃣</span>
-                                            <div class="point-content">
-                                                <strong data-zh="法律层面：马斯克的真正目标不是"赢"" data-en="Legal: Musk's Real Goal Isn't to 'Win'"
-                                                       >法律层面：马斯克的真正目标不是"赢"</strong>
-                                                <div class="surface-vs-insight">
-                                                    <p class="surface" data-zh="【表面】马斯克的核心论据是OpenAI违背了初始承诺。若法院认定营利转换违法，OpenAI可能退回非营利。" data-en="[Surface] Musk's core argument: OpenAI broke its initial non-profit promise. If the court rules the conversion illegal, OpenAI might revert to non-profit."
-                                                       >【表面】马斯克的核心论据是OpenAI违背了初始承诺。若法院认定营利转换违法，OpenAI可能退回非营利。</p>
-                                                    <p class="insight" data-zh="【反直觉】但马斯克聘用的律师团队有个微妙策略——他们要求"没收非法利润并赔偿"。这意味着马斯克可能不在乎OpenAI是否非营利，更在乎的是：如果法院认定营利转换"非法"，微软的$130亿就变成"非法所得"——微软可能被迫撤资，而马斯克可以用这笔钱为自己的xAI铺路。马斯克在用OpenAI的尸骸，给xAI争取18个月窗口期。" data-en="[Counter-Intuitive] Musk's legal team demands 'disgorgement of illicit profits'—not just reversal. If the court rules the conversion 'illegal,' Microsoft's $13B becomes 'illicit gains'—Microsoft may be forced to divest, and Musk could use that capital to fund xAI. Musk is using OpenAI's carcass to pave the road for xAI's 18-month runway."
-                                                       >【反直觉】但马斯克聘用的律师团队有个微妙策略——他们要求"没收非法利润并赔偿"。这意味着马斯克可能不在乎OpenAI是否非营利，更在乎的是：如果法院认定营利转换"非法"，微软的$130亿就变成"非法所得"——微软可能被迫撤资，而马斯克可以用这笔钱为自己的xAI铺路。马斯克在用OpenAI的尸骸，给xAI争取18个月窗口期。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="point">
-                                            <span class="point-num">2️⃣</span>
-                                            <div class="point-content">
-                                                <strong data-zh="商业影响：最慌乱的不是OpenAI，是Anthropic和Google" data-en="Business Impact: The Most Panicked Aren't OpenAI—It's Anthropic and Google"
-                                                       >商业影响：最慌乱的不是OpenAI，是Anthropic和Google</strong>
-                                                <div class="surface-vs-insight">
-                                                    <p class="surface" data-zh="【表面】若OpenAI被强制退回非营利，微软投资将面临无法退出困境，2000+生态伙伴需重新谈判。" data-en="[Surface] If OpenAI reverts to non-profit, Microsoft faces trapped capital, 2000+ partners must renegotiate."
-                                                       >【表面】若OpenAI被强制退回非营利，微软投资将面临无法退出困境，2000+生态伙伴需重新谈判。</p>
-                                                    <p class="insight" data-zh="【反直觉】但真正会慌乱的是Anthropic和Google。为什么？如果法院裁定"非营利承诺具有法律约束力"，Anthropic（也是非营利转营利）和Google的AI伦理承诺也可能被审视。马斯克这一招，可能不是针对OpenAI，而是给整个AI行业设了一个法律陷阱。" data-en="[Counter-Intuitive] The real panic will be at Anthropic and Google. Why? If the court rules that non-profit commitments are legally binding, Anthropic (also non-profit turned for-profit) and Google's AI ethics pledges could be scrutinized. Musk's move may not target OpenAI—it's a legal trap for the entire AI industry."
-                                                       >【反直觉】但真正会慌乱的是Anthropic和Google。为什么？如果法院裁定"非营利承诺具有法律约束力"，Anthropic（也是非营利转营利）和Google的AI伦理承诺也可能被审视。马斯克这一招，可能不是针对OpenAI，而是给整个AI行业设了一个法律陷阱。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="point">
-                                            <span class="point-num">3️⃣</span>
-                                            <div class="point-content">
-                                                <strong data-zh="行业意义：最支持马斯克的人，可能是OpenAI老员工" data-en="Industry Significance: Musk's Biggest Supporters May Be OpenAI's Own Veterans"
-                                                       >行业意义：最支持马斯克的人，可能是OpenAI老员工</strong>
-                                                <div class="surface-vs-insight">
-                                                    <p class="surface" data-zh="【表面】这是AI行业"理想主义vs商业利益"的路线之争。非营利胜则AI发展重回慢但安全轨道。" data-en="[Surface] This is the 'idealism vs commercial interest' battle. Non-profit victory means slower but safer AI development."
-                                                       >【表面】这是AI行业"理想主义vs商业利益"的路线之争。非营利胜则AI发展重回慢但安全轨道。</p>
-                                                    <p class="insight" data-zh="【反直觉】OpenAI员工可能比马斯克更希望公司变回非营利。为什么？营利转换后员工股票期权暴涨——如果强制退回非营利，这些期权可能一文不值。但有意思的是，OpenAI一些早期员工（2015-2019年入职的）一直认为"公司变味了"。他们可能暗中支持马斯克，不是因为想要赔偿，而是想回到"搞研究而不是搞融资"的日子。最支持马斯克的人，可能不是你想的那些。" data-en="[Counter-Intuitive] OpenAI employees may want the non-profit revert more than Musk. Why? Post-conversion stock options soared—but if forced back to non-profit, they become worthless. Yet interestingly, early employees (2015-2019 hires) have long felt the company 'lost its way.' They may quietly support Musk—not for compensation, but to return to 'doing research instead of raising money.' Musk's biggest supporters may not be who you'd expect."
-                                                       >【反直觉】OpenAI员工可能比马斯克更希望公司变回非营利。为什么？营利转换后员工股票期权暴涨——如果强制退回非营利，这些期权可能一文不值。但有意思的是，OpenAI一些早期员工（2015-2019年入职的）一直认为"公司变味了"。他们可能暗中支持马斯克，不是因为想要赔偿，而是想回到"搞研究而不是搞融资"的日子。最支持马斯克的人，可能不是你想的那些。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="analysis-section debate">
-                                    <h3 data-zh="⚔️ 争议焦点" data-en="⚔️ Debate"
-                                       >⚔️ 争议焦点</h3>
-                                    <div class="debate-grid">
-                                        <div class="debate-side pro">
-                                            <h4 data-zh="正方：支持马斯克" data-en="Pro: Support Musk"
-                                                >正方：支持马斯克</h4>
-                                            <ul>
-                                                <li data-zh="承诺就是承诺，不能拿了钱就翻脸" data-en="A promise is a promise; you can't take the money and change your mind"
-                                                    >承诺就是承诺，不能拿了钱就翻脸</li>
-                                                <li data-zh="如果这次不追责，以后所有AI公司都会"先非营利再营利"" data-en="If this goes unpunished, every AI company will use 'non-profit first, for-profit later' as a playbook"
-                                                    >如果这次不追责，以后所有AI公司都会"先非营利再营利"</li>
-                                                <li data-zh="非营利模式才能确保AI安全，不被资本绑架" data-en="Only non-profit can ensure AI safety, free from capital capture"
-                                                    >非营利模式才能确保AI安全，不被资本绑架</li>
-                                            </ul>
-                                        </div>
-                                        <div class="debate-side con">
-                                            <h4 data-zh="反方：支持OpenAI" data-en="Con: Support OpenAI"
-                                                >反方：支持OpenAI</h4>
-                                            <ul>
-                                                <li data-zh="AI发展需要巨额资金，非营利模式养不起AGI" data-en="AI development needs massive capital; non-profit can't fund AGI"
-                                                    >AI发展需要巨额资金，非营利模式养不起AGI</li>
-                                                <li data-zh="微软的投资拯救了OpenAI，不然它2019年就破产了" data-en="Microsoft's investment saved OpenAI; it would have gone bankrupt in 2019"
-                                                    >微软的投资拯救了OpenAI，不然它2019年就破产了</li>
-                                                <li data-zh="营利模式才能吸引顶尖人才，给出有竞争力的薪酬" data-en="For-profit can attract top talent with competitive compensation"
-                                                    >营利模式才能吸引顶尖人才，给出有竞争力的薪酬</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="analysis-section highlight">
-                                    <h3 data-zh="💡 AI前线观点" data-en="💡 AI Frontline View"
-                                       >💡 AI前线观点</h3>
-                                    <p data-zh="我们认为，这场诉讼最值得关注的结果不是"OpenAI是否变回非营利"，而是法院对"非营利承诺的法律约束力"的判定。如果法院认定这种承诺具有约束力，整个AI行业的融资逻辑都会改变——投资人会更谨慎，创始人会更保守，AI创新的速度可能放缓，但方向可能更安全。如果法院认定不具约束力，那么"先非营利再营利"将成为标准打法——这对创新是利好，但也意味着公众对AI公司的信任会进一步下降。无论哪种结果，AI行业都将被重塑。" data-en="We believe the most consequential outcome isn't whether OpenAI reverts to non-profit, but the court's ruling on whether non-profit commitments are legally binding. If binding, AI financing logic changes—investors become cautious, founders conservative, innovation slows but steers safer. If non-binding, 'non-profit first, for-profit later' becomes standard—good for innovation, but public trust in AI companies erodes further. Either way, the AI industry will be reshaped."
-                                       >我们认为，这场诉讼最值得关注的结果不是"OpenAI是否变回非营利"，而是法院对"非营利承诺的法律约束力"的判定。如果法院认定这种承诺具有约束力，整个AI行业的融资逻辑都会改变——投资人会更谨慎，创始人会更保守，AI创新的速度可能放缓，但方向可能更安全。如果法院认定不具约束力，那么"先非营利再营利"将成为标准打法——这对创新是利好，但也意味着公众对AI公司的信任会进一步下降。无论哪种结果，AI行业都将被重塑。</p>
-                                </div>
-                                <div class="analysis-section prediction">
-                                    <h3 data-zh="🔮 反直觉预测" data-en="🔮 Counter-Intuitive Prediction"
-                                       >🔮 反直觉预测</h3>
-                                    <div class="prediction-box">
-                                        <p data-zh="6个月后，如果这场诉讼还在进行中，最可能发生的不是法院判决，而是OpenAI主动提出一个"折中方案"：成立一个独立的非营利基金会来监督AGI安全，同时保留营利实体负责商业化。这个方案会让马斯克的部分诉求得到满足，也让OpenAI避免彻底拆分的风险。" data-en="In 6 months, if the lawsuit is still ongoing, the most likely outcome isn't a court ruling—it's OpenAI proactively offering a 'compromise': establish an independent non-profit foundation to oversee AGI safety, while retaining the for-profit entity for commercialization. This satisfies some of Musk's demands while avoiding a complete split."
-                                           >6个月后，如果这场诉讼还在进行中，最可能发生的不是法院判决，而是OpenAI主动提出一个"折中方案"：成立一个独立的非营利基金会来监督AGI安全，同时保留营利实体负责商业化。这个方案会让马斯克的部分诉求得到满足，也让OpenAI避免彻底拆分的风险。</p>
-                                        <p class="prediction-note" data-zh="如果预测错了，我们就在这里承认——但至少这个想法值得讨论。" data-en="If this prediction is wrong, we'll admit it right here—but the idea is worth debating."
-                                           >如果预测错了，我们就在这里承认——但至少这个想法值得讨论。</p>
-                                    </div>
-                                </div>
-                                <div class="analysis-data">
-                                    <h3 data-zh="📊 相关数据" data-en="📊 Related Data"
-                                       >📊 相关数据</h3>
-                                    <div class="data-grid">
-                                        <div class="data-item">
-                                            <span class="data-value">$860亿</span>
-                                            <span class="data-label" data-zh="OpenAI估值" data-en="OpenAI Valuation"
-                                                  >OpenAI估值</span>
-                                        </div>
-                                        <div class="data-item">
-                                            <span class="data-value">$130亿</span>
-                                            <span class="data-label" data-zh="微软投资" data-en="Microsoft Investment"
-                                                  >微软投资</span>
-                                        </div>
-                                        <div class="data-item">
-                                            <span class="data-value">~2000家</span>
-                                            <span class="data-label" data-zh="生态伙伴" data-en="Ecosystem Partners"
-                                                  >生态伙伴</span>
-                                        </div>
-                                        <div class="data-item">
-                                            <span class="data-value">$8400亿</span>
-                                            <span class="data-label" data-zh="产业链规模" data-en="Industry Chain Size"
-                                                  >产业链规模</span>
-                                        </div>
-                                        <div class="data-item">
-                                            <span class="data-value">$60亿</span>
-                                            <span class="data-label" data-zh="xAI融资(2025)" data-en="xAI Funding (2025)"
-                                                  >xAI融资(2025)</span>
-                                        </div>
-                                        <div class="data-item">
-                                            <span class="data-value">2-3年</span>
-                                            <span class="data-label" data-zh="预计诉讼耗时" data-en="Estimated Duration"
-                                                  >预计诉讼耗时</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="analysis-footer">
-                                <div class="analysis-tags">
-                                    <span class="tag">#OpenAI</span>
-                                    <span class="tag">#马斯克</span>
-                                    <span class="tag">#AI监管</span>
-                                    <span class="tag">#世纪诉讼</span>
-                                </div>
-                                <span class="analysis-source">Source: Reuters, Bloomberg · 编辑审核：是 · 反直觉观点：3个</span>
-                            </div>
-                        </div>
-                                        </div>
-                                        <div class="data-item">
-                                            <span class="data-value">$8400亿</span>
-                                            <span class="data-label" data-zh="产业链规模" data-en="Industry Chain Size">产业链规模</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="analysis-footer">
-                                <div class="analysis-tags">
-                                    <span class="tag">#OpenAI</span>
-                                    <span class="tag">#马斯克</span>
-                                    <span class="tag">#AI监管</span>
-                                </div>
-                                <span class="analysis-source">Source: Reuters, Bloomberg</span>
-                            </div>
-                        </div>
+                        <!-- 由 renderer.js 填充 -->
                     </div>
                 </div>
             </section>
 
             <!-- ========== API定价板块 ========== -->
             <section id="pricingSection" class="section">
-                <!-- API定价内容保持不变 -->
                 <header class="page-header">
-                    <h1 data-zh="💰 主流大模型API定价对比" data-en="💰 LLM API Pricing Comparison">💰 主流大模型API定价对比</h1>
-                    <p class="subtitle" data-zh="每百万Token计价 · 数据截至2026年4月 · 仅供参考" data-en="Per million tokens · Updated Apr 2026 · For reference only">每百万Token计价 · 数据截至2026年4月 · 仅供参考</p>
-                    <p class="note" data-zh="* 价格随时可能变动，请以各平台官方文档为准" data-en="* Prices subject to change; verify with official docs">* 价格随时可能变动，请以各平台官方文档为准</p>
+                    <h1>💰 主流大模型API定价对比</h1>
+                    <p class="subtitle">每百万Token计价 · 数据截至2026年4月 · 仅供参考</p>
+                    <p class="note">* 价格随时可能变动，请以各平台官方文档为准</p>
                 </header>
 
                 <div class="pricing-group">
-                    <h2 class="group-title" data-zh="🌍 国际模型" data-en="🌍 International Models">🌍 国际模型 International Models</h2>
+                    <h2 class="group-title">🌍 国际模型 International Models</h2>
                     <div class="pricing-table-wrapper">
                         <table class="pricing-table">
                             <thead>
                                 <tr>
-                                    <th data-zh="模型" data-en="Model">模型</th>
-                                    <th data-zh="输入 Input" data-en="Input">输入 Input</th>
-                                    <th data-zh="输出 Output" data-en="Output">输出 Output</th>
-                                    <th data-zh="上下文" data-en="Context">上下文</th>
-                                    <th data-zh="性价比" data-en="Value">性价比</th>
+                                    <th>模型</th>
+                                    <th>输入 Input</th>
+                                    <th>输出 Output</th>
+                                    <th>上下文</th>
+                                    <th>性价比</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -570,23 +196,23 @@
                 </div>
 
                 <div class="pricing-group">
-                    <h2 class="group-title" data-zh="🇨🇳 国产模型" data-en="🇨🇳 China Models">🇨🇳 国产模型 China Models (人民币 RMB)</h2>
+                    <h2 class="group-title">🇨🇳 国产模型 China Models (人民币 RMB)</h2>
                     <div class="pricing-table-wrapper">
                         <table class="pricing-table">
                             <thead>
                                 <tr>
-                                    <th data-zh="模型" data-en="Model">模型</th>
-                                    <th data-zh="输入 Input" data-en="Input">输入 Input</th>
-                                    <th data-zh="输出 Output" data-en="Output">输出 Output</th>
-                                    <th data-zh="上下文" data-en="Context">上下文</th>
-                                    <th data-zh="性价比" data-en="Value">性价比</th>
+                                    <th>模型</th>
+                                    <th>输入 Input</th>
+                                    <th>输出 Output</th>
+                                    <th>上下文</th>
+                                    <th>性价比</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="tier-mid"><td><strong>DeepSeek-V4 Pro</strong><br><span class="vendor">DeepSeek</span></td><td>¥2.00</td><td>¥3.00</td><td>1M</td><td><span class="badge very-high">🏷️ 超值 Best Value</span></td></tr>
                                 <tr class="tier-budget"><td><strong>DeepSeek-V4 Flash</strong><br><span class="vendor">DeepSeek</span></td><td>¥0.50</td><td>¥1.00</td><td>1M</td><td><span class="badge very-high">🏷️ 超值 Best Value</span></td></tr>
                                 <tr class="tier-mid"><td><strong>Kimi K2.6</strong><br><span class="vendor">Moonshot</span></td><td>~¥3.00</td><td>~¥12.00</td><td>1M</td><td><span class="badge high">🏆 推荐 Recommended</span></td></tr>
-                                <tr class="tier-mid"><td><strong>Qwen-Max</strong><br><span class="vendor">Alibaba</span></td><td>~¥2.00</td><td>¥9.60</td><td>128K</td><td><span class="badge mid">⚖️ 均衡 Balanced</span></td></tr>
+                                <tr class="tier-mid"><td><strong>Qwen-MAX</strong><br><span class="vendor">Alibaba</span></td><td>~¥2.00</td><td>¥9.60</td><td>128K</td><td><span class="badge mid">⚖️ 均衡 Balanced</span></td></tr>
                                 <tr class="tier-budget"><td><strong>Qwen-Plus</strong><br><span class="vendor">Alibaba</span></td><td>~¥0.50</td><td>¥2.00</td><td>128K</td><td><span class="badge very-high">🏷️ 超值 Best Value</span></td></tr>
                                 <tr class="tier-budget"><td><strong>Qwen-Turbo</strong><br><span class="vendor">Alibaba</span></td><td>~¥0.20</td><td>¥0.70</td><td>128K</td><td><span class="badge very-high">🏷️ 超值 Best Value</span></td></tr>
                                 <tr class="tier-free"><td><strong>Qwen-Flash</strong><br><span class="vendor">Alibaba</span></td><td>免费</td><td>免费</td><td>128K</td><td><span class="badge free">免费</span></td></tr>
@@ -598,7 +224,7 @@
                 </div>
 
                 <div class="pricing-group">
-                    <h2 class="group-title" data-zh="🎫 订阅方案对比" data-en="🎫 Subscription Plans">🎫 订阅方案对比</h2>
+                    <h2 class="group-title">🎫 订阅方案对比</h2>
                     <div class="plan-cards">
                         <div class="plan-card">
                             <div class="plan-name">ChatGPT Plus</div>
@@ -625,8 +251,8 @@
                             </ul>
                         </div>
                         <div class="plan-card free">
-                            <div class="plan-name" data-zh="国内免费方案" data-en="China Free Plans">国内免费方案</div>
-                            <div class="plan-price" data-zh="免费" data-en="Free">免费</div>
+                            <div class="plan-name">国内免费方案</div>
+                            <div class="plan-price">免费</div>
                             <ul class="plan-features">
                                 <li>Kimi 大量免费额度</li>
                                 <li>豆包 完全免费</li>
@@ -650,11 +276,12 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-container">
-            <p>AI前线 © 2026 · AI Frontline · <span data-zh="每日更新" data-en="Updated Daily">每日更新</span></p>
-            <p class="footer-note" data-zh="数据来源：公开网络资讯整理 · 广告收入用于维持服务器运营" data-en="Data: public sources · Ad revenue supports server costs">数据来源：公开网络资讯整理 · 广告收入用于维持服务器运营</p>
+            <p>AI前线 © 2026 · AI Frontline · 每日更新</p>
+            <p class="footer-note">数据来源：公开网络资讯整理 · 广告收入用于维持服务器运营</p>
         </div>
     </footer>
 
     <script src="app.js"></script>
+    <script src="js/renderer.js"></script>
 </body>
 </html>
