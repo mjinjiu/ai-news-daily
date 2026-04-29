@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI前线 · 2026年4月第三周归档</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .archive-page { max-width: 900px; margin: 0 auto; padding: 24px; }
+        .archive-header { margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+        .archive-header h1 { font-size: 1.5rem; color: var(--text); margin-bottom: 8px; }
+        .archive-header p { color: var(--text-secondary); font-size: 0.85rem; }
+        .archive-meta { display: flex; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+        .archive-meta span { font-size: 0.8rem; color: var(--text-muted); background: var(--surface-hover); padding: 4px 10px; border-radius: 12px; }
+        .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); text-decoration: none; font-size: 0.9rem; margin-bottom: 16px; padding: 6px 12px; border-radius: 8px; transition: background 0.2s; }
+        .back-link:hover { background: var(--primary-soft); }
+        .archive-list-full { display: flex; flex-direction: column; gap: 20px; }
+        .archive-list-full .news-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 24px;
+            cursor: pointer;
+            position: relative;
+            transition: var(--transition);
+        }
+        .archive-list-full .news-item:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 20px rgba(139,92,246,0.1);
+            transform: translateY(-2px);
+        }
+        .archive-list-full .news-item::after {
+            content: "↗";
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .archive-list-full .news-item:hover::after {
+            opacity: 1;
+            color: var(--primary);
+        }
+        .archive-list-full h3 { font-size: 1.1rem; margin-bottom: 10px; color: var(--text); line-height: 1.4; padding-right: 28px; }
+        .archive-list-full .news-excerpt { color: var(--text-secondary); font-size: 0.88rem; line-height: 1.7; margin-bottom: 12px; }
+        .archive-list-full .news-footer { font-size: 0.78rem; display: flex; align-items: center; gap: 10px; }
+        .no-more { text-align: center; padding: 40px 0; color: var(--text-muted); }
+        .no-more-icon { font-size: 2rem; margin-bottom: 12px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">AI前线</a>
+            <div class="nav-links">
+                <a href="../index.html#news" class="nav-link">📰 AI新闻</a>
+                <a href="../index.html#pricing" class="nav-link">💰 API定价</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="archive-page">
+        <a href="../index.html" class="back-link">← 返回首页</a>
+        
+        <div class="archive-header">
+            <h1>📂 2026年4月 第三周归档</h1>
+            <p>本周共收录 10 条AI资讯，涵盖技术突破、行业动态、政策风向与重磅事件。</p>
+            <div class="archive-meta">
+                <span>📅 2026.04.21 — 04.27</span>
+                <span>📝 10 条</span>
+                <span>🏷️ 技术×4 / 行业×3 / 重磅×2 / 政策×1</span>
+            </div>
+        </div>
+
+        <div class="archive-list-full">
+            <div class="news-item" data-source-url="https://www.reuters.com/technology/">
+                <h3>马斯克诉OpenAI"世纪诉讼"正式开庭</h3>
+                <p class="news-excerpt">马斯克指控OpenAI背弃非营利使命，要求五项救济：没收所有非法利润、撤销营利转换、罢免Altman等。若胜诉，OpenAI融资及合作伙伴关系将被重构，影响约8,400亿美元AI产业链。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-breaking">重磅</span>
+                    <span class="news-source">Reuters</span>
+                    <span class="news-date">04-27</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://www.icsmart.cn/">
+                <h3>DeepSeek+华为昇腾实现99%成本降幅</h3>
+                <p class="news-excerpt">DeepSeek-R1基于华为昇腾芯片实现推理成本下降99%，同时保持性能无损。这意味着国产AI算力方案已具备国际竞争力，可能重塑全球AI推理市场格局。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-tech">技术</span>
+                    <span class="news-source">芯智讯</span>
+                    <span class="news-date">04-27</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://tech.sina.com.cn/ai/">
+                <h3>地平线发布「星空」车规级AI芯片</h3>
+                <p class="news-excerpt">地平线机器人正式发布新一代车规级AI芯片「星空」，算力达560 TOPS，功耗仅35W。该芯片已获多家头部车企定点，预计2027年量产上车。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-tech">技术</span>
+                    <span class="news-source">Tech Daily</span>
+                    <span class="news-date">04-27</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://www.bloomberg.com/news/technology">
+                <h3>Meta大规模部署Graviton发力代理AI</h3>
+                <p class="news-excerpt">Meta宣布在自有数据中心大规模部署AWS Graviton处理器，用于支撑下一代代理式AI（Agentic AI）系统。此举标志着云厂商自研芯片在AI推理场景的成熟。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-industry">行业</span>
+                    <span class="news-source">Bloomberg</span>
+                    <span class="news-date">04-27</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://www.gov.cn/zhengce/zhengceku/">
+                <h3>中国AI专利占全球60%领先</h3>
+                <p class="news-excerpt">世界知识产权组织报告显示，2025年中国AI专利申请量占全球60%，连续六年居首。专利申请集中在计算机视觉、自然语言处理和自动驾驶三大领域。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-policy">政策</span>
+                    <span class="news-source">Gov.cn</span>
+                    <span class="news-date">04-26~27</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://tech.sina.com.cn/ai/">
+                <h3>深圳AI规上企业突破2600家</h3>
+                <p class="news-excerpt">深圳市工信局发布数据显示，截至2026年Q1，深圳人工智能规上企业已达2600余家，产业集群规模突破5000亿元，年增速超25%。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-industry">行业</span>
+                    <span class="news-source">Sina Tech</span>
+                    <span class="news-date">04-27</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://www.donews.com/">
+                <h3>3D DRAM存储芯片验证成功</h3>
+                <p class="news-excerpt">三星电子与SK海力士先后宣布3D DRAM（立体堆叠存储芯片）技术验证成功，单颗容量可达1Tb，带宽提升3倍，有望2028年实现量产。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-tech">技术</span>
+                    <span class="news-source">DoNews</span>
+                    <span class="news-date">04-23</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://www.geekpark.net/">
+                <h3>联想×作业帮发布Claw AI教育一体机</h3>
+                <p class="news-excerpt">联想与作业帮联合推出Claw AI教育一体机，搭载教育专用大模型，支持1对1个性化辅导、自动批改与学情分析，定价6999元起。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-industry">行业</span>
+                    <span class="news-source">极客公园</span>
+                    <span class="news-date">04-27</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://www.icsmart.cn/">
+                <h3>华为CM384集群超英伟达NV72</h3>
+                <p class="news-excerpt">华为最新发布的CM384 AI集群在多项基准测试中超越英伟达NV72，性能提升1.7倍，功耗降低30%。该集群已在盘古大模型训练中验证。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-tech">技术</span>
+                    <span class="news-source">芯智讯</span>
+                    <span class="news-date">04-27</span>
+                </div>
+            </div>
+            <div class="news-item" data-source-url="https://www.reuters.com/technology/">
+                <h3>全球AI安全峰会在日内瓦召开</h3>
+                <p class="news-excerpt">第二届全球AI安全峰会在日内瓦召开，中美欧等40国代表出席。会议重点讨论AI系统安全标准、跨境数据治理和AI武器化风险管控。</p>
+                <div class="news-footer">
+                    <span class="news-tag tag-breaking">重磅</span>
+                    <span class="news-source">Reuters</span>
+                    <span class="news-date">04-26</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="no-more">
+            <div class="no-more-icon">🏁</div>
+            <p>本周共 10 条资讯，已展示全部内容</p>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 8px;">如需查看更早内容，请关注后续更新归档</p>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>AI前线 © 2026 · AI前线 · 每日更新</p>
+        </div>
+    </footer>
+
+    <script>
+        // 归档页面新闻点击跳转
+        document.querySelectorAll('.news-item[data-source-url]').forEach(item => {
+            item.addEventListener('click', () => {
+                const url = item.dataset.sourceUrl;
+                if (url) window.open(url, '_blank', 'noopener,noreferrer');
+            });
+        });
+    </script>
+</body>
+</html>

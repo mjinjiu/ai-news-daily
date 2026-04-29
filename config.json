@@ -1,0 +1,28 @@
+{
+  "sources": [
+    {"name": "Reuters", "url": "https://www.reuters.com/technology/", "lang": "en", "search": "Reuters AI artificial intelligence latest"},
+    {"name": "Bloomberg", "url": "https://www.bloomberg.com/news/technology", "lang": "en", "search": "Bloomberg AI technology latest news"},
+    {"name": "Anthropic", "url": "https://www.anthropic.com/news/", "lang": "en", "search": "Anthropic Claude AI news"},
+    {"name": "OpenAI", "url": "https://openai.com/blog/", "lang": "en", "search": "OpenAI GPT news latest"},
+    {"name": "TechCrunch", "url": "https://techcrunch.com/category/artificial-intelligence/", "lang": "en", "search": "TechCrunch AI artificial intelligence"},
+    {"name": "芯智讯", "url": "https://www.icsmart.cn/", "lang": "zh", "search": "芯智讯 AI 人工智能 芯片"},
+    {"name": "Sina Tech", "url": "https://tech.sina.com.cn/ai/", "lang": "zh", "search": "新浪科技 AI 人工智能"},
+    {"name": "极客公园", "url": "https://www.geekpark.net/", "lang": "zh", "search": "极客公园 AI 人工智能 科技"},
+    {"name": "云头条", "url": "https://www.c114.com.cn/", "lang": "zh", "search": "云头条 AI 人工智能 通信"},
+    {"name": "DoNews", "url": "https://www.donews.com/", "lang": "zh", "search": "DoNews AI 人工智能"}
+  ],
+  "github": {
+    "cn_repo": "https://github.com/mjinjiu/ai-news-daily.git",
+    "en_repo": "https://github.com/mjinjiu/ai-news-daily-en.git"
+  },
+  "schedule": {
+    "hour": 8,
+    "minute": 17,
+    "timezone": "Asia/Shanghai"
+  },
+  "output": {
+    "max_articles_per_day": 12,
+    "featured_max": 2,
+    "excerpt_max_length": 120
+  }
+}
