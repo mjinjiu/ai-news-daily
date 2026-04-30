@@ -1,124 +1,142 @@
 {
   "meta": {
-    "date": "2026-04-29",
-    "updatedAt": "2026-04-29T08:17:00+08:00",
+    "date": "2026-04-30",
+    "updatedAt": "2026-04-30T08:17:00+08:00",
     "total": 10
   },
   "breaking": [
     {
       "id": "news-001",
-      "title_zh": "马斯克出庭作证OpenAI诉讼：索赔超1340亿美元，要求恢复非营利架构",
-      "title_en": "Musk Testifies in OpenAI Trial: Demands $134B+ Damages, Non-Profit Reversal",
-      "summary_zh": "马斯克正式出庭作证，指控OpenAI及其CEO奥特曼背弃非营利使命，将慈善机构转变为营利实体。诉讼索赔超1340亿美元，要求恢复非营利架构并罢免现任高管。",
-      "summary_en": "Musk takes the stand accusing OpenAI and CEO Altman of betraying the non-profit mission. Lawsuit demands over $134B in damages, restoration of non-profit structure, and removal of current executives.",
-      "date": "04-28~29",
-      "source": "Reuters / Sina Finance",
+      "title_zh": "四大科技巨头财报出炉：谷歌云大增63%，Meta上调AI开支至1450亿美元",
+      "title_en": "Big Tech Earnings: Google Cloud +63%, Meta Raises AI Capex to $145B",
+      "summary_zh": "谷歌、Meta、亚马逊、微软同日发布Q1财报。谷歌营收超预期增长22%，云业务大增63%，上调全年资本开支至1800-1900亿美元。Meta营收增长33%，但盘后跌近7%因AI投资担忧。",
+      "summary_en": "Google, Meta, Amazon, Microsoft report Q1 earnings. Google revenue up 22% with Cloud +63%, raising full-year capex to $180-190B. Meta revenue up 33% but falls 7% after hours on AI spending concerns.",
+      "date": "04-30",
+      "source": "Wall Street / Sina Finance",
       "category": "breaking",
-      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-29/doc-inhwattu8165212.shtml"
+      "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwfpqh7518348.shtml"
     },
     {
       "id": "news-002",
-      "title_zh": "OpenAI发布ChatGPT Images 2.0：像素级复刻现实，假图零拦截",
-      "title_en": "OpenAI Launches ChatGPT Images 2.0: Pixel-Perfect Reality Replication, Zero Fake Detection",
-      "summary_zh": "OpenAI正式发布最新图像生成模型ChatGPT Images 2.0，对真实世界的复刻达到像素级别。媒体实测发现，生成的假图在各平台遭遇零拦截，且没有AI生成水印，引发虚假信息担忧。",
-      "summary_en": "OpenAI launches ChatGPT Images 2.0 with pixel-level reality replication. Media tests show generated fake images pass undetected across platforms with no AI watermark, raising misinformation concerns.",
-      "date": "04-29",
-      "source": "Sina Tech",
+      "title_zh": "马斯克诉奥特曼庭审首日：'没有我就没有OpenAI'",
+      "title_en": "Musk vs Altman Trial Day 1: 'No OpenAI Without Me'",
+      "summary_zh": "马斯克作为首位出庭证人，向陪审团解释创办OpenAI非营利的初衷，要求奥特曼和布罗克曼离职，将'不当得利'归还慈善机构。奥特曼到庭旁听。",
+      "summary_en": "Musk takes the stand as first witness, explaining why OpenAI was founded as non-profit. Demands Altman and Brockman step down, return 'ill-gotten gains' to charity. Altman attends court.",
+      "date": "04-30",
+      "source": "Reuters / Wall Street",
       "category": "breaking",
-      "url": "https://finance.sina.com.cn/jjxw/2026-04-29/doc-inhwceiq7980120.shtml"
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-29/doc-inhwesks7901474.shtml"
     }
   ],
   "daily": [
     {
       "id": "news-003",
-      "title_zh": "工信部+国家数据局联合发布'模数共振'行动：20个行业攻关AI智能体",
-      "title_en": "MIIT + National Data Bureau Launch 'Model-Data Resonance' Action: 20 Industries to Deploy AI Agents",
-      "excerpt_zh": "两部门联合印发通知，提出到2026年底基本形成'数据—模型—场景应用'良性互促循环，在20个行业推动产出一批人工智能应用场景，攻关一批行业模型、专用模型和特色智能体。",
-      "excerpt_en": "Two ministries jointly issue notice to establish 'data-model-scenario' virtuous cycle by end of 2026, promoting AI applications across 20 industries with specialized models and intelligent agents.",
-      "date": "04-28~29",
-      "source": "每日经济新闻",
-      "category": "policy",
-      "url": "https://finance.sina.com.cn/jjxw/2026-04-29/doc-inhwaxzu6998053.shtml"
+      "title_zh": "Anthropic拟按超9000亿美元估值融资，白宫拟绕过禁令让其'回来'",
+      "title_en": "Anthropic Weighs $900B+ Valuation Round, White House Eyes Bypassing Ban",
+      "excerpt_zh": "Anthropic正在权衡新一轮融资，估值或超9000亿美元。与此同时，白宫拟起草行政指令绕开五角大楼禁令，为联邦机构接入其旗舰模型Mythos铺路——因其展现出识别网络漏洞的罕见能力。",
+      "excerpt_en": "Anthropic weighs new funding round at $900B+ valuation. White House reportedly drafting executive order to bypass Pentagon blacklist, paving way for federal agencies to access Mythos model due to its rare network vulnerability detection capabilities.",
+      "date": "04-30",
+      "source": "Wall Street / Bloomberg",
+      "category": "industry",
+      "url": "https://wallstreetcn.com/articles/3771318"
     },
     {
       "id": "news-004",
-      "title_zh": "OpenAI与亚马逊AWS深度合作：模型+Codex登陆Bedrock平台",
-      "title_en": "OpenAI Partners with Amazon AWS: Models + Codex Launch on Bedrock",
-      "excerpt_zh": "在结束与微软独家云合作仅一天后，OpenAI迅速宣布与AWS达成深度合作。Amazon Bedrock将新增OpenAI模型服务，帮助企业客户在AWS上构建可投入生产的AI代理。",
-      "excerpt_en": "Just one day after ending exclusive cloud partnership with Microsoft, OpenAI announces deep AWS collaboration. Amazon Bedrock will add OpenAI model services for enterprise AI agent development.",
-      "date": "04-28~29",
-      "source": "Sina Finance",
+      "title_zh": "亚马逊AWS上线OpenAI模型，AWS收入增速创近两年最高",
+      "title_en": "AWS Launches OpenAI Models, Cloud Growth Hits 2-Year High",
+      "excerpt_zh": "亚马逊Q1财报中AWS表现亮眼，收入增速为近两年最高。AWS云平台正式上线OpenAI模型服务，企业可在AWS上构建生产级AI代理。",
+      "excerpt_en": "Amazon Q1 earnings show AWS at fastest growth rate in two years. AWS cloud platform officially launches OpenAI model services, enabling enterprises to build production AI agents on AWS.",
+      "date": "04-30",
+      "source": "Sina Finance / Bloomberg",
       "category": "industry",
-      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-29/doc-inhwaxzr1297310.shtml"
+      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-29/doc-inhwesks7901474.shtml"
     },
     {
       "id": "news-005",
-      "title_zh": "DeepSeek发布V4预览版：百万Token超长文本算力消耗降至27%",
-      "title_en": "DeepSeek Releases V4 Preview: Million-Token Processing at 27% Compute Cost",
-      "excerpt_zh": "DeepSeek发布新一代旗舰模型V4预览版，分Pro与Flash两个版本。处理100万Token超长文本时，算力消耗仅为上一代27%，内存占用降至10%，API价格全球最低水平。",
-      "excerpt_en": "DeepSeek launches V4 preview with Pro and Flash variants. Processing 1M tokens costs only 27% of previous generation compute, memory usage down to 10%, with globally lowest API pricing.",
-      "date": "04-28~29",
-      "source": "Sina Finance",
+      "title_zh": "高通Q2手机芯片跌13%，数据中心业务成新救命稻草",
+      "title_en": "Qualcomm Q2 Phone Chips Down 13%, Data Center Becomes New Lifeline",
+      "excerpt_zh": "高通Q2手机芯片收入下跌13%，但CEO称'已看到底部'。数据中心芯片业务成为新增长点，盘后股价先跌后涨逾10%。",
+      "excerpt_en": "Qualcomm Q2 phone chip revenue down 13%, but CEO says 'seeing the bottom'. Data center chip business emerges as new growth driver, stock surges 10%+ after hours.",
+      "date": "04-30",
+      "source": "Sina Finance / Bloomberg",
       "category": "tech",
-      "url": "https://finance.sina.com.cn/roll/2026-04-29/doc-inhwattq8315826.shtml"
+      "url": "https://wallstreetcn.com/articles/3771318"
     },
     {
       "id": "news-006",
-      "title_zh": "Anthropic Claude全面接入Adobe、Blender等八大创意软件生态",
-      "title_en": "Anthropic Claude Integrates with Adobe, Blender and 8 Major Creative Platforms",
-      "excerpt_zh": "Anthropic宣布升级Claude，面向创意人士新增多款专属连接器，全面接入Adobe、Blender、Ableton、Autodesk Fusion等八大主流创意平台，将AI能力深度整合至专业工作流。",
-      "excerpt_en": "Anthropic upgrades Claude with new connectors for creatives, integrating with Adobe, Blender, Ableton, Autodesk Fusion and 5 other major creative platforms for professional workflows.",
-      "date": "04-29",
-      "source": "IT之家 / Sina Tech",
-      "category": "tech",
-      "url": "https://finance.sina.com.cn/tech/digi/2026-04-29/doc-inhwceip1212369.shtml"
+      "title_zh": "OpenAI未达增长预期引发AI概念股全线大跌",
+      "title_en": "OpenAI Misses Growth Targets, AI Stocks Tumble Across Board",
+      "excerpt_zh": "报道称OpenAI营收与用户增长均未达内部预期，引发AI基建股集体下跌。甲骨文跌4.1%、CoreWeave跌5.8%、AMD跌3.4%、英伟达跌1.6%，创近一个月最差单日表现。",
+      "excerpt_en": "Reports that OpenAI missed revenue and user growth targets trigger broad AI infrastructure selloff. Oracle -4.1%, CoreWeave -5.8%, AMD -3.4%, NVIDIA -1.6% — worst single-day performance in a month.",
+      "date": "04-29~30",
+      "source": "Sina Finance / 21st Century",
+      "category": "industry",
+      "url": "https://www.21jingji.com/article/20260428/herald/dbc2ec402555260cca6bb562d16754f2.html"
     },
     {
       "id": "news-007",
-      "title_zh": "AI算力爆发引爆电力需求：数据中心耗电激增，高压与液冷技术重构格局",
-      "title_en": "AI Compute Boom Drives Power Demand Surge: Data Center Energy Crisis",
-      "excerpt_zh": "AI算力产业爆发式增长催生全新电力需求增量与技术变革。AI数据中心耗电激增，高压与液冷技术正在重构电力行业竞争格局。",
-      "excerpt_en": "AI compute boom creates unprecedented power demand growth. Data center energy consumption surges, with high-voltage and liquid cooling technologies reshaping the power industry landscape.",
-      "date": "04-29",
-      "source": "每日经济新闻",
-      "category": "industry",
-      "url": "https://finance.sina.com.cn/roll/2026-04-29/doc-inhwattw7099972.shtml"
+      "title_zh": "23岁业余爱好者用ChatGPT攻克60年数学猜想Erdős #1196",
+      "title_en": "23-Year-Old Amateur Cracks 60-Year Erdős #1196 Math Conjecture with ChatGPT",
+      "excerpt_zh": "一位没有系统高等数学训练的年轻人，利用ChatGPT在80分钟内解出了困扰数学界60年的Erdős #1196问题。这是AI辅助人类突破知识边界的最新案例。",
+      "excerpt_en": "A young person without formal higher math training used ChatGPT to solve the 60-year-old Erdős #1196 problem in 80 minutes. Latest case of AI-assisted human breakthrough at knowledge boundaries.",
+      "date": "04-30",
+      "source": "Science Daily / Sina Tech",
+      "category": "tech",
+      "url": "https://finance.sina.com.cn/tech/roll/2026-04-30/doc-inhwfays7415910.shtml"
     },
     {
       "id": "news-008",
-      "title_zh": "OpenAI业绩未达标报道引发AI概念股全线大跌",
-      "title_en": "OpenAI Misses Targets Report Triggers AI Stock Selloff",
-      "excerpt_zh": "报道称OpenAI未能达成销售额及用户增长核心目标，AI概念股应声大跌。甲骨文跌4.1%、CoreWeave跌5.8%、AMD跌3.4%、英伟达跌1.6%，创近一个月最差单日表现。",
-      "excerpt_en": "Reports that OpenAI missed sales and user growth targets trigger AI stock selloff. Oracle -4.1%, CoreWeave -5.8%, AMD -3.4%, NVIDIA -1.6% — worst single-day performance in a month.",
-      "date": "04-29",
-      "source": "Sina Finance",
-      "category": "industry",
-      "url": "https://finance.sina.com.cn/world/2026-04-29/doc-inhwceip1186641.shtml"
+      "title_zh": "Anthropic今日正式关闭Claude 1M上下文Beta，开发者需迁移至新模型",
+      "title_en": "Anthropic Retires Claude 1M Context Beta Today, Developers Must Migrate",
+      "excerpt_zh": "4月30日起，Anthropic正式关闭Sonnet 4和Sonnet 4.5的1M上下文Beta。超长文本处理需迁移至Sonnet 4.6或Opus 4.6，1M上下文现已作为标准功能免费提供。",
+      "excerpt_en": "Starting April 30, Anthropic officially retires the 1M context beta on Sonnet 4 and 4.5. Long-context processing must migrate to Sonnet 4.6 or Opus 4.6, where 1M tokens are now standard at no premium.",
+      "date": "04-30",
+      "source": "Anthropic / Tech Media",
+      "category": "tech",
+      "url": "https://pasqualepillitteri.it/en/news/1451/anthropic-1m-context-beta-retirement-april-30-2026"
     },
     {
       "id": "news-009",
-      "title_zh": "白宫紧急约谈科技企业：Anthropic Claude Mythos拉高网络安全风险",
-      "title_en": "White House Emergency Tech Summit: Anthropic Mythos Raises Cybersecurity Risks",
-      "excerpt_zh": "多家科技与网络安全企业与白宫举行闭门会谈，议题涵盖AI网络安全。Anthropic最新推出的Claude Mythos模型具备高阶黑客攻击能力，成为会议焦点风险议题。",
-      "excerpt_en": "Tech and cybersecurity firms hold closed-door White House talks on AI security. Anthropic's Claude Mythos model's advanced hacking capabilities become focal risk discussion point.",
-      "date": "04-29",
-      "source": "Sina 7x24",
-      "category": "policy",
-      "url": "https://finance.sina.com.cn/7x24/2026-04-29/doc-inhwceiq7962760.shtml"
+      "title_zh": "四大巨头2026年AI资本支出合计超6000亿美元，投资回报引质疑",
+      "title_en": "Big Four Tech Giants' 2026 AI Capex Tops $600B, ROI Questioned",
+      "excerpt_zh": "谷歌、Meta、微软、亚马逊2026年计划在AI基础设施上合计投入超6000亿美元。摩根士丹利判断，AI投资的第一信号是营收加速而非支出规模本身。",
+      "excerpt_en": "Google, Meta, Microsoft, Amazon plan combined $600B+ in AI infrastructure for 2026. Morgan Stanley says first signal of AI ROI is revenue acceleration, not capex scale itself.",
+      "date": "04-30",
+      "source": "Sina Finance / Morgan Stanley",
+      "category": "finance",
+      "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwfpqh7518348.shtml"
     },
     {
       "id": "news-010",
-      "title_zh": "亚马逊推出AI生产力软件套件：面向物流和招聘场景",
-      "title_en": "Amazon Launches AI Productivity Suite for Logistics and Recruitment",
-      "excerpt_zh": "AWS宣布推出Amazon Connect Decisions和Amazon Connect Talent工具，依赖AI代理自动执行面试、创建预测需求电子表格等任务，与微软、甲骨文、Salesforce直接竞争。",
-      "excerpt_en": "AWS launches Amazon Connect Decisions and Talent tools using AI agents for automated interviews and demand forecasting spreadsheets, directly competing with Microsoft, Oracle, and Salesforce.",
-      "date": "04-29",
-      "source": "Sina 7x24",
-      "category": "industry",
-      "url": "https://finance.sina.com.cn/7x24/2026-04-29/doc-inhwapmw8266537.shtml"
+      "title_zh": "Meta推出'模型能力倡议'：捕捉员工鼠标点击和键盘输入训练AI",
+      "title_en": "Meta's 'Model Capability Initiative' Captures Employee Inputs to Train AI",
+      "excerpt_zh": "Meta向员工发布通知，推出MCI计划，将捕捉员工鼠标点击、键盘输入和屏幕内容上下文用于训练AI智能体。员工工作行为数据正式成为AI训练语料。",
+      "excerpt_en": "Meta launches MCI initiative, capturing employee mouse clicks, keyboard inputs, and screen context to train AI agents. Employee work behavior data now becomes AI training corpus.",
+      "date": "04-29~30",
+      "source": "Caixin / Sina Tech",
+      "category": "policy",
+      "url": "https://www.caixin.com/2026-04-25/102437791.html"
     }
   ],
   "weekly": [
+    {
+      "day": "周三",
+      "day_en": "Wed",
+      "date": "04-30",
+      "count": 10,
+      "items": [
+        {"title_zh": "四大科技巨头财报出炉", "title_en": "Big Tech earnings released", "category": "breaking", "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwfpqh7518348.shtml"},
+        {"title_zh": "马斯克诉奥特曼庭审首日", "title_en": "Musk vs Altman trial begins", "category": "breaking", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-29/doc-inhwesks7901474.shtml"},
+        {"title_zh": "Anthropic拟超9000亿美元融资", "title_en": "Anthropic $900B+ valuation round", "category": "industry", "url": "https://wallstreetcn.com/articles/3771318"},
+        {"title_zh": "AWS上线OpenAI模型", "title_en": "AWS launches OpenAI models", "category": "industry", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-29/doc-inhwesks7901474.shtml"},
+        {"title_zh": "高通数据中心成救命稻草", "title_en": "Qualcomm data center lifeline", "category": "tech", "url": "https://wallstreetcn.com/articles/3771318"},
+        {"title_zh": "OpenAI未达标引发AI股大跌", "title_en": "OpenAI miss triggers AI selloff", "category": "industry", "url": "https://www.21jingji.com/article/20260428/herald/dbc2ec402555260cca6bb562d16754f2.html"},
+        {"title_zh": "23岁爱好者攻克60年数学猜想", "title_en": "23yo cracks 60yr math conjecture", "category": "tech", "url": "https://finance.sina.com.cn/tech/roll/2026-04-30/doc-inhwfays7415910.shtml"},
+        {"title_zh": "Anthropic关闭1M上下文Beta", "title_en": "Anthropic retires 1M context beta", "category": "tech", "url": "https://pasqualepillitteri.it/en/news/1451/anthropic-1m-context-beta-retirement-april-30-2026"},
+        {"title_zh": "四大巨头AI开支超6000亿美元", "title_en": "Big Four AI capex tops $600B", "category": "finance", "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwfpqh7518348.shtml"},
+        {"title_zh": "Meta捕捉员工数据训练AI", "title_en": "Meta captures employee data for AI", "category": "policy", "url": "https://www.caixin.com/2026-04-25/102437791.html"}
+      ]
+    },
     {
       "day": "周二",
       "day_en": "Tue",
@@ -153,5 +171,23 @@
         {"title_zh": "埃森哲全面部署Copilot", "title_en": "Accenture deploys Copilot globally", "category": "industry", "url": "https://finance.sina.com.cn/7x24/2026-04-28/doc-inhvyquu8795258.shtml"}
       ]
     }
-  ]
+  ],
+  "stats": [
+    {"num": "10", "label_zh": "今日新闻", "label_en": "Today's News"},
+    {"num": "4", "label_zh": "科技巨头财报", "label_en": "Big Tech Earnings"},
+    {"num": "$600B+", "label_zh": "AI总投资", "label_en": "AI Total Investment"},
+    {"num": "1", "label_zh": "数学猜想被攻克", "label_en": "Math Conjecture Cracked"}
+  ],
+  "hotList": [
+    {"title_zh": "四大科技巨头财报出炉：谷歌云大增63%", "title_en": "Big Tech Earnings: Google Cloud +63%", "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwfpqh7518348.shtml"},
+    {"title_zh": "马斯克诉奥特曼庭审首日", "title_en": "Musk vs Altman Trial Day 1", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-29/doc-inhwesks7901474.shtml"},
+    {"title_zh": "Anthropic拟超9000亿美元估值融资", "title_en": "Anthropic $900B+ Valuation Round", "url": "https://wallstreetcn.com/articles/3771318"},
+    {"title_zh": "23岁爱好者用ChatGPT攻克60年数学猜想", "title_en": "23yo Cracks 60yr Conjecture with ChatGPT", "url": "https://finance.sina.com.cn/tech/roll/2026-04-30/doc-inhwfays7415910.shtml"},
+    {"title_zh": "OpenAI未达预期引发AI股全线大跌", "title_en": "OpenAI Miss Triggers AI Stock Selloff", "url": "https://www.21jingji.com/article/20260428/herald/dbc2ec402555260cca6bb562d16754f2.html"},
+    {"title_zh": "四大巨头AI资本开支超6000亿美元", "title_en": "Big Four AI Capex Tops $600B", "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwfpqh7518348.shtml"},
+    {"title_zh": "Anthropic 1M上下文Beta今日退役", "title_en": "Anthropic 1M Context Beta Retires Today", "url": "https://pasqualepillitteri.it/en/news/1451/anthropic-1m-context-beta-retirement-april-30-2026"},
+    {"title_zh": "Meta捕捉员工行为数据训练AI", "title_en": "Meta Captures Employee Data for AI", "url": "https://www.caixin.com/2026-04-25/102437791.html"}
+  ],
+  "tags": ["财报季", "OpenAI诉讼", "Anthropic", "AWS", "AI投资", "大模型", "谷歌云", "Meta", "数学猜想", "数据隐私"],
+  "sources": ["Reuters", "Bloomberg", "Sina Finance", "Wall Street", "21st Century", "Caixin", "TechCrunch", "Anthropic"]
 }
