@@ -1,189 +1,189 @@
 {
   "meta": {
-    "date": "2026-05-07",
-    "updatedAt": "2026-05-07T08:17:00+08:00",
+    "date": "2026-05-08",
+    "updatedAt": "2026-05-08T08:17:00+08:00",
     "total": 10
   },
   "breaking": [
     {
       "id": "news-001",
-      "title_zh": "苹果支付2.5亿美元和解Siri AI功能延迟诉讼",
-      "title_en": "Apple to Pay $250M to Settle Lawsuit Over Siri's Delayed AI Features",
-      "summary_zh": "苹果公司同意支付2.5亿美元和解因Siri AI功能延迟推出的集体诉讼。此案凸显了科技巨头在AI承诺与实际交付之间的法律风险。",
-      "summary_en": "Apple agrees to pay $250M to settle class-action lawsuit over delayed Siri AI features. The case highlights legal risks for tech giants between AI promises and actual delivery.",
-      "date": "05-07",
-      "source": "TechCrunch / Reuters",
+      "title_zh": "苹果首款AI视觉AirPods进入开发后期阶段",
+      "title_en": "Apple's First AI Vision AirPods Enters Final Development Stage",
+      "summary_zh": "知名爆料人马克·古尔曼透露，苹果首款内置摄像头的AirPods已进入DVT（设计验证测试）阶段，摄像头将作为AI版Siri的'眼睛'观察周围环境。",
+      "summary_en": "Renowned leaker Mark Gurman reveals Apple's first camera-equipped AirPods has entered DVT stage, with cameras serving as 'eyes' for AI-powered Siri.",
+      "date": "05-08",
+      "source": "Bloomberg / 芯智讯",
       "category": "breaking",
-      "url": "https://techcrunch.com/2026/05/06/apple-to-pay-250m-to-settle-lawsuit-over-siris-delayed-ai-features/"
+      "url": "https://finance.sina.com.cn/jjxw/2026-05-08/doc-inhxckat2475836.shtml"
     },
     {
       "id": "news-002",
-      "title_zh": "AI热潮推动三星市值突破1万亿美元",
-      "title_en": "AI Boom Pushes Samsung to $1 Trillion Valuation",
-      "summary_zh": "受AI芯片需求激增推动，三星电子市值突破1万亿美元大关，成为亚洲第二家达到此里程碑的科技企业。其HBM内存和先进制程订单已排至2027年。",
-      "summary_en": "Driven by surging AI chip demand, Samsung Electronics market cap breaks $1 trillion, becoming Asia's second tech company to reach this milestone. HBM memory and advanced process orders booked through 2027.",
-      "date": "05-07",
-      "source": "TechCrunch / Bloomberg",
+      "title_zh": "中美拟在元首会晤期间讨论AI议题",
+      "title_en": "US-China to Discuss AI at Upcoming Presidential Summit",
+      "summary_zh": "据报道，中美双方正考虑启动有关人工智能的官方讨论，可能在下周北京中美元首会晤期间进行。外交部表示双方就特朗普访华保持沟通。",
+      "summary_en": "Reports indicate US and China are considering launching official discussions on AI during the upcoming presidential summit in Beijing next week.",
+      "date": "05-08",
+      "source": "Reuters / 财联社",
       "category": "breaking",
-      "url": "https://techcrunch.com/2026/05/06/ai-boom-pushes-samsung-to-1t/"
+      "url": "https://www.cls.cn/detail/2365544"
     }
   ],
   "daily": [
     {
       "id": "news-003",
-      "title_zh": "DeepSeek首轮融资估值或达450亿美元",
-      "title_en": "DeepSeek Could Hit $45B Valuation from First Investment Round",
-      "excerpt_zh": "中国AI独角兽DeepSeek正在进行首轮融资，估值可能高达450亿美元。其低成本高性能的推理模型正在全球范围内挑战OpenAI和Anthropic的主导地位。",
-      "excerpt_en": "Chinese AI unicorn DeepSeek is in its first funding round with potential $45B valuation. Its low-cost high-performance reasoning models are challenging OpenAI and Anthropic's dominance globally.",
-      "date": "05-07",
-      "source": "TechCrunch / Bloomberg",
+      "title_zh": "豆包收费冲上热搜，AI免费时代正在落幕",
+      "title_en": "Doubao Charging Goes Viral: AI Free Era Nearing End",
+      "excerpt_zh": "字节跳动旗下豆包大模型收费引发热议，标志着AI免费时代加速落幕。算力成本驱动下，分层收费阶段即将到来，AI正从'玩具'变为'生产要素'。",
+      "excerpt_en": "ByteDance's Doubao model charging sparks debate, signaling the end of AI's free era. Tiered pricing is coming as compute costs drive the industry shift.",
+      "date": "05-08",
+      "source": "Sina Tech / 极客公园",
       "category": "industry",
-      "url": "https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/"
+      "url": "https://k.sina.com.cn/article_5953740931_162dee0830670360zk.html"
     },
     {
       "id": "news-004",
-      "title_zh": "谷歌AI搜索新增Reddit等社区引用功能",
-      "title_en": "Google Updates AI Search to Include Quotes from Reddit and Other Sources",
-      "excerpt_zh": "谷歌更新AI搜索体验，开始在AI概览中引用Reddit等社区平台的真实用户观点。这一举措旨在解决AI搜索结果被指'过于 polished、缺乏真实人类视角'的批评。",
-      "excerpt_en": "Google updates AI search to cite real user opinions from Reddit and community platforms in AI overviews. The move addresses criticism that AI search results are 'too polished and lack authentic human perspective'.",
-      "date": "05-07",
-      "source": "TechCrunch / Sina Tech",
-      "category": "tech",
-      "url": "https://techcrunch.com/2026/05/06/google-updates-ai-search-to-include-quotes-from-reddit-and-other-sources/"
+      "title_zh": "马斯克诉OpenAI世纪庭审持续爆猛料",
+      "title_en": "Musk vs OpenAI 'Trial of the Century' Continues",
+      "excerpt_zh": "马斯克起诉OpenAI案进入第二周，Greg Brockman等多位重量级人物出庭。庭审揭露2015年创立细节及马斯克2018年离开内幕，OpenAI高管层争议不断。",
+      "excerpt_en": "Musk's lawsuit against OpenAI enters week two with explosive revelations. Founding details and internal disputes are being exposed in court.",
+      "date": "05-08",
+      "source": "Reuters / 虎嗅",
+      "category": "industry",
+      "url": "https://finance.sina.com.cn/stock/t/2026-05-08/doc-inhxccuv8028683.shtml"
     },
     {
       "id": "news-005",
-      "title_zh": "马斯克如何离开OpenAI？Greg Brockman首次详细披露内幕",
-      "title_en": "How Elon Musk Left OpenAI, According to Greg Brockman",
-      "excerpt_zh": "OpenAI联合创始人Greg Brockman首次详细披露了马斯克2018年离开公司的内幕。据其描述，马斯克曾提议接管OpenAI并担任CEO，遭拒绝后离开并转而创办xAI。",
-      "excerpt_en": "OpenAI co-founder Greg Brockman details Elon Musk's 2018 departure. Musk reportedly proposed taking over OpenAI as CEO; after rejection, he left and later founded xAI.",
-      "date": "05-07",
-      "source": "TechCrunch / Reuters",
+      "title_zh": "软银拟携手英伟达、富士康打造日本国产AI服务器",
+      "title_en": "SoftBank to Build Japan's Homegrown AI Servers with Nvidia, Foxconn",
+      "excerpt_zh": "软银集团计划在英伟达和富士康协助下，于本年代末开始在本土开发和制造AI服务器。该项目将被纳入周一公布的中期管理计划。",
+      "excerpt_en": "SoftBank plans to develop and manufacture AI servers domestically with Nvidia and Foxconn support by the end of this decade.",
+      "date": "05-08",
+      "source": "Reuters / Bloomberg",
       "category": "industry",
-      "url": "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/"
+      "url": "https://finance.sina.com.cn/7x24/2026-05-08/doc-inhxccuv8025886.shtml"
     },
     {
       "id": "news-006",
-      "title_zh": "AI评估平台Braintrust确认数据泄露，要求所有客户轮换密钥",
-      "title_en": "AI Evaluation Startup Braintrust Confirms Breach, Tells Every Customer to Rotate Keys",
-      "excerpt_zh": "AI模型评估平台Braintrust确认遭遇安全入侵，攻击者获取了敏感客户数据。公司已通知所有客户立即轮换API密钥和访问凭证，影响范围仍在评估中。",
-      "excerpt_en": "AI model evaluation platform Braintrust confirms security breach. Attackers accessed sensitive customer data. All customers advised to immediately rotate API keys and credentials.",
-      "date": "05-07",
-      "source": "TechCrunch / Security",
+      "title_zh": "Anthropic'内省适配器'让AI模型'自我坦白'",
+      "title_en": "Anthropic's 'Introspection Adapter' Makes AI Models Self-Report",
+      "excerpt_zh": "Anthropic最新论文发布'内省适配器'技术，让黑盒模型能够自行说出隐藏行为。被认为是AI安全领域的技术突破，有望解决模型可解释性难题。",
+      "excerpt_en": "Anthropic's new paper introduces an 'introspection adapter' that enables black-box models to self-report hidden behaviors, a breakthrough in AI safety.",
+      "date": "05-08",
+      "source": "Anthropic / 图灵人工智能",
       "category": "tech",
-      "url": "https://techcrunch.com/2026/05/06/ai-evaluation-startup-braintrust-confirms-breach-tells-every-customer-to-rotate-sensitive-keys/"
+      "url": "https://k.sina.com.cn/article_7857201856_1d45362c0019057bry.html"
     },
     {
       "id": "news-007",
-      "title_zh": "SAP豪掷11.6亿美元收购德国18个月大AI实验室NemoClaw",
-      "title_en": "SAP Bets $1.16B on 18-Month-Old German AI Lab NemoClaw",
-      "excerpt_zh": "德国软件巨头SAP以11.6亿美元收购成立仅18个月的AI实验室NemoClaw。该实验室专注于企业AI智能体技术，SAP计划将其整合进S/4HANA Cloud产品线。",
-      "excerpt_en": "German software giant SAP acquires 18-month-old AI lab NemoClaw for $1.16B. The lab focuses on enterprise AI agent technology; SAP plans integration into S/4HANA Cloud product line.",
-      "date": "05-07",
-      "source": "TechCrunch / 极客公园",
+      "title_zh": "三星AI需求爆发：芯片、生态双轮驱动",
+      "title_en": "Samsung AI Demand Explodes: Chip + Ecosystem Dual Drive",
+      "excerpt_zh": "2026年开年，三星电子凭借强劲AI需求实现业绩爆发，Q4芯片业务营业利润达16.4万亿韩元（约114亿美元），同比激增逾四倍，远超市场预期。",
+      "excerpt_en": "Samsung's Q4 chip operating profit surges over 4x YoY to 16.4 trillion won (~$11.4B), driven by booming AI demand for HBM memory and advanced processes.",
+      "date": "05-08",
+      "source": "Bloomberg / 芯智讯",
       "category": "industry",
-      "url": "https://techcrunch.com/2026/05/06/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/"
+      "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190578y8.html"
     },
     {
       "id": "news-008",
-      "title_zh": "Meta收购机器人初创公司，加码人形AI机器人布局",
-      "title_en": "Meta Buys Robotics Startup to Bolster Humanoid AI Ambitions",
-      "excerpt_zh": "Meta低调收购一家专注于人形机器人控制的AI初创公司，交易金额未披露。此前Meta已宣布组建新团队开发'通用人形机器人'，与特斯拉Optimus形成直接竞争。",
-      "excerpt_en": "Meta quietly acquires an AI startup focused on humanoid robot control. Meta previously announced a new team to develop 'general-purpose humanoid robots', directly competing with Tesla Optimus.",
-      "date": "05-06~07",
-      "source": "TechCrunch / 芯智讯",
-      "category": "tech",
-      "url": "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/"
+      "title_zh": "xAI核心工程团队重组，SpaceX高管兼任总裁",
+      "title_en": "xAI Core Engineering Team Restructures with SpaceX Executive as President",
+      "excerpt_zh": "马斯克旗下xAI推进新一轮组织架构调整，SpaceX星链高级副总裁迈克尔·尼科尔斯兼任xAI总裁，称将集中资源大幅提升训练效率。",
+      "excerpt_en": "Elon Musk's xAI undergoes restructuring. SpaceX Starlink SVP Michael Nichols becomes xAI president, vowing to boost training efficiency.",
+      "date": "05-08",
+      "source": "Business Insider / 环球网",
+      "category": "industry",
+      "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190579j4.html"
     },
     {
       "id": "news-009",
-      "title_zh": "五角大楼与英伟达、微软、AWS签约部署机密网络AI",
-      "title_en": "Pentagon Inks Deals with Nvidia, Microsoft, AWS to Deploy AI on Classified Networks",
-      "excerpt_zh": "美国国防部与三大云/芯片巨头签订协议，在机密军事网络中部署AI系统。合作涵盖AI模型训练、推理基础设施和边缘部署，标志着军事AI进入规模化应用阶段。",
-      "excerpt_en": "US Department of Defense signs agreements with three cloud/chip giants to deploy AI on classified military networks. Cooperation covers AI model training, inference infrastructure and edge deployment.",
-      "date": "05-07",
-      "source": "TechCrunch / Reuters",
-      "category": "policy",
-      "url": "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/"
+      "title_zh": "VLA模型未终结：智平方创始人郭彦东发声",
+      "title_en": "VLA Models Not Dead: ZhiSquare Founder Guo Yandong Speaks Out",
+      "excerpt_zh": "针对'VLA时代已经终结'的论调，智平方创始人郭彦东在演讲中论证VLA仍在持续变强。具身智能赛道正陷入世界模型与VLA的技术路线之争。",
+      "excerpt_en": "Amid claims that 'VLA era is over', ZhiSquare's founder argues VLA models continue to strengthen, as the embodied AI field debates technical paths.",
+      "date": "05-08",
+      "source": "极客公园 / 图灵人工智能",
+      "category": "tech",
+      "url": "https://k.sina.com.cn/article_5952915720_162d2490806703vb7c.html"
     },
     {
       "id": "news-010",
-      "title_zh": "谷歌、英伟达押注40亿美元自学习AI公司，目标'替代科学家'",
-      "title_en": "Google & Nvidia Back $4B Self-Learning AI Company Aiming to 'Replace Scientists'",
-      "excerpt_zh": "获得谷歌和英伟达投资的自学习AI公司估值已达40亿美元。该公司开发的AI系统能够自主设计实验、分析数据并得出结论，目标是自动化科学研究流程。",
-      "excerpt_en": "Self-learning AI company backed by Google and Nvidia reaches $4B valuation. Its AI system can autonomously design experiments, analyze data and draw conclusions, aiming to automate scientific research.",
-      "date": "05-07",
-      "source": "极客公园 / Sina Tech",
+      "title_zh": "人形机器人灵犀X2将走出实验室，售价十几万起",
+      "title_en": "Humanoid Robot Lingxi X2 Ready for Market, Starting at $20K+",
+      "excerpt_zh": "上海智元机器人宣布灵犀X2将于5月22日开启合作伙伴招募，正式走出实验室。根据配置不同，售价在十几万至三四十万元之间。",
+      "excerpt_en": "ZhiYuan Robotics announces Lingxi X2 humanoid robot will open partner recruitment on May 22, marking its move from lab to commercial application.",
+      "date": "05-08",
+      "source": "Sina Tech / 云头条",
       "category": "tech",
-      "url": "https://cj.sina.cn/articles/view/5953740931/162dee083067035db4"
+      "url": "https://k.sina.com.cn/article_7857141524_1d452771401902aktc.html"
     }
   ],
   "weekly": [
     {
-      "day": "周三",
-      "day_en": "Wed",
-      "date": "05-07",
+      "day": "周四",
+      "day_en": "Thu",
+      "date": "05-08",
       "count": 10,
       "items": [
         {
-          "title_zh": "苹果2.5亿美元和解Siri AI诉讼",
-          "title_en": "Apple $250M Siri AI settlement",
+          "title_zh": "苹果AI视觉AirPods进入DVT阶段",
+          "title_en": "Apple AI vision AirPods enters DVT",
           "category": "breaking",
-          "url": "https://techcrunch.com/2026/05/06/apple-to-pay-250m-to-settle-lawsuit-over-siris-delayed-ai-features/"
+          "url": "https://finance.sina.com.cn/jjxw/2026-05-08/doc-inhxckat2475836.shtml"
         },
         {
-          "title_zh": "三星市值突破1万亿美元",
-          "title_en": "Samsung hits $1T market cap",
+          "title_zh": "中美拟讨论AI议题",
+          "title_en": "US-China to discuss AI",
           "category": "breaking",
-          "url": "https://techcrunch.com/2026/05/06/ai-boom-pushes-samsung-to-1t/"
+          "url": "https://www.cls.cn/detail/2365544"
         },
         {
-          "title_zh": "DeepSeek首轮融资估值450亿美元",
-          "title_en": "DeepSeek $45B valuation round",
+          "title_zh": "豆包收费，AI免费时代落幕",
+          "title_en": "Doubao charging, free AI era ends",
           "category": "industry",
-          "url": "https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/"
+          "url": "https://k.sina.com.cn/article_5953740931_162dee0830670360zk.html"
         },
         {
-          "title_zh": "谷歌AI搜索引用Reddit内容",
-          "title_en": "Google AI search cites Reddit",
-          "category": "tech",
-          "url": "https://techcrunch.com/2026/05/06/google-updates-ai-search-to-include-quotes-from-reddit-and-other-sources/"
-        },
-        {
-          "title_zh": "Brockman披露马斯克离任内幕",
-          "title_en": "Brockman reveals Musk departure",
+          "title_zh": "马斯克诉OpenAI庭审持续",
+          "title_en": "Musk vs OpenAI trial continues",
           "category": "industry",
-          "url": "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/"
+          "url": "https://finance.sina.com.cn/stock/t/2026-05-08/doc-inhxccuv8028683.shtml"
         },
         {
-          "title_zh": "Braintrust确认数据泄露",
-          "title_en": "Braintrust confirms data breach",
-          "category": "tech",
-          "url": "https://techcrunch.com/2026/05/06/ai-evaluation-startup-braintrust-confirms-breach/"
-        },
-        {
-          "title_zh": "SAP 11.6亿收购AI实验室",
-          "title_en": "SAP $1.16B AI lab acquisition",
+          "title_zh": "软银携手英伟达造AI服务器",
+          "title_en": "SoftBank + Nvidia AI servers",
           "category": "industry",
-          "url": "https://techcrunch.com/2026/05/06/sap-bets-1-16b-on-18-month-old-german-ai-lab/"
+          "url": "https://finance.sina.com.cn/7x24/2026-05-08/doc-inhxccuv8025886.shtml"
         },
         {
-          "title_zh": "Meta收购机器人公司",
-          "title_en": "Meta acquires robotics startup",
+          "title_zh": "Anthropic内省适配器突破",
+          "title_en": "Anthropic introspection adapter",
           "category": "tech",
-          "url": "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup/"
+          "url": "https://k.sina.com.cn/article_7857201856_1d45362c0019057bry.html"
         },
         {
-          "title_zh": "五角大楼部署机密网络AI",
-          "title_en": "Pentagon deploys classified AI",
-          "category": "policy",
-          "url": "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws/"
+          "title_zh": "三星AI需求业绩爆发",
+          "title_en": "Samsung AI demand surge",
+          "category": "industry",
+          "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190578y8.html"
         },
         {
-          "title_zh": "自学习AI公司估值40亿美元",
-          "title_en": "Self-learning AI at $4B valuation",
+          "title_zh": "xAI团队重组提速",
+          "title_en": "xAI restructuring speeds up",
+          "category": "industry",
+          "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190579j4.html"
+        },
+        {
+          "title_zh": "VLA模型路线之争",
+          "title_en": "VLA model debate continues",
           "category": "tech",
-          "url": "https://cj.sina.cn/articles/view/5953740931/162dee083067035db4"
+          "url": "https://k.sina.com.cn/article_5952915720_162d2490806703vb7c.html"
+        },
+        {
+          "title_zh": "灵犀X2机器人商业化",
+          "title_en": "Lingxi X2 robot commercialization",
+          "category": "tech",
+          "url": "https://k.sina.com.cn/article_7857141524_1d452771401902aktc.html"
         }
       ]
     }
@@ -195,83 +195,83 @@
       "label_en": "Today's News"
     },
     {
-      "num": "4",
-      "label_zh": "科技巨头财报",
-      "label_en": "Big Tech Earnings"
+      "num": "2",
+      "label_zh": "重大产品发布",
+      "label_en": "Major Product Launches"
     },
     {
-      "num": "$600B+",
-      "label_zh": "AI总投资",
-      "label_en": "AI Total Investment"
+      "num": "$114B",
+      "label_zh": "三星芯片利润",
+      "label_en": "Samsung Chip Profit"
     },
     {
-      "num": "1",
-      "label_zh": "数学猜想被攻克",
-      "label_en": "Math Conjecture Cracked"
+      "num": "60%",
+      "label_zh": "中国AI专利占比",
+      "label_en": "China AI Patent Share"
     }
   ],
   "hotList": [
     {
-      "title_zh": "四大科技巨头财报出炉：谷歌云大增63%",
-      "title_en": "Big Tech Earnings: Google Cloud +63%",
-      "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwfpqh7518348.shtml"
+      "title_zh": "苹果首款AI视觉AirPods进入开发后期",
+      "title_en": "Apple AI vision AirPods enters final dev stage",
+      "url": "https://finance.sina.com.cn/jjxw/2026-05-08/doc-inhxckat2475836.shtml"
     },
     {
-      "title_zh": "马斯克诉奥特曼庭审首日",
-      "title_en": "Musk vs Altman Trial Day 1",
-      "url": "https://finance.sina.com.cn/stock/usstock/c/2026-04-29/doc-inhwesks7901474.shtml"
+      "title_zh": "中美拟在元首会晤期间讨论AI",
+      "title_en": "US-China AI talks at presidential summit",
+      "url": "https://www.cls.cn/detail/2365544"
     },
     {
-      "title_zh": "Anthropic拟超9000亿美元估值融资",
-      "title_en": "Anthropic $900B+ Valuation Round",
-      "url": "https://wallstreetcn.com/articles/3771318"
+      "title_zh": "豆包收费，AI免费时代落幕",
+      "title_en": "Doubao charging ends AI free era",
+      "url": "https://k.sina.com.cn/article_5953740931_162dee0830670360zk.html"
     },
     {
-      "title_zh": "23岁爱好者用ChatGPT攻克60年数学猜想",
-      "title_en": "23yo Cracks 60yr Conjecture with ChatGPT",
-      "url": "https://finance.sina.com.cn/tech/roll/2026-04-30/doc-inhwfays7415910.shtml"
+      "title_zh": "马斯克诉OpenAI世纪庭审持续",
+      "title_en": "Musk vs OpenAI trial continues",
+      "url": "https://finance.sina.com.cn/stock/t/2026-05-08/doc-inhxccuv8028683.shtml"
     },
     {
-      "title_zh": "OpenAI未达预期引发AI股全线大跌",
-      "title_en": "OpenAI Miss Triggers AI Stock Selloff",
-      "url": "https://www.21jingji.com/article/20260428/herald/dbc2ec402555260cca6bb562d16754f2.html"
+      "title_zh": "软银携手英伟达打造日本AI服务器",
+      "title_en": "SoftBank + Nvidia Japan AI servers",
+      "url": "https://finance.sina.com.cn/7x24/2026-05-08/doc-inhxccuv8025886.shtml"
     },
     {
-      "title_zh": "四大巨头AI资本开支超6000亿美元",
-      "title_en": "Big Four AI Capex Tops $600B",
-      "url": "https://finance.sina.com.cn/wm/2026-04-30/doc-inhwfpqh7518348.shtml"
+      "title_zh": "Anthropic内省适配器技术突破",
+      "title_en": "Anthropic introspection adapter",
+      "url": "https://k.sina.com.cn/article_7857201856_1d45362c0019057bry.html"
     },
     {
-      "title_zh": "Anthropic 1M上下文Beta今日退役",
-      "title_en": "Anthropic 1M Context Beta Retires Today",
-      "url": "https://pasqualepillitteri.it/en/news/1451/anthropic-1m-context-beta-retirement-april-30-2026"
+      "title_zh": "三星Q4芯片利润激增四倍",
+      "title_en": "Samsung Q4 chip profit surges 4x",
+      "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190578y8.html"
     },
     {
-      "title_zh": "Meta捕捉员工行为数据训练AI",
-      "title_en": "Meta Captures Employee Data for AI",
-      "url": "https://www.caixin.com/2026-04-25/102437791.html"
+      "title_zh": "xAI核心团队重组",
+      "title_en": "xAI core team restructuring",
+      "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190579j4.html"
     }
   ],
   "tags": [
-    "财报季",
-    "OpenAI诉讼",
+    "苹果AI",
+    "中美AI对话",
+    "豆包收费",
+    "马斯克诉讼",
+    "软银",
+    "英伟达",
     "Anthropic",
-    "AWS",
-    "AI投资",
-    "大模型",
-    "谷歌云",
-    "Meta",
-    "数学猜想",
-    "数据隐私"
+    "三星芯片",
+    "xAI重组",
+    "VLA模型"
   ],
   "sources": [
     "Reuters",
     "Bloomberg",
-    "Sina Finance",
-    "Wall Street",
-    "21st Century",
-    "Caixin",
     "TechCrunch",
+    "Sina Tech",
+    "财联社",
+    "极客公园",
+    "芯智讯",
     "Anthropic"
   ]
 }
