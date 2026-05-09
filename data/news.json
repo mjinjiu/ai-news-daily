@@ -1,189 +1,189 @@
 {
   "meta": {
-    "date": "2026-05-08",
-    "updatedAt": "2026-05-08T08:17:00+08:00",
+    "date": "2026-05-09",
+    "updatedAt": "2026-05-09T08:17:00+08:00",
     "total": 10
   },
   "breaking": [
     {
       "id": "news-001",
-      "title_zh": "苹果首款AI视觉AirPods进入开发后期阶段",
-      "title_en": "Apple's First AI Vision AirPods Enters Final Development Stage",
-      "summary_zh": "知名爆料人马克·古尔曼透露，苹果首款内置摄像头的AirPods已进入DVT（设计验证测试）阶段，摄像头将作为AI版Siri的'眼睛'观察周围环境。",
-      "summary_en": "Renowned leaker Mark Gurman reveals Apple's first camera-equipped AirPods has entered DVT stage, with cameras serving as 'eyes' for AI-powered Siri.",
-      "date": "05-08",
-      "source": "Bloomberg / 芯智讯",
+      "title_zh": "DeepSeek加速商业化：V4.1六月发布，加入图像与音频处理能力",
+      "title_en": "DeepSeek Accelerates Commercialization: V4.1 Coming in June with Image & Audio",
+      "summary_zh": "DeepSeek正将现有模型转化为收费产品，V4.1将于六月发布，重点增强企业应用能力，加入图像与音频处理。同时从字节跳动等吸纳人才扩充团队。",
+      "summary_en": "DeepSeek is converting models to paid products. V4.1 launches June with image/audio processing capabilities, targeting enterprise applications.",
+      "date": "05-09",
+      "source": "The Information / AI普瑞斯",
       "category": "breaking",
-      "url": "https://finance.sina.com.cn/jjxw/2026-05-08/doc-inhxckat2475836.shtml"
+      "url": "https://k.sina.com.cn/article_5953189932_162d6782c067048a8e.html"
     },
     {
       "id": "news-002",
-      "title_zh": "中美拟在元首会晤期间讨论AI议题",
-      "title_en": "US-China to Discuss AI at Upcoming Presidential Summit",
-      "summary_zh": "据报道，中美双方正考虑启动有关人工智能的官方讨论，可能在下周北京中美元首会晤期间进行。外交部表示双方就特朗普访华保持沟通。",
-      "summary_en": "Reports indicate US and China are considering launching official discussions on AI during the upcoming presidential summit in Beijing next week.",
-      "date": "05-08",
-      "source": "Reuters / 财联社",
+      "title_zh": "马斯克xAI解散并入SpaceX，更名为SpaceXAI",
+      "title_en": "Musk's xAI Dissolves into SpaceX, Rebrands as SpaceXAI",
+      "summary_zh": "马斯克宣布xAI不再是独立公司，作为SpaceX旗下AI产品存在。同日SpaceXAI宣布与Anthropic签约，为其提供Colossus 1超级计算机算力。",
+      "summary_en": "Elon Musk announces xAI is no longer independent, becoming SpaceXAI. Signs deal with Anthropic to provide Colossus 1 supercomputing power.",
+      "date": "05-09",
+      "source": "财新网 / X",
       "category": "breaking",
-      "url": "https://www.cls.cn/detail/2365544"
+      "url": "https://www.caixin.com/2026-05-07/102441371.html"
     }
   ],
   "daily": [
     {
       "id": "news-003",
-      "title_zh": "豆包收费冲上热搜，AI免费时代正在落幕",
-      "title_en": "Doubao Charging Goes Viral: AI Free Era Nearing End",
-      "excerpt_zh": "字节跳动旗下豆包大模型收费引发热议，标志着AI免费时代加速落幕。算力成本驱动下，分层收费阶段即将到来，AI正从'玩具'变为'生产要素'。",
-      "excerpt_en": "ByteDance's Doubao model charging sparks debate, signaling the end of AI's free era. Tiered pricing is coming as compute costs drive the industry shift.",
-      "date": "05-08",
-      "source": "Sina Tech / 极客公园",
+      "title_zh": "腾讯云今日起AI算力涨价5%，国内云三巨头集体终结降价周期",
+      "title_en": "Tencent Cloud AI Compute Prices Rise 5% Today, Ending 20-Year Cloud Price Drop",
+      "excerpt_zh": "继阿里云、百度智能云后，腾讯云宣布今日起AI算力、容器服务、EMR等产品涨价5%。国内云三巨头集体转身，标志着延续近20年的云计算'只降不升'周期终结。",
+      "excerpt_en": "Tencent Cloud joins Alibaba and Baidu in raising AI compute prices by 5%, ending two decades of cloud price declines. AI compute becomes 'strategic resource'.",
+      "date": "05-09",
+      "source": "证券时报 / 腾讯云",
       "category": "industry",
-      "url": "https://k.sina.com.cn/article_5953740931_162dee0830670360zk.html"
+      "url": "https://www.stcn.com/article/detail/3734661.html"
     },
     {
       "id": "news-004",
-      "title_zh": "马斯克诉OpenAI世纪庭审持续爆猛料",
-      "title_en": "Musk vs OpenAI 'Trial of the Century' Continues",
-      "excerpt_zh": "马斯克起诉OpenAI案进入第二周，Greg Brockman等多位重量级人物出庭。庭审揭露2015年创立细节及马斯克2018年离开内幕，OpenAI高管层争议不断。",
-      "excerpt_en": "Musk's lawsuit against OpenAI enters week two with explosive revelations. Founding details and internal disputes are being exposed in court.",
-      "date": "05-08",
-      "source": "Reuters / 虎嗅",
-      "category": "industry",
-      "url": "https://finance.sina.com.cn/stock/t/2026-05-08/doc-inhxccuv8028683.shtml"
+      "title_zh": "特朗普政府拟AI安全行政令：不强制要求尖端模型政府审批",
+      "title_en": "Trump Admin Drafts AI Security Executive Order Without Mandatory Model Approval",
+      "excerpt_zh": "特朗普政府拟修订网络安全信息共享计划，将AI企业纳入其中，应对AI驱动的网络攻击威胁。但不会强制要求尖端AI模型必须获得政府批准，草案内容仍可能调整。",
+      "excerpt_en": "Trump administration plans AI security EO focusing on cyber threat sharing, but refrains from mandatory government approval for cutting-edge AI models.",
+      "date": "05-09",
+      "source": "财联社 / Reuters",
+      "category": "policy",
+      "url": "https://finance.sina.com.cn/stock/t/2026-05-09/doc-inhxfnzv4076785.shtml"
     },
     {
       "id": "news-005",
-      "title_zh": "软银拟携手英伟达、富士康打造日本国产AI服务器",
-      "title_en": "SoftBank to Build Japan's Homegrown AI Servers with Nvidia, Foxconn",
-      "excerpt_zh": "软银集团计划在英伟达和富士康协助下，于本年代末开始在本土开发和制造AI服务器。该项目将被纳入周一公布的中期管理计划。",
-      "excerpt_en": "SoftBank plans to develop and manufacture AI servers domestically with Nvidia and Foxconn support by the end of this decade.",
-      "date": "05-08",
-      "source": "Reuters / Bloomberg",
+      "title_zh": "谷歌Isomorphic Labs拟筹集超20亿美元，AI药物发现加速",
+      "title_en": "Google's Isomorphic Labs to Raise Over $2B for AI Drug Discovery",
+      "excerpt_zh": "从谷歌DeepMind分拆的AI药物发现公司Isomorphic Labs正进行深入讨论，拟在新一轮融资中筹集超20亿美元。Thrive Capital将主导，Alphabet也参与其中。",
+      "excerpt_en": "Isomorphic Labs, spun off from Google DeepMind, is in talks to raise over $2B. Thrive Capital to lead, Alphabet participating. Another bet on AI-driven drug discovery.",
+      "date": "05-09",
+      "source": "Reuters / 新浪",
       "category": "industry",
-      "url": "https://finance.sina.com.cn/7x24/2026-05-08/doc-inhxccuv8025886.shtml"
+      "url": "https://k.sina.com.cn/article_5953190046_162d6789e067033k7u.html"
     },
     {
       "id": "news-006",
-      "title_zh": "Anthropic'内省适配器'让AI模型'自我坦白'",
-      "title_en": "Anthropic's 'Introspection Adapter' Makes AI Models Self-Report",
-      "excerpt_zh": "Anthropic最新论文发布'内省适配器'技术，让黑盒模型能够自行说出隐藏行为。被认为是AI安全领域的技术突破，有望解决模型可解释性难题。",
-      "excerpt_en": "Anthropic's new paper introduces an 'introspection adapter' that enables black-box models to self-report hidden behaviors, a breakthrough in AI safety.",
-      "date": "05-08",
-      "source": "Anthropic / 图灵人工智能",
-      "category": "tech",
-      "url": "https://k.sina.com.cn/article_7857201856_1d45362c0019057bry.html"
+      "title_zh": "AI终端迎国标：手机、电脑、汽车座舱等7品类按L1-L4分级",
+      "title_en": "China Unveils AI Terminal Grading Standard: 7 Categories from L1 to L4",
+      "excerpt_zh": "工信部等部门联合启动AI终端智能化分级国家标准，从L1响应级到L4协同级。首批覆盖手机、电脑、电视、眼镜、汽车座舱、音箱、耳机等7个品类，将衔接'以旧换新'政策落地。",
+      "excerpt_en": "China launches AI terminal intelligence grading standards, covering phones, PCs, car cockpits, glasses, speakers, headphones. Will integrate with trade-in policies.",
+      "date": "05-09",
+      "source": "上观新闻 / 东方财富",
+      "category": "policy",
+      "url": "https://wap.eastmoney.com/a/202605093731948340.html"
     },
     {
       "id": "news-007",
-      "title_zh": "三星AI需求爆发：芯片、生态双轮驱动",
-      "title_en": "Samsung AI Demand Explodes: Chip + Ecosystem Dual Drive",
-      "excerpt_zh": "2026年开年，三星电子凭借强劲AI需求实现业绩爆发，Q4芯片业务营业利润达16.4万亿韩元（约114亿美元），同比激增逾四倍，远超市场预期。",
-      "excerpt_en": "Samsung's Q4 chip operating profit surges over 4x YoY to 16.4 trillion won (~$11.4B), driven by booming AI demand for HBM memory and advanced processes.",
-      "date": "05-08",
-      "source": "Bloomberg / 芯智讯",
-      "category": "industry",
-      "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190578y8.html"
+      "title_zh": "四部门发文促进AI与能源双向赋能，部署29项重点任务",
+      "title_en": "Four Ministries Issue AI-Energy Mutual Empowerment Plan with 29 Key Tasks",
+      "excerpt_zh": "发改委等四部门联合编制《关于促进人工智能与能源双向赋能的行动方案》，以能源支撑AI发展、AI赋能能源转型为主线，提出2027年初步构建能源保障体系目标。",
+      "excerpt_en": "China's four ministries unveil action plan for AI-energy mutual empowerment, deploying 29 tasks. Goal: preliminary energy security system by 2027.",
+      "date": "05-09",
+      "source": "新浪财经 / 发改委",
+      "category": "policy",
+      "url": "https://finance.sina.cn/headline/2026-05-09/detail-inhxftiv3825296.d.html"
     },
     {
       "id": "news-008",
-      "title_zh": "xAI核心工程团队重组，SpaceX高管兼任总裁",
-      "title_en": "xAI Core Engineering Team Restructures with SpaceX Executive as President",
-      "excerpt_zh": "马斯克旗下xAI推进新一轮组织架构调整，SpaceX星链高级副总裁迈克尔·尼科尔斯兼任xAI总裁，称将集中资源大幅提升训练效率。",
-      "excerpt_en": "Elon Musk's xAI undergoes restructuring. SpaceX Starlink SVP Michael Nichols becomes xAI president, vowing to boost training efficiency.",
-      "date": "05-08",
-      "source": "Business Insider / 环球网",
-      "category": "industry",
-      "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190579j4.html"
+      "title_zh": "GitHub Copilot Workspace支持跨仓库上下文，重构效率提升40%",
+      "title_en": "GitHub Copilot Workspace Adds Cross-Repo Context, 40% Faster Refactoring",
+      "excerpt_zh": "GitHub宣布Copilot Workspace支持跨仓库上下文感知，可同时引用和修改最多10个关联仓库的代码。早期用户反馈微服务架构重构效率提升40%。",
+      "excerpt_en": "GitHub Copilot Workspace now supports cross-repository context awareness across up to 10 linked repos. Early users report 40% faster refactoring for microservices.",
+      "date": "05-09",
+      "source": "GitHub / SkillsLLM",
+      "category": "tech",
+      "url": "https://skillsllm.com/news/ai-news-2026-05-05"
     },
     {
       "id": "news-009",
-      "title_zh": "VLA模型未终结：智平方创始人郭彦东发声",
-      "title_en": "VLA Models Not Dead: ZhiSquare Founder Guo Yandong Speaks Out",
-      "excerpt_zh": "针对'VLA时代已经终结'的论调，智平方创始人郭彦东在演讲中论证VLA仍在持续变强。具身智能赛道正陷入世界模型与VLA的技术路线之争。",
-      "excerpt_en": "Amid claims that 'VLA era is over', ZhiSquare's founder argues VLA models continue to strengthen, as the embodied AI field debates technical paths.",
-      "date": "05-08",
-      "source": "极客公园 / 图灵人工智能",
+      "title_zh": "Anthropic发布MCP 2.1：双向工具调用，200+服务器承诺支持",
+      "title_en": "Anthropic Releases MCP 2.1 with Bidirectional Tool Calling",
+      "excerpt_zh": "模型上下文协议MCP升级至2.1版本，引入双向工具调用，允许服务器向客户端请求能力。200多个MCP服务器已承诺支持新规范，推动更复杂的Agent工作流。",
+      "excerpt_en": "Model Context Protocol updated to v2.1 with bidirectional tool calling. Over 200 MCP servers committed to support, enabling more sophisticated agent workflows.",
+      "date": "05-09",
+      "source": "Anthropic / SkillsLLM",
       "category": "tech",
-      "url": "https://k.sina.com.cn/article_5952915720_162d2490806703vb7c.html"
+      "url": "https://skillsllm.com/news/ai-news-2026-05-05"
     },
     {
       "id": "news-010",
-      "title_zh": "人形机器人灵犀X2将走出实验室，售价十几万起",
-      "title_en": "Humanoid Robot Lingxi X2 Ready for Market, Starting at $20K+",
-      "excerpt_zh": "上海智元机器人宣布灵犀X2将于5月22日开启合作伙伴招募，正式走出实验室。根据配置不同，售价在十几万至三四十万元之间。",
-      "excerpt_en": "ZhiYuan Robotics announces Lingxi X2 humanoid robot will open partner recruitment on May 22, marking its move from lab to commercial application.",
-      "date": "05-08",
-      "source": "Sina Tech / 云头条",
+      "title_zh": "贵阳成立具身智能机器人产教融合共同体，抢占产业新赛道",
+      "title_en": "Guiyang Establishes Embodied AI Robot Industry-Education Alliance",
+      "excerpt_zh": "2026具身智能机器人产教融合发展大会在贵阳举行，贵州省具身智能机器人产教融合共同体（产业联盟）正式成立。聚焦能源矿山、航空航天、山地农机、智慧文旅四大赛道。",
+      "excerpt_en": "Guiyang hosts embodied AI robot conference, establishing industry-education alliance. Focuses on mining, aerospace, agricultural machinery, smart tourism.",
+      "date": "05-09",
+      "source": "贵州日报 / 新浪",
       "category": "tech",
-      "url": "https://k.sina.com.cn/article_7857141524_1d452771401902aktc.html"
+      "url": "https://finance.sina.com.cn/jjxw/2026-05-09/doc-inhxfnzx3935068.shtml"
     }
   ],
   "weekly": [
     {
-      "day": "周四",
-      "day_en": "Thu",
-      "date": "05-08",
+      "day": "周五",
+      "day_en": "Fri",
+      "date": "05-09",
       "count": 10,
       "items": [
         {
-          "title_zh": "苹果AI视觉AirPods进入DVT阶段",
-          "title_en": "Apple AI vision AirPods enters DVT",
+          "title_zh": "DeepSeek V4.1六月发布，加速商业化",
+          "title_en": "DeepSeek V4.1 coming June, commercial push",
           "category": "breaking",
-          "url": "https://finance.sina.com.cn/jjxw/2026-05-08/doc-inhxckat2475836.shtml"
+          "url": "https://k.sina.com.cn/article_5953189932_162d6782c067048a8e.html"
         },
         {
-          "title_zh": "中美拟讨论AI议题",
-          "title_en": "US-China to discuss AI",
+          "title_zh": "xAI并入SpaceX，更名SpaceXAI",
+          "title_en": "xAI dissolves into SpaceX, rebrands",
           "category": "breaking",
-          "url": "https://www.cls.cn/detail/2365544"
+          "url": "https://www.caixin.com/2026-05-07/102441371.html"
         },
         {
-          "title_zh": "豆包收费，AI免费时代落幕",
-          "title_en": "Doubao charging, free AI era ends",
+          "title_zh": "腾讯云AI算力涨价5%",
+          "title_en": "Tencent Cloud AI compute up 5%",
           "category": "industry",
-          "url": "https://k.sina.com.cn/article_5953740931_162dee0830670360zk.html"
+          "url": "https://www.stcn.com/article/detail/3734661.html"
         },
         {
-          "title_zh": "马斯克诉OpenAI庭审持续",
-          "title_en": "Musk vs OpenAI trial continues",
+          "title_zh": "特朗普拟AI安全行政令",
+          "title_en": "Trump drafts AI security EO",
+          "category": "policy",
+          "url": "https://finance.sina.com.cn/stock/t/2026-05-09/doc-inhxfnzv4076785.shtml"
+        },
+        {
+          "title_zh": "Isomorphic Labs拟筹20亿美元",
+          "title_en": "Isomorphic Labs raising $2B+",
           "category": "industry",
-          "url": "https://finance.sina.com.cn/stock/t/2026-05-08/doc-inhxccuv8028683.shtml"
+          "url": "https://k.sina.com.cn/article_5953190046_162d6789e067033k7u.html"
         },
         {
-          "title_zh": "软银携手英伟达造AI服务器",
-          "title_en": "SoftBank + Nvidia AI servers",
-          "category": "industry",
-          "url": "https://finance.sina.com.cn/7x24/2026-05-08/doc-inhxccuv8025886.shtml"
+          "title_zh": "AI终端迎国标分级",
+          "title_en": "AI terminal grading standard",
+          "category": "policy",
+          "url": "https://wap.eastmoney.com/a/202605093731948340.html"
         },
         {
-          "title_zh": "Anthropic内省适配器突破",
-          "title_en": "Anthropic introspection adapter",
+          "title_zh": "四部门AI+能源双向赋能",
+          "title_en": "AI-energy mutual empowerment",
+          "category": "policy",
+          "url": "https://finance.sina.cn/headline/2026-05-09/detail-inhxftiv3825296.d.html"
+        },
+        {
+          "title_zh": "Copilot跨仓库上下文",
+          "title_en": "Copilot cross-repo context",
           "category": "tech",
-          "url": "https://k.sina.com.cn/article_7857201856_1d45362c0019057bry.html"
+          "url": "https://skillsllm.com/news/ai-news-2026-05-05"
         },
         {
-          "title_zh": "三星AI需求业绩爆发",
-          "title_en": "Samsung AI demand surge",
-          "category": "industry",
-          "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190578y8.html"
-        },
-        {
-          "title_zh": "xAI团队重组提速",
-          "title_en": "xAI restructuring speeds up",
-          "category": "industry",
-          "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190579j4.html"
-        },
-        {
-          "title_zh": "VLA模型路线之争",
-          "title_en": "VLA model debate continues",
+          "title_zh": "Anthropic MCP 2.1发布",
+          "title_en": "Anthropic MCP 2.1 released",
           "category": "tech",
-          "url": "https://k.sina.com.cn/article_5952915720_162d2490806703vb7c.html"
+          "url": "https://skillsllm.com/news/ai-news-2026-05-05"
         },
         {
-          "title_zh": "灵犀X2机器人商业化",
-          "title_en": "Lingxi X2 robot commercialization",
+          "title_zh": "贵阳具身智能产教融合",
+          "title_en": "Guiyang embodied AI alliance",
           "category": "tech",
-          "url": "https://k.sina.com.cn/article_7857141524_1d452771401902aktc.html"
+          "url": "https://finance.sina.com.cn/jjxw/2026-05-09/doc-inhxfnzx3935068.shtml"
         }
       ]
     }
@@ -195,74 +195,76 @@
       "label_en": "Today's News"
     },
     {
-      "num": "2",
-      "label_zh": "重大产品发布",
-      "label_en": "Major Product Launches"
+      "num": "3",
+      "label_zh": "政策发布",
+      "label_en": "Policy Releases"
     },
     {
-      "num": "$114B",
-      "label_zh": "三星芯片利润",
-      "label_en": "Samsung Chip Profit"
+      "num": "$2B+",
+      "label_zh": "Isomorphic融资",
+      "label_en": "Isomorphic Funding"
     },
     {
-      "num": "60%",
-      "label_zh": "中国AI专利占比",
-      "label_en": "China AI Patent Share"
+      "num": "7",
+      "label_zh": "AI终端品类国标",
+      "label_en": "AI Terminal Categories"
     }
   ],
   "hotList": [
     {
-      "title_zh": "苹果首款AI视觉AirPods进入开发后期",
-      "title_en": "Apple AI vision AirPods enters final dev stage",
-      "url": "https://finance.sina.com.cn/jjxw/2026-05-08/doc-inhxckat2475836.shtml"
+      "title_zh": "DeepSeek V4.1六月发布，加速商业化",
+      "title_en": "DeepSeek V4.1 coming June with image/audio",
+      "url": "https://k.sina.com.cn/article_5953189932_162d6782c067048a8e.html"
     },
     {
-      "title_zh": "中美拟在元首会晤期间讨论AI",
-      "title_en": "US-China AI talks at presidential summit",
-      "url": "https://www.cls.cn/detail/2365544"
+      "title_zh": "xAI解散并入SpaceX，更名SpaceXAI",
+      "title_en": "xAI dissolves into SpaceX, rebrands",
+      "url": "https://www.caixin.com/2026-05-07/102441371.html"
     },
     {
-      "title_zh": "豆包收费，AI免费时代落幕",
-      "title_en": "Doubao charging ends AI free era",
-      "url": "https://k.sina.com.cn/article_5953740931_162dee0830670360zk.html"
+      "title_zh": "腾讯云AI算力今日起涨价5%",
+      "title_en": "Tencent Cloud AI prices rise 5%",
+      "url": "https://www.stcn.com/article/detail/3734661.html"
     },
     {
-      "title_zh": "马斯克诉OpenAI世纪庭审持续",
-      "title_en": "Musk vs OpenAI trial continues",
-      "url": "https://finance.sina.com.cn/stock/t/2026-05-08/doc-inhxccuv8028683.shtml"
+      "title_zh": "特朗普拟AI安全行政令",
+      "title_en": "Trump drafts AI security EO",
+      "url": "https://finance.sina.com.cn/stock/t/2026-05-09/doc-inhxfnzv4076785.shtml"
     },
     {
-      "title_zh": "软银携手英伟达打造日本AI服务器",
-      "title_en": "SoftBank + Nvidia Japan AI servers",
-      "url": "https://finance.sina.com.cn/7x24/2026-05-08/doc-inhxccuv8025886.shtml"
+      "title_zh": "AI终端迎国标L1-L4分级",
+      "title_en": "AI terminal L1-L4 grading",
+      "url": "https://wap.eastmoney.com/a/202605093731948340.html"
     },
     {
-      "title_zh": "Anthropic内省适配器技术突破",
-      "title_en": "Anthropic introspection adapter",
-      "url": "https://k.sina.com.cn/article_7857201856_1d45362c0019057bry.html"
+      "title_zh": "Isomorphic Labs拟筹超20亿美元",
+      "title_en": "Isomorphic Labs raising $2B+",
+      "url": "https://k.sina.com.cn/article_5953190046_162d6789e067033k7u.html"
     },
     {
-      "title_zh": "三星Q4芯片利润激增四倍",
-      "title_en": "Samsung Q4 chip profit surges 4x",
-      "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190578y8.html"
+      "title_zh": "四部门AI+能源双向赋能",
+      "title_en": "Four ministries AI-energy plan",
+      "url": "https://finance.sina.cn/headline/2026-05-09/detail-inhxftiv3825296.d.html"
     },
     {
-      "title_zh": "xAI核心团队重组",
-      "title_en": "xAI core team restructuring",
-      "url": "https://k.sina.com.cn/article_7857201856_1d45362c00190579j4.html"
+      "title_zh": "Anthropic MCP 2.1双向工具调用",
+      "title_en": "Anthropic MCP 2.1 bidirectional",
+      "url": "https://skillsllm.com/news/ai-news-2026-05-05"
     }
   ],
   "tags": [
-    "苹果AI",
-    "中美AI对话",
-    "豆包收费",
-    "马斯克诉讼",
-    "软银",
-    "英伟达",
-    "Anthropic",
-    "三星芯片",
-    "xAI重组",
-    "VLA模型"
+    "DeepSeek",
+    "xAI",
+    "SpaceXAI",
+    "腾讯云",
+    "AI算力涨价",
+    "特朗普",
+    "AI行政令",
+    "Isomorphic Labs",
+    "AI终端国标",
+    "MCP 2.1",
+    "具身智能",
+    "AI+能源"
   ],
   "sources": [
     "Reuters",
@@ -270,8 +272,9 @@
     "TechCrunch",
     "Sina Tech",
     "财联社",
-    "极客公园",
-    "芯智讯",
-    "Anthropic"
+    "财新网",
+    "Anthropic",
+    "GitHub",
+    "The Information"
   ]
 }
