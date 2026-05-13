@@ -47,6 +47,7 @@
         <a href="#news" class="nav-link active" data-section="news" aria-current="page">📰 AI新闻</a>
         <a href="#github" class="nav-link" data-section="github" aria-current="false">🔥 GitHub趋势</a>
         <a href="#api" class="nav-link" data-section="api" aria-current="false">📈 API趋势</a>
+        <a href="#notes" class="nav-link" data-section="notes" aria-current="false">📝 杂记</a>
         <button class="lang-toggle" id="langToggle" aria-label="切换语言" aria-pressed="false" style="display:none">EN</button>
       </div>
     </div>
@@ -152,18 +153,6 @@
                   <li class="archive-loading">加载中...</li>
                 </ul>
               </div>
-              <div class="archive-section">
-                <h4>🔥 GitHub趋势</h4>
-                <ul class="archive-list" id="githubArchive">
-                  <li class="archive-loading">加载中...</li>
-                </ul>
-              </div>
-              <div class="archive-section">
-                <h4>📈 API趋势</h4>
-                <ul class="archive-list" id="apiArchive">
-                  <li class="archive-loading">加载中...</li>
-                </ul>
-              </div>
               <p class="archive-hint">💡 点击日期查看当日归档</p>
             </div>
 
@@ -182,7 +171,7 @@
         </div>
       </section>
 
-      <!-- ========== GitHub流行趋势栏目（内容待填充） ========== -->
+      <!-- ========== GitHub流行趋势栏目 ========== -->
       <section id="githubSection" class="main-section" aria-labelledby="githubHeading">
         <header class="page-header">
           <h1 id="githubHeading">🔥 GitHub 流行趋势</h1>
@@ -190,17 +179,36 @@
           <p class="update-time">更新于：2026-05-10</p>
         </header>
 
-        <div class="github-layout">
-          <div class="github-placeholder">
-            <div class="placeholder-icon">🔧</div>
-            <h2>功能开发中</h2>
-            <p>该栏目正在搭建中，将展示每日GitHub Trending中AI相关的热门项目，附带借鉴价值分析。</p>
-            <p class="placeholder-hint">预计上线时间：2026-05-15</p>
+        <div class="news-layout">
+          <!-- 左侧：主内容 -->
+          <div class="news-main">
+            <div id="githubContent">
+              <div class="github-placeholder">
+                <div class="placeholder-icon">🔧</div>
+                <h2>功能开发中</h2>
+                <p>该栏目正在搭建中，将展示每日GitHub Trending中AI相关的热门项目，附带借鉴价值分析。</p>
+                <p class="placeholder-hint">预计上线时间：2026-05-15</p>
+              </div>
+            </div>
           </div>
+
+          <!-- 右侧边栏 -->
+          <aside class="news-sidebar" role="complementary" aria-label="GitHub侧边栏">
+            <div class="widget archive">
+              <h3>📂 历史归档</h3>
+              <div class="archive-section">
+                <h4>🔥 GitHub趋势</h4>
+                <ul class="archive-list" id="githubArchive">
+                  <li class="archive-loading">加载中...</li>
+                </ul>
+              </div>
+              <p class="archive-hint">💡 点击日期查看当日归档</p>
+            </div>
+          </aside>
         </div>
       </section>
 
-      <!-- ========== API调用流行趋势栏目（内容待填充） ========== -->
+      <!-- ========== API调用流行趋势栏目 ========== -->
       <section id="apiSection" class="main-section" aria-labelledby="apiHeading">
         <header class="page-header">
           <h1 id="apiHeading">📈 API 调用趋势</h1>
@@ -208,13 +216,69 @@
           <p class="update-time">更新于：2026-05-10</p>
         </header>
 
-        <div class="api-layout">
-          <div class="api-placeholder">
-            <div class="placeholder-icon">📊</div>
-            <h2>功能开发中</h2>
-            <p>该栏目正在搭建中，将展示各AI平台API调用量趋势、价格变动预警、新模型上线通知等。</p>
-            <p class="placeholder-hint">预计上线时间：2026-05-20</p>
+        <div class="news-layout">
+          <!-- 左侧：主内容 -->
+          <div class="news-main">
+            <div id="apiContent">
+              <div class="api-placeholder">
+                <div class="placeholder-icon">📊</div>
+                <h2>功能开发中</h2>
+                <p>该栏目正在搭建中，将展示各AI平台API调用量趋势、价格变动预警、新模型上线通知等。</p>
+                <p class="placeholder-hint">预计上线时间：2026-05-20</p>
+              </div>
+            </div>
           </div>
+
+          <!-- 右侧边栏 -->
+          <aside class="news-sidebar" role="complementary" aria-label="API侧边栏">
+            <div class="widget archive">
+              <h3>📂 历史归档</h3>
+              <div class="archive-section">
+                <h4>📈 API趋势</h4>
+                <ul class="archive-list" id="apiArchive">
+                  <li class="archive-loading">加载中...</li>
+                </ul>
+              </div>
+              <p class="archive-hint">💡 点击日期查看当日归档</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========== 杂记栏目 ========== -->
+      <section id="notesSection" class="main-section" aria-labelledby="notesHeading">
+        <header class="page-header">
+          <h1 id="notesHeading">📝 杂记</h1>
+          <p class="subtitle">碎片洞察 · 偶遇好物 · 值得记一笔的发现</p>
+          <p class="update-time">更新于：2026-05-13</p>
+        </header>
+
+        <div class="news-layout">
+          <!-- 左侧：主内容 -->
+          <div class="news-main">
+            <div id="notesContent">
+              <div class="notes-placeholder">
+                <div class="placeholder-icon">✨</div>
+                <h2>杂记栏目</h2>
+                <p>这里记录队长发来的有意思的文章、视频，经分析后整理成可读的内容。</p>
+                <p class="placeholder-hint">等队长投喂素材中...</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 右侧边栏 -->
+          <aside class="news-sidebar" role="complementary" aria-label="杂记侧边栏">
+            <div class="widget archive">
+              <h3>📂 历史归档</h3>
+              <div class="archive-section">
+                <h4>📝 杂记</h4>
+                <ul class="archive-list" id="notesArchive">
+                  <li class="archive-empty">暂无历史归档</li>
+                </ul>
+              </div>
+              <p class="archive-hint">💡 点击日期查看当日归档</p>
+            </div>
+          </aside>
         </div>
       </section>
 

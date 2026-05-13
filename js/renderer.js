@@ -195,11 +195,11 @@ const Renderer = (function () {
     var newsPath = archiveDate ? 'data/news/' + archiveDate + '.json' : 'data/news/current.json';
     var githubPath = archiveDate ? 'data/github/' + archiveDate + '.json' : 'data/github/current.json';
     var apiPath = archiveDate ? 'data/api/' + archiveDate + '.json' : 'data/api/current.json';
+    var notesPath = archiveDate ? 'data/notes/' + archiveDate + '.json' : 'data/notes/current.json';
 
     // News 数据
     fetchData(newsPath, function (news) {
       if (!news) {
-        // 如果 current.json 不存在，fallback 到旧的 news.json
         fetchData('data/news.json', function (legacy) {
           if (legacy) renderNewsSection(legacy, archiveDate);
         });
@@ -218,6 +218,12 @@ const Renderer = (function () {
     fetchData(apiPath, function (data) {
       if (!data) return;
       renderApiSection(data, archiveDate);
+    });
+
+    // 杂记数据
+    fetchData(notesPath, function (data) {
+      if (!data) return;
+      renderNotesSection(data, archiveDate);
     });
   }
 
@@ -262,6 +268,37 @@ const Renderer = (function () {
 
     if (data.archiveDates && data.archiveDates.length > 0) {
       renderArchiveLinks('apiArchive', data.archiveDates, 'api');
+    }
+  }
+
+  function renderNotesSection(data, archiveDate) {
+    // 杂记栏目渲染
+    var container = document.getElementById('notesContent');
+    if (!container) return;
+
+    if (data.meta && data.meta.note === 'placeholder') {
+      container.innerHTML = '<div class="notes-placeholder"><span class="placeholder-icon">✨</span><h3>杂记栏目</h3><p>这里记录队长发来的有意思的文章、视频，经分析后整理成可读的内容。</p><p class="placeholder-hint">等队长投喂素材中...</p></div>';
+      return;
+    }
+
+    // 渲染笔记列表
+    if (data.items && data.items.length > 0) {
+      container.innerHTML = data.items.map(function(item) {
+        return (
+          '<article class="card note-card anim-fade-up">' +
+            '<div class="note-meta">' + escapeHtml(item.date) + ' · ' + escapeHtml(item.source || '杂记') + '</div>' +
+            '<h3>' + escapeHtml(item.title) + '</h3>' +
+            '<p class="note-excerpt">' + escapeHtml(item.excerpt) + '</p>' +
+            (item.url ? '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener" class="note-link">阅读原文 →</a>' : '') +
+          '</article>'
+        );
+      }).join('');
+    } else {
+      container.innerHTML = '<div class="notes-placeholder"><span class="placeholder-icon">✨</span><h3>杂记栏目</h3><p>等队长投喂素材中...</p></div>';
+    }
+
+    if (data.archiveDates && data.archiveDates.length > 0) {
+      renderArchiveLinks('notesArchive', data.archiveDates, 'notes');
     }
   }
 
