@@ -154,208 +154,19 @@ const Renderer = (function () {
     }).join('');
   }
 
-  // ===== 8. 渲染深度解读 =====
+  // ===== 8. 渲染深度解读（已废弃） =====
   var analysisPage = 0;
   var analysisPerPage = 8;
   var analysisItems = [];
-
-  function parseDate(d) {
-    if (!d) return 0;
-    var parts = d.split(/[-\/]/);
-    if (parts.length === 2) {
-      return new Date(2026, parseInt(parts[0]) - 1, parseInt(parts[1])).getTime();
-    }
-    if (parts.length >= 3) {
-      return new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2])).getTime();
-    }
-    return 0;
-  }
-
-  function renderAnalysis(containerId, items) {
-    analysisItems = items || [];
-    // 按日期排序：新→旧
-    analysisItems.sort(function (a, b) {
-      return parseDate(b.date) - parseDate(a.date);
-    });
-    var container = document.getElementById(containerId);
-    if (!container) return;
-    updateAnalysisPage();
-  }
-
-  function updateAnalysisPage() {
-    var container = document.getElementById('analysisFeatured');
-    if (!container) return;
-
-    var start = analysisPage * analysisPerPage;
-    var pageItems = analysisItems.slice(start, start + analysisPerPage);
-    var totalPages = Math.ceil(analysisItems.length / analysisPerPage) || 1;
-
-    container.innerHTML = pageItems.map(function (item) {
-      var points = (I18N.getLang() === 'zh' ? item.points_zh : item.points_en) || [];
-      var debate = I18N.getLang() === 'zh' ? item.debate_zh : item.debate_en;
-      var pointsHtml = points.map(function (p) {
-        return (
-          '<div class="point">' +
-            '<span class="point-num">' + p.num + '</span>' +
-            '<div class="point-content">' +
-              '<strong>' + escapeHtml(p.title) + '</strong>' +
-              '<p>' + escapeHtml(p.desc) + '</p>' +
-            '</div>' +
-          '</div>'
-        );
-      }).join('');
-
-      var debateHtml = '';
-      if (debate) {
-        debateHtml = (
-          '<div class="analysis-section debate">' +
-            '<h3>' + I18N.t('debateTitle') + '</h3>' +
-            '<div class="debate-grid">' +
-              '<div class="debate-side pro">' +
-                '<h4>' + I18N.t('proSide') + '</h4>' +
-                '<ul>' + debate.pro.map(function (d) { return '<li>' + escapeHtml(d) + '</li>'; }).join('') + '</ul>' +
-              '</div>' +
-              '<div class="debate-side con">' +
-                '<h4>' + I18N.t('conSide') + '</h4>' +
-                '<ul>' + debate.con.map(function (d) { return '<li>' + escapeHtml(d) + '</li>'; }).join('') + '</ul>' +
-              '</div>' +
-            '</div>' +
-          '</div>'
-        );
-      }
-
-      var predictionHtml = '';
-      if (item.prediction_zh || item.prediction_en) {
-        predictionHtml = (
-          '<div class="analysis-section prediction">' +
-            '<h3>\ud83d\udd2e ' + I18N.t('predictionTitle') + '</h3>' +
-            '<div class="prediction-box">' +
-              '<p>' + escapeHtml(getText(item, 'prediction')) + '</p>' +
-              '<p class="prediction-note">' + I18N.t('predictionNote') + '</p>' +
-            '</div>' +
-          '</div>'
-        );
-      }
-
-      var tagsHtml = (item.tags || []).map(function (t) { return '<span class="tag">' + escapeHtml(t) + '</span>'; }).join('');
-
-      return (
-        '<article class="analysis-card featured anim-fade-up collapsed" data-id="' + item.id + '" data-index="' + (start + idx) + '">' +
-          '<div class="analysis-header">' +
-            '<span class="analysis-tag tag-breaking">' + item.grade + '\u7ea7\u00b7\u4ee3\u8868\u4f5c</span>' +
-            '<span class="analysis-date">' + escapeHtml(item.date) + '</span>' +
-          '</div>' +
-          '<h2>' + escapeHtml(getText(item, 'title')) + '</h2>' +
-          '<div class="analysis-summary">' +
-            '<p>' + escapeHtml(getText(item, 'summary')) + '</p>' +
-          '</div>' +
-          '<div class="analysis-fold-hint">' +
-            '<span class="fold-icon">▼</span>' +
-            '<span class="fold-text">' + I18N.t('clickToExpand') + '</span>' +
-          '</div>' +
-          '<div class="analysis-body">' +
-            '<div class="analysis-section">' +
-              '<h3>\ud83d\udca1 ' + points.length + I18N.t('counterPoints') + '</h3>' +
-              '<div class="analysis-points">' + pointsHtml + '</div>' +
-            '</div>' +
-            debateHtml +
-            predictionHtml +
-          '</div>' +
-          '<div class="analysis-footer">' +
-            '<div class="analysis-tags">' + tagsHtml + '</div>' +
-            '<span class="analysis-source">' + I18N.t('sourceLabel') + '：' + escapeHtml(item.source) + '</span>' +
-          '</div>' +
-        '</article>'
-      );
-    }).join('');
-
-    // Pagination
-    var prevBtn = document.getElementById('analysisPrev');
-    var nextBtn = document.getElementById('analysisNext');
-    var pageNum = document.getElementById('analysisPageNum');
-    if (prevBtn) prevBtn.disabled = analysisPage <= 0;
-    if (nextBtn) nextBtn.disabled = analysisPage >= totalPages - 1;
-    if (pageNum) pageNum.textContent = (analysisPage + 1) + ' / ' + totalPages;
-
-    // 绑定折叠点击事件
-    container.querySelectorAll('.analysis-card.collapsed').forEach(function(card) {
-      card.addEventListener('click', function(e) {
-        if (e.target.closest('a')) return;
-        card.classList.toggle('collapsed');
-        card.classList.toggle('expanded');
-      });
-    });
-  }
-
-  function nextAnalysisPage() {
-    var totalPages = Math.ceil(analysisItems.length / analysisPerPage) || 1;
-    if (analysisPage < totalPages - 1) {
-      analysisPage++;
-      updateAnalysisPage();
-    }
-  }
-
-  function prevAnalysisPage() {
-    if (analysisPage > 0) {
-      analysisPage--;
-      updateAnalysisPage();
-    }
-  }
+  function parseDate(d) { return 0; }
+  function renderAnalysis(containerId, items) { /* 栏目已移除 */ }
+  function updateAnalysisPage() { /* 栏目已移除 */ }
+  function nextAnalysisPage() { /* 栏目已移除 */ }
+  function prevAnalysisPage() { /* 栏目已移除 */ }
 
   // ===== 9. 渲染API定价 =====
-  function renderPricing(data) {
-    if (!data) return;
-
-    // International table
-    var intlBody = document.getElementById('pricingIntlBody');
-    if (intlBody && data.international) {
-      intlBody.innerHTML = data.international.map(function (row) {
-        return (
-          '<tr class="tier-' + row.tier + '">' +
-            '<td><strong>' + escapeHtml(row.model) + '</strong><br><span class="vendor">' + escapeHtml(row.vendor) + '</span></td>' +
-            '<td>' + escapeHtml(row.input) + '</td>' +
-            '<td>' + escapeHtml(row.output) + '</td>' +
-            '<td>' + escapeHtml(row.context) + '</td>' +
-            '<td><span class="badge ' + row.tier + '">' + escapeHtml(getText(row, 'badge')) + '</span></td>' +
-          '</tr>'
-        );
-      }).join('');
-    }
-
-    // China table
-    var cnBody = document.getElementById('pricingChinaBody');
-    if (cnBody && data.china) {
-      cnBody.innerHTML = data.china.map(function (row) {
-        return (
-          '<tr class="tier-' + row.tier + '">' +
-            '<td><strong>' + escapeHtml(row.model) + '</strong><br><span class="vendor">' + escapeHtml(row.vendor) + '</span></td>' +
-            '<td>' + escapeHtml(row.input) + '</td>' +
-            '<td>' + escapeHtml(row.output) + '</td>' +
-            '<td>' + escapeHtml(row.context) + '</td>' +
-            '<td><span class="badge ' + row.tier + '">' + escapeHtml(getText(row, 'badge')) + '</span></td>' +
-          '</tr>'
-        );
-      }).join('');
-    }
-
-    // Plan cards
-    var plansContainer = document.getElementById('pricingPlans');
-    if (plansContainer && data.plans) {
-      plansContainer.innerHTML = data.plans.map(function (plan) {
-        var cls = 'plan-card anim-fade-up';
-        if (plan.highlight) cls += ' highlight';
-        if (plan.isFree) cls += ' free';
-        var feats = (I18N.getLang() === 'zh' ? plan.features_zh : plan.features_en) || [];
-        return (
-          '<div class="' + cls + '">' +
-            '<div class="plan-name">' + escapeHtml(getText(plan, 'name')) + '</div>' +
-            '<div class="plan-price">' + escapeHtml(getText(plan, 'price')) + '<span>' + escapeHtml(getText(plan, 'period')) + '</span></div>' +
-            '<ul class="plan-features">' + feats.map(function (f) { return '<li>' + escapeHtml(f) + '</li>'; }).join('') + '</ul>' +
-          '</div>'
-        );
-      }).join('');
-    }
-  }
+  // ===== 9. 渲染API定价（已废弃） =====
+  function renderPricing(data) { /* 栏目已移除 */ }
 
   // ===== 主入口：加载所有数据 =====
   function loadAll() {
@@ -374,17 +185,7 @@ const Renderer = (function () {
       updateTimestamps(news.meta);
     });
 
-    // Analysis data
-    fetchData('data/analysis.json', function (analysis) {
-      if (!analysis) return;
-      renderAnalysis('analysisFeatured', analysis.items);
-    });
-
-    // Pricing data
-    fetchData('data/pricing.json', function (pricing) {
-      if (!pricing) return;
-      renderPricing(pricing);
-    });
+    // Analysis / Pricing 栏目已移除，不再加载对应数据
   }
 
   function fetchData(url, callback) {
@@ -408,16 +209,7 @@ const Renderer = (function () {
     });
   }
 
-  // Re-render on language change
-  I18N.onChange(function () {
-    loadAll();
-  });
-
   return {
-    loadAll: loadAll,
-    nextAnalysisPage: nextAnalysisPage,
-    prevAnalysisPage: prevAnalysisPage,
-    renderAnalysis: renderAnalysis,
-    updateAnalysisPage: updateAnalysisPage
+    loadAll: loadAll
   };
 })();

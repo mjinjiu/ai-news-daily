@@ -50,23 +50,6 @@
     switchSection(window.location.hash.slice(1), true);
   }
 
-  // ==================== 2. 语言切换 ====================
-  var langToggle = document.getElementById('langToggle');
-  if (langToggle) {
-    langToggle.addEventListener('click', function () {
-      I18N.toggle();
-      try { localStorage.setItem('ai-frontline-lang', I18N.getLang()); } catch (e) { /* ignore */ }
-    });
-
-    // 初始化按钮文本
-    function syncLangBtn() {
-      langToggle.textContent = I18N.t('langBtn');
-      langToggle.setAttribute('aria-pressed', I18N.getLang() === 'en' ? 'true' : 'false');
-    }
-    I18N.onChange(syncLangBtn);
-    syncLangBtn();
-  }
-
   // ==================== 3. 全局事件委托 — 新闻点击跳转 ====================
   document.addEventListener('click', function (e) {
     var clickable = e.target.closest('[data-source-url]');
@@ -159,32 +142,20 @@
   // ==================== 6. 更新时间 ====================
   function updateTime() {
     var now = new Date();
-    var lang = I18N.getLang();
-    var timeStr;
-    if (lang === 'zh') {
-      timeStr = now.toLocaleString('zh-CN', {
-        year: 'numeric', month: '2-digit', day: '2-digit',
-        hour: '2-digit', minute: '2-digit'
-      });
-    } else {
-      timeStr = now.toLocaleString('en-US', {
-        year: 'numeric', month: 'short', day: '2-digit',
-        hour: '2-digit', minute: '2-digit'
-      });
-    }
-    var prefix = I18N.t('updatePrefix');
+    var timeStr = now.toLocaleString('zh-CN', {
+      year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit'
+    });
     document.querySelectorAll('.update-time').forEach(function (el) {
-      el.textContent = prefix + timeStr;
+      el.textContent = '更新于：' + timeStr;
     });
   }
 
-  // ==================== 7. 深度解读分页 ====================
+  // ==================== 7. 深度解读分页（已废弃，保留空壳兼容旧代码） ====================
   document.addEventListener('click', function (e) {
     var btn = e.target.closest('[data-analysis-action]');
     if (!btn) return;
-    var action = btn.dataset.analysisAction;
-    if (action === 'prev') Renderer.prevAnalysisPage();
-    if (action === 'next') Renderer.nextAnalysisPage();
+    // analysis section 已移除，此功能当前不生效
   });
 
   // ==================== 8. 所有数据渲染完成后初始化动画 ====================
@@ -201,14 +172,5 @@
     setTimeout(onRenderComplete, 100);
   });
 
-  // Also re-init animations on language change (re-render happens)
-  I18N.onChange(function () {
-    setTimeout(function () {
-      if (observer) observer.disconnect();
-      initAnimations();
-      updateTime();
-    }, 150);
-  });
-
-  console.log('\u2705 AI前线 v4.1 loaded \u00b7 Data-driven rendering \u00b7 https://mjinjiu.github.io/ai-news-daily/');
+  console.log('\u2705 AI前线 v4.2 loaded \u00b7 中文站专注版 \u00b7 https://mjinjiu.github.io/ai-news-daily/');
 })();
