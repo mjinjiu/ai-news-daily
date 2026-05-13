@@ -593,21 +593,17 @@ body {
   color: var(--text-muted);
 }
 
-/* ========== 新闻两栏布局 ========== */
+/* ========== 新闻布局（去侧边栏后全宽单列） ========== */
 .news-layout {
-  display: flex;
-  gap: 24px;
+  display: block;
 }
 
 .news-main {
-  flex: 1;
-  min-width: 0;
+  width: 100%;
 }
 
 .news-sidebar {
-  width: 280px;
-  flex-shrink: 0;
-  display: none; /* 默认隐藏，在>=1024px时显示 */
+  display: none;
 }
 
 /* ========== 区块标题 ========== */
@@ -849,7 +845,32 @@ body {
   margin-left: auto;
 }
 
-/* ========== 本周回顾 ========== */
+/* ========== GitHub趋势 & API趋势 专属样式 ========== */
+.lang-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--surface);
+  margin-bottom: 6px;
+  font-size: 0.85rem;
+}
+.lang-name { font-weight: 500; }
+.lang-count { color: var(--text-muted); font-size: 0.8rem; }
+
+.change-up { color: #10b981; font-weight: 600; }
+.change-down { color: #ef4444; font-weight: 600; }
+
+#githubLanguages {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+@media (max-width: 767px) {
+  #githubLanguages { grid-template-columns: 1fr; }
+}
 .weekly-review { margin-bottom: 32px; }
 
 .week-timeline {
@@ -1380,9 +1401,8 @@ body {
 .archive-hint { font-size: 0.75rem; color: var(--text-tertiary); margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border); }
 
 /* ========== 响应式 ========== */
-/* >= 1024px: 显示侧边栏，双列布局 */
+/* >= 1024px */
 @media (min-width: 1024px) {
-  .news-sidebar { display: block; }
   .featured-row { grid-template-columns: 1fr 1fr; }
   .stats-row { grid-template-columns: repeat(4, 1fr); }
 }
@@ -1414,7 +1434,7 @@ body {
   .news-bar { width: 3px; }
   .news-body h3 { font-size: 0.9rem; }
   .news-excerpt {
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 3;
     font-size: 0.8rem;
   }
   .news-footer { gap: 6px; flex-wrap: wrap; }
@@ -1422,11 +1442,8 @@ body {
   .news-tag { padding: 2px 6px; font-size: 0.7rem; }
 
   /* 布局 */
-  .news-layout { flex-direction: column; gap: 24px; }
+  .news-layout { display: block; }
   .news-main { min-width: 100%; }
-  .news-sidebar {
-    display: none; /* 修复：统一移动端隐藏策略，完全隐藏而非移到下方 */
-  }
 
   /* 统计 */
   .stats-row { grid-template-columns: repeat(2, 1fr); }
@@ -1635,6 +1652,149 @@ body {
 }
 
 .source-list-bottom .source-tag:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* ========== 历史回顾（缩略 + 点击展开）========== */
+.history-review {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 2px solid var(--border);
+}
+
+.history-week {
+  margin-bottom: 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--surface);
+  transition: var(--transition);
+}
+
+.history-week:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-hover);
+}
+
+.history-week-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  cursor: pointer;
+  user-select: none;
+  background: var(--surface);
+  transition: background 0.2s;
+}
+
+.history-week-header:hover {
+  background: var(--surface-hover);
+}
+
+.history-week-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.history-week-breaking {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.history-week-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  padding: 2px 8px;
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.history-week-toggle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  transition: transform 0.2s;
+  flex-shrink: 0;
+}
+
+.history-week-content {
+  padding: 0 20px 20px 20px;
+  animation: fadeIn 0.25s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.history-week-empty,
+.history-week-error,
+.history-week-loading {
+  padding: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.history-week-error {
+  color: var(--accent-red);
+}
+
+.history-empty {
+  padding: 32px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ========== 信源（板块内底部展示）========== */
+.sources-section {
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 2px solid var(--border);
+}
+
+.sources-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sources-section h2 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.source-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.source-list .source-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.source-list .source-tag:hover {
   background: var(--primary-soft);
   border-color: var(--primary);
   color: var(--primary);

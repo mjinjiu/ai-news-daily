@@ -1,181 +1,149 @@
 {
   "meta": {
-    "date": "2026-05-07",
-    "updatedAt": "2026-05-13T19:45:00+08:00",
-    "total": 8,
-    "weekRange": "5.05 — 5.11",
-    "daysCount": 1
+    "date": "2026-05-12",
+    "updatedAt": "2026-05-12T08:00:00+08:00",
+    "total": 0,
+    "weekRange": "5.12 — 5.18",
+    "daysCount": 0
   },
   "breaking": [
     {
-      "id": "news-2026-05-13-001",
-      "title_zh": "苹果支付2.5亿美元和解Siri AI功能延迟诉讼",
-      "title_en": "Apple to Pay $250M to Settle Lawsuit Over Siri's Delayed AI Features",
-      "summary_zh": "苹果公司同意支付2.5亿美元和解因Siri AI功能延迟推出的集体诉讼。此案凸显了科技巨头在AI承诺与实际交付之间的法律风险。",
-      "summary_en": "Apple agrees to pay $250M to settle class-action lawsuit over delayed Siri AI features. The case highlights legal risks for tech giants between AI promises and actual delivery.",
-      "date": "05-07",
-      "source": "TechCrunch / Reuters",
+      "id": "news-2026-05-12-001",
+      "title_zh": "OpenAI发布GPT-5预览版，多模态能力大幅提升",
+      "title_en": "OpenAI Releases GPT-5 Preview with Significant Multimodal Improvements",
+      "summary_zh": "OpenAI正式发布GPT-5预览版本，新模型在图像理解、视频分析和语音交互方面实现突破性进展。API延迟降低40%，价格维持不变。",
+      "summary_en": "OpenAI officially releases GPT-5 preview. The new model achieves breakthrough progress in image understanding, video analysis and voice interaction. API latency reduced by 40% while pricing remains unchanged.",
+      "date": "05-12",
+      "source": "TechCrunch / The Verge",
       "category": "breaking",
-      "url": "https://techcrunch.com/2026/05/06/apple-to-pay-250m-to-settle-lawsuit-over-siris-delayed-ai-features/"
+      "url": "https://techcrunch.com/2026/05/12/openai-gpt5-preview/"
     },
     {
-      "id": "news-2026-05-13-002",
-      "title_zh": "AI热潮推动三星市值突破1万亿美元",
-      "title_en": "AI Boom Pushes Samsung to $1 Trillion Valuation",
-      "summary_zh": "受AI芯片需求激增推动，三星电子市值突破1万亿美元大关，成为亚洲第二家达到此里程碑的科技企业。其HBM内存和先进制程订单已排至2027年。",
-      "summary_en": "Driven by surging AI chip demand, Samsung Electronics market cap breaks $1 trillion, becoming Asia's second tech company to reach this milestone. HBM memory and advanced process orders booked through 2027.",
-      "date": "05-07",
-      "source": "TechCrunch / Bloomberg",
+      "id": "news-2026-05-12-002",
+      "title_zh": "Anthropic完成新一轮融资，估值突破900亿美元",
+      "title_en": "Anthropic Closes New Funding Round at $90B+ Valuation",
+      "summary_zh": "Anthropic宣布完成由谷歌领投的新一轮融资，公司估值超过900亿美元。Claude 4 Enterprise版本同步上线，支持200万字上下文窗口。",
+      "summary_en": "Anthropic announces new funding round led by Google, with company valuation exceeding $90B. Claude 4 Enterprise launches simultaneously, supporting 2M token context window.",
+      "date": "05-12",
+      "source": "Bloomberg / TechCrunch",
       "category": "breaking",
-      "url": "https://techcrunch.com/2026/05/06/ai-boom-pushes-samsung-to-1t/"
+      "url": "https://bloomberg.com/news/articles/2026-05-12/anthropic-90b/"
     }
   ],
   "daily": [
     {
-      "id": "news-2026-05-13-003",
-      "title_zh": "DeepSeek首轮融资估值或达450亿美元",
-      "title_en": "DeepSeek Could Hit $45B Valuation from First Investment Round",
-      "excerpt_zh": "中国AI独角兽DeepSeek正在进行首轮融资，估值可能高达450亿美元。其低成本高性能的推理模型正在全球范围内挑战OpenAI和Anthropic的主导地位。",
-      "excerpt_en": "Chinese AI unicorn DeepSeek is in its first funding round with potential $45B valuation. Its low-cost high-performance reasoning models are challenging OpenAI and Anthropic's dominance globally.",
-      "date": "05-07",
-      "source": "TechCrunch / Bloomberg",
-      "category": "industry",
-      "url": "https://techcrunch.com/2026/05/06/deepseek-could-hit-45b-valuation-from-its-first-investment-round/"
-    },
-    {
-      "id": "news-2026-05-13-004",
-      "title_zh": "谷歌AI搜索新增Reddit等社区引用功能",
-      "title_en": "Google Updates AI Search to Include Quotes from Reddit and Other Sources",
-      "excerpt_zh": "谷歌更新AI搜索体验，开始在AI概览中引用Reddit等社区平台的真实用户观点。这一举措旨在解决AI搜索结果被指'过于 polished、缺乏真实人类视角'的批评。",
-      "excerpt_en": "Google updates AI search to cite real user opinions from Reddit and community platforms in AI overviews. The move addresses criticism that AI search results are 'too polished and lack authentic human perspective'.",
-      "date": "05-07",
-      "source": "TechCrunch / Sina Tech",
+      "id": "news-2026-05-12-003",
+      "title_zh": "微软Copilot新增'深度研究'模式，可自主完成复杂调研",
+      "title_en": "Microsoft Copilot Adds 'Deep Research' Mode for Autonomous Complex Research",
+      "excerpt_zh": "微软宣布Copilot新增深度研究功能，AI可自主规划研究路径、搜索多源信息并生成综合报告。首批面向Microsoft 365 Enterprise用户开放。",
+      "excerpt_en": "Microsoft announces Copilot deep research feature where AI can autonomously plan research paths, search multiple sources and generate comprehensive reports. First available to Microsoft 365 Enterprise users.",
+      "date": "05-12",
+      "source": "The Verge / Microsoft",
       "category": "tech",
-      "url": "https://techcrunch.com/2026/05/06/google-updates-ai-search-to-include-quotes-from-reddit-and-other-sources/"
+      "url": "https://theverge.com/2026/05/12/microsoft-copilot-deep-research/"
     },
     {
-      "id": "news-2026-05-13-005",
-      "title_zh": "马斯克如何离开OpenAI？Greg Brockman首次详细披露内幕",
-      "title_en": "How Elon Musk Left OpenAI, According to Greg Brockman",
-      "excerpt_zh": "OpenAI联合创始人Greg Brockman首次详细披露了马斯克2018年离开公司的内幕。据其描述，马斯克曾提议接管OpenAI并担任CEO，遭拒绝后离开并转而创办xAI。",
-      "excerpt_en": "OpenAI co-founder Greg Brockman details Elon Musk's 2018 departure. Musk reportedly proposed taking over OpenAI as CEO; after rejection, he left and later founded xAI.",
-      "date": "05-07",
-      "source": "TechCrunch / Reuters",
-      "category": "industry",
-      "url": "https://techcrunch.com/2026/05/06/how-elon-musk-left-openai-according-to-greg-brockman/"
-    },
-    {
-      "id": "news-2026-05-13-006",
-      "title_zh": "AI评估平台Braintrust确认数据泄露，要求所有客户轮换密钥",
-      "title_en": "AI Evaluation Startup Braintrust Confirms Breach, Tells Every Customer to Rotate Keys",
-      "excerpt_zh": "AI模型评估平台Braintrust确认遭遇安全入侵，攻击者获取了敏感客户数据。公司已通知所有客户立即轮换API密钥和访问凭证，影响范围仍在评估中。",
-      "excerpt_en": "AI model evaluation platform Braintrust confirms security breach. Attackers accessed sensitive customer data. All customers advised to immediately rotate API keys and credentials.",
-      "date": "05-07",
-      "source": "TechCrunch / Security",
-      "category": "tech",
-      "url": "https://techcrunch.com/2026/05/06/ai-evaluation-startup-braintrust-confirms-breach-tells-every-customer-to-rotate-sensitive-keys/"
-    },
-    {
-      "id": "news-2026-05-13-007",
-      "title_zh": "SAP豪掷11.6亿美元收购德国18个月大AI实验室NemoClaw",
-      "title_en": "SAP Bets $1.16B on 18-Month-Old German AI Lab NemoClaw",
-      "excerpt_zh": "德国软件巨头SAP以11.6亿美元收购成立仅18个月的AI实验室NemoClaw。该实验室专注于企业AI智能体技术，SAP计划将其整合进S/4HANA Cloud产品线。",
-      "excerpt_en": "German software giant SAP acquires 18-month-old AI lab NemoClaw for $1.16B. The lab focuses on enterprise AI agent technology; SAP plans integration into S/4HANA Cloud product line.",
-      "date": "05-07",
-      "source": "TechCrunch / 极客公园",
-      "category": "industry",
-      "url": "https://techcrunch.com/2026/05/06/sap-bets-1-16b-on-18-month-old-german-ai-lab-and-says-yes-to-nemoclaw/"
-    },
-    {
-      "id": "news-2026-05-13-008",
-      "title_zh": "Meta收购机器人初创公司，加码人形AI机器人布局",
-      "title_en": "Meta Buys Robotics Startup to Bolster Humanoid AI Ambitions",
-      "excerpt_zh": "Meta低调收购一家专注于人形机器人控制的AI初创公司，交易金额未披露。此前Meta已宣布组建新团队开发'通用人形机器人'，与特斯拉Optimus形成直接竞争。",
-      "excerpt_en": "Meta quietly acquires an AI startup focused on humanoid robot control. Meta previously announced a new team to develop 'general-purpose humanoid robots', directly competing with Tesla Optimus.",
-      "date": "05-06~07",
-      "source": "TechCrunch / 芯智讯",
-      "category": "tech",
-      "url": "https://techcrunch.com/2026/05/01/meta-buys-robotics-startup-to-bolster-its-humanoid-ai-ambitions/"
-    },
-    {
-      "id": "news-2026-05-13-009",
-      "title_zh": "五角大楼与英伟达、微软、AWS签约部署机密网络AI",
-      "title_en": "Pentagon Inks Deals with Nvidia, Microsoft, AWS to Deploy AI on Classified Networks",
-      "excerpt_zh": "美国国防部与三大云/芯片巨头签订协议，在机密军事网络中部署AI系统。合作涵盖AI模型训练、推理基础设施和边缘部署，标志着军事AI进入规模化应用阶段。",
-      "excerpt_en": "US Department of Defense signs agreements with three cloud/chip giants to deploy AI on classified military networks. Cooperation covers AI model training, inference infrastructure and edge deployment.",
-      "date": "05-07",
-      "source": "TechCrunch / Reuters",
+      "id": "news-2026-05-12-004",
+      "title_zh": "欧盟AI法案实施细则正式生效，高风险AI系统面临合规大考",
+      "title_en": "EU AI Act Implementation Rules Take Effect, High-Risk AI Systems Face Compliance Test",
+      "excerpt_zh": "欧盟AI法案实施细则今日正式生效，涵盖医疗、教育、招聘等8个高风险领域的企业必须在6个月内完成合规整改。违规最高可处全球营收7%罚款。",
+      "excerpt_en": "EU AI Act implementation rules take effect today. Enterprises in 8 high-risk areas including healthcare, education and recruitment must complete compliance rectification within 6 months. Maximum fine: 7% of global revenue.",
+      "date": "05-12",
+      "source": "Reuters / EU Official",
       "category": "policy",
-      "url": "https://techcrunch.com/2026/05/01/pentagon-inks-deals-with-nvidia-microsoft-and-aws-to-deploy-ai-on-classified-networks/"
+      "url": "https://reuters.com/technology/ai-act-2026-05-12/"
     },
     {
-      "id": "news-2026-05-13-010",
-      "title_zh": "谷歌、英伟达押注40亿美元自学习AI公司，目标'替代科学家'",
-      "title_en": "Google & Nvidia Back $4B Self-Learning AI Company Aiming to 'Replace Scientists'",
-      "excerpt_zh": "获得谷歌和英伟达投资的自学习AI公司估值已达40亿美元。该公司开发的AI系统能够自主设计实验、分析数据并得出结论，目标是自动化科学研究流程。",
-      "excerpt_en": "Self-learning AI company backed by Google and Nvidia reaches $4B valuation. Its AI system can autonomously design experiments, analyze data and draw conclusions, aiming to automate scientific research.",
-      "date": "05-07",
-      "source": "极客公园 / Sina Tech",
+      "id": "news-2026-05-12-005",
+      "title_zh": " Stability AI开源新一代视频生成模型Stable Video 3D",
+      "title_en": "Stability AI Open Sources Next-Gen Video Model Stable Video 3D",
+      "excerpt_zh": "Stability AI发布并开源Stable Video 3D模型，支持从单张图片生成360度可交互3D视频。模型参数量较前代减少50%，生成速度提升3倍。",
+      "excerpt_en": "Stability AI releases and open sources Stable Video 3D model, supporting 360-degree interactive 3D video generation from a single image. Model parameters reduced by 50% with 3x faster generation speed.",
+      "date": "05-12",
+      "source": "Stability AI / TechCrunch",
       "category": "tech",
-      "url": "https://cj.sina.cn/articles/view/5953740931/162dee083067035db4"
+      "url": "https://stability.ai/blog/stable-video-3d"
+    },
+    {
+      "id": "news-2026-05-12-006",
+      "title_zh": "字节跳动Seed团队发布音乐生成大模型，支持中英文歌词",
+      "title_en": "ByteDance Seed Team Releases Music Generation Model Supporting Chinese and English Lyrics",
+      "excerpt_zh": "字节跳动Seed团队发布开源音乐生成大模型Seed-Music，支持通过文本提示生成完整歌曲，可处理中英文歌词，最长支持4分钟音频。",
+      "excerpt_en": "ByteDance Seed team releases open-source music generation model Seed-Music, supporting full song generation from text prompts with Chinese and English lyrics, up to 4 minutes of audio.",
+      "date": "05-12",
+      "source": "ByteDance / 36氪",
+      "category": "tech",
+      "url": "https://36kr.com/p/seed-music"
+    },
+    {
+      "id": "news-2026-05-12-007",
+      "title_zh": "英伟达H100供应量持续紧张，交货周期延长至52周",
+      "title_en": "Nvidia H100 Supply Remains Tight, Lead Time Extends to 52 Weeks",
+      "excerpt_zh": "英伟达H100 GPU交货周期从36周进一步延长至52周，云厂商正在加速导入自研芯片和AMD MI300系列作为替代方案。",
+      "excerpt_en": "Nvidia H100 GPU lead time extends from 36 to 52 weeks. Cloud providers are accelerating adoption of in-house chips and AMD MI300 series as alternatives.",
+      "date": "05-12",
+      "source": "Bloomberg / 芯智讯",
+      "category": "industry",
+      "url": "https://bloomberg.com/news/articles/2026-05-12/nvidia-h100-shortage/"
+    },
+    {
+      "id": "news-2026-05-12-008",
+      "title_zh": "AI编程助手Cursor月活突破500万，企业版营收占比超60%",
+      "title_en": "AI Coding Assistant Cursor Hits 5M MAU, Enterprise Revenue Exceeds 60%",
+      "excerpt_zh": "AI编程工具Cursor宣布月活跃用户突破500万，其中企业版订阅收入占总营收60%以上。公司同时宣布B轮融资2亿美元，估值达15亿美元。",
+      "excerpt_en": "AI coding tool Cursor announces 5M monthly active users, with enterprise subscriptions accounting for over 60% of total revenue. Company also announces $200M Series B at $1.5B valuation.",
+      "date": "05-12",
+      "source": "TechCrunch / Cursor Blog",
+      "category": "industry",
+      "url": "https://techcrunch.com/2026/05/12/cursor-5m-mau/"
     }
   ],
   "weekly": [
     {
-      "day": "周三",
-      "day_en": "Wed",
-      "date": "05-07",
-      "count": 10,
+      "day": "周一",
+      "day_en": "Mon",
+      "date": "05-12",
+      "count": 8,
       "items": [
         {
-          "title_zh": "苹果2.5亿美元和解Siri AI诉讼",
-          "title_en": "Apple $250M Siri AI settlement",
+          "title_zh": "OpenAI发布GPT-5预览版",
+          "title_en": "OpenAI GPT-5 preview released",
           "category": "breaking"
         },
         {
-          "title_zh": "三星市值突破1万亿美元",
-          "title_en": "Samsung hits $1T market cap",
+          "title_zh": "Anthropic估值突破900亿美元",
+          "title_en": "Anthropic $90B+ valuation",
           "category": "breaking"
         },
         {
-          "title_zh": "DeepSeek首轮融资估值450亿美元",
-          "title_en": "DeepSeek $45B valuation round",
-          "category": "industry"
-        },
-        {
-          "title_zh": "谷歌AI搜索引用Reddit内容",
-          "title_en": "Google AI search cites Reddit",
+          "title_zh": "Copilot新增深度研究模式",
+          "title_en": "Copilot deep research mode",
           "category": "tech"
         },
         {
-          "title_zh": "Brockman披露马斯克离任内幕",
-          "title_en": "Brockman reveals Musk departure",
-          "category": "industry"
-        },
-        {
-          "title_zh": "Braintrust确认数据泄露",
-          "title_en": "Braintrust confirms data breach",
-          "category": "tech"
-        },
-        {
-          "title_zh": "SAP 11.6亿收购AI实验室",
-          "title_en": "SAP $1.16B AI lab acquisition",
-          "category": "industry"
-        },
-        {
-          "title_zh": "Meta收购机器人公司",
-          "title_en": "Meta acquires robotics startup",
-          "category": "tech"
-        },
-        {
-          "title_zh": "五角大楼部署机密网络AI",
-          "title_en": "Pentagon deploys classified AI",
+          "title_zh": "欧盟AI法案实施细则生效",
+          "title_en": "EU AI Act rules take effect",
           "category": "policy"
         },
         {
-          "title_zh": "自学习AI公司估值40亿美元",
-          "title_en": "Self-learning AI at $4B valuation",
+          "title_zh": "Stable Video 3D开源",
+          "title_en": "Stable Video 3D open sourced",
           "category": "tech"
+        },
+        {
+          "title_zh": "字节跳动发布音乐生成模型",
+          "title_en": "ByteDance music model released",
+          "category": "tech"
+        },
+        {
+          "title_zh": "H100交货周期延长至52周",
+          "title_en": "H100 lead time 52 weeks",
+          "category": "industry"
+        },
+        {
+          "title_zh": "Cursor月活突破500万",
+          "title_en": "Cursor 5M MAU milestone",
+          "category": "industry"
         }
       ]
     }
@@ -190,32 +158,32 @@
   "hotList": [
     {
       "rank": 1,
-      "title_zh": "TechCrunch / Reuters 报道 2 条",
-      "title_en": "2 from TechCrunch / Reuters",
+      "title_zh": "TechCrunch / The Verge 报道 2 条",
+      "title_en": "2 from TechCrunch / The Verge",
       "heat": 30
     },
     {
       "rank": 2,
-      "title_zh": "TechCrunch / Bloomberg 报道 1 条",
-      "title_en": "1 from TechCrunch / Bloomberg",
-      "heat": 15
+      "title_zh": "Bloomberg / TechCrunch 报道 2 条",
+      "title_en": "2 from Bloomberg / TechCrunch",
+      "heat": 25
     },
     {
       "rank": 3,
-      "title_zh": "TechCrunch / Sina Tech 报道 1 条",
-      "title_en": "1 from TechCrunch / Sina Tech",
+      "title_zh": "Stability AI / TechCrunch 报道 1 条",
+      "title_en": "1 from Stability AI / TechCrunch",
       "heat": 15
     },
     {
       "rank": 4,
-      "title_zh": "TechCrunch / Security 报道 1 条",
-      "title_en": "1 from TechCrunch / Security",
+      "title_zh": "ByteDance / 36氪 报道 1 条",
+      "title_en": "1 from ByteDance / 36kr",
       "heat": 15
     },
     {
       "rank": 5,
-      "title_zh": "TechCrunch / 极客公园 报道 1 条",
-      "title_en": "1 from TechCrunch / 极客公园",
+      "title_zh": "Reuters / EU Official 报道 1 条",
+      "title_en": "1 from Reuters / EU Official",
       "heat": 15
     }
   ],
@@ -227,19 +195,23 @@
     "AI模型",
     "开源",
     "政策",
-    "监管"
+    "监管",
+    "多模态",
+    "芯片"
   ],
   "sources": [
-    "TechCrunch / 芯智讯",
-    "极客公园 / Sina Tech",
-    "TechCrunch / Security",
-    "TechCrunch / Sina Tech",
-    "TechCrunch / Bloomberg",
-    "TechCrunch / 极客公园",
-    "TechCrunch / Reuters"
+    "TechCrunch / The Verge",
+    "Bloomberg / TechCrunch",
+    "The Verge / Microsoft",
+    "Reuters / EU Official",
+    "Stability AI / TechCrunch",
+    "ByteDance / 36氪",
+    "Bloomberg / 芯智讯",
+    "TechCrunch / Cursor Blog"
   ],
   "archiveDates": [
-    "2026-05-13",
-    "2026-05-07"
+    "2026-05-05",
+    "2026-05-07",
+    "2026-05-13"
   ]
 }

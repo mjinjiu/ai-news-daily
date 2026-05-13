@@ -36,7 +36,7 @@
     gtag('config', 'G-C6EWLPV4J4');
   </script>
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
   <!-- ========== 顶部导航 ========== -->
@@ -62,48 +62,49 @@
         <header class="page-header">
           <h1 id="newsHeading">⚡ 每日AI前线</h1>
           <p class="subtitle">追踪人工智能最新动态与行业趋势</p>
-          <p class="update-time">更新于：2026-05-07</p>
+          <p class="update-time">更新于：2026-05-13</p>
         </header>
 
-        <div class="news-layout">
-          <!-- 左侧：主内容 -->
-          <div class="news-main">
-            <!-- 头条区 — 由 renderer.js 填充 -->
-            <div class="featured-row" id="featuredRow">
+        <!-- 头条区 — 由 renderer.js 填充 -->
+        <div class="featured-row" id="featuredRow">
+          <!-- dynamic -->
+        </div>
+
+        <!-- 本周新闻列表 — 由 renderer.js 填充 -->
+        <div class="news-today">
+          <div class="section-header">
+            <div class="header-left">
+              <h2>📰 本周新闻</h2>
+              <span class="date-badge">5.12 — 5.18</span>
+              <span class="archive-badge" style="display:none"></span>
+            </div>
+            <span class="count news-count">加载中...</span>
+          </div>
+          <div class="news-list" id="newsList">
+            <!-- dynamic -->
+          </div>
+        </div>
+
+        <!-- 历史回顾 — 由 renderer.js 填充 -->
+        <div class="history-review">
+          <div class="section-header">
+            <h2>📚 历史回顾</h2>
+            <span class="range">过去周报</span>
+          </div>
+          <div class="history-timeline" id="historyTimeline">
+            <!-- dynamic: 每周缩略 + 点击展开 -->
+          </div>
+        </div>
+
+        <!-- 信源 — 页面底部 -->
+        <section class="sources-section" id="sourcesSection" aria-labelledby="sourcesHeading">
+          <div class="sources-container">
+            <h2 id="sourcesHeading">📡 本周信源</h2>
+            <div class="source-list" id="sourceList">
               <!-- dynamic -->
             </div>
-
-            <!-- 今日新闻列表 — 由 renderer.js 填充 -->
-            <div class="news-today">
-              <div class="section-header">
-                <div class="header-left">
-                  <h2>📰 本周新闻</h2>
-                  <span class="date-badge">5月7日</span>
-                  <span class="archive-badge" style="display:none"></span>
-                </div>
-                <span class="count news-count">10 条</span>
-              </div>
-              <div class="news-list" id="newsList">
-                <!-- dynamic -->
-              </div>
-            </div>
-
-            <!-- 本周回顾 — 由 renderer.js 填充 -->
-            <div class="weekly-review">
-              <div class="section-header">
-                <h2>📅 本周回顾</h2>
-                <span class="range">5.05 — 5.11</span>
-              </div>
-              <div class="week-timeline" id="weekTimeline">
-                <!-- dynamic -->
-              </div>
-            </div>
           </div>
-
-          <!-- 右侧边栏 — 精简后只保留占位结构 -->
-          <aside class="news-sidebar" role="complementary" aria-label="侧边栏">
-          </aside>
-        </div>
+        </section>
       </section>
 
       <!-- ========== GitHub流行趋势栏目 ========== -->
@@ -111,48 +112,60 @@
         <header class="page-header">
           <h1 id="githubHeading">🔥 GitHub 流行趋势</h1>
           <p class="subtitle">追踪AI与开发领域最受欢迎的GitHub项目</p>
-          <p class="update-time">更新于：2026-05-10</p>
+          <p class="update-time">更新于：2026-05-13</p>
         </header>
 
         <div class="news-layout">
           <!-- 左侧：主内容 -->
           <div class="news-main">
-            <div id="githubContent">
-              <div class="github-placeholder">
-                <div class="placeholder-icon">🔧</div>
-                <h2>功能开发中</h2>
-                <p>该栏目正在搭建中，将展示每日GitHub Trending中AI相关的热门项目，附带借鉴价值分析。</p>
-                <p class="placeholder-hint">预计上线时间：2026-05-15</p>
+            <!-- 重磅项目 -->
+            <div class="featured-row" id="githubFeatured"></div>
+
+            <!-- 项目列表 -->
+            <div class="news-list-wrapper">
+              <div class="section-header">
+                <h2>📦 本周热门项目</h2>
+                <span class="count github-count">加载中...</span>
               </div>
+              <div id="githubList"></div>
+            </div>
+
+            <!-- 语言分布 -->
+            <div class="news-list-wrapper">
+              <div class="section-header">
+                <h2>🌐 语言分布</h2>
+              </div>
+              <div id="githubLanguages"></div>
             </div>
           </div>
-
-      <!-- GitHub趋势：去掉右侧边栏，全宽占位 -->
-    </section>
+        </div>
+      </section>
 
       <!-- ========== API调用流行趋势栏目 ========== -->
       <section id="apiSection" class="main-section" aria-labelledby="apiHeading">
         <header class="page-header">
           <h1 id="apiHeading">📈 API 调用趋势</h1>
           <p class="subtitle">追踪主流AI模型API的调用量、热度与定价变动趋势</p>
-          <p class="update-time">更新于：2026-05-10</p>
+          <p class="update-time">更新于：2026-05-13</p>
         </header>
 
         <div class="news-layout">
           <!-- 左侧：主内容 -->
           <div class="news-main">
-            <div id="apiContent">
-              <div class="api-placeholder">
-                <div class="placeholder-icon">📊</div>
-                <h2>功能开发中</h2>
-                <p>该栏目正在搭建中，将展示各AI平台API调用量趋势、价格变动预警、新模型上线通知等。</p>
-                <p class="placeholder-hint">预计上线时间：2026-05-20</p>
+            <!-- 重磅变动 -->
+            <div class="featured-row" id="apiFeatured"></div>
+
+            <!-- 趋势列表 -->
+            <div class="news-list-wrapper">
+              <div class="section-header">
+                <h2>📊 本周API动态</h2>
+                <span class="count api-count">加载中...</span>
               </div>
+              <div id="apiList"></div>
             </div>
           </div>
-
-      <!-- API趋势：去掉右侧边栏，全宽占位 -->
-    </section>
+        </div>
+      </section>
 
       <!-- ========== 杂记栏目 ========== -->
       <section id="notesSection" class="main-section" aria-labelledby="notesHeading">
@@ -181,16 +194,6 @@
     </div>
   </main>
 
-  <!-- 信源 — 页面底部 -->
-  <section class="sources-bottom" id="sourcesBottom" aria-labelledby="sourcesBottomHeading">
-    <div class="sources-bottom-container">
-      <h2 id="sourcesBottomHeading">📡 信源</h2>
-      <div class="source-list-bottom" id="sourceListBottom">
-        <!-- dynamic -->
-      </div>
-    </div>
-  </section>
-
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-container">
@@ -200,8 +203,8 @@
   </footer>
 
   <!-- ========== 脚本加载 ========== -->
-  <script src="js/i18n.js"></script>
-  <script src="js/renderer.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/i18n.js?v=4"></script>
+  <script src="js/renderer.js?v=4"></script>
+  <script src="js/app.js?v=4"></script>
 </body>
 </html>

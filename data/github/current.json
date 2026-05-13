@@ -1,19 +1,161 @@
 {
   "meta": {
     "date": "2026-05-13",
-    "updatedAt": "2026-05-13T19:21:11+08:00",
-    "total": 0,
-    "weekRange": "5.11 — 5.17",
-    "daysCount": 1
+    "weekLabel": "5.12 — 5.18",
+    "total": 11,
+    "updatedAt": "2026-05-13T21:30:00+08:00"
   },
-  "breaking": [],
-  "daily": [],
-  "weekly": [],
-  "stats": [],
-  "hotList": [],
-  "tags": [],
-  "sources": [],
-  "archiveDates": [
-    "2026-05-13"
-  ]
+  "featured": [
+    {
+      "id": "gh-2026-05-13-001",
+      "name": "rohitg00 / agentmemory",
+      "title_zh": "AI编码智能体持久化记忆方案",
+      "title_en": "Persistent Memory for AI Coding Agents",
+      "description_zh": "基于真实基准测试的AI编码智能体持久化记忆方案，TypeScript实现。",
+      "description_en": "Persistent memory for AI coding agents based on real-world benchmarks.",
+      "language": "TypeScript",
+      "stars_today": "1,048",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "score": 30
+    },
+    {
+      "id": "gh-2026-05-13-002",
+      "name": "mattpocock / skills",
+      "title_zh": "Claude目录技能模板：工程师实战技能",
+      "title_en": "Skills for Real Engineers from Claude Directory",
+      "description_zh": "来自.claude目录的实战技能模板，可直接用于Claude项目。",
+      "description_en": "Skills for Real Engineers. Straight from my .claude directory.",
+      "language": "Shell",
+      "stars_today": "3,867",
+      "url": "https://github.com/mattpocock/skills",
+      "score": 25
+    }
+  ],
+  "projects": [
+    {
+      "id": "gh-2026-05-13-001",
+      "name": "rohitg00 / agentmemory",
+      "title_zh": "AI编码智能体持久化记忆方案",
+      "title_en": "Persistent Memory for AI Coding Agents",
+      "description_zh": "基于真实基准测试的AI编码智能体持久化记忆方案。",
+      "description_en": "Persistent memory for AI coding agents based on real-world benchmarks.",
+      "language": "TypeScript",
+      "stars_today": "1,048",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "score": 30,
+      "tags": ["AI Agent", "Memory"]
+    },
+    {
+      "id": "gh-2026-05-13-002",
+      "name": "HKUDS / AI-Trader",
+      "title_zh": "AI-Trader：全自动智能体原生交易",
+      "title_en": "AI-Trader: 100% Fully-Automated Agent-Native Trading",
+      "description_zh": "100%全自动智能体原生交易系统，Python实现。",
+      "description_en": "100% Fully-Automated Agent-Native Trading system.",
+      "language": "Python",
+      "stars_today": "229",
+      "url": "https://github.com/HKUDS/AI-Trader",
+      "score": 30,
+      "tags": ["AI Agent", "Trading"]
+    },
+    {
+      "id": "gh-2026-05-13-003",
+      "name": "mattpocock / skills",
+      "title_zh": "Claude目录技能模板：工程师实战技能",
+      "title_en": "Skills for Real Engineers from Claude Directory",
+      "description_zh": "来自.claude目录的实战技能模板，可直接用于Claude项目。",
+      "description_en": "Skills for Real Engineers. Straight from my .claude directory.",
+      "language": "Shell",
+      "stars_today": "3,867",
+      "url": "https://github.com/mattpocock/skills",
+      "score": 25,
+      "tags": ["Claude", "Skills"]
+    },
+    {
+      "id": "gh-2026-05-13-004",
+      "name": "rasbt / LLMs-from-scratch",
+      "title_zh": "从零构建ChatGPT式大语言模型",
+      "title_en": "Implement a ChatGPT-like LLM from Scratch",
+      "description_zh": "用PyTorch从零开始逐步实现一个ChatGPT式LLM的完整教程。",
+      "description_en": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step.",
+      "language": "Jupyter Notebook",
+      "stars_today": "772",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "score": 25,
+      "tags": ["LLM", "Education"]
+    },
+    {
+      "id": "gh-2026-05-13-005",
+      "name": "CloakHQ / CloakBrowser",
+      "title_zh": "隐形Chromium：通过全部机器人检测测试",
+      "title_en": "Stealth Chromium Passing Every Bot Detection Test",
+      "description_zh": "通过全部30/30机器人检测测试的隐形Chromium，Playwright替代方案。",
+      "description_en": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement.",
+      "language": "Python",
+      "stars_today": "1,606",
+      "url": "https://github.com/CloakHQ/CloakBrowser",
+      "score": 20,
+      "tags": ["Browser", "Security"]
+    },
+    {
+      "id": "gh-2026-05-13-006",
+      "name": "millionco / react-doctor",
+      "title_zh": "React代码审查智能体：捕捉劣质React代码",
+      "title_en": "React Doctor: Catches Bad React Code",
+      "description_zh": "智能体写的React代码质量不佳？这个工具帮你审查和修正。",
+      "description_en": "Your agent writes bad React. This catches it.",
+      "language": "TypeScript",
+      "stars_today": "788",
+      "url": "https://github.com/millionco/react-doctor",
+      "score": 20,
+      "tags": ["React", "AI Agent"]
+    },
+    {
+      "id": "gh-2026-05-13-007",
+      "name": "datawhalechina / hello-agents",
+      "title_zh": "《从零开始构建智能体》中文教程",
+      "title_en": "Hello Agents: Build Agents from Scratch (CN)",
+      "description_zh": "DataWhale出品的中文智能体原理与实践教程，从零开始构建AI智能体。",
+      "description_en": "Chinese tutorial on building AI agents from scratch by DataWhale.",
+      "language": "Python",
+      "stars_today": "599",
+      "url": "https://github.com/datawhalechina/hello-agents",
+      "score": 20,
+      "tags": ["Agent", "Tutorial"]
+    },
+    {
+      "id": "gh-2026-05-13-008",
+      "name": "yikart / AiToEarn",
+      "title_zh": "AI变现工具：用AI赚钱的实践方案",
+      "title_en": "AiToEarn: Use AI to Earn Money",
+      "description_zh": "AI变现实践方案，探索如何用AI工具创造收入。",
+      "description_en": "Let's use AI to Earn!",
+      "language": "TypeScript",
+      "stars_today": "1,282",
+      "url": "https://github.com/yikart/AiToEarn",
+      "score": 20,
+      "tags": ["AI", "Business"]
+    },
+    {
+      "id": "gh-2026-05-13-009",
+      "name": "tinyhumansai / openhuman",
+      "title_zh": "OpenHuman：私人AI超级智能体",
+      "title_en": "OpenHuman: Personal AI Super Intelligence",
+      "description_zh": "私密、简单且极其强大的个人AI超级智能体，Rust实现。",
+      "description_en": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+      "language": "Rust",
+      "stars_today": "1,014",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "score": 15,
+      "tags": ["AI", "Rust"]
+    }
+  ],
+  "languages": [
+    { "name": "TypeScript", "count": 3, "color": "#3178c6" },
+    { "name": "Python", "count": 4, "color": "#3572A5" },
+    { "name": "Jupyter Notebook", "count": 1, "color": "#DA5B0B" },
+    { "name": "Shell", "count": 1, "color": "#89e051" },
+    { "name": "Rust", "count": 1, "color": "#dea584" }
+  ],
+  "sources": ["GitHub Trending"]
 }

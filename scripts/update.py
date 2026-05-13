@@ -1,30 +1,37 @@
 #!/usr/bin/env python3
 """
-AI前线 — 每日新闻自动更新脚本（归档制 v2）
+AI前线 — 每周归档制自动更新脚本 v4
 
-功能：
-1. 每天生成独立归档：data/news/YYYY-MM-DD.json
-2. 自动合并本周数据到 data/news/current.json（主界面展示用）
-3. 每个栏目独立归档目录：news/、github/、api/
-4. 保留历史数据，永不覆盖
+流程：
+1. 每天运行：获取当天新闻 → 追加到 current.json（本周累积）
+2. 每周日 23:59（或周一 00:00）归档：
+   a. current.json → data/news/YYYY-MM-DD.json（本周周一日期）
+   b. 更新 data/news/index.json
+   c. 清空 current.json 开始新周
 
-归档结构：
-  data/
-    news/
-      2026-05-10.json   ← 每日独立归档
-      2026-05-11.json
-      ...
-      current.json      ← 本周合并（主界面读取这个）
-    github/
-      2026-05-10.json
-      current.json
-    api/
-      2026-05-10.json
-      current.json
+数据格式（current.json / 历史周 JSON）：
+{
+  "meta": {
+    "weekStart": "2026-05-12",
+    "weekEnd": "2026-05-18",
+    "weekLabel": "5.12 — 5.18",
+    "total": 8,
+    "updatedAt": "2026-05-13T21:00:00+08:00"
+  },
+  "breaking": [...],
+  "daily": [...],
+  "sources": ["Reuters", "Bloomberg", ...]
+}
+
+新格式特点：
+- 去掉 weekly、stats、hotList、tags 等前端已废弃字段
+- sources 拆分为独立来源，去 TechCrunch 前缀
+- 一周一份 JSON，历史周自动归档
 """
 
 import json
 import os
+import subprocess
 import sys
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -32,17 +39,20 @@ from typing import Optional
 
 import requests
 
+# ========== 配置 ==========
 ROOT = Path(__file__).parent.parent
-
-ARCHIVE_DIRS = {
-    "news": ROOT / "data" / "news",
-    "github": ROOT / "data" / "github",
-    "api": ROOT / "data" / "api",
-}
+NEWS_DIR = ROOT / "data" / "news"
+INDEX_FILE = NEWS_DIR / "index.json"
+CURRENT_FILE = NEWS_DIR / "current.json"
+LEGACY_FILE = ROOT / "data" / "news.json"
 
 KIMI_API_KEY = os.environ.get("KIMI_API_KEY", "")
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 DEBUG_MODE = os.environ.get("DEBUG_MODE", "false").lower() == "true"
+
+
+# ========== 工具函数 ==========
+def get_today() -> datetime:
+    return datetime.now()
 
 
 def get_today_str() -> str:
@@ -53,18 +63,37 @@ def get_today_display() -> str:
     return datetime.now().strftime("%m-%d")
 
 
-def get_week_range() -> str:
-    today = datetime.now()
-    monday = today - timedelta(days=today.weekday())
-    sunday = monday + timedelta(days=6)
-    return f"{monday.month}.{monday.day} — {sunday.month}.{sunday.day}"
-
-
-def get_week_dates(today: Optional[datetime] = None) -> list:
+def get_week_start(today: Optional[datetime] = None) -> str:
+    """获取本周周一的日期字符串 YYYY-MM-DD"""
     if today is None:
         today = datetime.now()
     monday = today - timedelta(days=today.weekday())
-    return [(monday + timedelta(days=i)).strftime("%Y-%m-%d") for i in range(7)]
+    return monday.strftime("%Y-%m-%d")
+
+
+def get_week_end(today: Optional[datetime] = None) -> str:
+    """获取本周周日的日期字符串 YYYY-MM-DD"""
+    if today is None:
+        today = datetime.now()
+    monday = today - timedelta(days=today.weekday())
+    sunday = monday + timedelta(days=6)
+    return sunday.strftime("%Y-%m-%d")
+
+
+def get_week_label(today: Optional[datetime] = None) -> str:
+    """获取周标签，如 '5.12 — 5.18'"""
+    if today is None:
+        today = datetime.now()
+    monday = today - timedelta(days=today.weekday())
+    sunday = monday + timedelta(days=6)
+    return f"{monday.month}.{monday.day:02d} — {sunday.month}.{sunday.day:02d}"
+
+
+def is_sunday(today: Optional[datetime] = None) -> bool:
+    """判断今天是否是周日（归档日）"""
+    if today is None:
+        today = datetime.now()
+    return today.weekday() == 6  # 周日=6
 
 
 def save_json(data: dict, filepath: Path) -> None:
@@ -85,80 +114,145 @@ def load_json(filepath: Path) -> Optional[dict]:
         return None
 
 
-def merge_weekly_data(archive_dir: Path, dates: list) -> dict:
-    """合并本周所有日期数据到 current.json"""
-    all_breaking = []
-    all_daily = []
-    all_stats = []
-    all_hotList = []
-    all_tags = set()
-    all_sources = set()
-    latest_date = ""
+def clean_sources(sources: list) -> list:
+    """清理信源：拆分 'X / Y' 为独立来源，去重，去 TechCrunch 前缀"""
+    all_sources = []
+    seen = set()
+    for src in sources:
+        # 按 / 拆分
+        parts = [p.strip() for p in src.split("/")]
+        for part in parts:
+            if part and part not in seen:
+                seen.add(part)
+                all_sources.append(part)
+    return sorted(all_sources)
 
-    for date_str in dates:
-        filepath = archive_dir / f"{date_str}.json"
-        data = load_json(filepath)
-        if not data:
-            continue
-        if date_str > latest_date:
-            latest_date = date_str
-        all_breaking.extend(data.get("breaking", []))
-        all_daily.extend(data.get("daily", []))
-        all_stats.extend(data.get("stats", []))
-        all_hotList.extend(data.get("hotList", []))
-        all_tags.update(data.get("tags", []))
-        all_sources.update(data.get("sources", []))
 
-    # 去重
-    seen_ids = set()
-    unique_breaking = []
-    for item in all_breaking:
-        if item.get("id") and item["id"] not in seen_ids:
-            seen_ids.add(item["id"])
-            unique_breaking.append(item)
-
-    seen_ids = set()
-    unique_daily = []
-    for item in all_daily:
-        if item.get("id") and item["id"] not in seen_ids:
-            seen_ids.add(item["id"])
-            unique_daily.append(item)
-
-    seen_labels = set()
-    unique_stats = []
-    for item in all_stats:
-        label = item.get("label_zh", "")
-        if label and label not in seen_labels:
-            seen_labels.add(label)
-            unique_stats.append(item)
-
-    seen_titles = set()
-    unique_hotList = []
-    for item in all_hotList:
-        title = item.get("title_zh", "")
-        if title and title not in seen_titles:
-            seen_titles.add(title)
-            unique_hotList.append(item)
-
+# ========== current.json 管理 ==========
+def load_current() -> dict:
+    """加载 current.json，不存在则创建空模板"""
+    data = load_json(CURRENT_FILE)
+    if data:
+        return data
+    
+    today = get_today()
     return {
         "meta": {
-            "date": latest_date or get_today_str(),
-            "updatedAt": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00"),
-            "total": len(unique_breaking) + len(unique_daily),
-            "weekRange": get_week_range(),
-            "daysCount": len([d for d in dates if (archive_dir / f"{d}.json").exists()]),
+            "weekStart": get_week_start(today),
+            "weekEnd": get_week_end(today),
+            "weekLabel": get_week_label(today),
+            "total": 0,
+            "updatedAt": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00")
         },
-        "breaking": unique_breaking,
-        "daily": unique_daily,
-        "weekly": [],
-        "stats": unique_stats,
-        "hotList": unique_hotList,
-        "tags": sorted(list(all_tags)),
-        "sources": sorted(list(all_sources)),
-        "archiveDates": [d for d in dates if (archive_dir / f"{d}.json").exists()],
+        "breaking": [],
+        "daily": [],
+        "sources": []
     }
 
 
+def save_current(data: dict) -> None:
+    """保存 current.json 并同步 legacy news.json"""
+    save_json(data, CURRENT_FILE)
+    # 同步旧格式兼容文件
+    save_json(data, LEGACY_FILE)
+
+
+def append_news_to_current(current: dict, new_data: dict) -> dict:
+    """把当天新闻追加到 current.json，去重"""
+    today = get_today()
+    
+    # 更新 meta
+    current["meta"]["weekStart"] = get_week_start(today)
+    current["meta"]["weekEnd"] = get_week_end(today)
+    current["meta"]["weekLabel"] = get_week_label(today)
+    current["meta"]["updatedAt"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00")
+    
+    # 去重集合
+    seen_ids = set()
+    for item in current.get("breaking", []):
+        if item.get("id"):
+            seen_ids.add(item["id"])
+    for item in current.get("daily", []):
+        if item.get("id"):
+            seen_ids.add(item["id"])
+    
+    # 追加 breaking
+    for item in new_data.get("breaking", []):
+        if item.get("id") and item["id"] not in seen_ids:
+            seen_ids.add(item["id"])
+            current["breaking"].append(item)
+    
+    # 追加 daily
+    for item in new_data.get("daily", []):
+        if item.get("id") and item["id"] not in seen_ids:
+            seen_ids.add(item["id"])
+            current["daily"].append(item)
+    
+    # 合并 sources
+    all_sources = set(current.get("sources", []))
+    all_sources.update(new_data.get("sources", []))
+    current["sources"] = clean_sources(list(all_sources))
+    
+    # 更新 total
+    current["meta"]["total"] = len(current["breaking"]) + len(current["daily"])
+    
+    return current
+
+
+# ========== 归档 ==========
+def archive_week() -> bool:
+    """
+    归档本周 current.json 到历史周 JSON
+    文件名：data/news/YYYY-MM-DD.json（本周周一日期）
+    更新 index.json
+    """
+    current = load_json(CURRENT_FILE)
+    if not current:
+        print("⚠️ current.json 不存在，无需归档")
+        return False
+    
+    # 如果本周没有新闻，跳过归档
+    total = len(current.get("breaking", [])) + len(current.get("daily", []))
+    if total == 0:
+        print("⚠️ 本周无新闻，跳过归档")
+        return False
+    
+    # 归档文件名 = 本周周一日期
+    week_start = current["meta"].get("weekStart", get_week_start())
+    archive_path = NEWS_DIR / f"{week_start}.json"
+    
+    # 保存归档（直接复制 current.json 内容）
+    save_json(current, archive_path)
+    
+    # 更新 index.json
+    index = load_json(INDEX_FILE) or []
+    if week_start not in index:
+        index.append(week_start)
+        index.sort(reverse=True)  # 最新在前
+        save_json(index, INDEX_FILE)
+    
+    print(f"📦 已归档本周数据到 {archive_path} ({total} 条)")
+    
+    # 清空 current.json（保留空模板）
+    empty_current = {
+        "meta": {
+            "weekStart": get_week_start(),
+            "weekEnd": get_week_end(),
+            "weekLabel": get_week_label(),
+            "total": 0,
+            "updatedAt": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00")
+        },
+        "breaking": [],
+        "daily": [],
+        "sources": []
+    }
+    save_current(empty_current)
+    print("🆕 已创建新的 current.json 空模板")
+    
+    return True
+
+
+# ========== 新闻生成 ==========
 def generate_news_via_kimi() -> Optional[dict]:
     if not KIMI_API_KEY:
         print("⚠️ 未设置 KIMI_API_KEY，跳过 AI 生成")
@@ -173,17 +267,18 @@ def generate_news_via_kimi() -> Optional[dict]:
 2. 优先从以下信源获取：Decrypt、Reuters、Bloomberg、新浪财经、新浪科技、36氪
 3. 分类：breaking（1-2条重磅）、industry（2-3条行业）、tech（2-3条技术）、policy（1-2条政策）
 4. 每条新闻包含双语标题和摘要
-5. 提供 4-6 个今日关键数字统计
+5. source 字段只写独立来源名，不要写 "TechCrunch / Reuters" 这种组合，直接写 "Reuters"
 输出格式：严格的 JSON，不要 markdown 代码块标记。"""
 
     user_prompt = f"""请按以下结构生成 {today} 的 AI 新闻数据：
 {{"meta": {{"date": "{today}", "updatedAt": "{datetime.now().strftime('%Y-%m-%dT%H:%M:%S+08:00')}", "total": N}},
- "breaking": [{{"id": "news-001", "title_zh": "中文标题", "title_en": "Title", "summary_zh": "摘要", "summary_en": "Summary", "date": "MM-DD", "source": "来源", "category": "breaking", "url": "https://..."}}],
- "daily": [{{"id": "news-003", "title_zh": "标题", "title_en": "Title", "excerpt_zh": "摘要", "excerpt_en": "Excerpt", "date": "MM-DD", "source": "来源", "category": "industry|tech|policy", "url": "https://..."}}],
- "weekly": [], "stats": [{{"num": "$1B+", "label_zh": "标签", "label_en": "Label"}}],
- "hotList": [{{"title_zh": "标题", "title_en": "Title", "url": "https://..."}}],
- "tags": ["OpenAI"], "sources": ["Reuters"]}}
-注意：weekly 留空，由前端处理。"""
+ "breaking": [{{"id": "news-{today}-001", "title_zh": "中文标题", "title_en": "Title", "summary_zh": "摘要", "summary_en": "Summary", "date": "{today_display}", "source": "Reuters", "category": "breaking", "url": "https://..."}}],
+ "daily": [{{"id": "news-{today}-003", "title_zh": "标题", "title_en": "Title", "excerpt_zh": "摘要", "excerpt_en": "Excerpt", "date": "{today_display}", "source": "Bloomberg", "category": "industry|tech|policy", "url": "https://..."}}],
+ "sources": ["Reuters", "Bloomberg"]}}
+注意：
+- source 字段只写单一来源名，不要组合
+- 去掉 weekly、stats、hotList、tags 字段
+- sources 数组只包含独立来源名"""
 
     try:
         print("🤖 正在调用 Kimi API 生成新闻...")
@@ -199,11 +294,20 @@ def generate_news_via_kimi() -> Optional[dict]:
         response.raise_for_status()
         content = response.json()["choices"][0]["message"]["content"]
         data = json.loads(content)
-        required = ["meta", "breaking", "daily", "stats", "hotList", "tags", "sources"]
+        
+        required = ["meta", "breaking", "daily"]
         for key in required:
             if key not in data:
                 print(f"❌ 缺少字段: {key}")
                 return None
+        
+        # 确保 sources 存在
+        if "sources" not in data:
+            data["sources"] = []
+        
+        # 清理 sources
+        data["sources"] = clean_sources(data["sources"])
+        
         print(f"✅ Kimi API 返回 {data['meta'].get('total', 0)} 条新闻")
         return data
     except Exception as e:
@@ -218,67 +322,87 @@ def generate_fallback_news() -> dict:
     return {
         "meta": {"date": today, "updatedAt": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00"), "total": 1},
         "breaking": [{"id": f"news-{today}-001", "title_zh": f"{today} 示例数据", "title_en": "Sample", "summary_zh": "配置 API Key 后获取真实新闻", "summary_en": "Configure API Key", "date": today_display, "source": "AI前线", "category": "breaking", "url": "https://github.com/mjinjiu/ai-news-daily"}],
-        "daily": [], "weekly": [], "stats": [{"num": "0", "label_zh": "今日新闻", "label_en": "News"}],
-        "hotList": [], "tags": ["API配置"], "sources": ["AI前线"]
+        "daily": [],
+        "sources": ["AI前线"]
     }
 
 
-def generate_github_placeholder() -> dict:
-    return {"meta": {"date": get_today_str(), "updatedAt": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00"), "total": 0, "note": "placeholder"}, "repositories": [], "categories": []}
+# ========== Git 操作 ==========
+def git_commit_push() -> bool:
+    """Git 提交并推送"""
+    try:
+        subprocess.run(["git", "add", "-A"], cwd=ROOT, check=True, capture_output=True)
+        result = subprocess.run(
+            ["git", "diff", "--cached", "--quiet"],
+            cwd=ROOT, capture_output=True
+        )
+        if result.returncode == 0:
+            print("📝 无变更，跳过提交")
+            return True
+        
+        subprocess.run(
+            ["git", "commit", "-m", f"📰 自动更新 - {get_today_str()}"],
+            cwd=ROOT, check=True, capture_output=True
+        )
+        subprocess.run(
+            ["git", "push", "origin", "master"],
+            cwd=ROOT, check=True, capture_output=True
+        )
+        print("🚀 Git 推送完成")
+        return True
+    except subprocess.CalledProcessError as e:
+        print(f"❌ Git 操作失败: {e}")
+        return False
 
 
-def generate_api_placeholder() -> dict:
-    return {"meta": {"date": get_today_str(), "updatedAt": datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00"), "total": 0, "note": "placeholder"}, "trends": [], "categories": []}
-
-
-def update_section(section: str, generator) -> None:
-    """更新单个栏目：生成今日归档 + 合并本周 current.json"""
-    archive_dir = ARCHIVE_DIRS[section]
-    today = get_today_str()
-    
-    # 1. 生成今日数据（如果失败则使用 fallback）
-    data = generator()
-    if data is None:
-        if section == "news":
-            data = generate_fallback_news()
-        elif section == "github":
-            data = generate_github_placeholder()
-        else:
-            data = generate_api_placeholder()
-    
-    # 2. 保存每日归档
-    daily_path = archive_dir / f"{today}.json"
-    save_json(data, daily_path)
-    
-    # 3. 合并本周数据到 current.json
-    week_dates = get_week_dates()
-    current_data = merge_weekly_data(archive_dir, week_dates)
-    current_path = archive_dir / "current.json"
-    save_json(current_data, current_path)
-    
-    print(f"✅ {section} 栏目更新完成：今日 {data['meta']['total']} 条，本周累计 {current_data['meta']['total']} 条")
-
-
+# ========== 主流程 ==========
 def main() -> int:
-    print(f"🚀 AI前线归档更新启动 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"🚀 AI前线每周归档更新启动 - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     print("=" * 50)
 
     # 确保目录存在
-    for d in ARCHIVE_DIRS.values():
-        d.mkdir(parents=True, exist_ok=True)
+    NEWS_DIR.mkdir(parents=True, exist_ok=True)
 
-    # 更新各栏目
-    update_section("news", generate_news_via_kimi if KIMI_API_KEY else generate_fallback_news)
-    update_section("github", generate_github_placeholder)
-    update_section("api", generate_api_placeholder)
+    # 1. 检查是否需要归档（周日）
+    if is_sunday():
+        print("📦 今天是周日，执行本周归档...")
+        archive_week()
+    else:
+        print(f"📅 今天不是归档日（周日），跳过归档")
 
-    # 同时保留旧的 data/news.json 兼容（过渡期间）
-    news_current = load_json(ARCHIVE_DIRS["news"] / "current.json")
-    if news_current:
-        save_json(news_current, ROOT / "data" / "news.json")
+    # 2. 生成当天新闻
+    print("📰 获取当天新闻...")
+    new_data = generate_news_via_kimi()
+    if new_data is None:
+        new_data = generate_fallback_news()
+
+    # 3. 追加到 current.json
+    print("📝 追加到 current.json...")
+    current = load_current()
+    
+    # 检查是否跨周（如果 current.json 的 weekStart 不是本周，先归档旧周）
+    current_week_start = current["meta"].get("weekStart", "")
+    this_week_start = get_week_start()
+    if current_week_start and current_week_start != this_week_start:
+        print(f"⚠️ 检测到跨周！current.json 是 {current_week_start}，本周是 {this_week_start}")
+        print("📦 先归档旧周...")
+        archive_week()
+        current = load_current()  # 重新加载新的空模板
+    
+    current = append_news_to_current(current, new_data)
+    save_current(current)
+    
+    total = current["meta"]["total"]
+    breaking_count = len(current["breaking"])
+    daily_count = len(current["daily"])
+    print(f"✅ 更新完成：本周累计 {total} 条（重磅 {breaking_count}，日常 {daily_count}）")
+
+    # 4. Git 提交推送
+    print("🔄 Git 提交推送...")
+    git_commit_push()
 
     print("=" * 50)
-    print("✅ 全部更新完成！归档制已生效。")
+    print("✅ 全部完成！")
     return 0
 
 
