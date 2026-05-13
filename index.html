@@ -39,18 +39,14 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Skip Link (可访问性 Issue #12) -->
-  <a href="#mainContent" class="skip-link">跳转到主要内容</a>
-
-  <!-- ========== 顶部导航 (可访问性增强) ========== -->
+  <!-- ========== 顶部导航 ========== -->
   <nav class="navbar" role="navigation" aria-label="主导航">
     <div class="nav-container">
       <a href="index.html" class="nav-logo" aria-label="AI前线首页">AI前线</a>
       <div class="nav-links">
         <a href="#news" class="nav-link active" data-section="news" aria-current="page">📰 AI新闻</a>
-        <a href="#analysis" class="nav-link" data-section="analysis" aria-current="false">🔍 深度解读</a>
-        <a href="#pricing" class="nav-link" data-section="pricing" aria-current="false">💰 API定价</a>
-        <button class="lang-toggle" id="langToggle" aria-label="切换语言" aria-pressed="false">EN</button>
+        <a href="#github" class="nav-link" data-section="github" aria-current="false">🔥 GitHub趋势</a>
+        <a href="#api" class="nav-link" data-section="api" aria-current="false">📈 API趋势</a>
       </div>
     </div>
   </nav>
@@ -173,81 +169,42 @@
         </div>
       </section>
 
-      <!-- ========== 深度解读板块 ========== -->
-      <section id="analysisSection" class="main-section" aria-labelledby="analysisHeading">
+      <!-- ========== GitHub流行趋势栏目（内容待填充） ========== -->
+      <section id="githubSection" class="main-section" aria-labelledby="githubHeading">
         <header class="page-header">
-          <h1 id="analysisHeading">🔍 AI前线深度解读</h1>
-          <p class="subtitle">不止于新闻，更提供行业洞察与趋势判断</p>
+          <h1 id="githubHeading">🔥 GitHub 流行趋势</h1>
+          <p class="subtitle">追踪AI与开发领域最受欢迎的GitHub项目</p>
           <p class="update-time">更新于：2026-05-10</p>
         </header>
 
-        <div class="analysis-layout">
-          <div class="analysis-featured" id="analysisFeatured">
-            <!-- 由 renderer.js 填充 -->
-          </div>
-          <div class="pagination" role="navigation" aria-label="深度解读分页">
-            <button data-analysis-action="prev" id="analysisPrev">← 上一页</button>
-            <span class="page-num" id="analysisPageNum">1 / 1</span>
-            <button data-analysis-action="next" id="analysisNext">下一页 →</button>
+        <div class="github-layout">
+          <div class="github-placeholder">
+            <div class="placeholder-icon">🔧</div>
+            <h2>功能开发中</h2>
+            <p>该栏目正在搭建中，将展示每日GitHub Trending中AI相关的热门项目，附带借鉴价值分析。</p>
+            <p class="placeholder-hint">预计上线时间：2026-05-15</p>
           </div>
         </div>
       </section>
 
-      <!-- ========== API定价板块 ========== -->
-      <section id="pricingSection" class="main-section" aria-labelledby="pricingHeading">
+      <!-- ========== API调用流行趋势栏目（内容待填充） ========== -->
+      <section id="apiSection" class="main-section" aria-labelledby="apiHeading">
         <header class="page-header">
-          <h1 id="pricingHeading">💰 主流大模型API定价对比</h1>
-          <p class="subtitle">每百万Token计价 · 数据截至2026年4月 · 仅供参考</p>
-          <p class="note">* 价格随时可能变动，请以各平台官方文档为准</p>
+          <h1 id="apiHeading">📈 API 调用趋势</h1>
+          <p class="subtitle">追踪主流AI模型API的调用量、热度与定价变动趋势</p>
+          <p class="update-time">更新于：2026-05-10</p>
         </header>
 
-        <div class="pricing-group">
-          <h2 class="group-title">🌍 国际模型 International Models</h2>
-          <div class="pricing-table-wrapper">
-            <table class="pricing-table" role="table" aria-label="国际模型API定价">
-              <thead>
-                <tr role="row">
-                  <th role="columnheader">模型</th>
-                  <th role="columnheader">输入 Input</th>
-                  <th role="columnheader">输出 Output</th>
-                  <th role="columnheader">上下文</th>
-                  <th role="columnheader">性价比</th>
-                </tr>
-              </thead>
-              <tbody id="pricingIntlBody">
-                <!-- 由 renderer.js 填充 -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="pricing-group">
-          <h2 class="group-title">🇨🇳 国产模型 China Models (人民币 RMB)</h2>
-          <div class="pricing-table-wrapper">
-            <table class="pricing-table" role="table" aria-label="国产模型API定价">
-              <thead>
-                <tr role="row">
-                  <th role="columnheader">模型</th>
-                  <th role="columnheader">输入 Input</th>
-                  <th role="columnheader">输出 Output</th>
-                  <th role="columnheader">上下文</th>
-                  <th role="columnheader">性价比</th>
-                </tr>
-              </thead>
-              <tbody id="pricingChinaBody">
-                <!-- 由 renderer.js 填充 -->
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <div class="pricing-group">
-          <h2 class="group-title">🎫 订阅方案对比</h2>
-          <div class="plan-cards" id="pricingPlans">
-            <!-- 由 renderer.js 填充 -->
+        <div class="api-layout">
+          <div class="api-placeholder">
+            <div class="placeholder-icon">📊</div>
+            <h2>功能开发中</h2>
+            <p>该栏目正在搭建中，将展示各AI平台API调用量趋势、价格变动预警、新模型上线通知等。</p>
+            <p class="placeholder-hint">预计上线时间：2026-05-20</p>
           </div>
         </div>
       </section>
+
     </div>
   </main>
 
