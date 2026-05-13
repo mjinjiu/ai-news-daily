@@ -32,13 +32,13 @@ const Renderer = (function () {
     return I18N.t(key);
   }
 
-  // ===== 1. 渲染重磅新闻 =====
+  // ===== 1. 渲染重磅新闻（无跳转） =====
   function renderBreaking(containerId, items) {
     var container = document.getElementById(containerId);
     if (!container || !items) return;
     container.innerHTML = items.map(function (item) {
       return (
-        '<article class="card featured anim-fade-up" data-source-url="' + escapeHtml(item.url) + '" data-id="' + item.id + '" tabindex="0" role="link" aria-label="' + escapeHtml(getText(item, 'title')) + '">' +
+        '<article class="card featured anim-fade-up" data-id="' + item.id + '">' +
           '<div class="card-tag tag-breaking">' + categoryLabel('breaking') + ' Breaking</div>' +
           '<h2>' + escapeHtml(getText(item, 'title')) + '</h2>' +
           '<p class="card-meta">' + escapeHtml(item.date) + ' · ' + escapeHtml(item.source) + '</p>' +
@@ -89,7 +89,7 @@ const Renderer = (function () {
     container.innerHTML = items.map(function (item) {
       var catCls = categoryClass(item.category);
       return (
-        '<div class="news-item anim-fade-up" data-source-url="' + escapeHtml(item.url) + '" data-id="' + item.id + '" tabindex="0" role="link" aria-label="' + escapeHtml(getText(item, 'title')) + '">' +
+        '<div class="news-item anim-fade-up" data-id="' + item.id + '">' +
           '<div class="news-bar ' + catCls + '"></div>' +
           '<div class="news-body">' +
             '<h3>' + escapeHtml(getText(item, 'title')) + '</h3>' +
@@ -114,7 +114,7 @@ const Renderer = (function () {
       var listHtml = day.items && day.items.length > 0
         ? day.items.map(function (it) {
             var cls = categoryClass(it.category);
-            return '<li data-source-url="' + escapeHtml(it.url) + '" tabindex="0" role="link"><span class="dot ' + cls + '"></span><a href="' + escapeHtml(it.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(getText(it, 'title')) + '</a></li>';
+            return '<li><span class="dot ' + cls + '"></span>' + escapeHtml(getText(it, 'title')) + '</li>';
           }).join('')
         : '<li class="empty">' + I18N.t('emptyNews') + '</li>';
       return (
@@ -144,18 +144,38 @@ const Renderer = (function () {
     }).join('');
   }
 
-  // ===== 5. 渲染热榜 =====
-  function renderHotList(containerId, items) {
+  // ===== 5. 渲染本周重磅新闻（原热榜，改为重磅新闻展开卡片） =====
+  function renderHotList(containerId, breakingItems) {
     var container = document.getElementById(containerId);
-    if (!container || !items) return;
-    container.innerHTML = items.map(function (item, idx) {
-      var rankClass = idx < 3 ? 'rank-top' + (idx + 1) : '';
+    if (!container || !breakingItems) return;
+    
+    container.innerHTML = breakingItems.map(function (item, idx) {
       return (
-        '<li class="' + rankClass + '">' +
-          '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(getText(item, 'title')) + '</a>' +
+        '<li class="breaking-item" data-breaking-id="' + item.id + '">' +
+          '<div class="breaking-title">' +
+            '<span class="breaking-rank">' + (idx + 1) + '</span>' +
+            escapeHtml(getText(item, 'title')) +
+          '</div>' +
+          '<div class="breaking-card" style="display:none">' +
+            '<p class="breaking-summary">' + escapeHtml(getText(item, 'summary')) + '</p>' +
+            '<p class="breaking-meta">' + escapeHtml(item.date) + ' · ' + escapeHtml(item.source) + '</p>' +
+          '</div>' +
         '</li>'
       );
     }).join('');
+
+    // 绑定展开/收起事件
+    container.querySelectorAll('.breaking-item').forEach(function(li) {
+      li.addEventListener('click', function() {
+        var card = li.querySelector('.breaking-card');
+        if (!card) return;
+        var isHidden = card.style.display === 'none';
+        container.querySelectorAll('.breaking-card').forEach(function(c) {
+          c.style.display = 'none';
+        });
+        card.style.display = isHidden ? 'block' : 'none';
+      });
+    });
   }
 
   // ===== 6. 渲染标签云 =====
@@ -231,9 +251,7 @@ const Renderer = (function () {
     renderBreaking('featuredRow', news.breaking);
     renderDailyNews('newsList', news.daily, news.meta, archiveDate);
     renderWeekly('weekTimeline', news.weekly);
-    renderStats('statsRow', news.stats);
-    renderHotList('hotList', news.hotList);
-    renderTags('tagCloud', news.tags);
+    renderHotList('hotList', news.breaking);
     renderSources('sourceList', news.sources);
     updateTimestamps(news.meta);
 

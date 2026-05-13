@@ -94,18 +94,16 @@
     syncLangBtn();
   }
 
-  // ==================== 3. 全局事件委托 — 新闻点击跳转 ====================
+  // ==================== 3. 全局事件委托 — 新闻点击跳转（已禁用：去掉所有新闻跳转功能） ====================
+  // 2026-05-13: 用户要求去掉所有新闻点击跳转，以下逻辑保留但不再触发（data-source-url已从renderer移除）
+  /*
   document.addEventListener('click', function (e) {
     var clickable = e.target.closest('[data-source-url]');
     if (!clickable) return;
-    if (e.target.closest('a')) return; // Let real links handle themselves
-
+    if (e.target.closest('a')) return;
     var url = clickable.dataset.sourceUrl;
     if (!url) return;
-
-    // Keyboard support: Enter key
     if (e.type === 'keydown' && e.key !== 'Enter') return;
-
     e.preventDefault();
     window.open(url, '_blank', 'noopener,noreferrer');
   });
@@ -117,6 +115,7 @@
     e.preventDefault();
     window.open(el.dataset.sourceUrl, '_blank', 'noopener,noreferrer');
   });
+  */
 
   // ==================== 4. 广告位控制 ====================
   var adConfig = { top: false, sidebar: false, infeed: false, bottom: false };
