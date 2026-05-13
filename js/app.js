@@ -7,27 +7,32 @@
 (function () {
   'use strict';
 
-  // ==================== 1. 板块切换 ====================
+  // ==================== 1. 板块切换（支持归档路由 #section/YYYY-MM-DD）====================
   var navLinks = document.querySelectorAll('.nav-link');
   var sections = document.querySelectorAll('.main-section');
 
   function switchSection(targetId, skipScroll) {
+    // 处理归档路由格式：news/2026-05-10
+    var parts = targetId.split('/');
+    var sectionId = parts[0];
+    var archiveDate = parts[1] || null;
+
     navLinks.forEach(function (link) {
-      link.classList.toggle('active', link.dataset.section === targetId);
-      link.setAttribute('aria-current', link.dataset.section === targetId ? 'page' : 'false');
+      link.classList.toggle('active', link.dataset.section === sectionId);
+      link.setAttribute('aria-current', link.dataset.section === sectionId ? 'page' : 'false');
     });
 
     sections.forEach(function (section) {
-      section.classList.toggle('active', section.id === targetId + 'Section');
+      section.classList.toggle('active', section.id === sectionId + 'Section');
     });
 
     if (!skipScroll) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // Update URL hash without triggering hashchange
-    if (history.replaceState) {
-      history.replaceState(null, null, '#' + targetId);
+    // 如果带归档日期，加载对应归档数据
+    if (archiveDate) {
+      Renderer.loadAll(archiveDate);
     }
   }
 
@@ -36,16 +41,38 @@
     var link = e.target.closest('.nav-link');
     if (!link) return;
     e.preventDefault();
+    // 切回当前周视图
     switchSection(link.dataset.section);
+    Renderer.loadAll(null);
+    // 更新 URL
+    if (history.replaceState) {
+      history.replaceState(null, null, '#' + link.dataset.section);
+    }
   });
 
-  // Hash 变化
+  // Hash 变化（支持归档路由）
   window.addEventListener('hashchange', function () {
     var hash = window.location.hash.slice(1);
-    if (hash) switchSection(hash);
+    if (!hash) return;
+    switchSection(hash, true);
   });
 
-  // 页面加载检查 hash
+  // 归档链接点击事件委托
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest('.archive-link');
+    if (!link) return;
+    e.preventDefault();
+    var section = link.dataset.section;
+    var date = link.dataset.date;
+    if (section && date) {
+      switchSection(section + '/' + date);
+      if (history.replaceState) {
+        history.replaceState(null, null, '#' + section + '/' + date);
+      }
+    }
+  });
+
+  // 页面加载检查 hash（支持归档路由）
   if (window.location.hash) {
     switchSection(window.location.hash.slice(1), true);
   }

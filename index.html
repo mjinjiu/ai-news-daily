@@ -83,8 +83,9 @@
             <div class="news-today">
               <div class="section-header">
                 <div class="header-left">
-                  <h2>📰 今日新闻</h2>
+                  <h2>📰 本周新闻</h2>
                   <span class="date-badge">5月10日</span>
+                  <span class="archive-badge" style="display:none"></span>
                 </div>
                 <span class="count news-count">10 条</span>
               </div>
@@ -145,13 +146,25 @@
 
             <div class="widget archive">
               <h3>📂 历史归档</h3>
-              <ul class="archive-list" id="archiveList">
-                <li><a href="#"><span class="archive-week">2026.04 第三周</span><span class="archive-count">10 条</span></a></li>
-                <li class="archive-empty"><span class="archive-week">2026.04 第二周</span><span class="archive-count">—</span></li>
-                <li class="archive-empty"><span class="archive-week">2026.04 第一周</span><span class="archive-count">—</span></li>
-                <li class="archive-empty"><span class="archive-week">2026.03 第四周</span><span class="archive-count">—</span></li>
-              </ul>
-              <p class="archive-hint">💡 暂无更早归档，新数据将在每周日自动归档</p>
+              <div class="archive-section">
+                <h4>📰 AI新闻</h4>
+                <ul class="archive-list" id="newsArchive">
+                  <li class="archive-loading">加载中...</li>
+                </ul>
+              </div>
+              <div class="archive-section">
+                <h4>🔥 GitHub趋势</h4>
+                <ul class="archive-list" id="githubArchive">
+                  <li class="archive-loading">加载中...</li>
+                </ul>
+              </div>
+              <div class="archive-section">
+                <h4>📈 API趋势</h4>
+                <ul class="archive-list" id="apiArchive">
+                  <li class="archive-loading">加载中...</li>
+                </ul>
+              </div>
+              <p class="archive-hint">💡 点击日期查看当日归档</p>
             </div>
 
             <div class="widget sources">

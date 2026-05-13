@@ -48,20 +48,42 @@ const Renderer = (function () {
     }).join('');
   }
 
-  // ===== 2. 渲染今日新闻列表 =====
-  function renderDailyNews(containerId, items, meta) {
+  // ===== 2. 渲染今日新闻列表（支持本周合并视图） =====
+  function renderDailyNews(containerId, items, meta, archiveDate) {
     var container = document.getElementById(containerId);
     if (!container || !items) return;
 
     // 更新计数和日期
     var countEl = document.querySelector('.news-count');
-    if (countEl && meta) countEl.textContent = meta.total + ' ' + I18N.t('units');
+    if (countEl && meta) {
+      var countText = meta.total + ' ' + I18N.t('units');
+      if (meta.weekRange) {
+        countText = meta.weekRange + ' 共' + countText;
+      }
+      countEl.textContent = countText;
+    }
 
     var dateEl = document.querySelector('.date-badge');
     if (dateEl && meta) {
-      var lang = I18N.getLang();
-      var d = meta.date ? meta.date.split('-') : ['04', '28'];
-      dateEl.textContent = (lang === 'zh' ? d[1] + '月' + d[2] + '日' : d[1] + '/' + d[2]);
+      if (meta.weekRange) {
+        dateEl.textContent = meta.weekRange;
+      } else {
+        var lang = I18N.getLang();
+        var d = meta.date ? meta.date.split('-') : ['04', '28'];
+        dateEl.textContent = (lang === 'zh' ? d[1] + '月' + d[2] + '日' : d[1] + '/' + d[2]);
+      }
+    }
+
+    // 如果是历史归档视图，显示归档标记
+    if (archiveDate && meta) {
+      var archiveBadge = document.querySelector('.archive-badge');
+      if (archiveBadge) {
+        archiveBadge.style.display = 'inline-block';
+        archiveBadge.textContent = '📂 ' + archiveDate + ' 归档';
+      }
+    } else {
+      var archiveBadge = document.querySelector('.archive-badge');
+      if (archiveBadge) archiveBadge.style.display = 'none';
     }
 
     container.innerHTML = items.map(function (item) {
@@ -168,23 +190,100 @@ const Renderer = (function () {
   function renderPricing(data) { /* 栏目已移除 */ }
 
   // ===== 主入口：加载所有数据 =====
-  function loadAll() {
-    // News data
-    fetchData('data/news.json', function (news) {
-      if (!news) return;
-      renderBreaking('featuredRow', news.breaking);
-      renderDailyNews('newsList', news.daily, news.meta);
-      renderWeekly('weekTimeline', news.weekly);
-      renderStats('statsRow', news.stats);
-      renderHotList('hotList', news.hotList);
-      renderTags('tagCloud', news.tags);
-      renderSources('sourceList', news.sources);
+  // 归档制：默认加载 current.json（本周合并），支持指定日期归档
+  function loadAll(archiveDate) {
+    var newsPath = archiveDate ? 'data/news/' + archiveDate + '.json' : 'data/news/current.json';
+    var githubPath = archiveDate ? 'data/github/' + archiveDate + '.json' : 'data/github/current.json';
+    var apiPath = archiveDate ? 'data/api/' + archiveDate + '.json' : 'data/api/current.json';
 
-      // Update timestamps
-      updateTimestamps(news.meta);
+    // News 数据
+    fetchData(newsPath, function (news) {
+      if (!news) {
+        // 如果 current.json 不存在，fallback 到旧的 news.json
+        fetchData('data/news.json', function (legacy) {
+          if (legacy) renderNewsSection(legacy, archiveDate);
+        });
+        return;
+      }
+      renderNewsSection(news, archiveDate);
     });
 
-    // Analysis / Pricing 栏目已移除，不再加载对应数据
+    // GitHub 趋势数据
+    fetchData(githubPath, function (data) {
+      if (!data) return;
+      renderGithubSection(data, archiveDate);
+    });
+
+    // API 趋势数据
+    fetchData(apiPath, function (data) {
+      if (!data) return;
+      renderApiSection(data, archiveDate);
+    });
+  }
+
+  function renderNewsSection(news, archiveDate) {
+    renderBreaking('featuredRow', news.breaking);
+    renderDailyNews('newsList', news.daily, news.meta, archiveDate);
+    renderWeekly('weekTimeline', news.weekly);
+    renderStats('statsRow', news.stats);
+    renderHotList('hotList', news.hotList);
+    renderTags('tagCloud', news.tags);
+    renderSources('sourceList', news.sources);
+    updateTimestamps(news.meta);
+
+    // 渲染右侧历史归档入口
+    if (news.archiveDates && news.archiveDates.length > 0) {
+      renderArchiveLinks('newsArchive', news.archiveDates, 'news');
+    }
+  }
+
+  function renderGithubSection(data, archiveDate) {
+    // GitHub 栏目占位渲染
+    var container = document.getElementById('githubContent');
+    if (!container) return;
+
+    if (data.meta && data.meta.note === 'placeholder') {
+      container.innerHTML = '<div class="github-placeholder"><span class="placeholder-icon">🚧</span><h3>GitHub 趋势正在开发中</h3><p>每日自动扫描 GitHub 热门 AI 项目，即将上线</p></div>';
+    }
+
+    if (data.archiveDates && data.archiveDates.length > 0) {
+      renderArchiveLinks('githubArchive', data.archiveDates, 'github');
+    }
+  }
+
+  function renderApiSection(data, archiveDate) {
+    // API 趋势栏目占位渲染
+    var container = document.getElementById('apiContent');
+    if (!container) return;
+
+    if (data.meta && data.meta.note === 'placeholder') {
+      container.innerHTML = '<div class="api-placeholder"><span class="placeholder-icon">📈</span><h3>API 调用趋势正在开发中</h3><p>跟踪各大 AI 模型 API 调用量、价格变化，即将上线</p></div>';
+    }
+
+    if (data.archiveDates && data.archiveDates.length > 0) {
+      renderArchiveLinks('apiArchive', data.archiveDates, 'api');
+    }
+  }
+
+  // ===== 渲染历史归档链接 =====
+  function renderArchiveLinks(containerId, dates, section) {
+    var container = document.getElementById(containerId);
+    if (!container || !dates) return;
+    
+    // 去掉今天，只显示历史
+    var today = new Date().toISOString().split('T')[0];
+    var historyDates = dates.filter(function(d) { return d !== today; }).sort().reverse();
+    
+    if (historyDates.length === 0) {
+      container.innerHTML = '<p class="archive-empty">暂无历史归档</p>';
+      return;
+    }
+
+    container.innerHTML = historyDates.map(function(dateStr) {
+      var parts = dateStr.split('-');
+      var display = parts[1] + '-' + parts[2];
+      return '<li><a href="#' + section + '/' + dateStr + '" class="archive-link" data-section="' + section + '" data-date="' + dateStr + '">' + display + '</a></li>';
+    }).join('');
   }
 
   function fetchData(url, callback) {
@@ -210,7 +309,13 @@ const Renderer = (function () {
 
   // Re-render on language change
   I18N.onChange(function () {
-    loadAll();
+    // 保留当前归档状态重新加载
+    var hash = window.location.hash;
+    var archiveDate = null;
+    if (hash && hash.match(/^#(news|github|api)\/\d{4}-\d{2}-\d{2}$/)) {
+      archiveDate = hash.split('/')[1];
+    }
+    loadAll(archiveDate);
   });
 
   return {

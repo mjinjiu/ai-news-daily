@@ -2,9 +2,7 @@
   "meta": {
     "date": "2026-05-13",
     "updatedAt": "2026-05-13T19:21:11+08:00",
-    "total": 1,
-    "weekRange": "5.11 — 5.17",
-    "daysCount": 1
+    "total": 1
   },
   "breaking": [
     {
@@ -34,8 +32,5 @@
   ],
   "sources": [
     "AI前线"
-  ],
-  "archiveDates": [
-    "2026-05-13"
   ]
 }
