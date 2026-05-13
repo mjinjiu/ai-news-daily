@@ -62,7 +62,7 @@
         <header class="page-header">
           <h1 id="newsHeading">⚡ 每日AI前线</h1>
           <p class="subtitle">追踪人工智能最新动态与行业趋势</p>
-          <p class="update-time">更新于：2026-05-10</p>
+          <p class="update-time">更新于：2026-05-07</p>
         </header>
 
         <div class="news-layout">
@@ -78,7 +78,7 @@
               <div class="section-header">
                 <div class="header-left">
                   <h2>📰 本周新闻</h2>
-                  <span class="date-badge">5月10日</span>
+                  <span class="date-badge">5月7日</span>
                   <span class="archive-badge" style="display:none"></span>
                 </div>
                 <span class="count news-count">10 条</span>
@@ -92,7 +92,7 @@
             <div class="weekly-review">
               <div class="section-header">
                 <h2>📅 本周回顾</h2>
-                <span class="range">4.28 — 4.30</span>
+                <span class="range">5.05 — 5.11</span>
               </div>
               <div class="week-timeline" id="weekTimeline">
                 <!-- dynamic -->
@@ -100,37 +100,8 @@
             </div>
           </div>
 
-          <!-- 右侧边栏 — 由 renderer.js 填充 -->
+          <!-- 右侧边栏 — 精简后只保留占位结构 -->
           <aside class="news-sidebar" role="complementary" aria-label="侧边栏">
-            <div class="widget hot-topics">
-              <h3>🔥 本周重磅新闻</h3>
-              <ol class="hot-list" id="hotList">
-                <!-- dynamic: 重磅新闻标题，点击展开详情卡片 -->
-              </ol>
-            </div>
-
-            <div class="widget archive">
-              <h3>📂 历史归档</h3>
-              <div class="archive-section">
-                <h4>📰 AI新闻</h4>
-                <ul class="archive-list" id="newsArchive">
-                  <li class="archive-loading">加载中...</li>
-                </ul>
-              </div>
-              <p class="archive-hint">💡 点击日期查看当日归档</p>
-            </div>
-
-            <div class="widget sources">
-              <h3>📡 信源</h3>
-              <div class="source-list" id="sourceList">
-                <!-- dynamic -->
-              </div>
-            </div>
-            <div class="widget site-widget" style="display:none">
-              <h3>🌍 国际版</h3>
-              <p class="site-desc">专为海外读者打造的英文版AI前线</p>
-              <a href="https://mjinjiu.github.io/ai-news-daily-en/" class="site-link" target="_blank" rel="noopener noreferrer">👉 访问 AI Frontline →</a>
-            </div>
           </aside>
         </div>
       </section>
@@ -156,21 +127,8 @@
             </div>
           </div>
 
-          <!-- 右侧边栏 -->
-          <aside class="news-sidebar" role="complementary" aria-label="GitHub侧边栏">
-            <div class="widget archive">
-              <h3>📂 历史归档</h3>
-              <div class="archive-section">
-                <h4>🔥 GitHub趋势</h4>
-                <ul class="archive-list" id="githubArchive">
-                  <li class="archive-loading">加载中...</li>
-                </ul>
-              </div>
-              <p class="archive-hint">💡 点击日期查看当日归档</p>
-            </div>
-          </aside>
-        </div>
-      </section>
+      <!-- GitHub趋势：去掉右侧边栏，全宽占位 -->
+    </section>
 
       <!-- ========== API调用流行趋势栏目 ========== -->
       <section id="apiSection" class="main-section" aria-labelledby="apiHeading">
@@ -193,21 +151,8 @@
             </div>
           </div>
 
-          <!-- 右侧边栏 -->
-          <aside class="news-sidebar" role="complementary" aria-label="API侧边栏">
-            <div class="widget archive">
-              <h3>📂 历史归档</h3>
-              <div class="archive-section">
-                <h4>📈 API趋势</h4>
-                <ul class="archive-list" id="apiArchive">
-                  <li class="archive-loading">加载中...</li>
-                </ul>
-              </div>
-              <p class="archive-hint">💡 点击日期查看当日归档</p>
-            </div>
-          </aside>
-        </div>
-      </section>
+      <!-- API趋势：去掉右侧边栏，全宽占位 -->
+    </section>
 
       <!-- ========== 杂记栏目 ========== -->
       <section id="notesSection" class="main-section" aria-labelledby="notesHeading">
@@ -230,24 +175,21 @@
             </div>
           </div>
 
-          <!-- 右侧边栏 -->
-          <aside class="news-sidebar" role="complementary" aria-label="杂记侧边栏">
-            <div class="widget archive">
-              <h3>📂 历史归档</h3>
-              <div class="archive-section">
-                <h4>📝 杂记</h4>
-                <ul class="archive-list" id="notesArchive">
-                  <li class="archive-empty">暂无历史归档</li>
-                </ul>
-              </div>
-              <p class="archive-hint">💡 点击日期查看当日归档</p>
-            </div>
-          </aside>
-        </div>
-      </section>
+      <!-- 杂记：去掉右侧边栏，全宽占位 -->
+    </section>
 
     </div>
   </main>
+
+  <!-- 信源 — 页面底部 -->
+  <section class="sources-bottom" id="sourcesBottom" aria-labelledby="sourcesBottomHeading">
+    <div class="sources-bottom-container">
+      <h2 id="sourcesBottomHeading">📡 信源</h2>
+      <div class="source-list-bottom" id="sourceListBottom">
+        <!-- dynamic -->
+      </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="site-footer" role="contentinfo">

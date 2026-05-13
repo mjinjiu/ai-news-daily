@@ -1593,3 +1593,49 @@ body {
   font-size: 12px;
   padding: 4px 8px;
 }
+
+/* ===== 底部信源区域 ===== */
+.sources-bottom {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.sources-bottom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sources-bottom h2 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.source-list-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.source-list-bottom .source-tag {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.source-list-bottom .source-tag:hover {
+  background: var(--primary-soft);
+  border-color: var(--primary);
+  color: var(--primary);
+}

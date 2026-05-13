@@ -251,14 +251,8 @@ const Renderer = (function () {
     renderBreaking('featuredRow', news.breaking);
     renderDailyNews('newsList', news.daily, news.meta, archiveDate);
     renderWeekly('weekTimeline', news.weekly);
-    renderHotList('hotList', news.breaking);
-    renderSources('sourceList', news.sources);
+    renderSources('sourceListBottom', news.sources);
     updateTimestamps(news.meta);
-
-    // 渲染右侧历史归档入口
-    if (news.archiveDates && news.archiveDates.length > 0) {
-      renderArchiveLinks('newsArchive', news.archiveDates, 'news');
-    }
   }
 
   function renderGithubSection(data, archiveDate) {
