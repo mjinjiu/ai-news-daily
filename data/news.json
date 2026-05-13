@@ -1,189 +1,189 @@
 {
   "meta": {
-    "date": "2026-05-10",
-    "updatedAt": "2026-05-10T08:17:00+08:00",
+    "date": "2026-05-13",
+    "updatedAt": "2026-05-13T08:17:00+08:00",
     "total": 10
   },
   "breaking": [
     {
       "id": "news-001",
-      "title_zh": "Anthropic承诺五年向谷歌云投入2000亿美元，深化AI合作",
-      "title_en": "Anthropic Commits $200B to Google Cloud Over 5 Years in Landmark Deal",
-      "summary_zh": "Anthropic签署协议承诺五年内向谷歌云支出2000亿美元，占谷歌云收入积压订单的40%以上。同时谷歌母公司Alphabet计划向Anthropic投资高达400亿美元。",
-      "summary_en": "Anthropic commits to spend $200B with Google Cloud over five years, accounting for over 40% of Google's revenue backlog. Alphabet also investing up to $40B in the AI startup.",
-      "date": "05-10",
-      "source": "Reuters / The Information",
+      "title_zh": "Anthropic寻求300亿美元融资，估值逼近万亿美元",
+      "title_en": "Anthropic Seeks $30B Funding at Near-Trillion Valuation",
+      "summary_zh": "Anthropic正洽谈新一轮融资至少300亿美元，投前估值突破9000亿美元，直逼万亿美元。若达成，将超越OpenAI的8520亿美元估值。谷歌已承诺投资100亿美元，亚马逊出资50亿美元。",
+      "summary_en": "Anthropic is in talks to raise at least $30B at a pre-money valuation exceeding $900B. If completed, it would surpass OpenAI's $852B valuation. Google committed $10B, Amazon $5B.",
+      "date": "05-13",
+      "source": "Reuters / Bloomberg",
       "category": "breaking",
-      "url": "https://www.reuters.com/technology/anthropic-commits-spending-200-billion-googles-cloud-chips-2026-05-06/"
+      "url": "https://www.reuters.com/technology/"
     },
     {
       "id": "news-002",
-      "title_zh": "iOS 27将允许用户选择Claude或Gemini替代ChatGPT",
-      "title_en": "iOS 27 to Let Users Choose Claude or Gemini Instead of ChatGPT",
-      "summary_zh": "苹果iOS 27、iPadOS 27和macOS 27将允许用户将第三方AI服务设为Apple Intelligence默认选项，包括Claude和Gemini。苹果已与谷歌签署协议，计划使用基于Gemini的模型。",
-      "summary_en": "Apple's iOS 27 will let users set third-party AI services like Claude or Gemini as default for Apple Intelligence features. Apple has signed a deal with Google for Gemini-based models.",
-      "date": "05-10",
-      "source": "Bloomberg / MacRumors",
+      "title_zh": "OpenAI砸40亿美元抢前线部署工程师，成立部署公司",
+      "title_en": "OpenAI Pours $4B into FDE Talent, Launches Deployment Company",
+      "summary_zh": "OpenAI斥资40亿美元成立'部署公司'，收购咨询公司Tomoro，全力押注前线部署工程师（FDE）。传统软件工程师需求骤降70%，FDE需求激增近1000%，标志AI竞争从模型参数转向企业落地能力。",
+      "summary_en": "OpenAI invests $4B to launch The Deployment Company and acquires Tomoro, betting on Frontline Deployment Engineers. Traditional SWE demand dropped 70%, FDE demand surged ~1000%.",
+      "date": "05-13",
+      "source": "TechCrunch / The Verge",
       "category": "breaking",
-      "url": "https://www.bloomberg.com/news/articles/2026-05-05/apple-ios-27-ai-services-claude-gemini"
+      "url": "https://techcrunch.com/"
     }
   ],
   "daily": [
     {
       "id": "news-003",
-      "title_zh": "Anthropic与OpenAI双双成立企业AI合资企业",
-      "title_en": "Anthropic and OpenAI Both Launch Enterprise AI Joint Ventures",
-      "excerpt_zh": "Anthropic宣布成立专注企业AI服务的合资企业，估值15亿美元，Blackstone等参与。数小时后OpenAI也宣布成立类似企业The Development Company，融资40亿美元。",
-      "excerpt_en": "Anthropic launches enterprise AI JV valued at $1.5B with Blackstone, Goldman Sachs. OpenAI follows hours later with The Development Company raising $4B at $10B valuation.",
-      "date": "05-10",
-      "source": "TechCrunch / WSJ",
-      "category": "industry",
-      "url": "https://techcrunch.com/2026/05/04/anthropic-openai-enterprise-joint-ventures/"
+      "title_zh": "韩国'AI全民红利'提议引发股市一度重挫5%",
+      "title_en": "South Korea 'AI Citizen Dividend' Proposal Crashes Stock Market 5%",
+      "excerpt_zh": "韩国总统府提议设立'AI公民红利'，市场恐慌三星、SK海力士遭征超额利润税，Kospi盘中重挫5.1%。官方澄清资金源于超额税收而非暴利税，但AI财富再分配已成重要政策风险。",
+      "excerpt_en": "Korea's presidential office proposed an 'AI citizen dividend', sparking panic of excess profit taxes on Samsung and SK Hynix. Kospi plunged 5.1% intraday before officials clarified the funding source.",
+      "date": "05-13",
+      "source": "Wall Street Journal / NBD",
+      "category": "policy",
+      "url": "https://www.wsj.com/"
     },
     {
       "id": "news-004",
-      "title_zh": "OpenAI发布GPT-5.5：多步骤推理与Agent编码大幅提升",
-      "title_en": "OpenAI Debuts GPT-5.5 with Agentic Coding and Research Gains",
-      "excerpt_zh": "GPT-5.5在多步骤工作、工具使用和自主验证方面显著改进。在Agent编码、计算机使用和早期科学研究方面取得进展。更token高效，API即将推出。",
-      "excerpt_en": "GPT-5.5 improves at multi-step work, tool use, and self-verification. Gains in agentic coding, computer use, and early-stage scientific research. More token-efficient.",
-      "date": "05-10",
-      "source": "OpenAI / MacRumors",
+      "title_zh": "Anthropic推出逾十款法律AI工具，覆盖合同审查到司法备考",
+      "title_en": "Anthropic Launches 10+ Legal AI Tools from Contract Review to Bar Prep",
+      "excerpt_zh": "Anthropic通过Claude Cowork向付费用户开放法律AI工具套件，覆盖合同审查、司法备考等。法律行业因文件处理量大被视为AI替代潜力较高领域，律师是Claude使用率最高的职业群体之一。",
+      "excerpt_en": "Anthropic released 10+ legal AI tools via Claude Cowork, covering contract review to bar exam prep. Lawyers are among the highest Claude user groups outside software developers.",
+      "date": "05-13",
+      "source": "Anthropic / NYT",
       "category": "tech",
-      "url": "https://www.macrumors.com/2026/04/24/openai-gpt-5-5-research-gains/"
+      "url": "https://www.anthropic.com/"
     },
     {
       "id": "news-005",
-      "title_zh": "ChatGPT Images 2.0发布：首个具备思考能力的图像模型",
-      "title_en": "OpenAI Launches ChatGPT Images 2.0 with Thinking Capabilities",
-      "excerpt_zh": "Images 2.0是OpenAI首个具备思考能力的图像模型，可遵循复杂指令、准确定位物体关系、渲染密集布局。支持2K分辨率、多语言和8图批量生成。",
-      "excerpt_en": "Images 2.0 is OpenAI's first image model with thinking capabilities. Follows detailed instructions, preserves fine detail, renders dense layouts. Supports 2K and 8-image batches.",
-      "date": "05-10",
-      "source": "OpenAI / MacRumors",
-      "category": "tech",
-      "url": "https://www.macrumors.com/2026/04/22/openai-chatgpt-images-2-0/"
+      "title_zh": "通用汽车IT部门裁员超10%，全面转向AI原生开发人才",
+      "title_en": "GM Cuts 10%+ of IT Staff to Pivot to AI-Native Developer Talent",
+      "excerpt_zh": "通用汽车确认裁减IT部门约600名领薪员工，腾出资源招聘AI原生开发、数据工程、智能体开发专家。标志着从'AI工具应用'向'AI原生开发'的战略转型，目标实现AI系统全链路自研。",
+      "excerpt_en": "GM confirmed cutting ~600 salaried IT employees to free resources for AI-native developers, data engineers, and agent builders. A strategic shift from 'AI tool adoption' to 'AI-native development'.",
+      "date": "05-13",
+      "source": "Reuters / Bloomberg",
+      "category": "industry",
+      "url": "https://www.reuters.com/"
     },
     {
       "id": "news-006",
-      "title_zh": "谷歌计划向Anthropic投资高达400亿美元",
-      "title_en": "Google Plans to Invest Up to $40 Billion in Anthropic",
-      "excerpt_zh": "谷歌母公司Alphabet计划向Anthropic投资高达400亿美元，深化与这家AI初创公司的合作关系。此举将使谷歌成为Anthropic最重要的财务支持者之一。",
-      "excerpt_en": "Alphabet plans to invest up to $40B in Anthropic, deepening its partnership. This would make Google one of Anthropic's most significant financial backers.",
-      "date": "05-10",
-      "source": "Bloomberg / NYT",
-      "category": "finance",
-      "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic"
+      "title_zh": "GitLab大规模重组：裁员并宣称未来软件由机器构建、人类指导",
+      "title_en": "GitLab Restructures for AI Era: Cuts Staff, Says Software Will Be Machine-Built",
+      "excerpt_zh": "GitLab宣布重组计划'Act 2'，削减最多30%国家布局，精简职能部门最多三层管理层级，研发重组为60个小团队。CEO表示未来软件将由机器构建但人类指导，AI智能体承担编码审查任务。",
+      "excerpt_en": "GitLab announced 'Act 2' restructuring, cutting up to 30% of country footprint and flattening org layers. CEO says future software will be machine-built, human-guided, with agents handling coding tasks.",
+      "date": "05-13",
+      "source": "TechCrunch / The Verge",
+      "category": "industry",
+      "url": "https://techcrunch.com/"
     },
     {
       "id": "news-007",
-      "title_zh": "OpenAI推出100美元/月Pro订阅：面向重度Codex用户",
-      "title_en": "OpenAI Adds $100/Month ChatGPT Tier for Heavier Codex Use",
-      "excerpt_zh": "OpenAI新增100美元/月Pro订阅，提供5倍于Plus计划的Codex使用量。Anthropic也有类似定价结构：20美元Pro、100美元Max 5x、200美元Max 20x。",
-      "excerpt_en": "OpenAI adds $100/month Pro tier with 5x more Codex usage than Plus. Anthropic offers similar tiers: $20 Pro, $100 Max 5x, $200 Max 20x.",
-      "date": "05-10",
-      "source": "OpenAI / MacRumors",
-      "category": "industry",
-      "url": "https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/"
+      "title_zh": "Anthropic拒绝中国研究人员访问新AI模型Mythos",
+      "title_en": "Anthropic Rejects Chinese Researchers' Access to New AI Model Mythos",
+      "excerpt_zh": "Anthropic拒绝向中国研究人员开放漏洞发现模型Mythos的访问权限，仅提供给美国政府和选定组织。中方代表4月在新加坡会议期间提出请求被拒，美国国安委对此高度担忧。",
+      "excerpt_en": "Anthropic denied Chinese researchers access to Mythos, its vulnerability-finding AI model. Access is restricted to US government and select organizations. The NSC is highly concerned about the contact.",
+      "date": "05-13",
+      "source": "Sputnik / NYT",
+      "category": "policy",
+      "url": "https://sputniknews.cn/"
     },
     {
       "id": "news-008",
-      "title_zh": "Anthropic与OpenAI合同占全球云积压订单超半数",
-      "title_en": "Anthropic and OpenAI Contracts Account for Over Half of Global Cloud Backlog",
-      "excerpt_zh": "Anthropic和OpenAI与三大云厂商的合同占全球云积压订单（约2万亿美元）的一半以上。Anthropic已签CoreWeave多年协议，并将通过Amazon芯片获得近1吉瓦算力。",
-      "excerpt_en": "Contracts involving Anthropic and OpenAI now account for over half of the $2T backlog at AWS, Azure, and GCP. Anthropic also struck deals with CoreWeave and Amazon.",
-      "date": "05-10",
-      "source": "The Information / Reuters",
-      "category": "industry",
-      "url": "https://www.reuters.com/technology/anthropic-commits-spending-200-billion-googles-cloud-chips-2026-05-06/"
+      "title_zh": "宇树发布全球首款量产版载人变形机甲GD01，起售390万元",
+      "title_en": "Unitree Unveils World's First Mass-Produced Human-Riding Mecha GD01",
+      "excerpt_zh": "宇树发布全球首款量产版载人变形机甲GD01，直立行走和四足爬行双模式切换，载人后重约500公斤，起售390万元。公司2025年营收17亿元，人形机器人业务占比突破50%，冲刺科创板。",
+      "excerpt_en": "Unitree launched GD01, the world's first mass-produced human-riding mecha with dual-mode switching. Weighs ~500kg with rider, priced from $540K. 2025 revenue reached $240M, humanoid biz >50%.",
+      "date": "05-13",
+      "source": "Unitree / Tech In Asia",
+      "category": "tech",
+      "url": "https://www.unitree.com/"
     },
     {
       "id": "news-009",
-      "title_zh": "Anthropic探索2026年IPO，年收入冲刺26亿美元",
-      "title_en": "Anthropic Eyes 2026 IPO with Revenue Run Rate Targeting $2.6B",
-      "excerpt_zh": "Anthropic正探索最早于2026年IPO，已聘请Wilson Sonsini。公司预计年化收入明年增至26亿美元，目前服务超30万企业客户。",
-      "excerpt_en": "Anthropic exploring 2026 IPO, hired Wilson Sonsini. Annualized revenue run rate projected to hit $2.6B next year. Currently serves 300K+ enterprise clients.",
-      "date": "05-10",
-      "source": "Reuters / FT",
+      "title_zh": "微软与OpenAI合作设营收分成上限380亿，OpenAI可省970亿",
+      "title_en": "Microsoft-OpenAI Deal Caps Revenue Share at $38B, Saving OpenAI $97B",
+      "excerpt_zh": "微软与OpenAI最新合作协议设定380亿美元营收分成上限，相比原协议可能支付的1350亿美元，为OpenAI节省约970亿美元成本，有助于改善现金流并为上市做准备。",
+      "excerpt_en": "The new Microsoft-OpenAI agreement caps revenue sharing at $38B vs. potentially $135B, saving OpenAI ~$97B by 2030. This improves cash flow and supports IPO preparation.",
+      "date": "05-13",
+      "source": "Bloomberg / WSJ",
       "category": "finance",
-      "url": "https://www.reuters.com/technology/anthropic-eyes-2026-ipo-revenue-growth-2025-12-03/"
+      "url": "https://www.bloomberg.com/"
     },
     {
       "id": "news-010",
-      "title_zh": "Anthropic承诺Claude永无广告，暗讽ChatGPT广告计划",
-      "title_en": "Anthropic Pledges Claude Will Remain Ad-Free, Mocks ChatGPT Ads",
-      "excerpt_zh": "Anthropic承诺Claude永远不会植入广告，称'对话不是广告的合适场所'。此举直接针对OpenAI计划在ChatGPT中引入广告的策略。",
-      "excerpt_en": "Anthropic promises Claude will remain ad-free: 'A conversation with Claude is not one of them.' Directly contrasts with OpenAI's planned ChatGPT ad integration.",
-      "date": "05-10",
-      "source": "Anthropic / MacRumors",
-      "category": "industry",
-      "url": "https://www.macrumors.com/2026/02/04/anthropic-claude-ad-free/"
+      "title_zh": "花旗预测：阿里云AI收入未来五年CAGR将达90%",
+      "title_en": "Citi Predicts Alibaba Cloud AI Revenue CAGR of 90% Over 5 Years",
+      "excerpt_zh": "花旗预测阿里云AI相关收入将以90% CAGR从今年240亿元飙升至2031年5855亿元，占总云收入比例从15%跃升至70%。MaaS业务增速高达235%，阿里布局AI产业链四个领域。",
+      "excerpt_en": "Citi forecasts Alibaba Cloud AI revenue to grow at 90% CAGR from $3.3B to $81B by 2031, rising from 15% to 70% of total cloud revenue. MaaS business growth projected at 235% CAGR.",
+      "date": "05-13",
+      "source": "Citi / Sina Tech",
+      "category": "finance",
+      "url": "https://tech.sina.com.cn/"
     }
   ],
   "weekly": [
     {
-      "day": "周日",
-      "day_en": "Sun",
-      "date": "05-10",
+      "day": "周三",
+      "day_en": "Wed",
+      "date": "05-13",
       "count": 10,
       "items": [
         {
-          "title_zh": "Anthropic承诺2000亿美元谷歌云大单",
-          "title_en": "Anthropic commits $200B to Google Cloud",
+          "title_zh": "Anthropic寻求300亿美元融资",
+          "title_en": "Anthropic seeks $30B funding",
           "category": "breaking",
-          "url": "https://www.reuters.com/technology/anthropic-commits-spending-200-billion-googles-cloud-chips-2026-05-06/"
+          "url": "https://www.reuters.com/technology/"
         },
         {
-          "title_zh": "iOS 27将支持Claude/Gemini",
-          "title_en": "iOS 27 to support Claude/Gemini",
+          "title_zh": "OpenAI砸40亿美元抢FDE",
+          "title_en": "OpenAI $4B FDE push",
           "category": "breaking",
-          "url": "https://www.bloomberg.com/news/articles/2026-05-05/apple-ios-27-ai-services-claude-gemini"
+          "url": "https://techcrunch.com/"
         },
         {
-          "title_zh": "Anthropic与OpenAI成立企业AI合资企业",
-          "title_en": "Anthropic and OpenAI enterprise JVs",
-          "category": "industry",
-          "url": "https://techcrunch.com/2026/05/04/anthropic-openai-enterprise-joint-ventures/"
+          "title_zh": "韩国AI红利提议引股市重挫",
+          "title_en": "Korea AI dividend crashes market",
+          "category": "policy",
+          "url": "https://www.wsj.com/"
         },
         {
-          "title_zh": "OpenAI发布GPT-5.5",
-          "title_en": "OpenAI GPT-5.5 released",
+          "title_zh": "Anthropic推法律AI工具套件",
+          "title_en": "Anthropic legal AI tools",
           "category": "tech",
-          "url": "https://www.macrumors.com/2026/04/24/openai-gpt-5-5-research-gains/"
+          "url": "https://www.anthropic.com/"
         },
         {
-          "title_zh": "ChatGPT Images 2.0发布",
-          "title_en": "ChatGPT Images 2.0 launched",
+          "title_zh": "通用汽车裁员转向AI人才",
+          "title_en": "GM pivots to AI-native talent",
+          "category": "industry",
+          "url": "https://www.reuters.com/"
+        },
+        {
+          "title_zh": "GitLab重组AI智能体时代",
+          "title_en": "GitLab restructures for AI era",
+          "category": "industry",
+          "url": "https://techcrunch.com/"
+        },
+        {
+          "title_zh": "Anthropic拒中国访问Mythos",
+          "title_en": "Anthropic denies China Mythos access",
+          "category": "policy",
+          "url": "https://sputniknews.cn/"
+        },
+        {
+          "title_zh": "宇树发布载人变形机甲GD01",
+          "title_en": "Unitree launches mecha GD01",
           "category": "tech",
-          "url": "https://www.macrumors.com/2026/04/22/openai-chatgpt-images-2-0/"
+          "url": "https://www.unitree.com/"
         },
         {
-          "title_zh": "谷歌计划投资Anthropic 400亿美元",
-          "title_en": "Google to invest $40B in Anthropic",
+          "title_zh": "微软OpenAI新协议省970亿",
+          "title_en": "MS-OpenAI deal saves $97B",
           "category": "finance",
-          "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic"
+          "url": "https://www.bloomberg.com/"
         },
         {
-          "title_zh": "OpenAI推出100美元Pro订阅",
-          "title_en": "OpenAI $100 Pro tier",
-          "category": "industry",
-          "url": "https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/"
-        },
-        {
-          "title_zh": "AI合同占云积压订单半数",
-          "title_en": "AI contracts half of cloud backlog",
-          "category": "industry",
-          "url": "https://www.reuters.com/technology/anthropic-commits-spending-200-billion-googles-cloud-chips-2026-05-06/"
-        },
-        {
-          "title_zh": "Anthropic探索2026年IPO",
-          "title_en": "Anthropic eyes 2026 IPO",
+          "title_zh": "阿里云AI收入5年CAGR 90%",
+          "title_en": "Alibaba Cloud AI 90% CAGR",
           "category": "finance",
-          "url": "https://www.reuters.com/technology/anthropic-eyes-2026-ipo-revenue-growth-2025-12-03/"
-        },
-        {
-          "title_zh": "Claude承诺永无广告",
-          "title_en": "Claude ad-free pledge",
-          "category": "industry",
-          "url": "https://www.macrumors.com/2026/02/04/anthropic-claude-ad-free/"
+          "url": "https://tech.sina.com.cn/"
         }
       ]
     }
@@ -195,87 +195,87 @@
       "label_en": "Today's News"
     },
     {
-      "num": "$240B",
-      "label_zh": "Anthropic-Google合作总额",
-      "label_en": "Anthropic-Google Deal Value"
+      "num": "$900B+",
+      "label_zh": "Anthropic投前估值",
+      "label_en": "Anthropic Pre-Money Val"
     },
     {
-      "num": "2",
-      "label_zh": "企业AI合资",
-      "label_en": "Enterprise AI JVs"
+      "num": "$40B",
+      "label_zh": "OpenAI部署投资",
+      "label_en": "OpenAI Deployment Co."
     },
     {
-      "num": "300K+",
-      "label_zh": "Anthropic企业客户",
-      "label_en": "Anthropic Enterprise Clients"
+      "num": "90%",
+      "label_zh": "阿里云AI收入CAGR",
+      "label_en": "AliCloud AI Revenue CAGR"
     }
   ],
   "hotList": [
     {
-      "title_zh": "Anthropic承诺2000亿美元谷歌云大单",
-      "title_en": "Anthropic commits $200B to Google Cloud",
-      "url": "https://www.reuters.com/technology/anthropic-commits-spending-200-billion-googles-cloud-chips-2026-05-06/"
+      "title_zh": "Anthropic寻求300亿美元融资，估值逼近万亿",
+      "title_en": "Anthropic seeks $30B at near-trillion valuation",
+      "url": "https://www.reuters.com/technology/"
     },
     {
-      "title_zh": "iOS 27将支持Claude/Gemini替代ChatGPT",
-      "title_en": "iOS 27 to support Claude/Gemini",
-      "url": "https://www.bloomberg.com/news/articles/2026-05-05/apple-ios-27-ai-services-claude-gemini"
+      "title_zh": "OpenAI砸40亿美元抢前线部署工程师",
+      "title_en": "OpenAI $4B FDE talent grab",
+      "url": "https://techcrunch.com/"
     },
     {
-      "title_zh": "Anthropic与OpenAI双双成立企业AI合资企业",
-      "title_en": "Anthropic and OpenAI enterprise JVs",
-      "url": "https://techcrunch.com/2026/05/04/anthropic-openai-enterprise-joint-ventures/"
+      "title_zh": "韩国'AI红利'提议引发股市剧震",
+      "title_en": "Korea AI dividend crashes Kospi 5%",
+      "url": "https://www.wsj.com/"
     },
     {
-      "title_zh": "OpenAI发布GPT-5.5",
-      "title_en": "OpenAI GPT-5.5 released",
-      "url": "https://www.macrumors.com/2026/04/24/openai-gpt-5-5-research-gains/"
+      "title_zh": "Anthropic推逾十款法律AI工具",
+      "title_en": "Anthropic launches 10+ legal AI tools",
+      "url": "https://www.anthropic.com/"
     },
     {
-      "title_zh": "ChatGPT Images 2.0发布",
-      "title_en": "ChatGPT Images 2.0 launched",
-      "url": "https://www.macrumors.com/2026/04/22/openai-chatgpt-images-2-0/"
+      "title_zh": "通用汽车IT裁员转向AI原生人才",
+      "title_en": "GM cuts IT staff for AI-native pivot",
+      "url": "https://www.reuters.com/"
     },
     {
-      "title_zh": "谷歌计划投资Anthropic 400亿美元",
-      "title_en": "Google to invest $40B in Anthropic",
-      "url": "https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic"
+      "title_zh": "GitLab重组：软件由机器构建",
+      "title_en": "GitLab: software machine-built, human-guided",
+      "url": "https://techcrunch.com/"
     },
     {
-      "title_zh": "OpenAI推出100美元Pro订阅",
-      "title_en": "OpenAI $100 Pro tier",
-      "url": "https://www.macrumors.com/2026/04/09/openai-pro-subscription-tiers/"
+      "title_zh": "宇树发布载人变形机甲GD01",
+      "title_en": "Unitree unveils human-riding mecha GD01",
+      "url": "https://www.unitree.com/"
     },
     {
-      "title_zh": "Claude承诺永无广告",
-      "title_en": "Claude ad-free pledge",
-      "url": "https://www.macrumors.com/2026/02/04/anthropic-claude-ad-free/"
+      "title_zh": "阿里云AI收入未来五年CAGR 90%",
+      "title_en": "Alibaba Cloud AI 90% 5-year CAGR",
+      "url": "https://tech.sina.com.cn/"
     }
   ],
   "tags": [
     "Anthropic",
-    "Google Cloud",
-    "2000亿美元",
-    "iOS 27",
-    "Claude",
-    "Gemini",
-    "GPT-5.5",
-    "ChatGPT Images 2.0",
-    "企业AI合资",
+    "$30B融资",
+    "9000亿估值",
     "OpenAI",
-    "400亿美元",
-    "IPO",
-    "AI广告"
+    "FDE",
+    "部署公司",
+    "韩国AI红利",
+    "GitLab重组",
+    "法律AI",
+    "通用汽车",
+    "宇树GD01",
+    "阿里云",
+    "Mythos"
   ],
   "sources": [
     "Reuters",
     "Bloomberg",
     "TechCrunch",
-    "MacRumors",
-    "The Information",
-    "OpenAI",
-    "Anthropic",
+    "The Verge",
     "WSJ",
-    "FT"
+    "NYT",
+    "Sina Tech",
+    "Anthropic",
+    "OpenAI"
   ]
 }
