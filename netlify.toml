@@ -1,0 +1,27 @@
+# Netlify configuration for AI前线 staging environment
+[build]
+  # No build command needed - pure static HTML site
+  publish = "."
+
+# Branch deploy settings
+# Production: master branch → main site URL
+# Staging: staging branch → staging--xxx.netlify.app
+[context.production]
+  environment = { NODE_ENV = "production" }
+
+[context.staging]
+  environment = { NODE_ENV = "staging" }
+
+# Redirect rules (optional)
+[[redirects]]
+  from = "/en"
+  to = "https://mjinjiu.github.io/ai-news-daily-en/"
+  status = 302
+
+# Headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
