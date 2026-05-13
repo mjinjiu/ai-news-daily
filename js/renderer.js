@@ -164,7 +164,6 @@ const Renderer = (function () {
   function nextAnalysisPage() { /* 栏目已移除 */ }
   function prevAnalysisPage() { /* 栏目已移除 */ }
 
-  // ===== 9. 渲染API定价 =====
   // ===== 9. 渲染API定价（已废弃） =====
   function renderPricing(data) { /* 栏目已移除 */ }
 
@@ -208,6 +207,11 @@ const Renderer = (function () {
       el.textContent = prefix + dateStr;
     });
   }
+
+  // Re-render on language change
+  I18N.onChange(function () {
+    loadAll();
+  });
 
   return {
     loadAll: loadAll

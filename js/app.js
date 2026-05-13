@@ -50,6 +50,23 @@
     switchSection(window.location.hash.slice(1), true);
   }
 
+  // ==================== 2. 语言切换（按钮已隐藏，逻辑保留备用） ====================
+  var langToggle = document.getElementById('langToggle');
+  if (langToggle) {
+    langToggle.addEventListener('click', function () {
+      I18N.toggle();
+      try { localStorage.setItem('ai-frontline-lang', I18N.getLang()); } catch (e) { /* ignore */ }
+    });
+
+    // 初始化按钮文本
+    function syncLangBtn() {
+      langToggle.textContent = I18N.t('langBtn');
+      langToggle.setAttribute('aria-pressed', I18N.getLang() === 'en' ? 'true' : 'false');
+    }
+    I18N.onChange(syncLangBtn);
+    syncLangBtn();
+  }
+
   // ==================== 3. 全局事件委托 — 新闻点击跳转 ====================
   document.addEventListener('click', function (e) {
     var clickable = e.target.closest('[data-source-url]');
@@ -142,12 +159,22 @@
   // ==================== 6. 更新时间 ====================
   function updateTime() {
     var now = new Date();
-    var timeStr = now.toLocaleString('zh-CN', {
-      year: 'numeric', month: '2-digit', day: '2-digit',
-      hour: '2-digit', minute: '2-digit'
-    });
+    var lang = I18N.getLang();
+    var timeStr;
+    if (lang === 'zh') {
+      timeStr = now.toLocaleString('zh-CN', {
+        year: 'numeric', month: '2-digit', day: '2-digit',
+        hour: '2-digit', minute: '2-digit'
+      });
+    } else {
+      timeStr = now.toLocaleString('en-US', {
+        year: 'numeric', month: 'short', day: '2-digit',
+        hour: '2-digit', minute: '2-digit'
+      });
+    }
+    var prefix = I18N.t('updatePrefix');
     document.querySelectorAll('.update-time').forEach(function (el) {
-      el.textContent = '更新于：' + timeStr;
+      el.textContent = prefix + timeStr;
     });
   }
 
