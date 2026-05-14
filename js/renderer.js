@@ -74,31 +74,91 @@ const Renderer = (function () {
     );
   }
 
-  // ===== 3. 渲染本周新闻列表 =====
+  // ===== 3. 渲染本周新闻列表（带排序+分页） =====
+  var dailyNewsPageState = { page: 1, perPage: 10 };
+
   function renderDailyNews(containerId, items, meta) {
     var container = document.getElementById(containerId);
     if (!container || !items) return;
 
-    // 计数：用实际 items.length，兼容旧格式 meta.total 可能为 0 的情况
+    // 按日期倒序排列（最近的在前）
+    var sortedItems = items.slice().sort(function (a, b) {
+      var dateA = (a.date || '').split('-').slice(-2).join(''); // "05-14" → "0514"
+      var dateB = (b.date || '').split('-').slice(-2).join('');
+      return dateB.localeCompare(dateA); // 倒序：日期大的在前
+    });
+
+    // 总数量
+    var totalCount = sortedItems.length;
     var countEl = document.querySelector('.news-count');
     if (countEl) {
-      var actualCount = items.length;
-      countEl.textContent = actualCount + ' ' + I18N.t('units');
+      countEl.textContent = totalCount + ' ' + I18N.t('units');
     }
 
-    // 日期标签：兼容旧格式 weekRange / 新格式 weekLabel
+    // 日期标签
     var dateEl = document.querySelector('.date-badge');
     if (dateEl && meta) {
       var label = meta.weekLabel || meta.weekRange || '';
       if (label) dateEl.textContent = label;
     }
 
-    if (items.length === 0) {
+    if (sortedItems.length === 0) {
       container.innerHTML = '<div class="news-empty">本周暂无新闻，等更新...</div>';
       return;
     }
 
-    container.innerHTML = items.map(renderNewsItemHtml).join('');
+    // 分页
+    var perPage = dailyNewsPageState.perPage;
+    var totalPages = Math.ceil(totalCount / perPage);
+    var currentPage = dailyNewsPageState.page;
+    if (currentPage > totalPages) currentPage = 1;
+
+    var start = (currentPage - 1) * perPage;
+    var end = start + perPage;
+    var pageItems = sortedItems.slice(start, end);
+
+    // 渲染当前页
+    var html = pageItems.map(renderNewsItemHtml).join('');
+
+    // 分页控件（超过1页才显示）
+    if (totalPages > 1) {
+      html += '<div class="pagination">';
+      // 上一页
+      if (currentPage > 1) {
+        html += '<button class="page-btn" data-page="' + (currentPage - 1) + '">← 上一页</button>';
+      } else {
+        html += '<button class="page-btn disabled" disabled>← 上一页</button>';
+      }
+      // 页码
+      for (var i = 1; i <= totalPages; i++) {
+        var activeClass = i === currentPage ? 'active' : '';
+        html += '<button class="page-btn ' + activeClass + '" data-page="' + i + '">' + i + '</button>';
+      }
+      // 下一页
+      if (currentPage < totalPages) {
+        html += '<button class="page-btn" data-page="' + (currentPage + 1) + '">下一页 →</button>';
+      } else {
+        html += '<button class="page-btn disabled" disabled>下一页 →</button>';
+      }
+      html += '<span class="page-info">' + currentPage + ' / ' + totalPages + ' 页</span>';
+      html += '</div>';
+    }
+
+    container.innerHTML = html;
+
+    // 绑定分页点击事件
+    container.querySelectorAll('.page-btn:not(.disabled)').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var newPage = parseInt(this.dataset.page);
+        if (newPage && newPage !== currentPage) {
+          dailyNewsPageState.page = newPage;
+          renderDailyNews(containerId, items, meta);
+          // 滚动到新闻列表顶部
+          var newsSection = document.getElementById('news');
+          if (newsSection) newsSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
   }
 
   // ===== 4. 渲染历史回顾 =====
@@ -436,17 +496,15 @@ const Renderer = (function () {
       var path = 'data/news/' + weekId + '.json';
       fetchData(path, function (data) {
         if (data && data.meta) {
-          // 兼容旧格式：weekLabel / weekRange / date
           var weekLabel = data.meta.weekLabel || data.meta.weekRange || data.meta.date || weekId;
           var breakingTitle = '本周无重磅新闻';
           if (data.breaking && data.breaking.length > 0) {
             breakingTitle = getText(data.breaking[0], 'title');
           }
-          // 兼容旧格式：total 字段可能在 meta 中，也可能需要计算
-          var total = data.meta.total;
-          if (typeof total === 'undefined' || total === null) {
-            total = (data.daily ? data.daily.length : 0) + (data.breaking ? data.breaking.length : 0);
-          }
+          // 从实际数据计算总数，不用 meta.total（可能不准）
+          var dailyCount = data.daily ? data.daily.length : 0;
+          var breakingCount = data.breaking ? data.breaking.length : 0;
+          var total = dailyCount + breakingCount;
           weekList.push({
             weekStart: weekId,
             weekLabel: weekLabel,
@@ -456,7 +514,6 @@ const Renderer = (function () {
         }
         pending--;
         if (pending === 0) {
-          // 按时间倒序排列
           weekList.sort(function (a, b) {
             return b.weekStart.localeCompare(a.weekStart);
           });
