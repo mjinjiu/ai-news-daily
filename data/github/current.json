@@ -1,161 +1,278 @@
 {
-  "meta": {
-    "date": "2026-05-13",
-    "weekLabel": "5.12 — 5.18",
-    "total": 11,
-    "updatedAt": "2026-05-13T21:30:00+08:00"
-  },
-  "featured": [
+  "date": "2026-05-14",
+  "total_scanned": 19,
+  "high_value": [
     {
-      "id": "gh-2026-05-13-001",
       "name": "rohitg00 / agentmemory",
-      "title_zh": "AI编码智能体持久化记忆方案",
-      "title_en": "Persistent Memory for AI Coding Agents",
-      "description_zh": "基于真实基准测试的AI编码智能体持久化记忆方案，TypeScript实现。",
-      "description_en": "Persistent memory for AI coding agents based on real-world benchmarks.",
-      "language": "TypeScript",
-      "stars_today": "1,048",
       "url": "https://github.com/rohitg00/agentmemory",
-      "score": 30
-    },
-    {
-      "id": "gh-2026-05-13-002",
-      "name": "mattpocock / skills",
-      "title_zh": "Claude目录技能模板：工程师实战技能",
-      "title_en": "Skills for Real Engineers from Claude Directory",
-      "description_zh": "来自.claude目录的实战技能模板，可直接用于Claude项目。",
-      "description_en": "Skills for Real Engineers. Straight from my .claude directory.",
-      "language": "Shell",
-      "stars_today": "3,867",
-      "url": "https://github.com/mattpocock/skills",
-      "score": 25
-    }
-  ],
-  "projects": [
-    {
-      "id": "gh-2026-05-13-001",
-      "name": "rohitg00 / agentmemory",
-      "title_zh": "AI编码智能体持久化记忆方案",
-      "title_en": "Persistent Memory for AI Coding Agents",
-      "description_zh": "基于真实基准测试的AI编码智能体持久化记忆方案。",
-      "description_en": "Persistent memory for AI coding agents based on real-world benchmarks.",
+      "repo": "rohitg00/agentmemory",
+      "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
       "language": "TypeScript",
-      "stars_today": "1,048",
-      "url": "https://github.com/rohitg00/agentmemory",
+      "stars_today": "1,379",
       "score": 30,
-      "tags": ["AI Agent", "Memory"]
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'agent'",
+        "今日有新增stars",
+        "语言相关(typescript)"
+      ]
     },
     {
-      "id": "gh-2026-05-13-002",
-      "name": "HKUDS / AI-Trader",
-      "title_zh": "AI-Trader：全自动智能体原生交易",
-      "title_en": "AI-Trader: 100% Fully-Automated Agent-Native Trading",
-      "description_zh": "100%全自动智能体原生交易系统，Python实现。",
-      "description_en": "100% Fully-Automated Agent-Native Trading system.",
+      "name": "K-Dense-AI / scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "description": "A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
       "language": "Python",
-      "stars_today": "229",
-      "url": "https://github.com/HKUDS/AI-Trader",
+      "stars_today": "99",
       "score": 30,
-      "tags": ["AI Agent", "Trading"]
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'agent'",
+        "今日有新增stars",
+        "语言相关(python)"
+      ]
     },
     {
-      "id": "gh-2026-05-13-003",
+      "name": "danielmiessler / Personal_AI_Infrastructure",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+      "repo": "danielmiessler/Personal_AI_Infrastructure",
+      "description": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+      "language": "TypeScript",
+      "stars_today": "435",
+      "score": 30,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'agent'",
+        "今日有新增stars",
+        "语言相关(typescript)"
+      ]
+    },
+    {
       "name": "mattpocock / skills",
-      "title_zh": "Claude目录技能模板：工程师实战技能",
-      "title_en": "Skills for Real Engineers from Claude Directory",
-      "description_zh": "来自.claude目录的实战技能模板，可直接用于Claude项目。",
-      "description_en": "Skills for Real Engineers. Straight from my .claude directory.",
-      "language": "Shell",
-      "stars_today": "3,867",
       "url": "https://github.com/mattpocock/skills",
+      "repo": "mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .claude directory.",
+      "language": "Shell",
+      "stars_today": "3,392",
       "score": 25,
-      "tags": ["Claude", "Skills"]
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'claude'",
+        "今日有新增stars"
+      ]
     },
     {
-      "id": "gh-2026-05-13-004",
       "name": "rasbt / LLMs-from-scratch",
-      "title_zh": "从零构建ChatGPT式大语言模型",
-      "title_en": "Implement a ChatGPT-like LLM from Scratch",
-      "description_zh": "用PyTorch从零开始逐步实现一个ChatGPT式LLM的完整教程。",
-      "description_en": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step.",
-      "language": "Jupyter Notebook",
-      "stars_today": "772",
       "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "repo": "rasbt/LLMs-from-scratch",
+      "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+      "language": "Jupyter Notebook",
+      "stars_today": "821",
       "score": 25,
-      "tags": ["LLM", "Education"]
-    },
-    {
-      "id": "gh-2026-05-13-005",
-      "name": "CloakHQ / CloakBrowser",
-      "title_zh": "隐形Chromium：通过全部机器人检测测试",
-      "title_en": "Stealth Chromium Passing Every Bot Detection Test",
-      "description_zh": "通过全部30/30机器人检测测试的隐形Chromium，Playwright替代方案。",
-      "description_en": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement.",
-      "language": "Python",
-      "stars_today": "1,606",
-      "url": "https://github.com/CloakHQ/CloakBrowser",
-      "score": 20,
-      "tags": ["Browser", "Security"]
-    },
-    {
-      "id": "gh-2026-05-13-006",
-      "name": "millionco / react-doctor",
-      "title_zh": "React代码审查智能体：捕捉劣质React代码",
-      "title_en": "React Doctor: Catches Bad React Code",
-      "description_zh": "智能体写的React代码质量不佳？这个工具帮你审查和修正。",
-      "description_en": "Your agent writes bad React. This catches it.",
-      "language": "TypeScript",
-      "stars_today": "788",
-      "url": "https://github.com/millionco/react-doctor",
-      "score": 20,
-      "tags": ["React", "AI Agent"]
-    },
-    {
-      "id": "gh-2026-05-13-007",
-      "name": "datawhalechina / hello-agents",
-      "title_zh": "《从零开始构建智能体》中文教程",
-      "title_en": "Hello Agents: Build Agents from Scratch (CN)",
-      "description_zh": "DataWhale出品的中文智能体原理与实践教程，从零开始构建AI智能体。",
-      "description_en": "Chinese tutorial on building AI agents from scratch by DataWhale.",
-      "language": "Python",
-      "stars_today": "599",
-      "url": "https://github.com/datawhalechina/hello-agents",
-      "score": 20,
-      "tags": ["Agent", "Tutorial"]
-    },
-    {
-      "id": "gh-2026-05-13-008",
-      "name": "yikart / AiToEarn",
-      "title_zh": "AI变现工具：用AI赚钱的实践方案",
-      "title_en": "AiToEarn: Use AI to Earn Money",
-      "description_zh": "AI变现实践方案，探索如何用AI工具创造收入。",
-      "description_en": "Let's use AI to Earn!",
-      "language": "TypeScript",
-      "stars_today": "1,282",
-      "url": "https://github.com/yikart/AiToEarn",
-      "score": 20,
-      "tags": ["AI", "Business"]
-    },
-    {
-      "id": "gh-2026-05-13-009",
-      "name": "tinyhumansai / openhuman",
-      "title_zh": "OpenHuman：私人AI超级智能体",
-      "title_en": "OpenHuman: Personal AI Super Intelligence",
-      "description_zh": "私密、简单且极其强大的个人AI超级智能体，Rust实现。",
-      "description_en": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
-      "language": "Rust",
-      "stars_today": "1,014",
-      "url": "https://github.com/tinyhumansai/openhuman",
-      "score": 15,
-      "tags": ["AI", "Rust"]
+      "score_reasons": [
+        "含关键词 'llm'",
+        "含关键词 'chatgpt'",
+        "今日有新增stars"
+      ]
     }
   ],
-  "languages": [
-    { "name": "TypeScript", "count": 3, "color": "#3178c6" },
-    { "name": "Python", "count": 4, "color": "#3572A5" },
-    { "name": "Jupyter Notebook", "count": 1, "color": "#DA5B0B" },
-    { "name": "Shell", "count": 1, "color": "#89e051" },
-    { "name": "Rust", "count": 1, "color": "#dea584" }
+  "interesting": [
+    {
+      "name": "tinyhumansai / openhuman",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "repo": "tinyhumansai/openhuman",
+      "description": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+      "language": "Rust",
+      "stars_today": "1,696",
+      "score": 15,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "今日有新增stars"
+      ]
+    },
+    {
+      "name": "influxdata / telegraf",
+      "url": "https://github.com/influxdata/telegraf",
+      "repo": "influxdata/telegraf",
+      "description": "Agent for collecting, processing, aggregating, and writing metrics, logs, and other arbitrary data.",
+      "language": "Go",
+      "stars_today": "13",
+      "score": 15,
+      "score_reasons": [
+        "含关键词 'agent'",
+        "今日有新增stars"
+      ]
+    },
+    {
+      "name": "ton-blockchain / acton",
+      "url": "https://github.com/ton-blockchain/acton",
+      "repo": "ton-blockchain/acton",
+      "description": "Toolchain for TON smart contract development and beyond",
+      "language": "Rust",
+      "stars_today": "18",
+      "score": 15,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "今日有新增stars"
+      ]
+    },
+    {
+      "name": "obra / superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "repo": "obra/superpowers",
+      "description": "An agentic skills framework &amp; software development methodology that works.",
+      "language": "Shell",
+      "stars_today": "1,401",
+      "score": 10,
+      "score_reasons": [
+        "含关键词 'agent'",
+        "今日有新增stars"
+      ]
+    }
   ],
-  "sources": ["GitHub Trending"]
+  "all_projects": [
+    {
+      "name": "rohitg00 / agentmemory",
+      "url": "https://github.com/rohitg00/agentmemory",
+      "repo": "rohitg00/agentmemory",
+      "description": "#1 Persistent memory for AI coding agents based on real-world benchmarks",
+      "language": "TypeScript",
+      "stars_today": "1,379",
+      "score": 30,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'agent'",
+        "今日有新增stars",
+        "语言相关(typescript)"
+      ]
+    },
+    {
+      "name": "K-Dense-AI / scientific-agent-skills",
+      "url": "https://github.com/K-Dense-AI/scientific-agent-skills",
+      "repo": "K-Dense-AI/scientific-agent-skills",
+      "description": "A set of ready to use Agent Skills for research, science, engineering, analysis, finance and writing.",
+      "language": "Python",
+      "stars_today": "99",
+      "score": 30,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'agent'",
+        "今日有新增stars",
+        "语言相关(python)"
+      ]
+    },
+    {
+      "name": "danielmiessler / Personal_AI_Infrastructure",
+      "url": "https://github.com/danielmiessler/Personal_AI_Infrastructure",
+      "repo": "danielmiessler/Personal_AI_Infrastructure",
+      "description": "Agentic AI Infrastructure for magnifying HUMAN capabilities.",
+      "language": "TypeScript",
+      "stars_today": "435",
+      "score": 30,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'agent'",
+        "今日有新增stars",
+        "语言相关(typescript)"
+      ]
+    },
+    {
+      "name": "mattpocock / skills",
+      "url": "https://github.com/mattpocock/skills",
+      "repo": "mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .claude directory.",
+      "language": "Shell",
+      "stars_today": "3,392",
+      "score": 25,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'claude'",
+        "今日有新增stars"
+      ]
+    },
+    {
+      "name": "rasbt / LLMs-from-scratch",
+      "url": "https://github.com/rasbt/LLMs-from-scratch",
+      "repo": "rasbt/LLMs-from-scratch",
+      "description": "Implement a ChatGPT-like LLM in PyTorch from scratch, step by step",
+      "language": "Jupyter Notebook",
+      "stars_today": "821",
+      "score": 25,
+      "score_reasons": [
+        "含关键词 'llm'",
+        "含关键词 'chatgpt'",
+        "今日有新增stars"
+      ]
+    },
+    {
+      "name": "trycua / cua",
+      "url": "https://github.com/trycua/cua",
+      "repo": "trycua/cua",
+      "description": "Open-source infrastructure for Computer-Use Agents. Sandboxes, SDKs, and benchmarks to train and evaluate AI agents that can control full desktops (macOS, Linux, Windows).",
+      "language": "HTML",
+      "stars_today": "245",
+      "score": 25,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "含关键词 'agent'",
+        "今日有新增stars",
+        "语言相关(html)"
+      ]
+    },
+    {
+      "name": "yikart / AiToEarn",
+      "url": "https://github.com/yikart/AiToEarn",
+      "repo": "yikart/AiToEarn",
+      "description": "Let's use AI to Earn!",
+      "language": "TypeScript",
+      "stars_today": "981",
+      "score": 20,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "今日有新增stars",
+        "语言相关(typescript)"
+      ]
+    },
+    {
+      "name": "millionco / react-doctor",
+      "url": "https://github.com/millionco/react-doctor",
+      "repo": "millionco/react-doctor",
+      "description": "Your agent writes bad React. This catches it",
+      "language": "TypeScript",
+      "stars_today": "604",
+      "score": 20,
+      "score_reasons": [
+        "含关键词 'agent'",
+        "今日有新增stars",
+        "语言相关(typescript)"
+      ]
+    },
+    {
+      "name": "CloakHQ / CloakBrowser",
+      "url": "https://github.com/CloakHQ/CloakBrowser",
+      "repo": "CloakHQ/CloakBrowser",
+      "description": "Stealth Chromium that passes every bot detection test. Drop-in Playwright replacement with source-level fingerprint patches. 30/30 tests passed.",
+      "language": "Python",
+      "stars_today": "1,835",
+      "score": 20,
+      "score_reasons": [
+        "含关键词 'bot'",
+        "今日有新增stars",
+        "语言相关(python)"
+      ]
+    },
+    {
+      "name": "tinyhumansai / openhuman",
+      "url": "https://github.com/tinyhumansai/openhuman",
+      "repo": "tinyhumansai/openhuman",
+      "description": "Your Personal AI super intelligence. Private, Simple and extremely powerful.",
+      "language": "Rust",
+      "stars_today": "1,696",
+      "score": 15,
+      "score_reasons": [
+        "含关键词 'ai'",
+        "今日有新增stars"
+      ]
+    }
+  ]
 }
