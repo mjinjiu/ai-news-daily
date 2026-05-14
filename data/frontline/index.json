@@ -1,46 +1,8 @@
 {
   "meta": {
-    "updatedAt": "2026-05-14T19:30:00+08:00",
-    "totalArticles": 3,
-    "totalWeeks": 1
+    "updatedAt": "2026-05-14T20:00:00+08:00",
+    "totalArticles": 0,
+    "totalWeeks": 0
   },
-  "weeks": [
-    {
-      "weekStart": "2026-05-12",
-      "weekLabel": "5.12 — 5.18",
-      "articleCount": 3,
-      "articles": [
-        {
-          "id": "note-2026-05-14-001",
-          "title": "从 Vibe Coding 到 Spec-Driven：OpenSpec 想给 AI 编程加一层「约束」",
-          "summary": "看完费曼学徒冬瓜的 OpenSpec 讲解视频，整理一下核心思路。OpenSpec 本质上是在解决一个越来越普遍的问题：当 AI 编程助手越来越强，为什么项目级别的可预测性反而在下降？",
-          "date": "2026-05-14",
-          "tags": ["AI编程", "OpenSpec", "VibeCoding", "规范驱动开发", "工具推荐"],
-          "featured": false,
-          "source": "抖音视频整理 + 官方文档",
-          "weekStart": "2026-05-12"
-        },
-        {
-          "id": "note-2026-05-14-002",
-          "title": "一口气看懂 12 个 AI Agent 核心原理",
-          "summary": "来自「学习AI的1000天」Day29 视频整理。AI Agent 不是魔法，是 12 个模块的组合拳。理解这些原理，才能知道什么时候该用 Agent、什么时候不该用。",
-          "date": "2026-05-14",
-          "tags": ["AI Agent", "ReAct", "LLM", "工具调用", "记忆系统", "原理科普"],
-          "featured": false,
-          "source": "抖音视频整理 + 经典论文",
-          "weekStart": "2026-05-12"
-        },
-        {
-          "id": "note-2026-05-14-003",
-          "title": "AI时代，什么样的文章值得阅读？",
-          "summary": "信息过载时代，我们每天被海量AI生成的内容包围。什么样的文章真正值得花时间阅读？这篇整理自晓辉博士视频的思考，试图回答这个问题。",
-          "date": "2026-05-14",
-          "tags": ["AI阅读", "信息筛选", "内容质量", "阅读策略", "AI内容泛滥"],
-          "featured": true,
-          "source": "抖音视频整理 + 信息筛选实践",
-          "weekStart": "2026-05-12"
-        }
-      ]
-    }
-  ]
+  "weeks": []
 }
