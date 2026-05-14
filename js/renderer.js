@@ -279,9 +279,36 @@ const Renderer = (function () {
   }
 
   // ===== GitHub趋势渲染 =====
+  var githubPageState = { page: 1, perPage: 10 };
+  var loadedGithubHistoryWeeks = {};
+
   function getGithubDesc(item) {
-    // 优先使用中文描述，fallback 到英文
     return item.description_zh || item.description || '';
+  }
+
+  // GitHub 项目单项 HTML 生成器（复用）
+  function renderGithubItemHtml(item) {
+    var desc = getGithubDesc(item);
+    var url = item.url || ('https://github.com/' + (item.repo || item.name).replace(/\s+/g, ''));
+    return (
+      '<div class="news-item anim-fade-up">' +
+        '<div class="news-bar tech"></div>' +
+        '<div class="news-body">' +
+          '<h3><a href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + escapeHtml(item.name) + '</a></h3>' +
+          '<p class="news-excerpt">' + escapeHtml(desc) + '</p>' +
+          '<div class="news-source-link">' +
+            '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener" class="source-link">' +
+              '🔗 ' + escapeHtml(url.replace('https://', '')) +
+            '</a>' +
+          '</div>' +
+          '<div class="news-footer">' +
+            '<span class="news-tag tag-tech">' + escapeHtml(item.language || 'N/A') + '</span>' +
+            '<span class="news-source">⭐ +' + escapeHtml(item.stars_today || '0') + '</span>' +
+            '<span class="news-date">score: ' + escapeHtml(item.score || '0') + '</span>' +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
   }
 
   function renderGithubFeatured(containerId, data) {
@@ -292,7 +319,19 @@ const Renderer = (function () {
       container.innerHTML = '<div class="news-empty">暂无重磅项目</div>';
       return;
     }
-    container.innerHTML = items.slice(0, 3).map(function (item) {
+
+    // 当日重磅逻辑：匹配 data.date 与项目 date 字段
+    var today = data.date || new Date().toISOString().split('T')[0];
+    var todayShort = today.split('-').slice(1).join('-'); // "05-14"
+    var todayItems = items.filter(function (item) {
+      var itemDate = item.date || '';
+      var itemShort = itemDate.split('-').slice(-2).join('-');
+      return itemShort === todayShort;
+    });
+    // 有当日项目 → 只展示当日；否则展示全部 high_value（和 AI 新闻 breaking 逻辑一致）
+    var displayItems = todayItems.length > 0 ? todayItems : items;
+
+    container.innerHTML = displayItems.slice(0, 3).map(function (item) {
       var desc = getGithubDesc(item);
       var url = item.url || ('https://github.com/' + (item.repo || item.name).replace(/\s+/g, ''));
       return (
@@ -315,35 +354,167 @@ const Renderer = (function () {
     var container = document.getElementById(containerId);
     if (!container || !data) return;
     var items = data.all_projects || data.projects || [];
+    var totalCount = items.length;
     var countEl = document.querySelector('.github-count');
-    if (countEl) countEl.textContent = items.length + ' 个';
+    if (countEl) countEl.textContent = totalCount + ' 个';
     if (items.length === 0) {
       container.innerHTML = '<div class="news-empty">暂无项目数据</div>';
       return;
     }
-    container.innerHTML = items.map(function (item) {
-      var desc = getGithubDesc(item);
-      var url = item.url || ('https://github.com/' + (item.repo || item.name).replace(/\s+/g, ''));
+
+    // 分页
+    var perPage = githubPageState.perPage;
+    var totalPages = Math.ceil(totalCount / perPage);
+    var currentPage = githubPageState.page;
+    if (currentPage > totalPages) currentPage = 1;
+
+    var start = (currentPage - 1) * perPage;
+    var end = start + perPage;
+    var pageItems = items.slice(start, end);
+
+    var html = pageItems.map(renderGithubItemHtml).join('');
+
+    // 分页控件
+    if (totalPages > 1) {
+      html += '<div class="pagination">';
+      if (currentPage > 1) {
+        html += '<button class="page-btn" data-page="' + (currentPage - 1) + '">← 上一页</button>';
+      } else {
+        html += '<button class="page-btn disabled" disabled>← 上一页</button>';
+      }
+      for (var i = 1; i <= totalPages; i++) {
+        var activeClass = i === currentPage ? 'active' : '';
+        html += '<button class="page-btn ' + activeClass + '" data-page="' + i + '">' + i + '</button>';
+      }
+      if (currentPage < totalPages) {
+        html += '<button class="page-btn" data-page="' + (currentPage + 1) + '">下一页 →</button>';
+      } else {
+        html += '<button class="page-btn disabled" disabled>下一页 →</button>';
+      }
+      html += '<span class="page-info">' + currentPage + ' / ' + totalPages + ' 页</span>';
+      html += '</div>';
+    }
+
+    container.innerHTML = html;
+
+    // 绑定分页点击
+    container.querySelectorAll('.page-btn:not(.disabled)').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var newPage = parseInt(this.dataset.page);
+        if (newPage && newPage !== currentPage) {
+          githubPageState.page = newPage;
+          renderGithubList(containerId, data);
+          var section = document.getElementById('github');
+          if (section) section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  }
+
+  // ===== GitHub 历史回顾 =====
+  function loadGithubHistoryWeeksMeta(weekIds) {
+    var weekList = [];
+    var pending = weekIds.length;
+    if (pending === 0) {
+      renderGithubHistoryReview('githubHistoryTimeline', []);
+      return;
+    }
+    weekIds.forEach(function (weekId) {
+      var path = 'data/github/' + weekId + '.json';
+      fetchData(path, function (data) {
+        if (data && data.date) {
+          var weekLabel = data.date || weekId;
+          var topProject = '本周无热门项目';
+          var items = data.high_value || [];
+          if (items.length > 0) {
+            topProject = items[0].name || '未知项目';
+          }
+          var total = (data.all_projects || []).length;
+          weekList.push({
+            weekStart: weekId,
+            weekLabel: weekLabel,
+            total: total,
+            topProject: topProject
+          });
+        }
+        pending--;
+        if (pending === 0) {
+          weekList.sort(function (a, b) { return b.weekStart.localeCompare(a.weekStart); });
+          renderGithubHistoryReview('githubHistoryTimeline', weekList);
+        }
+      });
+    });
+  }
+
+  function renderGithubHistoryReview(containerId, weekList) {
+    var container = document.getElementById(containerId);
+    if (!container) return;
+    if (!weekList || weekList.length === 0) {
+      container.innerHTML = '<div class="history-empty">暂无历史回顾</div>';
+      return;
+    }
+    container.innerHTML = weekList.map(function (week) {
       return (
-        '<div class="news-item anim-fade-up">' +
-          '<div class="news-bar tech"></div>' +
-          '<div class="news-body">' +
-            '<h3><a href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + escapeHtml(item.name) + '</a></h3>' +
-            '<p class="news-excerpt">' + escapeHtml(desc) + '</p>' +
-            '<div class="news-footer">' +
-              '<span class="news-tag tag-tech">' + escapeHtml(item.language || 'N/A') + '</span>' +
-              '<span class="news-source">⭐ +' + escapeHtml(item.stars_today || '0') + '</span>' +
-              '<span class="news-date">score: ' + escapeHtml(item.score || '0') + '</span>' +
-            '</div>' +
-            '<div class="news-source-link">' +
-              '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener" class="source-link">' +
-                '🔗 ' + escapeHtml(url.replace('https://', '')) +
-              '</a>' +
-            '</div>' +
+        '<div class="history-week" data-week="' + escapeHtml(week.weekStart) + '">' +
+          '<div class="history-week-header">' +
+            '<span class="history-week-toggle">▼</span>' +
+            '<span class="history-week-label">' + escapeHtml(week.weekLabel) + '</span>' +
+            '<span class="history-week-count">' + week.total + ' 个项目</span>' +
+            '<span class="history-week-summary">🔥 ' + escapeHtml(week.topProject) + '</span>' +
           '</div>' +
+          '<div class="history-week-content" style="display:none"></div>' +
         '</div>'
       );
     }).join('');
+
+    // 绑定点击展开/收起
+    container.querySelectorAll('.history-week-header').forEach(function (header) {
+      header.addEventListener('click', function () {
+        var weekEl = this.closest('.history-week');
+        var contentEl = weekEl.querySelector('.history-week-content');
+        var toggleEl = weekEl.querySelector('.history-week-toggle');
+        if (!contentEl || !toggleEl) return;
+        var isHidden = contentEl.style.display === 'none';
+        var weekId = weekEl.dataset.week;
+        if (isHidden) {
+          loadGithubHistoryWeek(weekId, contentEl, toggleEl);
+        } else {
+          contentEl.style.display = 'none';
+          toggleEl.textContent = '▼';
+        }
+      });
+    });
+  }
+
+  function loadGithubHistoryWeek(weekId, contentEl, toggleEl) {
+    if (loadedGithubHistoryWeeks[weekId]) {
+      renderGithubHistoryWeekContent(contentEl, loadedGithubHistoryWeeks[weekId]);
+      contentEl.style.display = 'block';
+      toggleEl.textContent = '▲';
+      return;
+    }
+    var path = 'data/github/' + weekId + '.json';
+    fetchData(path, function (data) {
+      if (!data) {
+        contentEl.innerHTML = '<div class="history-week-error">加载失败</div>';
+        contentEl.style.display = 'block';
+        toggleEl.textContent = '▲';
+        return;
+      }
+      loadedGithubHistoryWeeks[weekId] = data;
+      renderGithubHistoryWeekContent(contentEl, data);
+      contentEl.style.display = 'block';
+      toggleEl.textContent = '▲';
+    });
+  }
+
+  function renderGithubHistoryWeekContent(contentEl, data) {
+    var items = data.all_projects || data.projects || [];
+    if (items.length === 0) {
+      contentEl.innerHTML = '<div class="history-week-empty">该周暂无项目</div>';
+      return;
+    }
+    contentEl.innerHTML = items.map(renderGithubItemHtml).join('');
   }
 
   function renderGithubLanguages(containerId, data) {
@@ -528,6 +699,17 @@ const Renderer = (function () {
             if (badgeEl && githubDate) {
               badgeEl.textContent = githubDate;
             }
+          }
+          resolve();
+        });
+      }),
+      // 3b. GitHub历史回顾索引
+      new Promise(function (resolve) {
+        fetchData('data/github/index.json', function (index) {
+          if (index && index.length > 0) {
+            loadGithubHistoryWeeksMeta(index);
+          } else {
+            renderGithubHistoryReview('githubHistoryTimeline', []);
           }
           resolve();
         });

@@ -10,7 +10,8 @@
       "description_zh": "AI编码智能体持久化记忆系统，真实场景基准测试排名第一",
       "language": "TypeScript",
       "stars_today": "1,379",
-      "score": 30
+      "score": 30,
+      "date": "2026-05-14"
     },
     {
       "name": "K-Dense-AI / scientific-agent-skills",
@@ -20,7 +21,8 @@
       "description_zh": "科研/工程/金融/写作场景的智能体技能库，开箱即用",
       "language": "Python",
       "stars_today": "99",
-      "score": 30
+      "score": 30,
+      "date": "2026-05-14"
     },
     {
       "name": "danielmiessler / Personal_AI_Infrastructure",
@@ -30,7 +32,8 @@
       "description_zh": "增强人类能力的智能体AI基础设施架构",
       "language": "TypeScript",
       "stars_today": "435",
-      "score": 30
+      "score": 30,
+      "date": "2026-05-14"
     },
     {
       "name": "mattpocock / skills",
@@ -40,7 +43,8 @@
       "description_zh": "真实工程师的Claude技能集，直接来自作者生产环境配置",
       "language": "Shell",
       "stars_today": "3,392",
-      "score": 25
+      "score": 25,
+      "date": "2026-05-14"
     },
     {
       "name": "rasbt / LLMs-from-scratch",
@@ -50,7 +54,8 @@
       "description_zh": "从零开始用PyTorch实现类ChatGPT大模型，手把手逐步教学",
       "language": "Jupyter Notebook",
       "stars_today": "821",
-      "score": 25
+      "score": 25,
+      "date": "2026-05-14"
     }
   ],
   "all_projects": [
@@ -62,7 +67,8 @@
       "description_zh": "AI编码智能体持久化记忆系统，真实场景基准测试排名第一",
       "language": "TypeScript",
       "stars_today": "1,379",
-      "score": 30
+      "score": 30,
+      "date": "2026-05-14"
     },
     {
       "name": "K-Dense-AI / scientific-agent-skills",
@@ -72,7 +78,8 @@
       "description_zh": "科研/工程/金融/写作场景的智能体技能库，开箱即用",
       "language": "Python",
       "stars_today": "99",
-      "score": 30
+      "score": 30,
+      "date": "2026-05-14"
     },
     {
       "name": "danielmiessler / Personal_AI_Infrastructure",
@@ -82,7 +89,8 @@
       "description_zh": "增强人类能力的智能体AI基础设施架构",
       "language": "TypeScript",
       "stars_today": "435",
-      "score": 30
+      "score": 30,
+      "date": "2026-05-14"
     },
     {
       "name": "mattpocock / skills",
@@ -92,7 +100,8 @@
       "description_zh": "真实工程师的Claude技能集，直接来自作者生产环境配置",
       "language": "Shell",
       "stars_today": "3,392",
-      "score": 25
+      "score": 25,
+      "date": "2026-05-14"
     },
     {
       "name": "rasbt / LLMs-from-scratch",
@@ -102,7 +111,8 @@
       "description_zh": "从零开始用PyTorch实现类ChatGPT大模型，手把手逐步教学",
       "language": "Jupyter Notebook",
       "stars_today": "821",
-      "score": 25
+      "score": 25,
+      "date": "2026-05-14"
     },
     {
       "name": "trycua / cua",
@@ -112,7 +122,8 @@
       "description_zh": "计算机使用智能体开源基础设施，支持训练控制完整桌面的AI代理",
       "language": "HTML",
       "stars_today": "245",
-      "score": 25
+      "score": 25,
+      "date": "2026-05-14"
     },
     {
       "name": "yikart / AiToEarn",
@@ -122,7 +133,8 @@
       "description_zh": "AI变现工具集，用AI技术实现内容创作自动化与流量变现",
       "language": "TypeScript",
       "stars_today": "981",
-      "score": 20
+      "score": 20,
+      "date": "2026-05-14"
     },
     {
       "name": "millionco / react-doctor",
@@ -132,7 +144,8 @@
       "description_zh": "AI写的React代码质量检测工具，自动发现潜在问题",
       "language": "TypeScript",
       "stars_today": "604",
-      "score": 20
+      "score": 20,
+      "date": "2026-05-14"
     },
     {
       "name": "CloakHQ / CloakBrowser",
@@ -142,7 +155,8 @@
       "description_zh": "隐身Chromium浏览器，通过全部机器人检测测试，Playwright替代方案",
       "language": "Python",
       "stars_today": "1,835",
-      "score": 20
+      "score": 20,
+      "date": "2026-05-14"
     },
     {
       "name": "tinyhumansai / openhuman",
@@ -152,7 +166,8 @@
       "description_zh": "个人AI超级智能助手，私有部署、简单易用且功能强大",
       "language": "Rust",
       "stars_today": "1,696",
-      "score": 15
+      "score": 15,
+      "date": "2026-05-14"
     }
   ]
 }
