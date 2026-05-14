@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>杂记 - AI前线</title>
+  <meta name="description" content="AI前线杂记 - 碎片洞察与深度整理">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+  <!-- 加载状态 -->
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-content">
+      <span class="loader-spinner">⚡</span>
+      <span class="loader-text">加载中...</span>
+    </div>
+  </div>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" role="navigation" aria-label="主导航">
+    <div class="nav-container">
+      <a href="index.html#notes" class="nav-logo" aria-label="AI前线首页">AI前线</a>
+      <div class="nav-links">
+        <a href="index.html#news" class="nav-link">📰 AI新闻</a>
+        <a href="index.html#github" class="nav-link">🔥 GitHub趋势</a>
+        <a href="index.html#api" class="nav-link">📈 API趋势</a>
+        <a href="index.html#notes" class="nav-link active">📝 杂记</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 面包屑 -->
+  <div class="breadcrumb-bar">
+    <div class="breadcrumb-container">
+      <a href="index.html#notes" class="breadcrumb-link">📝 杂记</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current" id="breadcrumbTitle">加载中...</span>
+    </div>
+  </div>
+
+  <!-- 主内容 -->
+  <main class="main-container note-detail-page" role="main">
+    <article id="noteDetail" class="note-detail-wrapper">
+      <div class="note-detail-loading">加载中...</div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-container">
+      <p>AI前线 © 2026 · AI Frontline</p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== 工具函数 =====
+    function escapeHtml(str) {
+      if (!str) return '';
+      var div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    // 计算阅读时间（按 300 字/分钟）
+    function calcReadingTime(text) {
+      if (!text) return '1 分钟';
+      var cnChars = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
+      var enWords = (text.match(/[a-zA-Z]+/g) || []).length;
+      var total = cnChars + enWords;
+      var minutes = Math.ceil(total / 300);
+      if (minutes < 1) minutes = 1;
+      return minutes + ' 分钟阅读';
+    }
+
+    // 简易 Markdown 渲染
+    function renderMarkdown(text) {
+      if (!text) return '';
+      var html = text
+        .replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+        .replace(/^## (.+)$/gm, '<h3>$1</h3>')
+        .replace(/^### (.+)$/gm, '<h4>$1</h4>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/^---$/gm, '<hr>')
+        .replace(/^\|(.+)\|$/gm, function(match, content) {
+          var cells = content.split('|').map(function(c) { return c.trim(); });
+          return '<div class="md-table-row">' + cells.map(function(c) { return '<span class="md-table-cell">' + escapeHtml(c) + '</span>'; }).join('') + '</div>';
+        })
+        .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+        .replace(/\n\n/g, '</p><p>')
+        .replace(/^(.+)$/gm, function(match) {
+          if (match.indexOf('<') === 0) return match;
+          return '<p>' + match + '</p>';
+        });
+      return html;
+    }
+
+    // 从 URL 参数获取文章 ID
+    function getNoteId() {
+      var params = new URLSearchParams(window.location.search);
+      return params.get('id');
+    }
+
+    // 从 ID 提取 weekStart
+    function getWeekStartFromId(id) {
+      if (!id) return null;
+      var parts = id.split('-');
+      if (parts.length >= 4) {
+        return parts[1] + '-' + parts[2] + '-' + parts[3];
+      }
+      return null;
+    }
+
+    // 加载单篇文章
+    function loadNoteDetail() {
+      var noteId = getNoteId();
+      var container = document.getElementById('noteDetail');
+      var breadcrumbTitle = document.getElementById('breadcrumbTitle');
+
+      if (!noteId) {
+        container.innerHTML = '<div class="note-error">缺少文章 ID 参数</div>';
+        breadcrumbTitle.textContent = '错误';
+        return;
+      }
+
+      var weekStart = getWeekStartFromId(noteId);
+      if (!weekStart) {
+        container.innerHTML = '<div class="note-error">无效的文章 ID 格式</div>';
+        breadcrumbTitle.textContent = '错误';
+        return;
+      }
+
+      // 优先尝试当前周 current.json，找不到再尝试归档文件
+      var paths = [
+        'data/notes/current.json',
+        'data/notes/' + weekStart + '.json'
+      ];
+
+      var loaded = false;
+      var pending = paths.length;
+
+      paths.forEach(function(path) {
+        fetch(path + '?_t=' + Date.now())
+          .then(function(res) { return res.json(); })
+          .then(function(data) {
+            if (loaded) return;
+            if (data && data.notes) {
+              var note = data.notes.find(function(n) { return n.id === noteId; });
+              if (note) {
+                loaded = true;
+                renderNote(container, note, breadcrumbTitle);
+                // 隐藏 loader
+                var loader = document.getElementById('pageLoader');
+                if (loader) loader.style.display = 'none';
+              }
+            }
+            pending--;
+            if (pending === 0 && !loaded) {
+              container.innerHTML = '<div class="note-error">文章未找到</div>';
+              breadcrumbTitle.textContent = '未找到';
+              var loader = document.getElementById('pageLoader');
+              if (loader) loader.style.display = 'none';
+            }
+          })
+          .catch(function() {
+            pending--;
+            if (pending === 0 && !loaded) {
+              container.innerHTML = '<div class="note-error">加载失败，请刷新重试</div>';
+              breadcrumbTitle.textContent = '错误';
+              var loader = document.getElementById('pageLoader');
+              if (loader) loader.style.display = 'none';
+            }
+          });
+      });
+    }
+
+    // 渲染文章详情
+    function renderNote(container, note, breadcrumbTitle) {
+      breadcrumbTitle.textContent = note.title;
+      document.title = note.title + ' - 杂记 - AI前线';
+
+      var readingTime = calcReadingTime(note.content);
+      var tagsHtml = (note.tags || []).map(function(tag) {
+        return '<span class="note-detail-tag">' + escapeHtml(tag) + '</span>';
+      }).join('');
+
+      var sourceHtml = note.source ? '<span class="note-detail-source">📎 ' + escapeHtml(note.source) + '</span>' : '';
+
+      container.innerHTML =
+        '<div class="note-detail-header">' +
+          '<h1 class="note-detail-title">' + escapeHtml(note.title) + '</h1>' +
+          '<div class="note-detail-meta">' +
+            '<span class="note-detail-date">📅 ' + escapeHtml(note.date) + '</span>' +
+            '<span class="note-detail-time">⏱ ' + escapeHtml(readingTime) + '</span>' +
+            sourceHtml +
+          '</div>' +
+          '<div class="note-detail-tags">' + tagsHtml + '</div>' +
+        '</div>' +
+        '<div class="note-detail-summary">' + escapeHtml(note.summary) + '</div>' +
+        '<div class="note-detail-content">' + renderMarkdown(note.content) + '</div>' +
+        '<div class="note-detail-footer">' +
+          '<a href="index.html#notes" class="back-btn">← 返回杂记目录</a>' +
+        '</div>';
+    }
+
+    // 页面加载完成后执行
+    document.addEventListener('DOMContentLoaded', loadNoteDetail);
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "updatedAt": "2026-05-14T11:15:00+08:00",
+    "totalArticles": 2,
+    "totalWeeks": 1
+  },
+  "weeks": [
+    {
+      "weekStart": "2026-05-14",
+      "weekLabel": "5.14 — 5.20",
+      "articleCount": 2,
+      "articles": [
+        {
+          "id": "note-2026-05-14-001",
+          "title": "从 Vibe Coding 到 Spec-Driven：OpenSpec 想给 AI 编程加一层「约束」",
+          "summary": "看完费曼学徒冬瓜的 OpenSpec 讲解视频，整理一下核心思路。OpenSpec 本质上是在解决一个越来越普遍的问题：当 AI 编程助手越来越强，为什么项目级别的可预测性反而在下降？",
+          "date": "2026-05-14",
+          "tags": ["AI编程", "OpenSpec", "VibeCoding", "规范驱动开发", "工具推荐"],
+          "featured": true,
+          "source": "抖音视频整理 + 官方文档",
+          "weekStart": "2026-05-14"
+        },
+        {
+          "id": "note-2026-05-14-002",
+          "title": "一口气看懂 12 个 AI Agent 核心原理",
+          "summary": "看完「学习AI的1000天」Day29视频，把AI Agent的12个核心原理一口气整理清楚。从LLM大脑到多Agent协作，搞懂Agent到底在干什么。",
+          "date": "2026-05-14",
+          "tags": ["AI Agent", "ReAct", "工具调用", "记忆系统", "多Agent协作", "技术原理"],
+          "featured": true,
+          "source": "抖音视频整理 + 技术文档",
+          "weekStart": "2026-05-14"
+        }
+      ]
+    }
+  ]
+}

@@ -596,34 +596,126 @@ const Renderer = (function () {
     }).join('');
   }
 
-  // ===== 渲染杂记栏目 =====
+  // ===== 渲染杂记栏目：目录页（摘要卡片 + 分页）=====
+  var notesPageState = { page: 1, perPage: 10 };
+
+  function calcReadingTime(text) {
+    if (!text) return '1 分钟';
+    var cnChars = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
+    var enWords = (text.match(/[a-zA-Z]+/g) || []).length;
+    var total = cnChars + enWords;
+    var minutes = Math.ceil(total / 300);
+    if (minutes < 1) minutes = 1;
+    return minutes + ' 分钟阅读';
+  }
+
   function renderNotesSection(data) {
-    var container = document.getElementById('notesContent');
-    if (!container || !data || !data.notes) return;
-    var notes = data.notes;
-    if (notes.length === 0) {
+    var container = document.getElementById('notesDirectory');
+    var paginationContainer = document.getElementById('notesPagination');
+    if (!container || !data || !data.weeks) return;
+
+    // 扁平化所有文章，按日期倒序
+    var allArticles = [];
+    data.weeks.forEach(function(week) {
+      (week.articles || []).forEach(function(article) {
+        article._weekStart = week.weekStart;
+        allArticles.push(article);
+      });
+    });
+
+    allArticles.sort(function(a, b) {
+      return (b.date || '').localeCompare(a.date || '');
+    });
+
+    var totalCount = allArticles.length;
+
+    // 更新标题栏计数
+    var updateTimeEl = document.getElementById('notesUpdateTime');
+    if (updateTimeEl && data.meta && data.meta.updatedAt) {
+      var dateStr = data.meta.updatedAt.split('T')[0];
+      updateTimeEl.textContent = '更新于：' + dateStr + ' · 共 ' + totalCount + ' 篇';
+    }
+
+    if (totalCount === 0) {
       container.innerHTML = '<div class="notes-placeholder"><div class="placeholder-icon">✨</div><h3>杂记空空如也</h3><p>看到有意思的文章、视频、观点，随手丢给我，帮你整理成笔记。</p></div>';
+      if (paginationContainer) paginationContainer.innerHTML = '';
       return;
     }
-    container.innerHTML = notes.map(function (note) {
-      var tagsHtml = (note.tags || []).map(function (tag) {
-        return '<span class="news-tag tag-tech">' + escapeHtml(tag) + '</span>';
+
+    // 分页
+    var perPage = notesPageState.perPage;
+    var totalPages = Math.ceil(totalCount / perPage);
+    var currentPage = notesPageState.page;
+    if (currentPage > totalPages) currentPage = 1;
+
+    var start = (currentPage - 1) * perPage;
+    var end = start + perPage;
+    var pageArticles = allArticles.slice(start, end);
+
+    // 渲染卡片列表
+    container.innerHTML = pageArticles.map(function(note) {
+      var tagsHtml = (note.tags || []).map(function(tag) {
+        return '<span class="note-card-tag">' + escapeHtml(tag) + '</span>';
       }).join('');
+
+      var sourceHtml = note.source ? '<span class="note-card-source">📎 ' + escapeHtml(note.source) + '</span>' : '';
+
       return (
-        '<article class="note-article anim-fade-up">' +
-          '<div class="note-header">' +
-            '<h2 class="note-title">' + escapeHtml(note.title) + '</h2>' +
-            '<div class="note-meta">' +
-              '<span class="note-date">' + escapeHtml(note.date) + '</span>' +
-              '<span class="note-source">' + escapeHtml(note.source || '') + '</span>' +
+        '<a href="note.html?id=' + encodeURIComponent(note.id) + '" class="note-card anim-fade-up">' +
+          '<div class="note-card-main">' +
+            '<h2 class="note-card-title">' + escapeHtml(note.title) + '</h2>' +
+            '<p class="note-card-summary">' + escapeHtml(note.summary) + '</p>' +
+            '<div class="note-card-footer">' +
+              '<span class="note-card-date">📅 ' + escapeHtml(note.date) + '</span>' +
+              sourceHtml +
             '</div>' +
-            '<div class="note-tags">' + tagsHtml + '</div>' +
           '</div>' +
-          '<div class="note-summary">' + escapeHtml(note.summary) + '</div>' +
-          '<div class="note-content">' + renderMarkdown(escapeHtml(note.content)) + '</div>' +
-        '</article>'
+          '<div class="note-card-side">' +
+            '<div class="note-card-tags">' + tagsHtml + '</div>' +
+            '<span class="note-card-arrow">→</span>' +
+          '</div>' +
+        '</a>'
       );
     }).join('');
+
+    // 分页控件
+    if (paginationContainer) {
+      if (totalPages > 1) {
+        var html = '';
+        if (currentPage > 1) {
+          html += '<button class="page-btn" data-page="' + (currentPage - 1) + '">← 上一页</button>';
+        } else {
+          html += '<button class="page-btn disabled" disabled>← 上一页</button>';
+        }
+        for (var i = 1; i <= totalPages; i++) {
+          var activeClass = i === currentPage ? 'active' : '';
+          html += '<button class="page-btn ' + activeClass + '" data-page="' + i + '">' + i + '</button>';
+        }
+        if (currentPage < totalPages) {
+          html += '<button class="page-btn" data-page="' + (currentPage + 1) + '">下一页 →</button>';
+        } else {
+          html += '<button class="page-btn disabled" disabled>下一页 →</button>';
+        }
+        html += '<span class="page-info">' + currentPage + ' / ' + totalPages + ' 页</span>';
+        paginationContainer.innerHTML = html;
+
+        // 绑定分页点击
+        paginationContainer.querySelectorAll('.page-btn:not(.disabled)').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            var newPage = parseInt(this.dataset.page);
+            if (newPage && newPage !== currentPage) {
+              notesPageState.page = newPage;
+              renderNotesSection(data);
+              // 滚动到目录顶部
+              var section = document.getElementById('notes');
+              if (section) section.scrollIntoView({ behavior: 'smooth' });
+            }
+          });
+        });
+      } else {
+        paginationContainer.innerHTML = '';
+      }
+    }
   }
 
   // 简易 Markdown 渲染（支持 ##、---、|表格|、```、**粗体**、*斜体*）
@@ -728,15 +820,11 @@ const Renderer = (function () {
           resolve();
         });
       }),
-      // 5. 杂记
+      // 5. 杂记（从索引加载，支持历史周聚合）
       new Promise(function (resolve) {
-        fetchData('data/notes/current.json', function (data) {
+        fetchData('data/notes/index.json', function (data) {
           if (data) {
             renderNotesSection(data);
-            var notesDate = data.meta && data.meta.updatedAt ? data.meta.updatedAt.split('T')[0] : '';
-            document.querySelectorAll('#notesSection .update-time').forEach(function (el) {
-              el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + notesDate;
-            });
           }
           resolve();
         });

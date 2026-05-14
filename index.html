@@ -201,24 +201,20 @@
         <header class="page-header">
           <h1 id="notesHeading">📝 杂记</h1>
           <p class="subtitle">碎片洞察 · 偶遇好物 · 值得记一笔的发现</p>
-          <p class="update-time">更新于：2026-05-13</p>
+          <p class="update-time" id="notesUpdateTime">更新于：...</p>
         </header>
 
         <div class="news-layout">
-          <!-- 左侧：主内容 -->
           <div class="news-main">
-            <div id="notesContent">
-              <div class="notes-placeholder">
-                <div class="placeholder-icon">✨</div>
-                <h2>杂记栏目</h2>
-                <p>这里记录队长发来的有意思的文章、视频，经分析后整理成可读的内容。</p>
-                <p class="placeholder-hint">等队长投喂素材中...</p>
-              </div>
+            <!-- 杂记目录 -->
+            <div id="notesDirectory">
+              <!-- 动态渲染 -->
             </div>
+            <!-- 分页 -->
+            <div id="notesPagination" class="pagination"></div>
           </div>
-
-      <!-- 杂记：去掉右侧边栏，全宽占位 -->
-    </section>
+        </div>
+      </section>
 
     </div>
   </main>
