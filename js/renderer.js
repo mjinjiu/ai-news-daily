@@ -727,7 +727,7 @@ const Renderer = (function () {
           }
           resolve();
         });
-      })
+      }),
       // 5. 杂记
       new Promise(function (resolve) {
         fetchData('data/notes/current.json', function (data) {
