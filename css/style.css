@@ -1835,6 +1835,129 @@ body {
   margin-left: 8px;
 }
 
+/* ========== 杂记栏目 ========== */
+.note-article {
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  transition: var(--transition);
+}
+
+.note-article:hover {
+  border-color: var(--primary-soft);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+}
+
+.note-header {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.note-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.note-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.note-summary {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: var(--bg);
+  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--primary);
+}
+
+.note-content {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text);
+}
+
+.note-content h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 20px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+.note-content h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 16px 0 8px;
+}
+
+.note-content p {
+  margin-bottom: 12px;
+}
+
+.note-content pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin: 12px 0;
+}
+
+.note-content code {
+  font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+}
+
+.note-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 20px 0;
+}
+
+.note-content a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.note-content a:hover {
+  text-decoration: underline;
+}
+
+.md-table-row {
+  display: flex;
+  gap: 12px;
+  padding: 4px 0;
+  font-size: 0.85rem;
+}
+
+.md-table-cell {
+  flex: 1;
+  min-width: 80px;
+}
+
 /* ========== 项目源地址链接 ========== */
 .card-source {
   margin-top: 12px;

@@ -425,8 +425,65 @@ const Renderer = (function () {
     }).join('');
   }
 
-  // ===== 渲染 GitHub/API/杂记占位 =====
-  function renderNotesSection(data) { /* 占位 */ }
+  // ===== 渲染杂记栏目 =====
+  function renderNotesSection(data) {
+    var container = document.getElementById('notesContent');
+    if (!container || !data || !data.notes) return;
+    var notes = data.notes;
+    if (notes.length === 0) {
+      container.innerHTML = '<div class="notes-placeholder"><div class="placeholder-icon">✨</div><h3>杂记空空如也</h3><p>看到有意思的文章、视频、观点，随手丢给我，帮你整理成笔记。</p></div>';
+      return;
+    }
+    container.innerHTML = notes.map(function (note) {
+      var tagsHtml = (note.tags || []).map(function (tag) {
+        return '<span class="news-tag tag-tech">' + escapeHtml(tag) + '</span>';
+      }).join('');
+      return (
+        '<article class="note-article anim-fade-up">' +
+          '<div class="note-header">' +
+            '<h2 class="note-title">' + escapeHtml(note.title) + '</h2>' +
+            '<div class="note-meta">' +
+              '<span class="note-date">' + escapeHtml(note.date) + '</span>' +
+              '<span class="note-source">' + escapeHtml(note.source || '') + '</span>' +
+            '</div>' +
+            '<div class="note-tags">' + tagsHtml + '</div>' +
+          '</div>' +
+          '<div class="note-summary">' + escapeHtml(note.summary) + '</div>' +
+          '<div class="note-content">' + renderMarkdown(escapeHtml(note.content)) + '</div>' +
+        '</article>'
+      );
+    }).join('');
+  }
+
+  // 简易 Markdown 渲染（支持 ##、---、|表格|、```、**粗体**、*斜体*）
+  function renderMarkdown(text) {
+    if (!text) return '';
+    var html = text
+      // 代码块
+      .replace(/```(\w+)?\n([\s\S]*?)```/g, '<pre><code>$2</code></pre>')
+      // 标题
+      .replace(/^## (.+)$/gm, '<h3>$1</h3>')
+      .replace(/^### (.+)$/gm, '<h4>$1</h4>')
+      // 粗体/斜体
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      // 分隔线
+      .replace(/^---$/gm, '<hr>')
+      // 表格（简化处理）
+      .replace(/^\|(.+)\|$/gm, function(match, content) {
+        var cells = content.split('|').map(function(c) { return c.trim(); });
+        return '<div class="md-table-row">' + cells.map(function(c) { return '<span class="md-table-cell">' + c + '</span>'; }).join('') + '</div>';
+      })
+      // 链接
+      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>')
+      // 段落
+      .replace(/\n\n/g, '</p><p>')
+      .replace(/^(.+)$/gm, function(match) {
+        if (match.indexOf('<') === 0) return match;
+        return '<p>' + match + '</p>';
+      });
+    return html;
+  }
 
   // ===== 主入口：加载所有数据（并行加载加速） =====
   function loadAll() {
@@ -484,6 +541,19 @@ const Renderer = (function () {
             var apiDate = data.meta && data.meta.updatedAt ? data.meta.updatedAt.split('T')[0] : '';
             document.querySelectorAll('#apiSection .update-time').forEach(function (el) {
               el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + apiDate;
+            });
+          }
+          resolve();
+        });
+      })
+      // 5. 杂记
+      new Promise(function (resolve) {
+        fetchData('data/notes/current.json', function (data) {
+          if (data) {
+            renderNotesSection(data);
+            var notesDate = data.meta && data.meta.updatedAt ? data.meta.updatedAt.split('T')[0] : '';
+            document.querySelectorAll('#notesSection .update-time').forEach(function (el) {
+              el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + notesDate;
             });
           }
           resolve();

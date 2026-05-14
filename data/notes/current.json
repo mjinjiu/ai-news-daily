@@ -1,10 +1,18 @@
 {
   "meta": {
-    "date": "2026-05-13",
-    "updatedAt": "2026-05-13T19:45:00+08:00",
-    "total": 0,
-    "note": "placeholder"
+    "updatedAt": "2026-05-14T10:45:00+08:00",
+    "total": 1
   },
-  "items": [],
-  "archiveDates": []
+  "notes": [
+    {
+      "id": "note-2026-05-14-001",
+      "title": "从 Vibe Coding 到 Spec-Driven：OpenSpec 想给 AI 编程加一层「约束」",
+      "summary": "看完费曼学徒冬瓜的 OpenSpec 讲解视频，整理一下核心思路。OpenSpec 本质上是在解决一个越来越普遍的问题：当 AI 编程助手越来越强，为什么项目级别的可预测性反而在下降？",
+      "content": "## 一、问题：Vibe Coding 的「失控」\n\n「Vibe Coding」这个词最近很火——意思是开发者用模糊的自然语言提示和零散的聊天历史来指导 AI 写代码。听起来很酷，但实际上：\n\n- AI 经常**遗漏细微需求**，或者**添加不需要的功能**\n- 需求只存在于对话历史里，**无法复现、难以审核**\n- 代码「听起来正确但跑不起来」的情况越来越常见\n\n个人生产力确实飙升了，但项目级别的**可预测性**却在急剧下降。\n\n---\n\n## 二、OpenSpec 是什么\n\n**OpenSpec** 是一个专为 AI 智能体（Claude Code、Cursor、Windsurf 等）设计的开源**规格驱动开发（Spec-Driven Development, SDD）**框架和 CLI 工具。\n\n核心理念很简单：**在写代码之前，先让开发者和 AI 在「规范」上达成一致。**\n\n有点像 GitOps 或基础设施即代码——用一个声明式的「真相来源」来约束 AI 的生成过程。\n\n---\n\n## 三、核心机制：specs/ vs changes/\n\nOpenSpec 在项目里创建两个关键目录：\n\n| 目录 | 作用 |\n|------|------|\n| `specs/` | 描述系统**当前状态**的真相来源 |\n| `changes/` | 每个变更都有自己的文件夹，存放提案、设计、任务清单 |\n\n当变更完成后，规范会合并回 `specs/` 目录。这样系统的「当前状态」和「提议的更新」始终分离，变更历史清晰可追溯。\n\n---\n\n## 四、三条命令跑通全流程\n\nOpenSpec 的上手门槛很低，官方说大概 5 分钟（相比之下 Spec-Kit 约 30 分钟）：\n\n```bash\n# 1. 安装\nnpm install -g @fission-ai/openspec@latest\n\n# 2. 初始化项目\ncd your-project\nopenspec init --tools claude  # 支持 25+ AI 工具\n\n# 3. 核心 workflow（3 条命令）\n/opsx:propose \"添加暗黑模式\"   → 生成提案 + 规范 + 设计 + 任务清单\n/opsx:apply                  → AI 按 tasks.md 逐条执行\n/opsx:archive                → 归档到 archive/，规范合并回 specs/\n```\n\n---\n\n## 五、与同类工具对比\n\n| 工具 | 定位 | 特点 |\n|------|------|------|\n| **OpenSpec** | 现有项目迭代（1→n） | 轻量、自由迭代、多工具兼容 |\n| **Spec-Kit** (GitHub) | 新项目从零开发（0→1） | 全面但重量级，阶段门较严格 |\n| **Kiro** (AWS) | 新功能开发 | 强但锁死在 IDE 和 Claude 模型 |\n\nOpenSpec 的哲学是：**fluid not rigid, iterative not waterfall, easy not complex.**\n\n---\n\n## 六、为什么值得关注\n\n对咱做 AI 前线这类项目的人来说，有几个直接启发：\n\n1. **「规范」比「prompt」更可靠** —— 与其反复调 prompt，不如把需求写成结构化规范\n2. **AI 协作需要工程纪律** —— 不是不让 AI 发挥，而是给它清晰的边界\n3. **可审计性越来越重要** —— 当代码是 AI 生成的，「为什么这样写」必须可追溯\n\n---\n\n## 七、资源\n\n- **GitHub**: https://github.com/Fission-AI/OpenSpec\n- **官网**: https://openspec.pro/\n- **NPM**: `npm install -g @fission-ai/openspec@latest`\n- **抖音原视频**: https://v.douyin.com/UEJFrFhDZEU/\n\n---\n\n*整理自费曼学徒冬瓜的 OpenSpec 讲解视频 + 官方文档 + 社区实践案例。*",
+      "date": "2026-05-14",
+      "source": "抖音视频整理 + 官方文档",
+      "tags": ["AI编程", "OpenSpec", "VibeCoding", "规范驱动开发", "工具推荐"],
+      "featured": true
+    }
+  ]
 }
