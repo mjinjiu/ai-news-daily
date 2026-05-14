@@ -1835,6 +1835,33 @@ body {
   margin-left: 8px;
 }
 
+/* ========== 项目源地址链接 ========== */
+.card-source {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--border);
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: var(--transition);
+  word-break: break-all;
+}
+
+.source-link:hover {
+  color: var(--primary);
+}
+
+.news-source-link {
+  margin-top: 6px;
+  padding-left: 16px;
+}
+
 /* ========== 信源（板块内底部展示）========== */
 .sources-section {
   margin-top: 48px;

@@ -287,7 +287,6 @@ const Renderer = (function () {
   function renderGithubFeatured(containerId, data) {
     var container = document.getElementById(containerId);
     if (!container || !data) return;
-    // 适配数据结构：high_value 作为 featured
     var items = data.high_value || data.featured || [];
     if (items.length === 0) {
       container.innerHTML = '<div class="news-empty">暂无重磅项目</div>';
@@ -295,12 +294,18 @@ const Renderer = (function () {
     }
     container.innerHTML = items.slice(0, 3).map(function (item) {
       var desc = getGithubDesc(item);
+      var url = item.url || ('https://github.com/' + (item.repo || item.name).replace(/\s+/g, ''));
       return (
         '<article class="card featured anim-fade-up">' +
           '<div class="card-tag tag-breaking">🔥 Trending</div>' +
-          '<h2>' + escapeHtml(item.name) + '</h2>' +
+          '<h2><a href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + escapeHtml(item.name) + '</a></h2>' +
           '<p class="card-meta">' + escapeHtml(item.language || 'N/A') + ' · ⭐ +' + escapeHtml(item.stars_today || '0') + '</p>' +
           '<p class="card-summary">' + escapeHtml(desc) + '</p>' +
+          '<p class="card-source">' +
+            '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener" class="source-link">' +
+              '🔗 项目源地址：' + escapeHtml(url.replace('https://', '')) +
+            '</a>' +
+          '</p>' +
         '</article>'
       );
     }).join('');
@@ -309,7 +314,6 @@ const Renderer = (function () {
   function renderGithubList(containerId, data) {
     var container = document.getElementById(containerId);
     if (!container || !data) return;
-    // 适配数据结构：all_projects 作为项目列表
     var items = data.all_projects || data.projects || [];
     var countEl = document.querySelector('.github-count');
     if (countEl) countEl.textContent = items.length + ' 个';
@@ -319,16 +323,22 @@ const Renderer = (function () {
     }
     container.innerHTML = items.map(function (item) {
       var desc = getGithubDesc(item);
+      var url = item.url || ('https://github.com/' + (item.repo || item.name).replace(/\s+/g, ''));
       return (
         '<div class="news-item anim-fade-up">' +
           '<div class="news-bar tech"></div>' +
           '<div class="news-body">' +
-            '<h3><a href="' + escapeHtml(item.url || '') + '" target="_blank" rel="noopener">' + escapeHtml(item.name) + '</a></h3>' +
+            '<h3><a href="' + escapeHtml(url) + '" target="_blank" rel="noopener">' + escapeHtml(item.name) + '</a></h3>' +
             '<p class="news-excerpt">' + escapeHtml(desc) + '</p>' +
             '<div class="news-footer">' +
               '<span class="news-tag tag-tech">' + escapeHtml(item.language || 'N/A') + '</span>' +
               '<span class="news-source">⭐ +' + escapeHtml(item.stars_today || '0') + '</span>' +
               '<span class="news-date">score: ' + escapeHtml(item.score || '0') + '</span>' +
+            '</div>' +
+            '<div class="news-source-link">' +
+              '<a href="' + escapeHtml(url) + '" target="_blank" rel="noopener" class="source-link">' +
+                '🔗 ' + escapeHtml(url.replace('https://', '')) +
+              '</a>' +
             '</div>' +
           '</div>' +
         '</div>'
@@ -457,6 +467,10 @@ const Renderer = (function () {
             document.querySelectorAll('#githubSection .update-time').forEach(function (el) {
               el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + githubDate;
             });
+            var badgeEl = document.querySelector('.github-date-badge');
+            if (badgeEl && githubDate) {
+              badgeEl.textContent = githubDate;
+            }
           }
           resolve();
         });
