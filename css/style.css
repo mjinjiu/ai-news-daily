@@ -2395,3 +2395,9 @@ body {
 .note-detail-source-footnote p {
   margin: 0;
 }
+
+.note-detail-source-footnote .source-disclaimer {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
