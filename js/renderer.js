@@ -658,7 +658,7 @@ const Renderer = (function () {
         return '<span class="note-card-tag">' + escapeHtml(tag) + '</span>';
       }).join('');
 
-      var sourceHtml = note.source ? '<span class="note-card-source">📎 ' + escapeHtml(note.source) + '</span>' : '';
+      var sourceHtml = '';
 
       return (
         '<a href="note.html?id=' + encodeURIComponent(note.id) + '" class="note-card anim-fade-up">' +

@@ -185,20 +185,20 @@
         return '<span class="note-detail-tag">' + escapeHtml(tag) + '</span>';
       }).join('');
 
-      var sourceHtml = note.source ? '<span class="note-detail-source">📎 ' + escapeHtml(note.source) + '</span>' : '';
-
       container.innerHTML =
         '<div class="note-detail-header">' +
           '<h1 class="note-detail-title">' + escapeHtml(note.title) + '</h1>' +
           '<div class="note-detail-meta">' +
             '<span class="note-detail-date">📅 ' + escapeHtml(note.date) + '</span>' +
             '<span class="note-detail-time">⏱ ' + escapeHtml(readingTime) + '</span>' +
-            sourceHtml +
           '</div>' +
           '<div class="note-detail-tags">' + tagsHtml + '</div>' +
         '</div>' +
         '<div class="note-detail-summary">' + escapeHtml(note.summary) + '</div>' +
         '<div class="note-detail-content">' + renderMarkdown(note.content) + '</div>' +
+        '<div class="note-detail-source-footnote">' +
+          '<p>📎 来源：' + escapeHtml(note.source || '未标注') + '</p>' +
+        '</div>' +
         '<div class="note-detail-footer">' +
           '<a href="index.html#notes" class="back-btn">← 返回杂记目录</a>' +
         '</div>';
