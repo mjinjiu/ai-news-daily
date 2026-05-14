@@ -1,8 +1,8 @@
 {
   "meta": {
-    "date": "2026-05-12",
-    "updatedAt": "2026-05-14T09:30:17+08:00",
-    "total": 9,
+    "date": "2026-05-14",
+    "updatedAt": "2026-05-14T09:35:00+08:00",
+    "total": 10,
     "weekRange": "5.12 — 5.18",
     "daysCount": 0,
     "weekStart": "2026-05-11",
@@ -34,14 +34,25 @@
     },
     {
       "id": "news-2026-05-14-001",
-      "title_zh": "2026-05-14 示例数据",
-      "title_en": "Sample",
-      "summary_zh": "配置 API Key 后获取真实新闻",
-      "summary_en": "Configure API Key",
+      "title_zh": "谷歌首次证实：黑客已用AI发动真实零日漏洞攻击",
+      "title_en": "Google Confirms: Hackers Used AI to Launch Real Zero-Day Attacks",
+      "summary_zh": "谷歌周一发布报告，首次确认犯罪黑客使用AI大模型发现了一个此前未知的零日漏洞，并差点发动大规模攻击。这是安全界首次捕获到AI参与的真实网络攻击代码，包含大量教学性注释和AI幻觉特征。",
+      "summary_en": "Google released a report confirming for the first time that criminal hackers used AI large models to discover a previously unknown zero-day vulnerability and nearly launched a large-scale attack. This is the first time AI-generated attack code has been captured in the wild.",
       "date": "05-14",
-      "source": "AI前线",
+      "source": "澎湃新闻 / 新智元",
       "category": "breaking",
-      "url": "https://github.com/mjinjiu/ai-news-daily"
+      "url": "https://m.thepaper.cn/newsDetail_forward_33171614"
+    },
+    {
+      "id": "news-2026-05-14-002",
+      "title_zh": "Anthropic估值破1.2万亿美元，收入超越OpenAI登顶AI新贵",
+      "title_en": "Anthropic Valuation Hits $1.2 Trillion, Revenue Surpasses OpenAI",
+      "summary_zh": "2026年Q1全球大模型总收入约207亿美元，Anthropic以31.4%市场份额超越OpenAI的29%。公司年化营收达440亿美元，12个月净增350亿。Claude Code成为企业级开发工具首选，财富10强中8家为其客户。",
+      "summary_en": "In Q1 2026, global LLM revenue was ~$20.7B. Anthropic captured 31.4% market share, surpassing OpenAI's 29%. Annualized revenue reached $44B with $35B net growth in 12 months. Claude Code is now the preferred enterprise dev tool.",
+      "date": "05-14",
+      "source": "21世纪经济报道 / 新浪财经",
+      "category": "breaking",
+      "url": "https://www.21jingji.com/article/20260513/herald/dcbe6e34a584b556714cfc4363df83e9.html"
     }
   ],
   "daily": [
@@ -110,6 +121,72 @@
       "source": "TechCrunch / Cursor Blog",
       "category": "industry",
       "url": "https://techcrunch.com/2026/05/12/cursor-5m-mau/"
+    },
+    {
+      "id": "news-2026-05-14-003",
+      "title_zh": "剂泰科技挂牌港交所，全球AI药物递送第一股首日高开175%",
+      "title_en": "Jitaitech Debuts on HKEX as First AI Drug Delivery Stock, Surges 175% on Day One",
+      "excerpt_zh": "2026年5月13日，剂泰科技（7666.HK）在香港联交所主板正式挂牌上市，成为全球AI药物递送第一股。IPO定价10.50港元/股，募资总额超21亿港元，首日高开175%引爆港股。",
+      "excerpt_en": "On May 13, 2026, Jitaitech (7666.HK) officially listed on the Hong Kong Stock Exchange as the world's first AI drug delivery stock. IPO priced at HK$10.50 per share, raising over HK$2.1B, surging 175% on debut.",
+      "date": "05-14",
+      "source": "动脉新医药 / 新浪财经",
+      "category": "industry",
+      "url": "http://k.sina.com.cn/article_5952915720_162d2490806703wwew.html"
+    },
+    {
+      "id": "news-2026-05-14-004",
+      "title_zh": "字节跳动豆包上线三档付费会员，国内AI助手进入商业化攻坚期",
+      "title_en": "ByteDance Doubao Launches Three-Tier Paid Membership, Domestic AI Assistants Enter Monetization Phase",
+      "excerpt_zh": "字节跳动旗下AI助手豆包在苹果App Store上线三档付费会员测试选项，标志着国内生成式AI行业从'烧钱抢用户'的规模扩张阶段，正式迈入价值变现的商业化攻坚期。",
+      "excerpt_en": "ByteDance's AI assistant Doubao launched three-tier paid membership options on the App Store, marking the domestic generative AI industry's shift from user acquisition to monetization.",
+      "date": "05-14",
+      "source": "新浪财经 / 华尔街见闻",
+      "category": "industry",
+      "url": "http://k.sina.com.cn/article_7857201856_1d45362c001905fvua.html"
+    },
+    {
+      "id": "news-2026-05-14-005",
+      "title_zh": "Anthropic洽购开发者工具公司Stainless，估值至少3亿美元",
+      "title_en": "Anthropic in Talks to Acquire Developer Tools Startup Stainless, Valued at $300M+",
+      "excerpt_zh": "据《The Information》报道，Anthropic正就收购开发者工具初创公司Stainless进行深入谈判，收购金额至少为3亿美元。Stainless为Anthropic、OpenAI及谷歌等提供AI模型接入服务。",
+      "excerpt_en": "According to The Information, Anthropic is in advanced talks to acquire developer tools startup Stainless for at least $300M. Stainless provides AI model access services for Anthropic, OpenAI and Google.",
+      "date": "05-14",
+      "source": "The Information / 新浪财经",
+      "category": "industry",
+      "url": "http://k.sina.com.cn/article_5953190046_162d6789e067034fam.html"
+    },
+    {
+      "id": "news-2026-05-14-006",
+      "title_zh": "宇树科技发布全球首款量产版载人变形机甲，售价390万元起",
+      "title_en": "Unitree Releases World's First Mass-Produced Human-Carrying Transforming Mech, Starting at $3.9M",
+      "excerpt_zh": "5月12日，宇树科技发布全球首款量产版载人变形机甲GD01，支持人形与四足双形态切换，载人后总重约500公斤，定位为民用交通工具，售价390万元起。2026年被视为人形机器人的量产元年。",
+      "excerpt_en": "On May 12, Unitree Technology released the world's first mass-produced human-carrying transforming mech GD01, supporting dual humanoid/quadruped modes. Total weight ~500kg, positioned as civilian transport, starting at $3.9M.",
+      "date": "05-14",
+      "source": "新浪财经 / 央视财经",
+      "category": "tech",
+      "url": "http://finance.sina.com.cn/jjxw/2026-05-14/doc-inhxusky9110256.shtml"
+    },
+    {
+      "id": "news-2026-05-14-007",
+      "title_zh": "苹果正探索在App Store中引入AI智能体方案",
+      "title_en": "Apple Exploring AI Agent Integration in App Store",
+      "excerpt_zh": "苹果正探索在App Store中引入人工智能智能体的方案，或将改变用户与应用的交互方式，为开发者提供新的AI能力分发渠道。",
+      "excerpt_en": "Apple is exploring plans to introduce AI agents into the App Store, potentially changing how users interact with apps and providing developers with new AI capability distribution channels.",
+      "date": "05-14",
+      "source": "新浪财经",
+      "category": "tech",
+      "url": "http://finance.sina.com.cn/7x24/2026-05-14/doc-inhxuskw0478414.shtml"
+    },
+    {
+      "id": "news-2026-05-14-008",
+      "title_zh": "宁波发布'AI+制造'全场景开放创新行动方案，三年培育20个工业大模型",
+      "title_en": "Ningbo Releases 'AI+Manufacturing' Open Innovation Plan, Aiming for 20 Industrial LLMs in 3 Years",
+      "excerpt_zh": "宁波正式发布《深化制造业数字化转型，打造'人工智能+制造'全场景开放创新高地行动方案(2026—2028年)》，力争三年培育20个工业垂类大模型，建设100个场景应用标志性项目。",
+      "excerpt_en": "Ningbo officially released an action plan for AI+manufacturing open innovation (2026-2028), aiming to cultivate 20 industrial vertical LLMs and build 100 landmark scenario application projects within three years.",
+      "date": "05-14",
+      "source": "衢州日报 / 新浪财经",
+      "category": "policy",
+      "url": "http://k.sina.com.cn/article_5953740931_162dee083067037d6w.html"
     }
   ],
   "weekly": [
@@ -160,44 +237,86 @@
           "category": "industry"
         }
       ]
+    },
+    {
+      "day": "周三",
+      "day_en": "Wed",
+      "date": "05-14",
+      "count": 8,
+      "items": [
+        {
+          "title_zh": "谷歌首次证实AI发动零日攻击",
+          "title_en": "Google confirms AI zero-day attacks",
+          "category": "breaking"
+        },
+        {
+          "title_zh": "Anthropic估值破1.2万亿美元",
+          "title_en": "Anthropic hits $1.2T valuation",
+          "category": "breaking"
+        },
+        {
+          "title_zh": "剂泰科技挂牌港交所首日高开175%",
+          "title_en": "Jitaitech HKEX debut surges 175%",
+          "category": "industry"
+        },
+        {
+          "title_zh": "豆包上线三档付费会员",
+          "title_en": "Doubao launches paid tiers",
+          "category": "industry"
+        },
+        {
+          "title_zh": "Anthropic洽购Stainless",
+          "title_en": "Anthropic acquires Stainless",
+          "category": "industry"
+        },
+        {
+          "title_zh": "宇树发布载人变形机甲",
+          "title_en": "Unitree releases mech GD01",
+          "category": "tech"
+        },
+        {
+          "title_zh": "苹果探索App Store引入AI智能体",
+          "title_en": "Apple explores AI agents in App Store",
+          "category": "tech"
+        },
+        {
+          "title_zh": "宁波发布AI+制造行动方案",
+          "title_en": "Ningbo AI+manufacturing plan",
+          "category": "policy"
+        }
+      ]
     }
   ],
   "stats": [
     {
-      "num": "8",
-      "label_zh": "今日新闻",
-      "label_en": "News Today"
+      "num": "10",
+      "label_zh": "本周新闻",
+      "label_en": "News This Week"
     }
   ],
   "hotList": [
     {
       "rank": 1,
-      "title_zh": "TechCrunch / The Verge 报道 2 条",
-      "title_en": "2 from TechCrunch / The Verge",
-      "heat": 30
+      "title_zh": "重磅新闻 4 条",
+      "title_en": "4 Breaking News",
+      "heat": 35
     },
     {
       "rank": 2,
-      "title_zh": "Bloomberg / TechCrunch 报道 2 条",
-      "title_en": "2 from Bloomberg / TechCrunch",
-      "heat": 25
+      "title_zh": "行业动态 5 条",
+      "title_en": "5 Industry Updates",
+      "heat": 28
     },
     {
       "rank": 3,
-      "title_zh": "Stability AI / TechCrunch 报道 1 条",
-      "title_en": "1 from Stability AI / TechCrunch",
-      "heat": 15
+      "title_zh": "技术前沿 3 条",
+      "title_en": "3 Tech Updates",
+      "heat": 20
     },
     {
       "rank": 4,
-      "title_zh": "ByteDance / 36氪 报道 1 条",
-      "title_en": "1 from ByteDance / 36kr",
-      "heat": 15
-    },
-    {
-      "rank": 5,
-      "title_zh": "Reuters / EU Official 报道 1 条",
-      "title_en": "1 from Reuters / EU Official",
+      "title_zh": "政策监管 2 条",
+      "title_en": "2 Policy Updates",
       "heat": 15
     }
   ],
@@ -214,18 +333,30 @@
     "芯片"
   ],
   "sources": [
+    "21世纪经济报道",
     "36氪",
-    "AI前线",
+    "Apple",
     "Bloomberg",
     "ByteDance",
+    "央视财经",
     "Cursor Blog",
     "EU Official",
     "Microsoft",
+    "NVIDIA",
+    "OpenAI",
     "Reuters",
     "Stability AI",
     "TechCrunch",
+    "The Information",
     "The Verge",
-    "芯智讯"
+    "Unitree",
+    "华尔街见闻",
+    "芯智讯",
+    "新浪财经",
+    "新智元",
+    "澎湃新闻",
+    "动脉新医药",
+    "衢州日报"
   ],
   "archiveDates": [
     "2026-05-05",
