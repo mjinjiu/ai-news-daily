@@ -1836,7 +1836,7 @@ body {
 }
 
 /* ========== 前线观察栏目 ========== */
-.note-article {
+.frontline-article {
   background: var(--surface);
   border-radius: var(--radius);
   padding: 24px;
@@ -1845,18 +1845,18 @@ body {
   transition: var(--transition);
 }
 
-.note-article:hover {
+.frontline-article:hover {
   border-color: var(--primary-soft);
   box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
 }
 
-.note-header {
+.frontline-header {
   margin-bottom: 16px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--border);
 }
 
-.note-title {
+.frontline-title {
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--text);
@@ -1864,7 +1864,7 @@ body {
   line-height: 1.4;
 }
 
-.note-meta {
+.frontline-meta {
   display: flex;
   gap: 12px;
   font-size: 0.8rem;
@@ -1872,13 +1872,13 @@ body {
   margin-bottom: 8px;
 }
 
-.note-tags {
+.frontline-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
 }
 
-.note-summary {
+.frontline-summary {
   font-size: 0.95rem;
   color: var(--text-secondary);
   line-height: 1.6;
@@ -1889,13 +1889,13 @@ body {
   border-left: 3px solid var(--primary);
 }
 
-.note-content {
+.frontline-content {
   font-size: 0.9rem;
   line-height: 1.75;
   color: var(--text);
 }
 
-.note-content h3 {
+.frontline-content h3 {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
@@ -1904,18 +1904,18 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.note-content h4 {
+.frontline-content h4 {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-secondary);
   margin: 16px 0 8px;
 }
 
-.note-content p {
+.frontline-content p {
   margin-bottom: 12px;
 }
 
-.note-content pre {
+.frontline-content pre {
   background: #1e1e2e;
   color: #cdd6f4;
   padding: 16px;
@@ -1926,23 +1926,23 @@ body {
   margin: 12px 0;
 }
 
-.note-content code {
+.frontline-content code {
   font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
 }
 
-.note-content hr {
+.frontline-content hr {
   border: none;
   border-top: 1px solid var(--border);
   margin: 20px 0;
 }
 
-.note-content a {
+.frontline-content a {
   color: var(--primary);
   text-decoration: none;
   transition: var(--transition);
 }
 
-.note-content a:hover {
+.frontline-content a:hover {
   text-decoration: underline;
 }
 
@@ -2029,14 +2029,14 @@ body {
 }
 
 /* ========== 前线观察目录页 ========== */
-.notes-directory {
+.frontline-directory {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
 /* 前线观察卡片 */
-.note-card {
+.frontline-card {
   display: flex;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -2049,18 +2049,18 @@ body {
   gap: 16px;
 }
 
-.note-card:hover {
+.frontline-card:hover {
   border-color: var(--primary);
   box-shadow: var(--shadow-hover);
   transform: translateY(-1px);
 }
 
-.note-card-main {
+.frontline-card-main {
   flex: 1;
   min-width: 0;
 }
 
-.note-card-title {
+.frontline-card-title {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
@@ -2068,11 +2068,11 @@ body {
   line-height: 1.4;
 }
 
-.note-card:hover .note-card-title {
+.frontline-card:hover .frontline-card-title {
   color: var(--primary);
 }
 
-.note-card-summary {
+.frontline-card-summary {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.6;
@@ -2083,24 +2083,24 @@ body {
   overflow: hidden;
 }
 
-.note-card-footer {
+.frontline-card-footer {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.note-card-date {
+.frontline-card-date {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
 
-.note-card-source {
+.frontline-card-source {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
 
-.note-card-side {
+.frontline-card-side {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -2109,14 +2109,14 @@ body {
   min-width: 80px;
 }
 
-.note-card-tags {
+.frontline-card-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
   justify-content: flex-end;
 }
 
-.note-card-tag {
+.frontline-card-tag {
   font-size: 0.72rem;
   font-weight: 600;
   padding: 2px 8px;
@@ -2126,13 +2126,13 @@ body {
   white-space: nowrap;
 }
 
-.note-card-arrow {
+.frontline-card-arrow {
   font-size: 1.2rem;
   color: var(--text-muted);
   transition: var(--transition);
 }
 
-.note-card:hover .note-card-arrow {
+.frontline-card:hover .frontline-card-arrow {
   color: var(--primary);
   transform: translateX(4px);
 }
@@ -2177,36 +2177,36 @@ body {
 }
 
 /* ========== 前线观察详情页 ========== */
-.note-detail-page {
+.frontline-detail-page {
   padding: 32px 0 48px;
 }
 
-.note-detail-wrapper {
+.frontline-detail-wrapper {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.note-detail-loading {
+.frontline-detail-loading {
   text-align: center;
   padding: 80px 20px;
   color: var(--text-muted);
   font-size: 1rem;
 }
 
-.note-detail-error {
+.frontline-detail-error {
   text-align: center;
   padding: 80px 20px;
   color: var(--accent-red);
   font-size: 1rem;
 }
 
-.note-detail-header {
+.frontline-detail-header {
   margin-bottom: 32px;
   padding-bottom: 24px;
   border-bottom: 2px solid var(--border);
 }
 
-.note-detail-title {
+.frontline-detail-title {
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--text);
@@ -2214,7 +2214,7 @@ body {
   margin-bottom: 16px;
 }
 
-.note-detail-meta {
+.frontline-detail-meta {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -2224,21 +2224,21 @@ body {
   color: var(--text-muted);
 }
 
-.note-detail-date,
-.note-detail-time,
-.note-detail-source {
+.frontline-detail-date,
+.frontline-detail-time,
+.frontline-detail-source {
   display: inline-flex;
   align-items: center;
   gap: 4px;
 }
 
-.note-detail-tags {
+.frontline-detail-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
 }
 
-.note-detail-tag {
+.frontline-detail-tag {
   font-size: 0.8rem;
   font-weight: 600;
   padding: 4px 12px;
@@ -2247,7 +2247,7 @@ body {
   border-radius: 20px;
 }
 
-.note-detail-summary {
+.frontline-detail-summary {
   font-size: 1rem;
   color: var(--text-secondary);
   line-height: 1.7;
@@ -2258,13 +2258,13 @@ body {
   border-left: 4px solid var(--primary);
 }
 
-.note-detail-content {
+.frontline-detail-content {
   font-size: 0.95rem;
   line-height: 1.8;
   color: var(--text);
 }
 
-.note-detail-content h3 {
+.frontline-detail-content h3 {
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
@@ -2273,18 +2273,18 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.note-detail-content h4 {
+.frontline-detail-content h4 {
   font-size: 1.05rem;
   font-weight: 600;
   color: var(--text-secondary);
   margin: 24px 0 12px;
 }
 
-.note-detail-content p {
+.frontline-detail-content p {
   margin-bottom: 16px;
 }
 
-.note-detail-content pre {
+.frontline-detail-content pre {
   background: #1e1e2e;
   color: #cdd6f4;
   padding: 20px;
@@ -2295,31 +2295,31 @@ body {
   margin: 16px 0;
 }
 
-.note-detail-content code {
+.frontline-detail-content code {
   font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
 }
 
-.note-detail-content hr {
+.frontline-detail-content hr {
   border: none;
   border-top: 1px solid var(--border);
   margin: 24px 0;
 }
 
-.note-detail-content a {
+.frontline-detail-content a {
   color: var(--primary);
   text-decoration: none;
   transition: var(--transition);
 }
 
-.note-detail-content a:hover {
+.frontline-detail-content a:hover {
   text-decoration: underline;
 }
 
-.note-detail-content strong {
+.frontline-detail-content strong {
   color: var(--text);
 }
 
-.note-detail-footer {
+.frontline-detail-footer {
   margin-top: 48px;
   padding-top: 24px;
   border-top: 2px solid var(--border);
@@ -2350,12 +2350,12 @@ body {
 
 /* ========== 响应式：前线观察 ========== */
 @media (max-width: 767px) {
-  .note-card {
+  .frontline-card {
     flex-direction: column;
     padding: 16px;
   }
 
-  .note-card-side {
+  .frontline-card-side {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -2363,15 +2363,15 @@ body {
     margin-top: 12px;
   }
 
-  .note-card-tags {
+  .frontline-card-tags {
     justify-content: flex-start;
   }
 
-  .note-detail-title {
+  .frontline-detail-title {
     font-size: 1.4rem;
   }
 
-  .note-detail-meta {
+  .frontline-detail-meta {
     gap: 8px;
   }
 
@@ -2381,7 +2381,7 @@ body {
 }
 
 /* ========== 前线观察来源脚注 ========== */
-.note-detail-source-footnote {
+.frontline-detail-source-footnote {
   margin-top: 32px;
   padding: 12px 16px;
   background: var(--surface-2);
@@ -2392,11 +2392,11 @@ body {
   text-align: center;
 }
 
-.note-detail-source-footnote p {
+.frontline-detail-source-footnote p {
   margin: 0;
 }
 
-.note-detail-source-footnote .source-disclaimer {
+.frontline-detail-source-footnote .source-disclaimer {
   margin-top: 4px;
   font-size: 0.75rem;
   color: var(--text-muted);

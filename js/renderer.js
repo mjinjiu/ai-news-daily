@@ -597,7 +597,7 @@ const Renderer = (function () {
   }
 
   // ===== 渲染前线观察栏目：目录页（摘要卡片 + 分页）=====
-  var notesPageState = { page: 1, perPage: 10 };
+  var frontlinePageState = { page: 1, perPage: 10 };
 
   function calcReadingTime(text) {
     if (!text) return '1 分钟';
@@ -610,8 +610,8 @@ const Renderer = (function () {
   }
 
   function renderNotesSection(data) {
-    var container = document.getElementById('notesDirectory');
-    var paginationContainer = document.getElementById('notesPagination');
+    var container = document.getElementById('frontlineDirectory');
+    var paginationContainer = document.getElementById('frontlinePagination');
     if (!container || !data || !data.weeks) return;
 
     // 扁平化所有文章，按日期倒序
@@ -630,22 +630,22 @@ const Renderer = (function () {
     var totalCount = allArticles.length;
 
     // 更新标题栏计数
-    var updateTimeEl = document.getElementById('notesUpdateTime');
+    var updateTimeEl = document.getElementById('frontlineUpdateTime');
     if (updateTimeEl && data.meta && data.meta.updatedAt) {
       var dateStr = data.meta.updatedAt.split('T')[0];
       updateTimeEl.textContent = '更新于：' + dateStr + ' · 共 ' + totalCount + ' 篇';
     }
 
     if (totalCount === 0) {
-      container.innerHTML = '<div class="notes-placeholder"><div class="placeholder-icon">✨</div><h3>前线观察空空如也</h3><p>看到有意思的文章、视频、观点，随手丢给我，帮你整理成深度洞察。</p></div>';
+      container.innerHTML = '<div class="frontline-placeholder"><div class="placeholder-icon">✨</div><h3>前线观察空空如也</h3><p>看到有意思的文章、视频、观点，随手丢给我，帮你整理成深度洞察。</p></div>';
       if (paginationContainer) paginationContainer.innerHTML = '';
       return;
     }
 
     // 分页
-    var perPage = notesPageState.perPage;
+    var perPage = frontlinePageState.perPage;
     var totalPages = Math.ceil(totalCount / perPage);
-    var currentPage = notesPageState.page;
+    var currentPage = frontlinePageState.page;
     if (currentPage > totalPages) currentPage = 1;
 
     var start = (currentPage - 1) * perPage;
@@ -704,10 +704,10 @@ const Renderer = (function () {
           btn.addEventListener('click', function() {
             var newPage = parseInt(this.dataset.page);
             if (newPage && newPage !== currentPage) {
-              notesPageState.page = newPage;
+              frontlinePageState.page = newPage;
               renderNotesSection(data);
               // 滚动到目录顶部
-              var section = document.getElementById('notes');
+              var section = document.getElementById('frontline');
               if (section) section.scrollIntoView({ behavior: 'smooth' });
             }
           });
@@ -822,7 +822,7 @@ const Renderer = (function () {
       }),
       // 5. 前线观察（从索引加载，支持历史周聚合）
       new Promise(function (resolve) {
-        fetchData('data/notes/index.json', function (data) {
+        fetchData('data/frontline/index.json', function (data) {
           if (data) {
             renderNotesSection(data);
           }
