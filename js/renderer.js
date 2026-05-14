@@ -219,26 +219,32 @@ const Renderer = (function () {
   }
 
   // ===== GitHub趋势渲染 =====
-  function renderGithubFeatured(containerId, items) {
+  function renderGithubFeatured(containerId, data) {
     var container = document.getElementById(containerId);
-    if (!container || !items) return;
-    container.innerHTML = items.map(function (item) {
-      var title = getText(item, 'title');
-      var desc = getText(item, 'description');
+    if (!container || !data) return;
+    // 适配数据结构：high_value 作为 featured
+    var items = data.high_value || data.featured || [];
+    if (items.length === 0) {
+      container.innerHTML = '<div class="news-empty">暂无重磅项目</div>';
+      return;
+    }
+    container.innerHTML = items.slice(0, 3).map(function (item) {
       return (
-        '<article class="card featured anim-fade-up" data-id="' + item.id + '">' +
+        '<article class="card featured anim-fade-up">' +
           '<div class="card-tag tag-breaking">🔥 Trending</div>' +
-          '<h2>' + escapeHtml(title) + '</h2>' +
-          '<p class="card-meta">' + escapeHtml(item.language) + ' · ⭐ +' + escapeHtml(item.stars_today) + '</p>' +
-          '<p class="card-summary">' + escapeHtml(desc) + '</p>' +
+          '<h2>' + escapeHtml(item.name) + '</h2>' +
+          '<p class="card-meta">' + escapeHtml(item.language || 'N/A') + ' · ⭐ +' + escapeHtml(item.stars_today || '0') + '</p>' +
+          '<p class="card-summary">' + escapeHtml(item.description || '') + '</p>' +
         '</article>'
       );
     }).join('');
   }
 
-  function renderGithubList(containerId, items, meta) {
+  function renderGithubList(containerId, data) {
     var container = document.getElementById(containerId);
-    if (!container || !items) return;
+    if (!container || !data) return;
+    // 适配数据结构：all_projects 作为项目列表
+    var items = data.all_projects || data.projects || [];
     var countEl = document.querySelector('.github-count');
     if (countEl) countEl.textContent = items.length + ' 个';
     if (items.length === 0) {
@@ -246,19 +252,16 @@ const Renderer = (function () {
       return;
     }
     container.innerHTML = items.map(function (item) {
-      var title = getText(item, 'title');
-      var desc = getText(item, 'description');
-      var tags = (item.tags || []).map(function (t) { return '<span class="news-tag tag-tech">' + escapeHtml(t) + '</span>'; }).join('');
       return (
-        '<div class="news-item anim-fade-up" data-id="' + item.id + '">' +
+        '<div class="news-item anim-fade-up">' +
           '<div class="news-bar tech"></div>' +
           '<div class="news-body">' +
-            '<h3>' + escapeHtml(title) + '</h3>' +
-            '<p class="news-excerpt">' + escapeHtml(desc) + '</p>' +
+            '<h3><a href="' + escapeHtml(item.url || '') + '" target="_blank" rel="noopener">' + escapeHtml(item.name) + '</a></h3>' +
+            '<p class="news-excerpt">' + escapeHtml(item.description || '') + '</p>' +
             '<div class="news-footer">' +
-              tags +
-              '<span class="news-source">' + escapeHtml(item.language) + '</span>' +
-              '<span class="news-date">⭐ +' + escapeHtml(item.stars_today) + '</span>' +
+              '<span class="news-tag tag-tech">' + escapeHtml(item.language || 'N/A') + '</span>' +
+              '<span class="news-source">⭐ +' + escapeHtml(item.stars_today || '0') + '</span>' +
+              '<span class="news-date">score: ' + escapeHtml(item.score || '0') + '</span>' +
             '</div>' +
           '</div>' +
         '</div>'
@@ -266,15 +269,31 @@ const Renderer = (function () {
     }).join('');
   }
 
-  function renderGithubLanguages(containerId, languages) {
+  function renderGithubLanguages(containerId, data) {
     var container = document.getElementById(containerId);
-    if (!container || !languages) return;
+    if (!container || !data) return;
+    // 从 all_projects 提取语言分布
+    var items = data.all_projects || [];
+    var langMap = {};
+    items.forEach(function (item) {
+      var lang = item.language || 'Unknown';
+      if (!langMap[lang]) langMap[lang] = { count: 0, color: '#666' };
+      langMap[lang].count++;
+    });
+    var languages = Object.keys(langMap).map(function (name) {
+      return { name: name, count: langMap[name].count };
+    }).sort(function (a, b) { return b.count - a.count; });
+
+    if (languages.length === 0) {
+      container.innerHTML = '<div class="news-empty">暂无语言数据</div>';
+      return;
+    }
     var total = languages.reduce(function (sum, l) { return sum + l.count; }, 0);
     container.innerHTML = languages.map(function (lang) {
       var pct = Math.round((lang.count / total) * 100);
       return (
         '<div class="lang-bar">' +
-          '<span class="lang-name" style="color:' + (lang.color || '#666') + '">● ' + escapeHtml(lang.name) + '</span>' +
+          '<span class="lang-name">● ' + escapeHtml(lang.name) + '</span>' +
           '<span class="lang-count">' + lang.count + ' 个 (' + pct + '%)</span>' +
         '</div>'
       );
@@ -358,11 +377,11 @@ const Renderer = (function () {
     // 3. 加载 GitHub趋势
     fetchData('data/github/current.json', function (data) {
       if (data) {
-        renderGithubFeatured('githubFeatured', data.featured);
-        renderGithubList('githubList', data.projects, data.meta);
-        renderGithubLanguages('githubLanguages', data.languages);
+        renderGithubFeatured('githubFeatured', data);
+        renderGithubList('githubList', data);
+        renderGithubLanguages('githubLanguages', data);
         // 更新 GitHub 栏目的时间戳
-        var githubDate = data.meta && data.meta.updatedAt ? data.meta.updatedAt.split('T')[0] : '';
+        var githubDate = data.date || '';
         document.querySelectorAll('#githubSection .update-time').forEach(function (el) {
           el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + githubDate;
         });
@@ -427,18 +446,45 @@ const Renderer = (function () {
   }
 
   function renderNewsSection(news) {
-    renderBreaking('featuredRow', news.breaking);
-    renderDailyNews('newsList', news.daily, news.meta);
+    var today = news.meta && news.meta.date ? news.meta.date : new Date().toISOString().split('T')[0];
+    var breaking = news.breaking || [];
+    var daily = news.daily || [];
+
+    // 分离当日重磅 vs 旧重磅
+    var todayBreaking = [];
+    var oldBreaking = [];
+    breaking.forEach(function (item) {
+      if (item.date === today) {
+        todayBreaking.push(item);
+      } else {
+        oldBreaking.push(item);
+      }
+    });
+
+    var featuredToShow = todayBreaking;
+    var dailyToShow = daily;
+
+    // 如果有当日重磅，旧重磅降级到 daily 列表（标记为重磅）
+    if (todayBreaking.length > 0 && oldBreaking.length > 0) {
+      oldBreaking.forEach(function (item) {
+        item.category = 'breaking'; // 标记为重磅
+      });
+      dailyToShow = oldBreaking.concat(daily);
+    }
+    // 如果没有当日重磅，保留所有 breaking 作为 featured
+    if (todayBreaking.length === 0) {
+      featuredToShow = breaking;
+    }
+
+    renderBreaking('featuredRow', featuredToShow);
+    renderDailyNews('newsList', dailyToShow, news.meta);
     renderSources('sourceList', news.sources);
     updateTimestamps(news.meta);
   }
 
   // 兼容旧格式（fallback）
   function renderNewsSectionLegacy(news) {
-    renderBreaking('featuredRow', news.breaking);
-    renderDailyNews('newsList', news.daily, news.meta);
-    renderSources('sourceList', news.sources);
-    updateTimestamps(news.meta);
+    renderNewsSection(news);
   }
 
   function fetchData(url, callback) {
