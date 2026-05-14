@@ -1,10 +1,13 @@
 {
   "meta": {
     "date": "2026-05-12",
-    "updatedAt": "2026-05-12T08:00:00+08:00",
-    "total": 0,
+    "updatedAt": "2026-05-14T08:42:01+08:00",
+    "total": 9,
     "weekRange": "5.12 — 5.18",
-    "daysCount": 0
+    "daysCount": 0,
+    "weekStart": "2026-05-11",
+    "weekEnd": "2026-05-17",
+    "weekLabel": "5.11 — 5.17"
   },
   "breaking": [
     {
@@ -28,6 +31,17 @@
       "source": "Bloomberg / TechCrunch",
       "category": "breaking",
       "url": "https://bloomberg.com/news/articles/2026-05-12/anthropic-90b/"
+    },
+    {
+      "id": "news-2026-05-14-001",
+      "title_zh": "2026-05-14 示例数据",
+      "title_en": "Sample",
+      "summary_zh": "配置 API Key 后获取真实新闻",
+      "summary_en": "Configure API Key",
+      "date": "05-14",
+      "source": "AI前线",
+      "category": "breaking",
+      "url": "https://github.com/mjinjiu/ai-news-daily"
     }
   ],
   "daily": [
@@ -200,14 +214,18 @@
     "芯片"
   ],
   "sources": [
-    "TechCrunch / The Verge",
-    "Bloomberg / TechCrunch",
-    "The Verge / Microsoft",
-    "Reuters / EU Official",
-    "Stability AI / TechCrunch",
-    "ByteDance / 36氪",
-    "Bloomberg / 芯智讯",
-    "TechCrunch / Cursor Blog"
+    "36氪",
+    "AI前线",
+    "Bloomberg",
+    "ByteDance",
+    "Cursor Blog",
+    "EU Official",
+    "Microsoft",
+    "Reuters",
+    "Stability AI",
+    "TechCrunch",
+    "The Verge",
+    "芯智讯"
   ],
   "archiveDates": [
     "2026-05-05",

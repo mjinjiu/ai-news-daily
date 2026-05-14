@@ -1,12 +1,235 @@
 {
   "meta": {
-    "weekStart": "2026-05-12",
-    "weekEnd": "2026-05-18",
-    "weekLabel": "5.12 — 5.18",
-    "total": 0,
-    "updatedAt": "2026-05-13T20:30:00+08:00"
+    "date": "2026-05-12",
+    "updatedAt": "2026-05-14T08:42:01+08:00",
+    "total": 9,
+    "weekRange": "5.12 — 5.18",
+    "daysCount": 0,
+    "weekStart": "2026-05-11",
+    "weekEnd": "2026-05-17",
+    "weekLabel": "5.11 — 5.17"
   },
-  "breaking": [],
-  "daily": [],
-  "sources": []
+  "breaking": [
+    {
+      "id": "news-2026-05-12-001",
+      "title_zh": "OpenAI发布GPT-5预览版，多模态能力大幅提升",
+      "title_en": "OpenAI Releases GPT-5 Preview with Significant Multimodal Improvements",
+      "summary_zh": "OpenAI正式发布GPT-5预览版本，新模型在图像理解、视频分析和语音交互方面实现突破性进展。API延迟降低40%，价格维持不变。",
+      "summary_en": "OpenAI officially releases GPT-5 preview. The new model achieves breakthrough progress in image understanding, video analysis and voice interaction. API latency reduced by 40% while pricing remains unchanged.",
+      "date": "05-12",
+      "source": "TechCrunch / The Verge",
+      "category": "breaking",
+      "url": "https://techcrunch.com/2026/05/12/openai-gpt5-preview/"
+    },
+    {
+      "id": "news-2026-05-12-002",
+      "title_zh": "Anthropic完成新一轮融资，估值突破900亿美元",
+      "title_en": "Anthropic Closes New Funding Round at $90B+ Valuation",
+      "summary_zh": "Anthropic宣布完成由谷歌领投的新一轮融资，公司估值超过900亿美元。Claude 4 Enterprise版本同步上线，支持200万字上下文窗口。",
+      "summary_en": "Anthropic announces new funding round led by Google, with company valuation exceeding $90B. Claude 4 Enterprise launches simultaneously, supporting 2M token context window.",
+      "date": "05-12",
+      "source": "Bloomberg / TechCrunch",
+      "category": "breaking",
+      "url": "https://bloomberg.com/news/articles/2026-05-12/anthropic-90b/"
+    },
+    {
+      "id": "news-2026-05-14-001",
+      "title_zh": "2026-05-14 示例数据",
+      "title_en": "Sample",
+      "summary_zh": "配置 API Key 后获取真实新闻",
+      "summary_en": "Configure API Key",
+      "date": "05-14",
+      "source": "AI前线",
+      "category": "breaking",
+      "url": "https://github.com/mjinjiu/ai-news-daily"
+    }
+  ],
+  "daily": [
+    {
+      "id": "news-2026-05-12-003",
+      "title_zh": "微软Copilot新增'深度研究'模式，可自主完成复杂调研",
+      "title_en": "Microsoft Copilot Adds 'Deep Research' Mode for Autonomous Complex Research",
+      "excerpt_zh": "微软宣布Copilot新增深度研究功能，AI可自主规划研究路径、搜索多源信息并生成综合报告。首批面向Microsoft 365 Enterprise用户开放。",
+      "excerpt_en": "Microsoft announces Copilot deep research feature where AI can autonomously plan research paths, search multiple sources and generate comprehensive reports. First available to Microsoft 365 Enterprise users.",
+      "date": "05-12",
+      "source": "The Verge / Microsoft",
+      "category": "tech",
+      "url": "https://theverge.com/2026/05/12/microsoft-copilot-deep-research/"
+    },
+    {
+      "id": "news-2026-05-12-004",
+      "title_zh": "欧盟AI法案实施细则正式生效，高风险AI系统面临合规大考",
+      "title_en": "EU AI Act Implementation Rules Take Effect, High-Risk AI Systems Face Compliance Test",
+      "excerpt_zh": "欧盟AI法案实施细则今日正式生效，涵盖医疗、教育、招聘等8个高风险领域的企业必须在6个月内完成合规整改。违规最高可处全球营收7%罚款。",
+      "excerpt_en": "EU AI Act implementation rules take effect today. Enterprises in 8 high-risk areas including healthcare, education and recruitment must complete compliance rectification within 6 months. Maximum fine: 7% of global revenue.",
+      "date": "05-12",
+      "source": "Reuters / EU Official",
+      "category": "policy",
+      "url": "https://reuters.com/technology/ai-act-2026-05-12/"
+    },
+    {
+      "id": "news-2026-05-12-005",
+      "title_zh": " Stability AI开源新一代视频生成模型Stable Video 3D",
+      "title_en": "Stability AI Open Sources Next-Gen Video Model Stable Video 3D",
+      "excerpt_zh": "Stability AI发布并开源Stable Video 3D模型，支持从单张图片生成360度可交互3D视频。模型参数量较前代减少50%，生成速度提升3倍。",
+      "excerpt_en": "Stability AI releases and open sources Stable Video 3D model, supporting 360-degree interactive 3D video generation from a single image. Model parameters reduced by 50% with 3x faster generation speed.",
+      "date": "05-12",
+      "source": "Stability AI / TechCrunch",
+      "category": "tech",
+      "url": "https://stability.ai/blog/stable-video-3d"
+    },
+    {
+      "id": "news-2026-05-12-006",
+      "title_zh": "字节跳动Seed团队发布音乐生成大模型，支持中英文歌词",
+      "title_en": "ByteDance Seed Team Releases Music Generation Model Supporting Chinese and English Lyrics",
+      "excerpt_zh": "字节跳动Seed团队发布开源音乐生成大模型Seed-Music，支持通过文本提示生成完整歌曲，可处理中英文歌词，最长支持4分钟音频。",
+      "excerpt_en": "ByteDance Seed team releases open-source music generation model Seed-Music, supporting full song generation from text prompts with Chinese and English lyrics, up to 4 minutes of audio.",
+      "date": "05-12",
+      "source": "ByteDance / 36氪",
+      "category": "tech",
+      "url": "https://36kr.com/p/seed-music"
+    },
+    {
+      "id": "news-2026-05-12-007",
+      "title_zh": "英伟达H100供应量持续紧张，交货周期延长至52周",
+      "title_en": "Nvidia H100 Supply Remains Tight, Lead Time Extends to 52 Weeks",
+      "excerpt_zh": "英伟达H100 GPU交货周期从36周进一步延长至52周，云厂商正在加速导入自研芯片和AMD MI300系列作为替代方案。",
+      "excerpt_en": "Nvidia H100 GPU lead time extends from 36 to 52 weeks. Cloud providers are accelerating adoption of in-house chips and AMD MI300 series as alternatives.",
+      "date": "05-12",
+      "source": "Bloomberg / 芯智讯",
+      "category": "industry",
+      "url": "https://bloomberg.com/news/articles/2026-05-12/nvidia-h100-shortage/"
+    },
+    {
+      "id": "news-2026-05-12-008",
+      "title_zh": "AI编程助手Cursor月活突破500万，企业版营收占比超60%",
+      "title_en": "AI Coding Assistant Cursor Hits 5M MAU, Enterprise Revenue Exceeds 60%",
+      "excerpt_zh": "AI编程工具Cursor宣布月活跃用户突破500万，其中企业版订阅收入占总营收60%以上。公司同时宣布B轮融资2亿美元，估值达15亿美元。",
+      "excerpt_en": "AI coding tool Cursor announces 5M monthly active users, with enterprise subscriptions accounting for over 60% of total revenue. Company also announces $200M Series B at $1.5B valuation.",
+      "date": "05-12",
+      "source": "TechCrunch / Cursor Blog",
+      "category": "industry",
+      "url": "https://techcrunch.com/2026/05/12/cursor-5m-mau/"
+    }
+  ],
+  "weekly": [
+    {
+      "day": "周一",
+      "day_en": "Mon",
+      "date": "05-12",
+      "count": 8,
+      "items": [
+        {
+          "title_zh": "OpenAI发布GPT-5预览版",
+          "title_en": "OpenAI GPT-5 preview released",
+          "category": "breaking"
+        },
+        {
+          "title_zh": "Anthropic估值突破900亿美元",
+          "title_en": "Anthropic $90B+ valuation",
+          "category": "breaking"
+        },
+        {
+          "title_zh": "Copilot新增深度研究模式",
+          "title_en": "Copilot deep research mode",
+          "category": "tech"
+        },
+        {
+          "title_zh": "欧盟AI法案实施细则生效",
+          "title_en": "EU AI Act rules take effect",
+          "category": "policy"
+        },
+        {
+          "title_zh": "Stable Video 3D开源",
+          "title_en": "Stable Video 3D open sourced",
+          "category": "tech"
+        },
+        {
+          "title_zh": "字节跳动发布音乐生成模型",
+          "title_en": "ByteDance music model released",
+          "category": "tech"
+        },
+        {
+          "title_zh": "H100交货周期延长至52周",
+          "title_en": "H100 lead time 52 weeks",
+          "category": "industry"
+        },
+        {
+          "title_zh": "Cursor月活突破500万",
+          "title_en": "Cursor 5M MAU milestone",
+          "category": "industry"
+        }
+      ]
+    }
+  ],
+  "stats": [
+    {
+      "num": "8",
+      "label_zh": "今日新闻",
+      "label_en": "News Today"
+    }
+  ],
+  "hotList": [
+    {
+      "rank": 1,
+      "title_zh": "TechCrunch / The Verge 报道 2 条",
+      "title_en": "2 from TechCrunch / The Verge",
+      "heat": 30
+    },
+    {
+      "rank": 2,
+      "title_zh": "Bloomberg / TechCrunch 报道 2 条",
+      "title_en": "2 from Bloomberg / TechCrunch",
+      "heat": 25
+    },
+    {
+      "rank": 3,
+      "title_zh": "Stability AI / TechCrunch 报道 1 条",
+      "title_en": "1 from Stability AI / TechCrunch",
+      "heat": 15
+    },
+    {
+      "rank": 4,
+      "title_zh": "ByteDance / 36氪 报道 1 条",
+      "title_en": "1 from ByteDance / 36kr",
+      "heat": 15
+    },
+    {
+      "rank": 5,
+      "title_zh": "Reuters / EU Official 报道 1 条",
+      "title_en": "1 from Reuters / EU Official",
+      "heat": 15
+    }
+  ],
+  "tags": [
+    "产业",
+    "融资",
+    "大厂",
+    "技术",
+    "AI模型",
+    "开源",
+    "政策",
+    "监管",
+    "多模态",
+    "芯片"
+  ],
+  "sources": [
+    "36氪",
+    "AI前线",
+    "Bloomberg",
+    "ByteDance",
+    "Cursor Blog",
+    "EU Official",
+    "Microsoft",
+    "Reuters",
+    "Stability AI",
+    "TechCrunch",
+    "The Verge",
+    "芯智讯"
+  ],
+  "archiveDates": [
+    "2026-05-05",
+    "2026-05-07",
+    "2026-05-13"
+  ]
 }
