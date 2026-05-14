@@ -596,7 +596,7 @@ const Renderer = (function () {
     }).join('');
   }
 
-  // ===== 渲染前线观察栏目：目录页（摘要卡片 + 分页）=====
+  // ===== 渲染前线笔记栏目：目录页（摘要卡片 + 分页）=====
   var frontlinePageState = { page: 1, perPage: 10 };
 
   function calcReadingTime(text) {
@@ -637,7 +637,7 @@ const Renderer = (function () {
     }
 
     if (totalCount === 0) {
-      container.innerHTML = '<div class="frontline-placeholder"><div class="placeholder-icon">✨</div><h3>前线观察空空如也</h3><p>看到有意思的文章、视频、观点，随手丢给我，帮你整理成深度洞察。</p></div>';
+      container.innerHTML = '<div class="frontline-placeholder"><div class="placeholder-icon">✨</div><h3>前线笔记空空如也</h3><p>有想法、观察到现象、或值得记录的技术思考，随时丢给我，帮你写成前线笔记。</p></div>';
       if (paginationContainer) paginationContainer.innerHTML = '';
       return;
     }
@@ -820,7 +820,7 @@ const Renderer = (function () {
           resolve();
         });
       }),
-      // 5. 前线观察（从索引加载，支持历史周聚合）
+      // 5. 前线笔记（从索引加载，支持历史周聚合）
       new Promise(function (resolve) {
         fetchData('data/frontline/index.json', function (data) {
           if (data) {

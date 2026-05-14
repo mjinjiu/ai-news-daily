@@ -1835,7 +1835,7 @@ body {
   margin-left: 8px;
 }
 
-/* ========== 前线观察栏目 ========== */
+/* ========== 前线笔记栏目 ========== */
 .frontline-article {
   background: var(--surface);
   border-radius: var(--radius);
@@ -2028,14 +2028,14 @@ body {
   color: var(--primary);
 }
 
-/* ========== 前线观察目录页 ========== */
+/* ========== 前线笔记目录页 ========== */
 .frontline-directory {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* 前线观察卡片 */
+/* 前线笔记卡片 */
 .frontline-card {
   display: flex;
   background: var(--surface);
@@ -2176,7 +2176,7 @@ body {
   white-space: nowrap;
 }
 
-/* ========== 前线观察详情页 ========== */
+/* ========== 前线笔记详情页 ========== */
 .frontline-detail-page {
   padding: 32px 0 48px;
 }
@@ -2348,7 +2348,7 @@ body {
   color: var(--primary);
 }
 
-/* ========== 响应式：前线观察 ========== */
+/* ========== 响应式：前线笔记 ========== */
 @media (max-width: 767px) {
   .frontline-card {
     flex-direction: column;
@@ -2380,7 +2380,7 @@ body {
   }
 }
 
-/* ========== 前线观察来源脚注 ========== */
+/* ========== 前线笔记来源脚注 ========== */
 .frontline-detail-source-footnote {
   margin-top: 32px;
   padding: 12px 16px;

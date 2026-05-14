@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>前线观察 - AI前线</title>
-  <meta name="description" content="AI前线前线观察 - 深度洞察与技术分析">
+  <title>前线笔记 - AI前线</title>
+  <meta name="description" content="AI前线前线笔记 - 原创技术观察与思考">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   <link rel="stylesheet" href="css/style.css?v=4">
 </head>
@@ -25,7 +25,7 @@
         <a href="index.html#news" class="nav-link">📰 AI新闻</a>
         <a href="index.html#github" class="nav-link">🔥 GitHub趋势</a>
         <a href="index.html#api" class="nav-link">📈 API趋势</a>
-        <a href="index.html#frontline" class="nav-link active">📝 前线观察</a>
+        <a href="index.html#frontline" class="nav-link active">📝 前线笔记</a>
       </div>
     </div>
   </nav>
@@ -33,7 +33,7 @@
   <!-- 面包屑 -->
   <div class="breadcrumb-bar">
     <div class="breadcrumb-container">
-      <a href="index.html#frontline" class="breadcrumb-link">📝 前线观察</a>
+      <a href="index.html#frontline" class="breadcrumb-link">📝 前线笔记</a>
       <span class="breadcrumb-sep">›</span>
       <span class="breadcrumb-current" id="breadcrumbTitle">加载中...</span>
     </div>
@@ -178,7 +178,7 @@
     // 渲染文章详情
     function renderNote(container, note, breadcrumbTitle) {
       breadcrumbTitle.textContent = note.title;
-      document.title = note.title + ' - 前线观察 - AI前线';
+      document.title = note.title + ' - 前线笔记 - AI前线';
 
       var readingTime = calcReadingTime(note.content);
       var tagsHtml = (note.tags || []).map(function(tag) {
@@ -201,7 +201,7 @@
           '<p class="source-disclaimer"></p>' +
         '</div>' +
         '<div class="frontline-detail-footer">' +
-          '<a href="index.html#frontline" class="back-btn">← 返回前线观察目录</a>' +
+          '<a href="index.html#frontline" class="back-btn">← 返回前线笔记目录</a>' +
         '</div>';
     }
 
