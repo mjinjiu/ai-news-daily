@@ -351,54 +351,68 @@ const Renderer = (function () {
   // ===== 渲染 GitHub/API/杂记占位 =====
   function renderNotesSection(data) { /* 占位 */ }
 
-  // ===== 主入口：加载所有数据 =====
+  // ===== 主入口：加载所有数据（并行加载加速） =====
   function loadAll() {
-    // 1. 加载本周 current.json (AI新闻)
-    fetchData('data/news/current.json', function (news) {
-      if (news) {
-        renderNewsSection(news);
-      } else {
-        // fallback 到旧格式
-        fetchData('data/news.json', function (legacy) {
-          if (legacy) renderNewsSectionLegacy(legacy);
+    // 并行加载所有独立数据源
+    Promise.all([
+      // 1. AI新闻
+      new Promise(function (resolve) {
+        fetchData('data/news/current.json', function (news) {
+          if (news) {
+            renderNewsSection(news);
+          } else {
+            fetchData('data/news.json', function (legacy) {
+              if (legacy) renderNewsSectionLegacy(legacy);
+            });
+          }
+          resolve();
         });
-      }
-    });
-
-    // 2. 加载历史周列表
-    fetchData('data/news/index.json', function (index) {
-      if (index && index.length > 0) {
-        loadHistoryWeeksMeta(index);
-      } else {
-        renderHistoryReview('historyTimeline', null);
-      }
-    });
-
-    // 3. 加载 GitHub趋势
-    fetchData('data/github/current.json', function (data) {
-      if (data) {
-        renderGithubFeatured('githubFeatured', data);
-        renderGithubList('githubList', data);
-        renderGithubLanguages('githubLanguages', data);
-        // 更新 GitHub 栏目的时间戳
-        var githubDate = data.date || '';
-        document.querySelectorAll('#githubSection .update-time').forEach(function (el) {
-          el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + githubDate;
+      }),
+      // 2. 历史回顾
+      new Promise(function (resolve) {
+        fetchData('data/news/index.json', function (index) {
+          if (index && index.length > 0) {
+            loadHistoryWeeksMeta(index);
+          } else {
+            renderHistoryReview('historyTimeline', null);
+          }
+          resolve();
         });
-      }
-    });
-
-    // 4. 加载 API趋势
-    fetchData('data/api/current.json', function (data) {
-      if (data) {
-        renderApiFeatured('apiFeatured', data.featured);
-        renderApiList('apiList', data.trends, data.meta);
-        // 更新 API 栏目的时间戳
-        var apiDate = data.meta && data.meta.updatedAt ? data.meta.updatedAt.split('T')[0] : '';
-        document.querySelectorAll('#apiSection .update-time').forEach(function (el) {
-          el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + apiDate;
+      }),
+      // 3. GitHub趋势
+      new Promise(function (resolve) {
+        fetchData('data/github/current.json', function (data) {
+          if (data) {
+            renderGithubFeatured('githubFeatured', data);
+            renderGithubList('githubList', data);
+            renderGithubLanguages('githubLanguages', data);
+            var githubDate = data.date || '';
+            document.querySelectorAll('#githubSection .update-time').forEach(function (el) {
+              el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + githubDate;
+            });
+          }
+          resolve();
         });
-      }
+      }),
+      // 4. API趋势
+      new Promise(function (resolve) {
+        fetchData('data/api/current.json', function (data) {
+          if (data) {
+            renderApiFeatured('apiFeatured', data.featured);
+            renderApiList('apiList', data.trends, data.meta);
+            var apiDate = data.meta && data.meta.updatedAt ? data.meta.updatedAt.split('T')[0] : '';
+            document.querySelectorAll('#apiSection .update-time').forEach(function (el) {
+              el.textContent = (I18N.getLang() === 'zh' ? '更新于：' : 'Updated: ') + apiDate;
+            });
+          }
+          resolve();
+        });
+      })
+    ]).then(function () {
+      console.log('🚀 所有数据加载完成');
+      // 隐藏加载提示
+      var loader = document.getElementById('pageLoader');
+      if (loader) loader.style.display = 'none';
     });
   }
 
@@ -487,17 +501,69 @@ const Renderer = (function () {
     renderNewsSection(news);
   }
 
+  // ===== 缓存工具 =====
+  var CACHE_PREFIX = 'ai_news_';
+  var CACHE_TTL = 5 * 60 * 1000; // 5分钟缓存
+
+  function getCache(key) {
+    try {
+      var item = localStorage.getItem(CACHE_PREFIX + key);
+      if (!item) return null;
+      var parsed = JSON.parse(item);
+      if (Date.now() - parsed.time > CACHE_TTL) {
+        localStorage.removeItem(CACHE_PREFIX + key);
+        return null;
+      }
+      return parsed.data;
+    } catch (e) { return null; }
+  }
+
+  function setCache(key, data) {
+    try {
+      localStorage.setItem(CACHE_PREFIX + key, JSON.stringify({
+        time: Date.now(),
+        data: data
+      }));
+    } catch (e) { /* 缓存满，忽略 */ }
+  }
+
   function fetchData(url, callback) {
-    // 加时间戳绕过 CDN 缓存
-    var sep = url.indexOf('?') >= 0 ? '&' : '?';
-    var nocacheUrl = url + sep + '_t=' + Date.now();
+    // 尝试从缓存读取
+    var cacheKey = url.replace(/\?.*$/, '').replace(/\//g, '_');
+    var cached = getCache(cacheKey);
+    if (cached) {
+      // 先返回缓存，同时后台刷新
+      callback(cached);
+      // 后台静默刷新（不阻塞）
+      fetch(url + (url.indexOf('?') >= 0 ? '&' : '?') + '_refresh=' + Date.now())
+        .then(function (res) { return res.json(); })
+        .then(function (data) { setCache(cacheKey, data); })
+        .catch(function () {});
+      return;
+    }
+
+    // 无缓存，正常请求
+    var nocacheUrl = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_t=' + Date.now();
     fetch(nocacheUrl)
       .then(function (res) { return res.json(); })
-      .then(function (data) { callback(data); })
+      .then(function (data) {
+        setCache(cacheKey, data);
+        callback(data);
+      })
       .catch(function (err) {
         console.error('Failed to load ' + url + ':', err);
         callback(null);
       });
+  }
+
+  function prefetchData(url) {
+    // 静默预加载，不回调
+    var cacheKey = url.replace(/\?.*$/, '').replace(/\//g, '_');
+    if (getCache(cacheKey)) return;
+    fetch(url + (url.indexOf('?') >= 0 ? '&' : '?') + '_t=' + Date.now())
+      .then(function (res) { return res.json(); })
+      .then(function (data) { setCache(cacheKey, data); })
+      .catch(function () {});
   }
 
   function updateTimestamps(meta) {

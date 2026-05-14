@@ -36,9 +36,26 @@
     gtag('config', 'G-C6EWLPV4J4');
   </script>
 
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//mjinjiu.github.io">
+  <link rel="preconnect" href="https://mjinjiu.github.io" crossorigin>
+
+  <!-- 预加载关键资源 -->
+  <link rel="preload" href="css/style.css?v=3" as="style">
+  <link rel="preload" href="data/news/current.json" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="js/renderer.js" as="script">
+
   <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 <body>
+  <!-- ========== 加载状态 ========== -->
+  <div id="pageLoader" class="page-loader">
+    <div class="loader-content">
+      <span class="loader-spinner">⚡</span>
+      <span class="loader-text">AI前线加载中...</span>
+    </div>
+  </div>
+
   <!-- ========== 顶部导航 ========== -->
   <nav class="navbar" role="navigation" aria-label="主导航">
     <div class="nav-container">
