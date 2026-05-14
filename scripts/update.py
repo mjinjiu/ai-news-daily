@@ -288,7 +288,7 @@ def generate_news_via_kimi() -> Optional[dict]:
             json={"model": "kimi-k2.5", "messages": [
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": user_prompt},
-            ], "temperature": 0.3, "response_format": {"type": "json_object"}},
+            ], "temperature": 1, "response_format": {"type": "json_object"}},
             timeout=120,
         )
         response.raise_for_status()
