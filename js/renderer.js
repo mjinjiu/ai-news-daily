@@ -219,6 +219,11 @@ const Renderer = (function () {
   }
 
   // ===== GitHub趋势渲染 =====
+  function getGithubDesc(item) {
+    // 优先使用中文描述，fallback 到英文
+    return item.description_zh || item.description || '';
+  }
+
   function renderGithubFeatured(containerId, data) {
     var container = document.getElementById(containerId);
     if (!container || !data) return;
@@ -229,12 +234,13 @@ const Renderer = (function () {
       return;
     }
     container.innerHTML = items.slice(0, 3).map(function (item) {
+      var desc = getGithubDesc(item);
       return (
         '<article class="card featured anim-fade-up">' +
           '<div class="card-tag tag-breaking">🔥 Trending</div>' +
           '<h2>' + escapeHtml(item.name) + '</h2>' +
           '<p class="card-meta">' + escapeHtml(item.language || 'N/A') + ' · ⭐ +' + escapeHtml(item.stars_today || '0') + '</p>' +
-          '<p class="card-summary">' + escapeHtml(item.description || '') + '</p>' +
+          '<p class="card-summary">' + escapeHtml(desc) + '</p>' +
         '</article>'
       );
     }).join('');
@@ -252,12 +258,13 @@ const Renderer = (function () {
       return;
     }
     container.innerHTML = items.map(function (item) {
+      var desc = getGithubDesc(item);
       return (
         '<div class="news-item anim-fade-up">' +
           '<div class="news-bar tech"></div>' +
           '<div class="news-body">' +
             '<h3><a href="' + escapeHtml(item.url || '') + '" target="_blank" rel="noopener">' + escapeHtml(item.name) + '</a></h3>' +
-            '<p class="news-excerpt">' + escapeHtml(item.description || '') + '</p>' +
+            '<p class="news-excerpt">' + escapeHtml(desc) + '</p>' +
             '<div class="news-footer">' +
               '<span class="news-tag tag-tech">' + escapeHtml(item.language || 'N/A') + '</span>' +
               '<span class="news-source">⭐ +' + escapeHtml(item.stars_today || '0') + '</span>' +
@@ -461,6 +468,8 @@ const Renderer = (function () {
 
   function renderNewsSection(news) {
     var today = news.meta && news.meta.date ? news.meta.date : new Date().toISOString().split('T')[0];
+    // 统一为 MM-DD 格式用于比较（breaking.date 是 "05-14" 格式）
+    var todayShort = today.split('-').slice(1).join('-'); // "2026-05-14" → "05-14"
     var breaking = news.breaking || [];
     var daily = news.daily || [];
 
@@ -468,7 +477,10 @@ const Renderer = (function () {
     var todayBreaking = [];
     var oldBreaking = [];
     breaking.forEach(function (item) {
-      if (item.date === today) {
+      // 兼容两种日期格式："05-14" 和 "2026-05-14"
+      var itemDate = item.date || '';
+      var itemShort = itemDate.split('-').slice(-2).join('-'); // 取最后两位
+      if (itemShort === todayShort) {
         todayBreaking.push(item);
       } else {
         oldBreaking.push(item);
