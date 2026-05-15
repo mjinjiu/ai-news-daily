@@ -1,8 +1,8 @@
 {
   "meta": {
     "date": "2026-05-14",
-    "updatedAt": "2026-05-15T08:42:02+08:00",
-    "total": 17,
+    "updatedAt": "2026-05-15T10:49:06+08:00",
+    "total": 26,
     "weekRange": "5.12 — 5.18",
     "daysCount": 0,
     "weekStart": "2026-05-11",
@@ -64,6 +64,19 @@
       "source": "AI前线",
       "category": "breaking",
       "url": "https://github.com/mjinjiu/ai-news-daily"
+    },
+    {
+      "id": "news-2026-05-15-002",
+      "title_zh": "重生之我在AI时代当老板：让一群Agent互相PUA",
+      "title_en": "",
+      "summary_zh": "Team，从来不是默认选项",
+      "summary_en": "",
+      "excerpt_zh": "Team，从来不是默认选项",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "breaking",
+      "url": "https://www.qbitai.com/2026/05/417816.html"
     }
   ],
   "daily": [
@@ -198,6 +211,110 @@
       "source": "衢州日报 / 新浪财经",
       "category": "policy",
       "url": "http://k.sina.com.cn/article_5953740931_162dee083067037d6w.html"
+    },
+    {
+      "id": "news-2026-05-15-003",
+      "title_zh": "淘天金码奖落幕：20 名超级工程师诞生，推动 AI Native 实践",
+      "title_en": "",
+      "summary_zh": "AI主导、人类协助",
+      "summary_en": "",
+      "excerpt_zh": "AI主导、人类协助",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417927.html"
+    },
+    {
+      "id": "news-2026-05-15-004",
+      "title_zh": "国产GPU组了个开源局，把SGLang等核心开发者都摇来了！",
+      "title_en": "",
+      "summary_zh": "国产GPU开启生态坐标之争",
+      "summary_en": "",
+      "excerpt_zh": "国产GPU开启生态坐标之争",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417791.html"
+    },
+    {
+      "id": "news-2026-05-15-005",
+      "title_zh": "Robotaxi第一股又涨疯了",
+      "title_en": "",
+      "summary_zh": "卖车收入暴涨116%",
+      "summary_en": "",
+      "excerpt_zh": "卖车收入暴涨116%",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417754.html"
+    },
+    {
+      "id": "news-2026-05-15-006",
+      "title_zh": "腾讯开源 Agent 记忆技术方案，Token 消耗最高降低 61%",
+      "title_en": "",
+      "summary_zh": "任务成功率最高提升 51%。",
+      "summary_en": "",
+      "excerpt_zh": "任务成功率最高提升 51%。",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417753.html"
+    },
+    {
+      "id": "news-2026-05-15-007",
+      "title_zh": "阿里 AI 应用新进展：悟空开始逐步规模化放量",
+      "title_en": "",
+      "summary_zh": "阿里 AI 在模型、云基础设施和应用各层实现加速突破",
+      "summary_en": "",
+      "excerpt_zh": "阿里 AI 在模型、云基础设施和应用各层实现加速突破",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417748.html"
+    },
+    {
+      "id": "news-2026-05-15-008",
+      "title_zh": "田渊栋AI创业估值315亿，老黄苏妈都投了，姚班施天麟也是合伙人",
+      "title_en": "",
+      "summary_zh": "谷歌GV、Greycroft联合领投这轮早期融资，英伟达、AMD等也参与其中",
+      "summary_en": "",
+      "excerpt_zh": "谷歌GV、Greycroft联合领投这轮早期融资，英伟达、AMD等也参与其中",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417468.html"
+    },
+    {
+      "id": "news-2026-05-15-009",
+      "title_zh": "亚历山大王回应一切：LeCun、Manus，“我的父母都是中国人”",
+      "title_en": "",
+      "summary_zh": "“研究员来Meta不是为了钱”",
+      "summary_en": "",
+      "excerpt_zh": "“研究员来Meta不是为了钱”",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417488.html"
+    },
+    {
+      "id": "news-2026-05-15-010",
+      "title_zh": "Waymo CEO回应L2升维L4：有可能，但只靠端到端还不够",
+      "title_en": "",
+      "summary_zh": "云端基模蒸馏上车，用语言对齐世界模型",
+      "summary_en": "",
+      "excerpt_zh": "云端基模蒸馏上车，用语言对齐世界模型",
+      "excerpt_en": "",
+      "date": "05-15",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417469.html"
     }
   ],
   "weekly": [
@@ -368,7 +485,8 @@
     "新浪财经",
     "澎湃新闻",
     "芯智讯",
-    "衢州日报"
+    "衢州日报",
+    "量子位"
   ],
   "archiveDates": [
     "2026-05-05",
