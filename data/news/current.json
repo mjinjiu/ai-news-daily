@@ -1,8 +1,8 @@
 {
   "meta": {
     "date": "2026-05-14",
-    "updatedAt": "2026-05-14T09:35:00+08:00",
-    "total": 10,
+    "updatedAt": "2026-05-15T08:42:02+08:00",
+    "total": 17,
     "weekRange": "5.12 — 5.18",
     "daysCount": 0,
     "weekStart": "2026-05-11",
@@ -53,6 +53,17 @@
       "source": "21世纪经济报道 / 新浪财经",
       "category": "breaking",
       "url": "https://www.21jingji.com/article/20260513/herald/dcbe6e34a584b556714cfc4363df83e9.html"
+    },
+    {
+      "id": "news-2026-05-15-001",
+      "title_zh": "2026-05-15 示例数据",
+      "title_en": "Sample",
+      "summary_zh": "配置 API Key 后获取真实新闻",
+      "summary_en": "Configure API Key",
+      "date": "05-15",
+      "source": "AI前线",
+      "category": "breaking",
+      "url": "https://github.com/mjinjiu/ai-news-daily"
     }
   ],
   "daily": [
@@ -335,10 +346,10 @@
   "sources": [
     "21世纪经济报道",
     "36氪",
+    "AI前线",
     "Apple",
     "Bloomberg",
     "ByteDance",
-    "央视财经",
     "Cursor Blog",
     "EU Official",
     "Microsoft",
@@ -350,12 +361,13 @@
     "The Information",
     "The Verge",
     "Unitree",
-    "华尔街见闻",
-    "芯智讯",
-    "新浪财经",
-    "新智元",
-    "澎湃新闻",
     "动脉新医药",
+    "华尔街见闻",
+    "央视财经",
+    "新智元",
+    "新浪财经",
+    "澎湃新闻",
+    "芯智讯",
     "衢州日报"
   ],
   "archiveDates": [
