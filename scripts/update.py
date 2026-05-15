@@ -144,6 +144,7 @@ def append_news_to_current(current: dict, new_data: dict) -> dict:
     current["meta"]["weekStart"] = get_week_start(today)
     current["meta"]["weekEnd"] = get_week_end(today)
     current["meta"]["weekLabel"] = get_week_label(today)
+    current["meta"]["date"] = get_today_str()  # 更新日期为今天
     current["meta"]["updatedAt"] = datetime.now().strftime("%Y-%m-%dT%H:%M:%S+08:00")
     
     seen_ids = set()
