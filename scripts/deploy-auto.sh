@@ -18,16 +18,16 @@ git commit -m "🤖 Auto-update: $(date +%Y-%m-%d)" || true
 git push origin master
 echo "✅ 中文站部署成功"
 
-# 英文站
-echo "📦 部署英文站..."
-cd "$SITE_EN"
-git add .
-git commit -m "🤖 Auto-update EN: $(date +%Y-%m-%d)" || true
-git push origin master
-echo "✅ 英文站部署成功"
+# 英文站（暂时停用）
+# echo "📦 部署英文站..."
+# cd "$SITE_EN"
+# git add .
+# git commit -m "🤖 Auto-update EN: $(date +%Y-%m-%d)" || true
+# git push origin master
+# echo "✅ 英文站部署成功"
 
 echo ""
 echo "======================"
-echo "🎉 双站部署完成！"
+echo "🎉 部署完成！"
 echo "   中文: https://mjinjiu.github.io/ai-news-daily/"
-echo "   英文: https://mjinjiu.github.io/ai-news-daily/en/"
+# echo "   英文: https://mjinjiu.github.io/ai-news-daily/en/"
