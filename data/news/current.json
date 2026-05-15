@@ -1,8 +1,8 @@
 {
   "meta": {
     "date": "2026-05-14",
-    "updatedAt": "2026-05-15T10:55:15+08:00",
-    "total": 26,
+    "updatedAt": "2026-05-15T10:56:27+08:00",
+    "total": 25,
     "weekRange": "5.12 — 5.18",
     "daysCount": 0,
     "weekStart": "2026-05-11",
@@ -53,17 +53,6 @@
       "source": "21世纪经济报道 / 新浪财经",
       "category": "breaking",
       "url": "https://www.21jingji.com/article/20260513/herald/dcbe6e34a584b556714cfc4363df83e9.html"
-    },
-    {
-      "id": "news-2026-05-15-001",
-      "title_zh": "2026-05-15 示例数据",
-      "title_en": "Sample",
-      "summary_zh": "配置 API Key 后获取真实新闻",
-      "summary_en": "Configure API Key",
-      "date": "05-15",
-      "source": "AI前线",
-      "category": "breaking",
-      "url": "https://github.com/mjinjiu/ai-news-daily"
     },
     {
       "id": "news-2026-05-15-002",
