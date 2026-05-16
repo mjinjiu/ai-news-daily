@@ -1,8 +1,8 @@
 {
   "meta": {
-    "date": "2026-05-15",
-    "updatedAt": "2026-05-15T11:17:59+08:00",
-    "total": 25,
+    "date": "2026-05-16",
+    "updatedAt": "2026-05-16T08:42:03+08:00",
+    "total": 35,
     "weekRange": "5.12 — 5.18",
     "daysCount": 0,
     "weekStart": "2026-05-11",
@@ -66,6 +66,32 @@
       "source": "量子位",
       "category": "breaking",
       "url": "https://www.qbitai.com/2026/05/417816.html"
+    },
+    {
+      "id": "news-2026-05-16-001",
+      "title_zh": "华为云创想者大会主题论坛议程公布：释放Agentic AI新布局",
+      "title_en": "",
+      "summary_zh": "",
+      "summary_en": "",
+      "excerpt_zh": "",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "breaking",
+      "url": "https://www.qbitai.com/2026/05/418135.html"
+    },
+    {
+      "id": "news-2026-05-16-002",
+      "title_zh": "Need is all you need：AI接手Coding后，程序员最值钱的能力只剩这一项?",
+      "title_en": "",
+      "summary_zh": "说明需求，Qoder就能帮你实现",
+      "summary_en": "",
+      "excerpt_zh": "说明需求，Qoder就能帮你实现",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "breaking",
+      "url": "https://www.qbitai.com/2026/05/418035.html"
     }
   ],
   "daily": [
@@ -304,6 +330,110 @@
       "source": "量子位",
       "category": "industry",
       "url": "https://www.qbitai.com/2026/05/417469.html"
+    },
+    {
+      "id": "news-2026-05-16-003",
+      "title_zh": "容联云发布“数字员工”级 Al Agent 平台，重塑大模型联络中心",
+      "title_en": "",
+      "summary_zh": "该平台以 AI Agent 为核心",
+      "summary_en": "",
+      "excerpt_zh": "该平台以 AI Agent 为核心",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/418140.html"
+    },
+    {
+      "id": "news-2026-05-16-004",
+      "title_zh": "手机的智能体AI，正在因为天玑全面跃升",
+      "title_en": "",
+      "summary_zh": "联发科正在成为智能体化体验落地的全栈赋能者",
+      "summary_en": "",
+      "excerpt_zh": "联发科正在成为智能体化体验落地的全栈赋能者",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417968.html"
+    },
+    {
+      "id": "news-2026-05-16-005",
+      "title_zh": "阿里发布Qoder 1.0，可全面接管代码生成、验证和交付流程",
+      "title_en": "",
+      "summary_zh": "Windows、macOS 和 Linux系统用户均可下载使用。",
+      "summary_en": "",
+      "excerpt_zh": "Windows、macOS 和 Linux系统用户均可下载使用。",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/418027.html"
+    },
+    {
+      "id": "news-2026-05-16-006",
+      "title_zh": "坐到马斯克和库克中间的湖南女人",
+      "title_en": "",
+      "summary_zh": "15岁离家，23岁创业",
+      "summary_en": "",
+      "excerpt_zh": "15岁离家，23岁创业",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417965.html"
+    },
+    {
+      "id": "news-2026-05-16-007",
+      "title_zh": "蚂蚁百灵 Ring-2.6-1T 开源 Agent 执行能力全面增强",
+      "title_en": "",
+      "summary_zh": "AIME 26 得分 95.83",
+      "summary_en": "",
+      "excerpt_zh": "AIME 26 得分 95.83",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417961.html"
+    },
+    {
+      "id": "news-2026-05-16-008",
+      "title_zh": "智能无处不在：OpenClaw预示的AI未来",
+      "title_en": "",
+      "summary_zh": "融入日常使用的各类终端",
+      "summary_en": "",
+      "excerpt_zh": "融入日常使用的各类终端",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417958.html"
+    },
+    {
+      "id": "news-2026-05-16-009",
+      "title_zh": "英伟达给黄仁勋儿女涨薪了！年薪百万美元，“凭能力而不是身份”",
+      "title_en": "",
+      "summary_zh": "“两人薪资评定全程与其父黄仁勋无关”",
+      "summary_en": "",
+      "excerpt_zh": "“两人薪资评定全程与其父黄仁勋无关”",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417943.html"
+    },
+    {
+      "id": "news-2026-05-16-010",
+      "title_zh": "数亿元融资落地！国内最早布局“人类学习”路线的具身公司，用人类视角重做具身智能",
+      "title_en": "",
+      "summary_zh": "具身智能正在经历一场静默但深刻的路线转变",
+      "summary_en": "",
+      "excerpt_zh": "具身智能正在经历一场静默但深刻的路线转变",
+      "excerpt_en": "",
+      "date": "05-16",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/417935.html"
     }
   ],
   "weekly": [
