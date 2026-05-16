@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-15",
+  "date": "2026-05-16",
   "total_scanned": 15,
   "high_value": [
     {
@@ -9,9 +9,9 @@
       "description": "AI-powered interactive 3D model generation, inspection, and presentation studio.",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "2017",
+      "stars_today": "2059",
       "score": 20,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "nexu-io/html-anything",
@@ -20,9 +20,9 @@
       "description": "✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck · poster · XHS / tweet · prototype · data report · Hyperframes) 🛡️ Sandboxed preview · 📤 1-click to WeChat / X / Zhihu / HTML / PNG 🔑 Zero API key — Claude Code / Cursor / Codex / Gemini / Copilot / OpenCode / Qwen / Aider.",
       "description_zh": "",
       "language": "HTML",
-      "stars_today": "1147",
-      "score": 11,
-      "date": "2026-05-15"
+      "stars_today": "1964",
+      "score": 19,
+      "date": "2026-05-16"
     },
     {
       "name": "simonlin1212/a-stock-data",
@@ -31,20 +31,9 @@
       "description": "A 股全栈数据工具包 — 6层架构 · 15个端点 · 7个数据源 | AI Skill for China A-Share Market Data",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "728",
-      "score": 7,
-      "date": "2026-05-15"
-    },
-    {
-      "name": "alchaincyf/huashu-md-html",
-      "repo": "alchaincyf/huashu-md-html",
-      "url": "https://github.com/alchaincyf/huashu-md-html",
-      "description": "md/html 双向流水线 · 三个能力一站式：万物→md / md→精美html / html→md。封装 markitdown + Pandoc + html-to-markdown + trafilatura。4 套反 AI slop 主题。Claude Code skill.",
-      "description_zh": "",
-      "language": "CSS",
-      "stars_today": "533",
-      "score": 5,
-      "date": "2026-05-15"
+      "stars_today": "879",
+      "score": 8,
+      "date": "2026-05-16"
     },
     {
       "name": "yaassin12/DeepSeek-V4-Pro-App",
@@ -53,9 +42,20 @@
       "description": "DeepSeek V4 Pro: Advanced AI desktop app. Features: 1.6T MoE architecture, 1M token context window, Engram memory. Pro coding agent, Think Mode (High/Max), repo-level reasoning, complex bug fixing. Real-time web search, local API key storage, cross-file analysis, low-latency streaming interface.",
       "description_zh": "",
       "language": "C++",
-      "stars_today": "401",
+      "stars_today": "402",
       "score": 4,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
+    },
+    {
+      "name": "sunyouzhi2003/LSFG-Desktop",
+      "repo": "sunyouzhi2003/LSFG-Desktop",
+      "url": "https://github.com/sunyouzhi2003/LSFG-Desktop",
+      "description": "Lossless Scaling 2026: Universal Frame Generation LSFG 3. Multi-frame gen: X2, X3, X4 multiplier for extreme FPS. AI Upscaling: LS1, FSR 3.1, NIS. Smooth gaming on Steam Deck, handhelds, and Android (LSFG-VK). Fix stuttering, low latency mode, VRR support, 4K spatial scaling, G-Sync compatible.",
+      "description_zh": "",
+      "language": "C++",
+      "stars_today": "398",
+      "score": 3,
+      "date": "2026-05-16"
     }
   ],
   "all_projects": [
@@ -66,9 +66,9 @@
       "description": "AI-powered interactive 3D model generation, inspection, and presentation studio.",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "2017",
+      "stars_today": "2059",
       "score": 20,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "nexu-io/html-anything",
@@ -77,9 +77,9 @@
       "description": "✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck · poster · XHS / tweet · prototype · data report · Hyperframes) 🛡️ Sandboxed preview · 📤 1-click to WeChat / X / Zhihu / HTML / PNG 🔑 Zero API key — Claude Code / Cursor / Codex / Gemini / Copilot / OpenCode / Qwen / Aider.",
       "description_zh": "",
       "language": "HTML",
-      "stars_today": "1147",
-      "score": 11,
-      "date": "2026-05-15"
+      "stars_today": "1964",
+      "score": 19,
+      "date": "2026-05-16"
     },
     {
       "name": "simonlin1212/a-stock-data",
@@ -88,20 +88,9 @@
       "description": "A 股全栈数据工具包 — 6层架构 · 15个端点 · 7个数据源 | AI Skill for China A-Share Market Data",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "728",
-      "score": 7,
-      "date": "2026-05-15"
-    },
-    {
-      "name": "alchaincyf/huashu-md-html",
-      "repo": "alchaincyf/huashu-md-html",
-      "url": "https://github.com/alchaincyf/huashu-md-html",
-      "description": "md/html 双向流水线 · 三个能力一站式：万物→md / md→精美html / html→md。封装 markitdown + Pandoc + html-to-markdown + trafilatura。4 套反 AI slop 主题。Claude Code skill.",
-      "description_zh": "",
-      "language": "CSS",
-      "stars_today": "533",
-      "score": 5,
-      "date": "2026-05-15"
+      "stars_today": "879",
+      "score": 8,
+      "date": "2026-05-16"
     },
     {
       "name": "yaassin12/DeepSeek-V4-Pro-App",
@@ -110,9 +99,9 @@
       "description": "DeepSeek V4 Pro: Advanced AI desktop app. Features: 1.6T MoE architecture, 1M token context window, Engram memory. Pro coding agent, Think Mode (High/Max), repo-level reasoning, complex bug fixing. Real-time web search, local API key storage, cross-file analysis, low-latency streaming interface.",
       "description_zh": "",
       "language": "C++",
-      "stars_today": "401",
+      "stars_today": "402",
       "score": 4,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "sunyouzhi2003/LSFG-Desktop",
@@ -121,9 +110,9 @@
       "description": "Lossless Scaling 2026: Universal Frame Generation LSFG 3. Multi-frame gen: X2, X3, X4 multiplier for extreme FPS. AI Upscaling: LS1, FSR 3.1, NIS. Smooth gaming on Steam Deck, handhelds, and Android (LSFG-VK). Fix stuttering, low latency mode, VRR support, 4K spatial scaling, G-Sync compatible.",
       "description_zh": "",
       "language": "C++",
-      "stars_today": "397",
+      "stars_today": "398",
       "score": 3,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "mikesheehan54/Claude-Code-Design-AI",
@@ -132,9 +121,9 @@
       "description": "Claude Design: AI UI/UX architect. Screenshot to React, Figma components, Tailwind CSS generator. Prototyping agent, design systems, wireframe renderer. SVG icon creator, dark mode toggle, responsive layout tool. Front-end code export, shadcn/ui integration, vector assets, branding assistant.",
       "description_zh": "",
       "language": "TypeScript",
-      "stars_today": "341",
+      "stars_today": "378",
       "score": 3,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "zoyluoblue/mc_aiplayer",
@@ -145,7 +134,7 @@
       "language": "Java",
       "stars_today": "261",
       "score": 2,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "agentara/skills",
@@ -154,9 +143,9 @@
       "description": "Original and practical skills for AI builders.",
       "description_zh": "",
       "language": "HTML",
-      "stars_today": "188",
-      "score": 1,
-      "date": "2026-05-15"
+      "stars_today": "233",
+      "score": 2,
+      "date": "2026-05-16"
     },
     {
       "name": "simonlin1212/TradingAgents-astock",
@@ -165,9 +154,20 @@
       "description": "A股多Agent投研框架 — 适配A股数据源(龙虎榜/游资/解禁等)，7位分析师基于A股规则的辩论决策，基于TradingAgents深度改造，适配大A。A-share multi-agent investment research framework — 7 AI analysts, bull/bear debate, risk assessment。",
       "description_zh": "",
       "language": "Python",
-      "stars_today": "157",
+      "stars_today": "195",
       "score": 1,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
+    },
+    {
+      "name": "LocoreMind/locoagent",
+      "repo": "LocoreMind/locoagent",
+      "url": "https://github.com/LocoreMind/locoagent",
+      "description": "AI-powered social media agent with real browser automation",
+      "description_zh": "",
+      "language": "TypeScript",
+      "stars_today": "139",
+      "score": 1,
+      "date": "2026-05-16"
     },
     {
       "name": "zowilyhter/HarvestPitch",
@@ -176,20 +176,9 @@
       "description": "Real-Time HarvestPitch platform featuring data-stream-processing technology and advanced machine-learning-integration for modern Service",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "15",
+      "stars_today": "19",
       "score": 0,
-      "date": "2026-05-15"
-    },
-    {
-      "name": "Alisha-21-cloud/DiamondPriceX",
-      "repo": "Alisha-21-cloud/DiamondPriceX",
-      "url": "https://github.com/Alisha-21-cloud/DiamondPriceX",
-      "description": "DiamondPriceX is a full-stack web application that predicts the market price of a diamond based on its physical and qualitative attributes. The platform combines a trained machine learning model with a clean, modern web interface to deliver real-time price estimates.",
-      "description_zh": "",
-      "language": "HTML",
-      "stars_today": "14",
-      "score": 0,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "olienath/ParlerT",
@@ -198,9 +187,9 @@
       "description": "Machine-learning augmented contextual-intelligence platform leveraging natural-language-processing for intelligent, scalable, distributed integrations as a master system integrator.",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "13",
+      "stars_today": "14",
       "score": 0,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "adindazu/AI",
@@ -211,7 +200,7 @@
       "language": "Python",
       "stars_today": "9",
       "score": 0,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
     },
     {
       "name": "zunelyat/PyTorch",
@@ -222,7 +211,18 @@
       "language": "Python",
       "stars_today": "9",
       "score": 0,
-      "date": "2026-05-15"
+      "date": "2026-05-16"
+    },
+    {
+      "name": "hidariako/React",
+      "repo": "hidariako/React",
+      "url": "https://github.com/hidariako/React",
+      "description": "Self-adaptive, predictive analytics-powered ReActAgent orchestrator. featuring machine-learning-integration capabilities with real-time architecture implementing modern event-driven-architecture patterns",
+      "description_zh": "",
+      "language": "JavaScript",
+      "stars_today": "9",
+      "score": 0,
+      "date": "2026-05-16"
     }
   ]
 }
