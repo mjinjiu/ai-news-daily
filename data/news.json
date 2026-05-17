@@ -1,615 +1,147 @@
 {
   "meta": {
-    "date": "2026-05-16",
-    "updatedAt": "2026-05-16T08:42:03+08:00",
-    "total": 35,
-    "weekRange": "5.12 — 5.18",
-    "daysCount": 0,
     "weekStart": "2026-05-11",
     "weekEnd": "2026-05-17",
-    "weekLabel": "5.11 — 5.17"
+    "weekLabel": "5.11 — 5.17",
+    "total": 10,
+    "updatedAt": "2026-05-17T08:42:02+08:00",
+    "date": "2026-05-17"
   },
   "breaking": [
     {
-      "id": "news-2026-05-12-001",
-      "title_zh": "OpenAI发布GPT-5预览版，多模态能力大幅提升",
-      "title_en": "OpenAI Releases GPT-5 Preview with Significant Multimodal Improvements",
-      "summary_zh": "OpenAI正式发布GPT-5预览版本，新模型在图像理解、视频分析和语音交互方面实现突破性进展。API延迟降低40%，价格维持不变。",
-      "summary_en": "OpenAI officially releases GPT-5 preview. The new model achieves breakthrough progress in image understanding, video analysis and voice interaction. API latency reduced by 40% while pricing remains unchanged.",
-      "date": "05-12",
-      "source": "TechCrunch / The Verge",
-      "category": "breaking",
-      "url": "https://techcrunch.com/2026/05/12/openai-gpt5-preview/"
-    },
-    {
-      "id": "news-2026-05-12-002",
-      "title_zh": "Anthropic完成新一轮融资，估值突破900亿美元",
-      "title_en": "Anthropic Closes New Funding Round at $90B+ Valuation",
-      "summary_zh": "Anthropic宣布完成由谷歌领投的新一轮融资，公司估值超过900亿美元。Claude 4 Enterprise版本同步上线，支持200万字上下文窗口。",
-      "summary_en": "Anthropic announces new funding round led by Google, with company valuation exceeding $90B. Claude 4 Enterprise launches simultaneously, supporting 2M token context window.",
-      "date": "05-12",
-      "source": "Bloomberg / TechCrunch",
-      "category": "breaking",
-      "url": "https://bloomberg.com/news/articles/2026-05-12/anthropic-90b/"
-    },
-    {
-      "id": "news-2026-05-14-001",
-      "title_zh": "谷歌首次证实：黑客已用AI发动真实零日漏洞攻击",
-      "title_en": "Google Confirms: Hackers Used AI to Launch Real Zero-Day Attacks",
-      "summary_zh": "谷歌周一发布报告，首次确认犯罪黑客使用AI大模型发现了一个此前未知的零日漏洞，并差点发动大规模攻击。这是安全界首次捕获到AI参与的真实网络攻击代码，包含大量教学性注释和AI幻觉特征。",
-      "summary_en": "Google released a report confirming for the first time that criminal hackers used AI large models to discover a previously unknown zero-day vulnerability and nearly launched a large-scale attack. This is the first time AI-generated attack code has been captured in the wild.",
-      "date": "05-14",
-      "source": "澎湃新闻 / 新智元",
-      "category": "breaking",
-      "url": "https://m.thepaper.cn/newsDetail_forward_33171614"
-    },
-    {
-      "id": "news-2026-05-14-002",
-      "title_zh": "Anthropic估值破1.2万亿美元，收入超越OpenAI登顶AI新贵",
-      "title_en": "Anthropic Valuation Hits $1.2 Trillion, Revenue Surpasses OpenAI",
-      "summary_zh": "2026年Q1全球大模型总收入约207亿美元，Anthropic以31.4%市场份额超越OpenAI的29%。公司年化营收达440亿美元，12个月净增350亿。Claude Code成为企业级开发工具首选，财富10强中8家为其客户。",
-      "summary_en": "In Q1 2026, global LLM revenue was ~$20.7B. Anthropic captured 31.4% market share, surpassing OpenAI's 29%. Annualized revenue reached $44B with $35B net growth in 12 months. Claude Code is now the preferred enterprise dev tool.",
-      "date": "05-14",
-      "source": "21世纪经济报道 / 新浪财经",
-      "category": "breaking",
-      "url": "https://www.21jingji.com/article/20260513/herald/dcbe6e34a584b556714cfc4363df83e9.html"
-    },
-    {
-      "id": "news-2026-05-15-002",
-      "title_zh": "重生之我在AI时代当老板：让一群Agent互相PUA",
+      "id": "news-2026-05-17-001",
+      "title_zh": "不用再找了，AI落地最全的实战打法，都在亦庄这场大会里",
       "title_en": "",
-      "summary_zh": "Team，从来不是默认选项",
+      "summary_zh": "5月19日至20日，带上你的需求。带上你的方案，我们在亦庄，不见不散。",
       "summary_en": "",
-      "excerpt_zh": "Team，从来不是默认选项",
+      "excerpt_zh": "5月19日至20日，带上你的需求。带上你的方案，我们在亦庄，不见不散。",
       "excerpt_en": "",
-      "date": "05-15",
+      "date": "05-17",
       "source": "量子位",
       "category": "breaking",
-      "url": "https://www.qbitai.com/2026/05/417816.html"
+      "url": "https://www.qbitai.com/2026/05/418620.html"
     },
     {
-      "id": "news-2026-05-16-001",
+      "id": "news-2026-05-17-002",
+      "title_zh": "奥特曼投的芯片涨疯了，今年最大科技IPO",
+      "title_en": "",
+      "summary_zh": "奥特曼的20亿持股版图也曝光了",
+      "summary_en": "",
+      "excerpt_zh": "奥特曼的20亿持股版图也曝光了",
+      "excerpt_en": "",
+      "date": "05-17",
+      "source": "量子位",
+      "category": "breaking",
+      "url": "https://www.qbitai.com/2026/05/418594.html"
+    }
+  ],
+  "daily": [
+    {
+      "id": "news-2026-05-17-003",
+      "title_zh": "虾马之后又火一个！OpenHuman用20分钟了解你的一切，存成卡帕西式知识库",
+      "title_en": "",
+      "summary_zh": "懂我的还得是Human",
+      "summary_en": "",
+      "excerpt_zh": "懂我的还得是Human",
+      "excerpt_en": "",
+      "date": "05-17",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/418571.html"
+    },
+    {
+      "id": "news-2026-05-17-004",
+      "title_zh": "别让模型烧Token了！GitHub 20k星神作：把全网变成命令行",
+      "title_en": "",
+      "summary_zh": "",
+      "summary_en": "",
+      "excerpt_zh": "",
+      "excerpt_en": "",
+      "date": "05-17",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/418518.html"
+    },
+    {
+      "id": "news-2026-05-17-005",
+      "title_zh": "中国500万医生的新AI：顶刊独家联手，卷的就是证据源",
+      "title_en": "",
+      "summary_zh": "阿里健康发布「氢离子」",
+      "summary_en": "",
+      "excerpt_zh": "阿里健康发布「氢离子」",
+      "excerpt_en": "",
+      "date": "05-17",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/418491.html"
+    },
+    {
+      "id": "news-2026-05-17-006",
+      "title_zh": "15.68万乐道L80开卖，厨房搬进前备厢，李斌：纯电大五座SUV的“拐点”",
+      "title_en": "",
+      "summary_zh": "共享蔚来超8800座充换电站",
+      "summary_en": "",
+      "excerpt_zh": "共享蔚来超8800座充换电站",
+      "excerpt_en": "",
+      "date": "05-17",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/418150.html"
+    },
+    {
+      "id": "news-2026-05-17-007",
       "title_zh": "华为云创想者大会主题论坛议程公布：释放Agentic AI新布局",
       "title_en": "",
       "summary_zh": "",
       "summary_en": "",
       "excerpt_zh": "",
       "excerpt_en": "",
-      "date": "05-16",
+      "date": "05-17",
       "source": "量子位",
-      "category": "breaking",
+      "category": "industry",
       "url": "https://www.qbitai.com/2026/05/418135.html"
     },
     {
-      "id": "news-2026-05-16-002",
+      "id": "news-2026-05-17-008",
       "title_zh": "Need is all you need：AI接手Coding后，程序员最值钱的能力只剩这一项?",
       "title_en": "",
       "summary_zh": "说明需求，Qoder就能帮你实现",
       "summary_en": "",
       "excerpt_zh": "说明需求，Qoder就能帮你实现",
       "excerpt_en": "",
-      "date": "05-16",
+      "date": "05-17",
       "source": "量子位",
-      "category": "breaking",
+      "category": "industry",
       "url": "https://www.qbitai.com/2026/05/418035.html"
-    }
-  ],
-  "daily": [
-    {
-      "id": "news-2026-05-12-003",
-      "title_zh": "微软Copilot新增'深度研究'模式，可自主完成复杂调研",
-      "title_en": "Microsoft Copilot Adds 'Deep Research' Mode for Autonomous Complex Research",
-      "excerpt_zh": "微软宣布Copilot新增深度研究功能，AI可自主规划研究路径、搜索多源信息并生成综合报告。首批面向Microsoft 365 Enterprise用户开放。",
-      "excerpt_en": "Microsoft announces Copilot deep research feature where AI can autonomously plan research paths, search multiple sources and generate comprehensive reports. First available to Microsoft 365 Enterprise users.",
-      "date": "05-12",
-      "source": "The Verge / Microsoft",
-      "category": "tech",
-      "url": "https://theverge.com/2026/05/12/microsoft-copilot-deep-research/"
     },
     {
-      "id": "news-2026-05-12-004",
-      "title_zh": "欧盟AI法案实施细则正式生效，高风险AI系统面临合规大考",
-      "title_en": "EU AI Act Implementation Rules Take Effect, High-Risk AI Systems Face Compliance Test",
-      "excerpt_zh": "欧盟AI法案实施细则今日正式生效，涵盖医疗、教育、招聘等8个高风险领域的企业必须在6个月内完成合规整改。违规最高可处全球营收7%罚款。",
-      "excerpt_en": "EU AI Act implementation rules take effect today. Enterprises in 8 high-risk areas including healthcare, education and recruitment must complete compliance rectification within 6 months. Maximum fine: 7% of global revenue.",
-      "date": "05-12",
-      "source": "Reuters / EU Official",
-      "category": "policy",
-      "url": "https://reuters.com/technology/ai-act-2026-05-12/"
-    },
-    {
-      "id": "news-2026-05-12-005",
-      "title_zh": " Stability AI开源新一代视频生成模型Stable Video 3D",
-      "title_en": "Stability AI Open Sources Next-Gen Video Model Stable Video 3D",
-      "excerpt_zh": "Stability AI发布并开源Stable Video 3D模型，支持从单张图片生成360度可交互3D视频。模型参数量较前代减少50%，生成速度提升3倍。",
-      "excerpt_en": "Stability AI releases and open sources Stable Video 3D model, supporting 360-degree interactive 3D video generation from a single image. Model parameters reduced by 50% with 3x faster generation speed.",
-      "date": "05-12",
-      "source": "Stability AI / TechCrunch",
-      "category": "tech",
-      "url": "https://stability.ai/blog/stable-video-3d"
-    },
-    {
-      "id": "news-2026-05-12-006",
-      "title_zh": "字节跳动Seed团队发布音乐生成大模型，支持中英文歌词",
-      "title_en": "ByteDance Seed Team Releases Music Generation Model Supporting Chinese and English Lyrics",
-      "excerpt_zh": "字节跳动Seed团队发布开源音乐生成大模型Seed-Music，支持通过文本提示生成完整歌曲，可处理中英文歌词，最长支持4分钟音频。",
-      "excerpt_en": "ByteDance Seed team releases open-source music generation model Seed-Music, supporting full song generation from text prompts with Chinese and English lyrics, up to 4 minutes of audio.",
-      "date": "05-12",
-      "source": "ByteDance / 36氪",
-      "category": "tech",
-      "url": "https://36kr.com/p/seed-music"
-    },
-    {
-      "id": "news-2026-05-12-007",
-      "title_zh": "英伟达H100供应量持续紧张，交货周期延长至52周",
-      "title_en": "Nvidia H100 Supply Remains Tight, Lead Time Extends to 52 Weeks",
-      "excerpt_zh": "英伟达H100 GPU交货周期从36周进一步延长至52周，云厂商正在加速导入自研芯片和AMD MI300系列作为替代方案。",
-      "excerpt_en": "Nvidia H100 GPU lead time extends from 36 to 52 weeks. Cloud providers are accelerating adoption of in-house chips and AMD MI300 series as alternatives.",
-      "date": "05-12",
-      "source": "Bloomberg / 芯智讯",
-      "category": "industry",
-      "url": "https://bloomberg.com/news/articles/2026-05-12/nvidia-h100-shortage/"
-    },
-    {
-      "id": "news-2026-05-12-008",
-      "title_zh": "AI编程助手Cursor月活突破500万，企业版营收占比超60%",
-      "title_en": "AI Coding Assistant Cursor Hits 5M MAU, Enterprise Revenue Exceeds 60%",
-      "excerpt_zh": "AI编程工具Cursor宣布月活跃用户突破500万，其中企业版订阅收入占总营收60%以上。公司同时宣布B轮融资2亿美元，估值达15亿美元。",
-      "excerpt_en": "AI coding tool Cursor announces 5M monthly active users, with enterprise subscriptions accounting for over 60% of total revenue. Company also announces $200M Series B at $1.5B valuation.",
-      "date": "05-12",
-      "source": "TechCrunch / Cursor Blog",
-      "category": "industry",
-      "url": "https://techcrunch.com/2026/05/12/cursor-5m-mau/"
-    },
-    {
-      "id": "news-2026-05-14-003",
-      "title_zh": "剂泰科技挂牌港交所，全球AI药物递送第一股首日高开175%",
-      "title_en": "Jitaitech Debuts on HKEX as First AI Drug Delivery Stock, Surges 175% on Day One",
-      "excerpt_zh": "2026年5月13日，剂泰科技（7666.HK）在香港联交所主板正式挂牌上市，成为全球AI药物递送第一股。IPO定价10.50港元/股，募资总额超21亿港元，首日高开175%引爆港股。",
-      "excerpt_en": "On May 13, 2026, Jitaitech (7666.HK) officially listed on the Hong Kong Stock Exchange as the world's first AI drug delivery stock. IPO priced at HK$10.50 per share, raising over HK$2.1B, surging 175% on debut.",
-      "date": "05-14",
-      "source": "动脉新医药 / 新浪财经",
-      "category": "industry",
-      "url": "http://k.sina.com.cn/article_5952915720_162d2490806703wwew.html"
-    },
-    {
-      "id": "news-2026-05-14-004",
-      "title_zh": "字节跳动豆包上线三档付费会员，国内AI助手进入商业化攻坚期",
-      "title_en": "ByteDance Doubao Launches Three-Tier Paid Membership, Domestic AI Assistants Enter Monetization Phase",
-      "excerpt_zh": "字节跳动旗下AI助手豆包在苹果App Store上线三档付费会员测试选项，标志着国内生成式AI行业从'烧钱抢用户'的规模扩张阶段，正式迈入价值变现的商业化攻坚期。",
-      "excerpt_en": "ByteDance's AI assistant Doubao launched three-tier paid membership options on the App Store, marking the domestic generative AI industry's shift from user acquisition to monetization.",
-      "date": "05-14",
-      "source": "新浪财经 / 华尔街见闻",
-      "category": "industry",
-      "url": "http://k.sina.com.cn/article_7857201856_1d45362c001905fvua.html"
-    },
-    {
-      "id": "news-2026-05-14-005",
-      "title_zh": "Anthropic洽购开发者工具公司Stainless，估值至少3亿美元",
-      "title_en": "Anthropic in Talks to Acquire Developer Tools Startup Stainless, Valued at $300M+",
-      "excerpt_zh": "据《The Information》报道，Anthropic正就收购开发者工具初创公司Stainless进行深入谈判，收购金额至少为3亿美元。Stainless为Anthropic、OpenAI及谷歌等提供AI模型接入服务。",
-      "excerpt_en": "According to The Information, Anthropic is in advanced talks to acquire developer tools startup Stainless for at least $300M. Stainless provides AI model access services for Anthropic, OpenAI and Google.",
-      "date": "05-14",
-      "source": "The Information / 新浪财经",
-      "category": "industry",
-      "url": "http://k.sina.com.cn/article_5953190046_162d6789e067034fam.html"
-    },
-    {
-      "id": "news-2026-05-14-006",
-      "title_zh": "宇树科技发布全球首款量产版载人变形机甲，售价390万元起",
-      "title_en": "Unitree Releases World's First Mass-Produced Human-Carrying Transforming Mech, Starting at $3.9M",
-      "excerpt_zh": "5月12日，宇树科技发布全球首款量产版载人变形机甲GD01，支持人形与四足双形态切换，载人后总重约500公斤，定位为民用交通工具，售价390万元起。2026年被视为人形机器人的量产元年。",
-      "excerpt_en": "On May 12, Unitree Technology released the world's first mass-produced human-carrying transforming mech GD01, supporting dual humanoid/quadruped modes. Total weight ~500kg, positioned as civilian transport, starting at $3.9M.",
-      "date": "05-14",
-      "source": "新浪财经 / 央视财经",
-      "category": "tech",
-      "url": "http://finance.sina.com.cn/jjxw/2026-05-14/doc-inhxusky9110256.shtml"
-    },
-    {
-      "id": "news-2026-05-14-007",
-      "title_zh": "苹果正探索在App Store中引入AI智能体方案",
-      "title_en": "Apple Exploring AI Agent Integration in App Store",
-      "excerpt_zh": "苹果正探索在App Store中引入人工智能智能体的方案，或将改变用户与应用的交互方式，为开发者提供新的AI能力分发渠道。",
-      "excerpt_en": "Apple is exploring plans to introduce AI agents into the App Store, potentially changing how users interact with apps and providing developers with new AI capability distribution channels.",
-      "date": "05-14",
-      "source": "新浪财经",
-      "category": "tech",
-      "url": "http://finance.sina.com.cn/7x24/2026-05-14/doc-inhxuskw0478414.shtml"
-    },
-    {
-      "id": "news-2026-05-14-008",
-      "title_zh": "宁波发布'AI+制造'全场景开放创新行动方案，三年培育20个工业大模型",
-      "title_en": "Ningbo Releases 'AI+Manufacturing' Open Innovation Plan, Aiming for 20 Industrial LLMs in 3 Years",
-      "excerpt_zh": "宁波正式发布《深化制造业数字化转型，打造'人工智能+制造'全场景开放创新高地行动方案(2026—2028年)》，力争三年培育20个工业垂类大模型，建设100个场景应用标志性项目。",
-      "excerpt_en": "Ningbo officially released an action plan for AI+manufacturing open innovation (2026-2028), aiming to cultivate 20 industrial vertical LLMs and build 100 landmark scenario application projects within three years.",
-      "date": "05-14",
-      "source": "衢州日报 / 新浪财经",
-      "category": "policy",
-      "url": "http://k.sina.com.cn/article_5953740931_162dee083067037d6w.html"
-    },
-    {
-      "id": "news-2026-05-15-003",
-      "title_zh": "淘天金码奖落幕：20 名超级工程师诞生，推动 AI Native 实践",
-      "title_en": "",
-      "summary_zh": "AI主导、人类协助",
-      "summary_en": "",
-      "excerpt_zh": "AI主导、人类协助",
-      "excerpt_en": "",
-      "date": "05-15",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417927.html"
-    },
-    {
-      "id": "news-2026-05-15-004",
-      "title_zh": "国产GPU组了个开源局，把SGLang等核心开发者都摇来了！",
-      "title_en": "",
-      "summary_zh": "国产GPU开启生态坐标之争",
-      "summary_en": "",
-      "excerpt_zh": "国产GPU开启生态坐标之争",
-      "excerpt_en": "",
-      "date": "05-15",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417791.html"
-    },
-    {
-      "id": "news-2026-05-15-005",
-      "title_zh": "Robotaxi第一股又涨疯了",
-      "title_en": "",
-      "summary_zh": "卖车收入暴涨116%",
-      "summary_en": "",
-      "excerpt_zh": "卖车收入暴涨116%",
-      "excerpt_en": "",
-      "date": "05-15",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417754.html"
-    },
-    {
-      "id": "news-2026-05-15-006",
-      "title_zh": "腾讯开源 Agent 记忆技术方案，Token 消耗最高降低 61%",
-      "title_en": "",
-      "summary_zh": "任务成功率最高提升 51%。",
-      "summary_en": "",
-      "excerpt_zh": "任务成功率最高提升 51%。",
-      "excerpt_en": "",
-      "date": "05-15",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417753.html"
-    },
-    {
-      "id": "news-2026-05-15-007",
-      "title_zh": "阿里 AI 应用新进展：悟空开始逐步规模化放量",
-      "title_en": "",
-      "summary_zh": "阿里 AI 在模型、云基础设施和应用各层实现加速突破",
-      "summary_en": "",
-      "excerpt_zh": "阿里 AI 在模型、云基础设施和应用各层实现加速突破",
-      "excerpt_en": "",
-      "date": "05-15",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417748.html"
-    },
-    {
-      "id": "news-2026-05-15-008",
-      "title_zh": "田渊栋AI创业估值315亿，老黄苏妈都投了，姚班施天麟也是合伙人",
-      "title_en": "",
-      "summary_zh": "谷歌GV、Greycroft联合领投这轮早期融资，英伟达、AMD等也参与其中",
-      "summary_en": "",
-      "excerpt_zh": "谷歌GV、Greycroft联合领投这轮早期融资，英伟达、AMD等也参与其中",
-      "excerpt_en": "",
-      "date": "05-15",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417468.html"
-    },
-    {
-      "id": "news-2026-05-15-009",
-      "title_zh": "亚历山大王回应一切：LeCun、Manus，“我的父母都是中国人”",
-      "title_en": "",
-      "summary_zh": "“研究员来Meta不是为了钱”",
-      "summary_en": "",
-      "excerpt_zh": "“研究员来Meta不是为了钱”",
-      "excerpt_en": "",
-      "date": "05-15",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417488.html"
-    },
-    {
-      "id": "news-2026-05-15-010",
-      "title_zh": "Waymo CEO回应L2升维L4：有可能，但只靠端到端还不够",
-      "title_en": "",
-      "summary_zh": "云端基模蒸馏上车，用语言对齐世界模型",
-      "summary_en": "",
-      "excerpt_zh": "云端基模蒸馏上车，用语言对齐世界模型",
-      "excerpt_en": "",
-      "date": "05-15",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417469.html"
-    },
-    {
-      "id": "news-2026-05-16-003",
+      "id": "news-2026-05-17-009",
       "title_zh": "容联云发布“数字员工”级 Al Agent 平台，重塑大模型联络中心",
       "title_en": "",
       "summary_zh": "该平台以 AI Agent 为核心",
       "summary_en": "",
       "excerpt_zh": "该平台以 AI Agent 为核心",
       "excerpt_en": "",
-      "date": "05-16",
+      "date": "05-17",
       "source": "量子位",
       "category": "industry",
       "url": "https://www.qbitai.com/2026/05/418140.html"
     },
     {
-      "id": "news-2026-05-16-004",
+      "id": "news-2026-05-17-010",
       "title_zh": "手机的智能体AI，正在因为天玑全面跃升",
       "title_en": "",
       "summary_zh": "联发科正在成为智能体化体验落地的全栈赋能者",
       "summary_en": "",
       "excerpt_zh": "联发科正在成为智能体化体验落地的全栈赋能者",
       "excerpt_en": "",
-      "date": "05-16",
+      "date": "05-17",
       "source": "量子位",
       "category": "industry",
       "url": "https://www.qbitai.com/2026/05/417968.html"
-    },
-    {
-      "id": "news-2026-05-16-005",
-      "title_zh": "阿里发布Qoder 1.0，可全面接管代码生成、验证和交付流程",
-      "title_en": "",
-      "summary_zh": "Windows、macOS 和 Linux系统用户均可下载使用。",
-      "summary_en": "",
-      "excerpt_zh": "Windows、macOS 和 Linux系统用户均可下载使用。",
-      "excerpt_en": "",
-      "date": "05-16",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/418027.html"
-    },
-    {
-      "id": "news-2026-05-16-006",
-      "title_zh": "坐到马斯克和库克中间的湖南女人",
-      "title_en": "",
-      "summary_zh": "15岁离家，23岁创业",
-      "summary_en": "",
-      "excerpt_zh": "15岁离家，23岁创业",
-      "excerpt_en": "",
-      "date": "05-16",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417965.html"
-    },
-    {
-      "id": "news-2026-05-16-007",
-      "title_zh": "蚂蚁百灵 Ring-2.6-1T 开源 Agent 执行能力全面增强",
-      "title_en": "",
-      "summary_zh": "AIME 26 得分 95.83",
-      "summary_en": "",
-      "excerpt_zh": "AIME 26 得分 95.83",
-      "excerpt_en": "",
-      "date": "05-16",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417961.html"
-    },
-    {
-      "id": "news-2026-05-16-008",
-      "title_zh": "智能无处不在：OpenClaw预示的AI未来",
-      "title_en": "",
-      "summary_zh": "融入日常使用的各类终端",
-      "summary_en": "",
-      "excerpt_zh": "融入日常使用的各类终端",
-      "excerpt_en": "",
-      "date": "05-16",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417958.html"
-    },
-    {
-      "id": "news-2026-05-16-009",
-      "title_zh": "英伟达给黄仁勋儿女涨薪了！年薪百万美元，“凭能力而不是身份”",
-      "title_en": "",
-      "summary_zh": "“两人薪资评定全程与其父黄仁勋无关”",
-      "summary_en": "",
-      "excerpt_zh": "“两人薪资评定全程与其父黄仁勋无关”",
-      "excerpt_en": "",
-      "date": "05-16",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417943.html"
-    },
-    {
-      "id": "news-2026-05-16-010",
-      "title_zh": "数亿元融资落地！国内最早布局“人类学习”路线的具身公司，用人类视角重做具身智能",
-      "title_en": "",
-      "summary_zh": "具身智能正在经历一场静默但深刻的路线转变",
-      "summary_en": "",
-      "excerpt_zh": "具身智能正在经历一场静默但深刻的路线转变",
-      "excerpt_en": "",
-      "date": "05-16",
-      "source": "量子位",
-      "category": "industry",
-      "url": "https://www.qbitai.com/2026/05/417935.html"
     }
-  ],
-  "weekly": [
-    {
-      "day": "周一",
-      "day_en": "Mon",
-      "date": "05-12",
-      "count": 8,
-      "items": [
-        {
-          "title_zh": "OpenAI发布GPT-5预览版",
-          "title_en": "OpenAI GPT-5 preview released",
-          "category": "breaking"
-        },
-        {
-          "title_zh": "Anthropic估值突破900亿美元",
-          "title_en": "Anthropic $90B+ valuation",
-          "category": "breaking"
-        },
-        {
-          "title_zh": "Copilot新增深度研究模式",
-          "title_en": "Copilot deep research mode",
-          "category": "tech"
-        },
-        {
-          "title_zh": "欧盟AI法案实施细则生效",
-          "title_en": "EU AI Act rules take effect",
-          "category": "policy"
-        },
-        {
-          "title_zh": "Stable Video 3D开源",
-          "title_en": "Stable Video 3D open sourced",
-          "category": "tech"
-        },
-        {
-          "title_zh": "字节跳动发布音乐生成模型",
-          "title_en": "ByteDance music model released",
-          "category": "tech"
-        },
-        {
-          "title_zh": "H100交货周期延长至52周",
-          "title_en": "H100 lead time 52 weeks",
-          "category": "industry"
-        },
-        {
-          "title_zh": "Cursor月活突破500万",
-          "title_en": "Cursor 5M MAU milestone",
-          "category": "industry"
-        }
-      ]
-    },
-    {
-      "day": "周三",
-      "day_en": "Wed",
-      "date": "05-14",
-      "count": 8,
-      "items": [
-        {
-          "title_zh": "谷歌首次证实AI发动零日攻击",
-          "title_en": "Google confirms AI zero-day attacks",
-          "category": "breaking"
-        },
-        {
-          "title_zh": "Anthropic估值破1.2万亿美元",
-          "title_en": "Anthropic hits $1.2T valuation",
-          "category": "breaking"
-        },
-        {
-          "title_zh": "剂泰科技挂牌港交所首日高开175%",
-          "title_en": "Jitaitech HKEX debut surges 175%",
-          "category": "industry"
-        },
-        {
-          "title_zh": "豆包上线三档付费会员",
-          "title_en": "Doubao launches paid tiers",
-          "category": "industry"
-        },
-        {
-          "title_zh": "Anthropic洽购Stainless",
-          "title_en": "Anthropic acquires Stainless",
-          "category": "industry"
-        },
-        {
-          "title_zh": "宇树发布载人变形机甲",
-          "title_en": "Unitree releases mech GD01",
-          "category": "tech"
-        },
-        {
-          "title_zh": "苹果探索App Store引入AI智能体",
-          "title_en": "Apple explores AI agents in App Store",
-          "category": "tech"
-        },
-        {
-          "title_zh": "宁波发布AI+制造行动方案",
-          "title_en": "Ningbo AI+manufacturing plan",
-          "category": "policy"
-        }
-      ]
-    }
-  ],
-  "stats": [
-    {
-      "num": "10",
-      "label_zh": "本周新闻",
-      "label_en": "News This Week"
-    }
-  ],
-  "hotList": [
-    {
-      "rank": 1,
-      "title_zh": "重磅新闻 4 条",
-      "title_en": "4 Breaking News",
-      "heat": 35
-    },
-    {
-      "rank": 2,
-      "title_zh": "行业动态 5 条",
-      "title_en": "5 Industry Updates",
-      "heat": 28
-    },
-    {
-      "rank": 3,
-      "title_zh": "技术前沿 3 条",
-      "title_en": "3 Tech Updates",
-      "heat": 20
-    },
-    {
-      "rank": 4,
-      "title_zh": "政策监管 2 条",
-      "title_en": "2 Policy Updates",
-      "heat": 15
-    }
-  ],
-  "tags": [
-    "产业",
-    "融资",
-    "大厂",
-    "技术",
-    "AI模型",
-    "开源",
-    "政策",
-    "监管",
-    "多模态",
-    "芯片"
   ],
   "sources": [
-    "21世纪经济报道",
-    "36氪",
-    "AI前线",
-    "Apple",
-    "Bloomberg",
-    "ByteDance",
-    "Cursor Blog",
-    "EU Official",
-    "Microsoft",
-    "NVIDIA",
-    "OpenAI",
-    "Reuters",
-    "Stability AI",
-    "TechCrunch",
-    "The Information",
-    "The Verge",
-    "Unitree",
-    "动脉新医药",
-    "华尔街见闻",
-    "央视财经",
-    "新智元",
-    "新浪财经",
-    "澎湃新闻",
-    "芯智讯",
-    "衢州日报",
     "量子位"
-  ],
-  "archiveDates": [
-    "2026-05-05",
-    "2026-05-07",
-    "2026-05-13"
   ]
 }
