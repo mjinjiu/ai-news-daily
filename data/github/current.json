@@ -1,39 +1,17 @@
 {
-  "date": "2026-05-17",
+  "date": "2026-05-18",
   "total_scanned": 15,
   "high_value": [
     {
-      "name": "nexu-io/html-anything",
-      "repo": "nexu-io/html-anything",
-      "url": "https://github.com/nexu-io/html-anything",
-      "description": "✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck · poster · XHS / tweet · prototype · data report · Hyperframes) 🛡️ Sandboxed preview · 📤 1-click to WeChat / X / Zhihu / HTML / PNG 🔑 Zero API key — Claude Code / Cursor / Codex / Gemini / Copilot / OpenCode / Qwen / Aider.",
-      "description_zh": "",
-      "language": "HTML",
-      "stars_today": "2449",
-      "score": 24,
-      "date": "2026-05-17"
-    },
-    {
-      "name": "simonlin1212/a-stock-data",
-      "repo": "simonlin1212/a-stock-data",
-      "url": "https://github.com/simonlin1212/a-stock-data",
-      "description": "A 股全栈数据工具包 — 6层架构 · 15个端点 · 7个数据源 | AI Skill for China A-Share Market Data",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "990",
-      "score": 9,
-      "date": "2026-05-17"
-    },
-    {
       "name": "yaassin12/DeepSeek-V4-Pro-App",
       "repo": "yaassin12/DeepSeek-V4-Pro-App",
       "url": "https://github.com/yaassin12/DeepSeek-V4-Pro-App",
       "description": "DeepSeek V4 Pro: Advanced AI desktop app. Features: 1.6T MoE architecture, 1M token context window, Engram memory. Pro coding agent, Think Mode (High/Max), repo-level reasoning, complex bug fixing. Real-time web search, local API key storage, cross-file analysis, low-latency streaming interface.",
       "description_zh": "",
       "language": "C++",
-      "stars_today": "480",
-      "score": 4,
-      "date": "2026-05-17"
+      "stars_today": "604",
+      "score": 6,
+      "date": "2026-05-18"
     },
     {
       "name": "sunyouzhi2003/LSFG-Desktop",
@@ -42,9 +20,9 @@
       "description": "Lossless Scaling 2026: Universal Frame Generation LSFG 3. Multi-frame gen: X2, X3, X4 multiplier for extreme FPS. AI Upscaling: LS1, FSR 3.1, NIS. Smooth gaming on Steam Deck, handhelds, and Android (LSFG-VK). Fix stuttering, low latency mode, VRR support, 4K spatial scaling, G-Sync compatible.",
       "description_zh": "",
       "language": "C++",
-      "stars_today": "479",
-      "score": 4,
-      "date": "2026-05-17"
+      "stars_today": "601",
+      "score": 6,
+      "date": "2026-05-18"
     },
     {
       "name": "BharathKumarSuresh/claude-design-system-hooks",
@@ -53,66 +31,9 @@
       "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "420",
+      "stars_today": "421",
       "score": 4,
-      "date": "2026-05-17"
-    }
-  ],
-  "all_projects": [
-    {
-      "name": "nexu-io/html-anything",
-      "repo": "nexu-io/html-anything",
-      "url": "https://github.com/nexu-io/html-anything",
-      "description": "✨ The agentic HTML editor — your local AI agent writes the HTML, you ship it. 🚀 75 Skills × 9 Surfaces (magazine · deck · poster · XHS / tweet · prototype · data report · Hyperframes) 🛡️ Sandboxed preview · 📤 1-click to WeChat / X / Zhihu / HTML / PNG 🔑 Zero API key — Claude Code / Cursor / Codex / Gemini / Copilot / OpenCode / Qwen / Aider.",
-      "description_zh": "",
-      "language": "HTML",
-      "stars_today": "2449",
-      "score": 24,
-      "date": "2026-05-17"
-    },
-    {
-      "name": "simonlin1212/a-stock-data",
-      "repo": "simonlin1212/a-stock-data",
-      "url": "https://github.com/simonlin1212/a-stock-data",
-      "description": "A 股全栈数据工具包 — 6层架构 · 15个端点 · 7个数据源 | AI Skill for China A-Share Market Data",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "990",
-      "score": 9,
-      "date": "2026-05-17"
-    },
-    {
-      "name": "yaassin12/DeepSeek-V4-Pro-App",
-      "repo": "yaassin12/DeepSeek-V4-Pro-App",
-      "url": "https://github.com/yaassin12/DeepSeek-V4-Pro-App",
-      "description": "DeepSeek V4 Pro: Advanced AI desktop app. Features: 1.6T MoE architecture, 1M token context window, Engram memory. Pro coding agent, Think Mode (High/Max), repo-level reasoning, complex bug fixing. Real-time web search, local API key storage, cross-file analysis, low-latency streaming interface.",
-      "description_zh": "",
-      "language": "C++",
-      "stars_today": "480",
-      "score": 4,
-      "date": "2026-05-17"
-    },
-    {
-      "name": "sunyouzhi2003/LSFG-Desktop",
-      "repo": "sunyouzhi2003/LSFG-Desktop",
-      "url": "https://github.com/sunyouzhi2003/LSFG-Desktop",
-      "description": "Lossless Scaling 2026: Universal Frame Generation LSFG 3. Multi-frame gen: X2, X3, X4 multiplier for extreme FPS. AI Upscaling: LS1, FSR 3.1, NIS. Smooth gaming on Steam Deck, handhelds, and Android (LSFG-VK). Fix stuttering, low latency mode, VRR support, 4K spatial scaling, G-Sync compatible.",
-      "description_zh": "",
-      "language": "C++",
-      "stars_today": "479",
-      "score": 4,
-      "date": "2026-05-17"
-    },
-    {
-      "name": "BharathKumarSuresh/claude-design-system-hooks",
-      "repo": "BharathKumarSuresh/claude-design-system-hooks",
-      "url": "https://github.com/BharathKumarSuresh/claude-design-system-hooks",
-      "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "420",
-      "score": 4,
-      "date": "2026-05-17"
+      "date": "2026-05-18"
     },
     {
       "name": "2508965-ship-it/harmonist-orchestral",
@@ -121,9 +42,9 @@
       "description": "🚀 Multi-Agent Orchestration Engine 2026 – Build & Deploy AI Swarms with Claude Code",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "420",
+      "stars_today": "421",
       "score": 4,
-      "date": "2026-05-17"
+      "date": "2026-05-18"
     },
     {
       "name": "Scratch-191/Canva-Pro-Toolkit",
@@ -134,7 +55,64 @@
       "language": "Unknown",
       "stars_today": "420",
       "score": 4,
-      "date": "2026-05-17"
+      "date": "2026-05-18"
+    }
+  ],
+  "all_projects": [
+    {
+      "name": "yaassin12/DeepSeek-V4-Pro-App",
+      "repo": "yaassin12/DeepSeek-V4-Pro-App",
+      "url": "https://github.com/yaassin12/DeepSeek-V4-Pro-App",
+      "description": "DeepSeek V4 Pro: Advanced AI desktop app. Features: 1.6T MoE architecture, 1M token context window, Engram memory. Pro coding agent, Think Mode (High/Max), repo-level reasoning, complex bug fixing. Real-time web search, local API key storage, cross-file analysis, low-latency streaming interface.",
+      "description_zh": "",
+      "language": "C++",
+      "stars_today": "604",
+      "score": 6,
+      "date": "2026-05-18"
+    },
+    {
+      "name": "sunyouzhi2003/LSFG-Desktop",
+      "repo": "sunyouzhi2003/LSFG-Desktop",
+      "url": "https://github.com/sunyouzhi2003/LSFG-Desktop",
+      "description": "Lossless Scaling 2026: Universal Frame Generation LSFG 3. Multi-frame gen: X2, X3, X4 multiplier for extreme FPS. AI Upscaling: LS1, FSR 3.1, NIS. Smooth gaming on Steam Deck, handhelds, and Android (LSFG-VK). Fix stuttering, low latency mode, VRR support, 4K spatial scaling, G-Sync compatible.",
+      "description_zh": "",
+      "language": "C++",
+      "stars_today": "601",
+      "score": 6,
+      "date": "2026-05-18"
+    },
+    {
+      "name": "BharathKumarSuresh/claude-design-system-hooks",
+      "repo": "BharathKumarSuresh/claude-design-system-hooks",
+      "url": "https://github.com/BharathKumarSuresh/claude-design-system-hooks",
+      "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "421",
+      "score": 4,
+      "date": "2026-05-18"
+    },
+    {
+      "name": "2508965-ship-it/harmonist-orchestral",
+      "repo": "2508965-ship-it/harmonist-orchestral",
+      "url": "https://github.com/2508965-ship-it/harmonist-orchestral",
+      "description": "🚀 Multi-Agent Orchestration Engine 2026 – Build & Deploy AI Swarms with Claude Code",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "421",
+      "score": 4,
+      "date": "2026-05-18"
+    },
+    {
+      "name": "Scratch-191/Canva-Pro-Toolkit",
+      "repo": "Scratch-191/Canva-Pro-Toolkit",
+      "url": "https://github.com/Scratch-191/Canva-Pro-Toolkit",
+      "description": "🚀 Canva Pro Lifetime 2026 – Free Access & AI Design Suite by Mr. Craft",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "420",
+      "score": 4,
+      "date": "2026-05-18"
     },
     {
       "name": "mikesheehan54/Claude-Code-Design-AI",
@@ -143,9 +121,9 @@
       "description": "Claude Design: AI UI/UX architect. Screenshot to React, Figma components, Tailwind CSS generator. Prototyping agent, design systems, wireframe renderer. SVG icon creator, dark mode toggle, responsive layout tool. Front-end code export, shadcn/ui integration, vector assets, branding assistant.",
       "description_zh": "",
       "language": "TypeScript",
-      "stars_today": "379",
-      "score": 3,
-      "date": "2026-05-17"
+      "stars_today": "404",
+      "score": 4,
+      "date": "2026-05-18"
     },
     {
       "name": "simonlin1212/TradingAgents-astock",
@@ -154,9 +132,9 @@
       "description": "A股多Agent投研框架 — 适配A股数据源(龙虎榜/游资/解禁等)，7位分析师基于A股规则的辩论决策，基于TradingAgents深度改造，适配大A。A-share multi-agent investment research framework — 7 AI analysts, bull/bear debate, risk assessment。",
       "description_zh": "",
       "language": "Python",
-      "stars_today": "278",
-      "score": 2,
-      "date": "2026-05-17"
+      "stars_today": "314",
+      "score": 3,
+      "date": "2026-05-18"
     },
     {
       "name": "agentic-in/elephant-agent",
@@ -165,9 +143,53 @@
       "description": "Personal-Model First Self Evolving AI Agent 🐘",
       "description_zh": "",
       "language": "Python",
-      "stars_today": "245",
+      "stars_today": "282",
       "score": 2,
-      "date": "2026-05-17"
+      "date": "2026-05-18"
+    },
+    {
+      "name": "agentara/skills",
+      "repo": "agentara/skills",
+      "url": "https://github.com/agentara/skills",
+      "description": "Original and practical skills for AI builders.",
+      "description_zh": "",
+      "language": "HTML",
+      "stars_today": "243",
+      "score": 2,
+      "date": "2026-05-18"
+    },
+    {
+      "name": "trading-2028/polymarket-ai-trading",
+      "repo": "trading-2028/polymarket-ai-trading",
+      "url": "https://github.com/trading-2028/polymarket-ai-trading",
+      "description": "Polymarket Polymarket AI trading AI trading prediction markets prediction markets paper trading paper trading OpenAI OpenAI Node.js Node.js Express Express Docker Docker CLOB CLOB mean reversion mean reversion dashboard dashboard crypto bot crypto bot SQLite SQLite automated trading automated trading API API research trading research trading",
+      "description_zh": "",
+      "language": "HTML",
+      "stars_today": "235",
+      "score": 2,
+      "date": "2026-05-18"
+    },
+    {
+      "name": "rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
+      "repo": "rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
+      "url": "https://github.com/rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
+      "description": "RFD Classification Machine Learning project developed using Python and Jupyter Notebook. This project includes data preprocessing, exploratory data analysis, feature engineering, and implementation of multiple classification algorithms such as Logistic Regression, Random Forest, SVM, KNN, and Naive Bayes for prediction and accuracy evaluation.",
+      "description_zh": "",
+      "language": "Jupyter Notebook",
+      "stars_today": "52",
+      "score": 0,
+      "date": "2026-05-18"
+    },
+    {
+      "name": "justxor/MachineLearningRoadmap",
+      "repo": "justxor/MachineLearningRoadmap",
+      "url": "https://github.com/justxor/MachineLearningRoadmap",
+      "description": "Полный Roadmap по машинному обучению 2026 ",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "35",
+      "score": 0,
+      "date": "2026-05-18"
     },
     {
       "name": "zowilyhter/HarvestPitch",
@@ -176,9 +198,9 @@
       "description": "Real-Time HarvestPitch platform featuring data-stream-processing technology and advanced machine-learning-integration for modern Service",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "18",
+      "stars_today": "19",
       "score": 0,
-      "date": "2026-05-17"
+      "date": "2026-05-18"
     },
     {
       "name": "olienath/ParlerT",
@@ -187,9 +209,9 @@
       "description": "Machine-learning augmented contextual-intelligence platform leveraging natural-language-processing for intelligent, scalable, distributed integrations as a master system integrator.",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "17",
+      "stars_today": "16",
       "score": 0,
-      "date": "2026-05-17"
+      "date": "2026-05-18"
     },
     {
       "name": "zunelyat/PyTorch",
@@ -200,29 +222,7 @@
       "language": "Python",
       "stars_today": "12",
       "score": 0,
-      "date": "2026-05-17"
-    },
-    {
-      "name": "justxor/MachineLearningRoadmap",
-      "repo": "justxor/MachineLearningRoadmap",
-      "url": "https://github.com/justxor/MachineLearningRoadmap",
-      "description": "Полный Roadmap по машинному обучению 2026 ",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "11",
-      "score": 0,
-      "date": "2026-05-17"
-    },
-    {
-      "name": "hidariako/React",
-      "repo": "hidariako/React",
-      "url": "https://github.com/hidariako/React",
-      "description": "Self-adaptive, predictive analytics-powered ReActAgent orchestrator. featuring machine-learning-integration capabilities with real-time architecture implementing modern event-driven-architecture patterns",
-      "description_zh": "",
-      "language": "JavaScript",
-      "stars_today": "11",
-      "score": 0,
-      "date": "2026-05-17"
+      "date": "2026-05-18"
     }
   ]
 }
