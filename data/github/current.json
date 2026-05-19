@@ -1,118 +1,17 @@
 {
-  "date": "2026-05-18",
+  "date": "2026-05-19",
   "total_scanned": 15,
   "high_value": [
     {
-      "name": "yaassin12/DeepSeek-V4-Pro-App",
-      "repo": "yaassin12/DeepSeek-V4-Pro-App",
-      "url": "https://github.com/yaassin12/DeepSeek-V4-Pro-App",
-      "description": "DeepSeek V4 Pro: Advanced AI desktop app. Features: 1.6T MoE architecture, 1M token context window, Engram memory. Pro coding agent, Think Mode (High/Max), repo-level reasoning, complex bug fixing. Real-time web search, local API key storage, cross-file analysis, low-latency streaming interface.",
+      "name": "Doorman11991/smallcode",
+      "repo": "Doorman11991/smallcode",
+      "url": "https://github.com/Doorman11991/smallcode",
+      "description": "AI coding agent optimized for small LLMs. 87% benchmark with 4B-active model.",
       "description_zh": "",
-      "language": "C++",
-      "stars_today": "604",
-      "score": 6,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "sunyouzhi2003/LSFG-Desktop",
-      "repo": "sunyouzhi2003/LSFG-Desktop",
-      "url": "https://github.com/sunyouzhi2003/LSFG-Desktop",
-      "description": "Lossless Scaling 2026: Universal Frame Generation LSFG 3. Multi-frame gen: X2, X3, X4 multiplier for extreme FPS. AI Upscaling: LS1, FSR 3.1, NIS. Smooth gaming on Steam Deck, handhelds, and Android (LSFG-VK). Fix stuttering, low latency mode, VRR support, 4K spatial scaling, G-Sync compatible.",
-      "description_zh": "",
-      "language": "C++",
-      "stars_today": "601",
-      "score": 6,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "BharathKumarSuresh/claude-design-system-hooks",
-      "repo": "BharathKumarSuresh/claude-design-system-hooks",
-      "url": "https://github.com/BharathKumarSuresh/claude-design-system-hooks",
-      "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "421",
-      "score": 4,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "2508965-ship-it/harmonist-orchestral",
-      "repo": "2508965-ship-it/harmonist-orchestral",
-      "url": "https://github.com/2508965-ship-it/harmonist-orchestral",
-      "description": "🚀 Multi-Agent Orchestration Engine 2026 – Build & Deploy AI Swarms with Claude Code",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "421",
-      "score": 4,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "Scratch-191/Canva-Pro-Toolkit",
-      "repo": "Scratch-191/Canva-Pro-Toolkit",
-      "url": "https://github.com/Scratch-191/Canva-Pro-Toolkit",
-      "description": "🚀 Canva Pro Lifetime 2026 – Free Access & AI Design Suite by Mr. Craft",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "420",
-      "score": 4,
-      "date": "2026-05-18"
-    }
-  ],
-  "all_projects": [
-    {
-      "name": "yaassin12/DeepSeek-V4-Pro-App",
-      "repo": "yaassin12/DeepSeek-V4-Pro-App",
-      "url": "https://github.com/yaassin12/DeepSeek-V4-Pro-App",
-      "description": "DeepSeek V4 Pro: Advanced AI desktop app. Features: 1.6T MoE architecture, 1M token context window, Engram memory. Pro coding agent, Think Mode (High/Max), repo-level reasoning, complex bug fixing. Real-time web search, local API key storage, cross-file analysis, low-latency streaming interface.",
-      "description_zh": "",
-      "language": "C++",
-      "stars_today": "604",
-      "score": 6,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "sunyouzhi2003/LSFG-Desktop",
-      "repo": "sunyouzhi2003/LSFG-Desktop",
-      "url": "https://github.com/sunyouzhi2003/LSFG-Desktop",
-      "description": "Lossless Scaling 2026: Universal Frame Generation LSFG 3. Multi-frame gen: X2, X3, X4 multiplier for extreme FPS. AI Upscaling: LS1, FSR 3.1, NIS. Smooth gaming on Steam Deck, handhelds, and Android (LSFG-VK). Fix stuttering, low latency mode, VRR support, 4K spatial scaling, G-Sync compatible.",
-      "description_zh": "",
-      "language": "C++",
-      "stars_today": "601",
-      "score": 6,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "BharathKumarSuresh/claude-design-system-hooks",
-      "repo": "BharathKumarSuresh/claude-design-system-hooks",
-      "url": "https://github.com/BharathKumarSuresh/claude-design-system-hooks",
-      "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "421",
-      "score": 4,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "2508965-ship-it/harmonist-orchestral",
-      "repo": "2508965-ship-it/harmonist-orchestral",
-      "url": "https://github.com/2508965-ship-it/harmonist-orchestral",
-      "description": "🚀 Multi-Agent Orchestration Engine 2026 – Build & Deploy AI Swarms with Claude Code",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "421",
-      "score": 4,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "Scratch-191/Canva-Pro-Toolkit",
-      "repo": "Scratch-191/Canva-Pro-Toolkit",
-      "url": "https://github.com/Scratch-191/Canva-Pro-Toolkit",
-      "description": "🚀 Canva Pro Lifetime 2026 – Free Access & AI Design Suite by Mr. Craft",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "420",
-      "score": 4,
-      "date": "2026-05-18"
+      "language": "JavaScript",
+      "stars_today": "500",
+      "score": 5,
+      "date": "2026-05-19"
     },
     {
       "name": "mikesheehan54/Claude-Code-Design-AI",
@@ -121,9 +20,99 @@
       "description": "Claude Design: AI UI/UX architect. Screenshot to React, Figma components, Tailwind CSS generator. Prototyping agent, design systems, wireframe renderer. SVG icon creator, dark mode toggle, responsive layout tool. Front-end code export, shadcn/ui integration, vector assets, branding assistant.",
       "description_zh": "",
       "language": "TypeScript",
-      "stars_today": "404",
+      "stars_today": "429",
       "score": 4,
-      "date": "2026-05-18"
+      "date": "2026-05-19"
+    },
+    {
+      "name": "BharathKumarSuresh/claude-design-system-hooks",
+      "repo": "BharathKumarSuresh/claude-design-system-hooks",
+      "url": "https://github.com/BharathKumarSuresh/claude-design-system-hooks",
+      "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "423",
+      "score": 4,
+      "date": "2026-05-19"
+    },
+    {
+      "name": "2508965-ship-it/harmonist-orchestral",
+      "repo": "2508965-ship-it/harmonist-orchestral",
+      "url": "https://github.com/2508965-ship-it/harmonist-orchestral",
+      "description": "🚀 Multi-Agent Orchestration Engine 2026 – Build & Deploy AI Swarms with Claude Code",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "421",
+      "score": 4,
+      "date": "2026-05-19"
+    },
+    {
+      "name": "Scratch-191/Canva-Pro-Toolkit",
+      "repo": "Scratch-191/Canva-Pro-Toolkit",
+      "url": "https://github.com/Scratch-191/Canva-Pro-Toolkit",
+      "description": "🚀 Canva Pro Lifetime 2026 – Free Access & AI Design Suite by Mr. Craft",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "420",
+      "score": 4,
+      "date": "2026-05-19"
+    }
+  ],
+  "all_projects": [
+    {
+      "name": "Doorman11991/smallcode",
+      "repo": "Doorman11991/smallcode",
+      "url": "https://github.com/Doorman11991/smallcode",
+      "description": "AI coding agent optimized for small LLMs. 87% benchmark with 4B-active model.",
+      "description_zh": "",
+      "language": "JavaScript",
+      "stars_today": "500",
+      "score": 5,
+      "date": "2026-05-19"
+    },
+    {
+      "name": "mikesheehan54/Claude-Code-Design-AI",
+      "repo": "mikesheehan54/Claude-Code-Design-AI",
+      "url": "https://github.com/mikesheehan54/Claude-Code-Design-AI",
+      "description": "Claude Design: AI UI/UX architect. Screenshot to React, Figma components, Tailwind CSS generator. Prototyping agent, design systems, wireframe renderer. SVG icon creator, dark mode toggle, responsive layout tool. Front-end code export, shadcn/ui integration, vector assets, branding assistant.",
+      "description_zh": "",
+      "language": "TypeScript",
+      "stars_today": "429",
+      "score": 4,
+      "date": "2026-05-19"
+    },
+    {
+      "name": "BharathKumarSuresh/claude-design-system-hooks",
+      "repo": "BharathKumarSuresh/claude-design-system-hooks",
+      "url": "https://github.com/BharathKumarSuresh/claude-design-system-hooks",
+      "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "423",
+      "score": 4,
+      "date": "2026-05-19"
+    },
+    {
+      "name": "2508965-ship-it/harmonist-orchestral",
+      "repo": "2508965-ship-it/harmonist-orchestral",
+      "url": "https://github.com/2508965-ship-it/harmonist-orchestral",
+      "description": "🚀 Multi-Agent Orchestration Engine 2026 – Build & Deploy AI Swarms with Claude Code",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "421",
+      "score": 4,
+      "date": "2026-05-19"
+    },
+    {
+      "name": "Scratch-191/Canva-Pro-Toolkit",
+      "repo": "Scratch-191/Canva-Pro-Toolkit",
+      "url": "https://github.com/Scratch-191/Canva-Pro-Toolkit",
+      "description": "🚀 Canva Pro Lifetime 2026 – Free Access & AI Design Suite by Mr. Craft",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "420",
+      "score": 4,
+      "date": "2026-05-19"
     },
     {
       "name": "simonlin1212/TradingAgents-astock",
@@ -132,9 +121,9 @@
       "description": "A股多Agent投研框架 — 适配A股数据源(龙虎榜/游资/解禁等)，7位分析师基于A股规则的辩论决策，基于TradingAgents深度改造，适配大A。A-share multi-agent investment research framework — 7 AI analysts, bull/bear debate, risk assessment。",
       "description_zh": "",
       "language": "Python",
-      "stars_today": "314",
+      "stars_today": "350",
       "score": 3,
-      "date": "2026-05-18"
+      "date": "2026-05-19"
     },
     {
       "name": "agentic-in/elephant-agent",
@@ -143,20 +132,9 @@
       "description": "Personal-Model First Self Evolving AI Agent 🐘",
       "description_zh": "",
       "language": "Python",
-      "stars_today": "282",
-      "score": 2,
-      "date": "2026-05-18"
-    },
-    {
-      "name": "agentara/skills",
-      "repo": "agentara/skills",
-      "url": "https://github.com/agentara/skills",
-      "description": "Original and practical skills for AI builders.",
-      "description_zh": "",
-      "language": "HTML",
-      "stars_today": "243",
-      "score": 2,
-      "date": "2026-05-18"
+      "stars_today": "316",
+      "score": 3,
+      "date": "2026-05-19"
     },
     {
       "name": "trading-2028/polymarket-ai-trading",
@@ -165,20 +143,31 @@
       "description": "Polymarket Polymarket AI trading AI trading prediction markets prediction markets paper trading paper trading OpenAI OpenAI Node.js Node.js Express Express Docker Docker CLOB CLOB mean reversion mean reversion dashboard dashboard crypto bot crypto bot SQLite SQLite automated trading automated trading API API research trading research trading",
       "description_zh": "",
       "language": "HTML",
-      "stars_today": "235",
+      "stars_today": "280",
       "score": 2,
-      "date": "2026-05-18"
+      "date": "2026-05-19"
     },
     {
-      "name": "rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
-      "repo": "rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
-      "url": "https://github.com/rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
-      "description": "RFD Classification Machine Learning project developed using Python and Jupyter Notebook. This project includes data preprocessing, exploratory data analysis, feature engineering, and implementation of multiple classification algorithms such as Logistic Regression, Random Forest, SVM, KNN, and Naive Bayes for prediction and accuracy evaluation.",
+      "name": "dex-original/okx-agent-trade-kit",
+      "repo": "dex-original/okx-agent-trade-kit",
+      "url": "https://github.com/dex-original/okx-agent-trade-kit",
+      "description": "okx trading bot okx agent mcp cli cryptocurrency okx api automated trading typescript okx trading bot model context protocol cursor ai trading crypto spot futures okx trading bot npm pnpm okx mcp open source quant defi cex okx trading bot algorithmic trading crypto bot okx trading bot okx api mcp okx trading bot crypto mcp",
       "description_zh": "",
-      "language": "Jupyter Notebook",
-      "stars_today": "52",
-      "score": 0,
-      "date": "2026-05-18"
+      "language": "TypeScript",
+      "stars_today": "266",
+      "score": 2,
+      "date": "2026-05-19"
+    },
+    {
+      "name": "Callous-0923/agent-study",
+      "repo": "Callous-0923/agent-study",
+      "url": "https://github.com/Callous-0923/agent-study",
+      "description": "36章AI Agent全栈课程：从ReAct循环到Claude Code逆向、MCP/A2A协议、RAG、DSPy、生产可观测性——全部为可运行Python文件，面试导向。",
+      "description_zh": "",
+      "language": "HTML",
+      "stars_today": "265",
+      "score": 2,
+      "date": "2026-05-19"
     },
     {
       "name": "justxor/MachineLearningRoadmap",
@@ -187,9 +176,20 @@
       "description": "Полный Roadmap по машинному обучению 2026 ",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "35",
+      "stars_today": "59",
       "score": 0,
-      "date": "2026-05-18"
+      "date": "2026-05-19"
+    },
+    {
+      "name": "rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
+      "repo": "rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
+      "url": "https://github.com/rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
+      "description": "RFD Classification Machine Learning project developed using Python and Jupyter Notebook. This project includes data preprocessing, exploratory data analysis, feature engineering, and implementation of multiple classification algorithms such as Logistic Regression, Random Forest, SVM, KNN, and Naive Bayes for prediction and accuracy evaluation.",
+      "description_zh": "",
+      "language": "Jupyter Notebook",
+      "stars_today": "55",
+      "score": 0,
+      "date": "2026-05-19"
     },
     {
       "name": "zowilyhter/HarvestPitch",
@@ -200,7 +200,7 @@
       "language": "JavaScript",
       "stars_today": "19",
       "score": 0,
-      "date": "2026-05-18"
+      "date": "2026-05-19"
     },
     {
       "name": "olienath/ParlerT",
@@ -209,20 +209,20 @@
       "description": "Machine-learning augmented contextual-intelligence platform leveraging natural-language-processing for intelligent, scalable, distributed integrations as a master system integrator.",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "16",
+      "stars_today": "15",
       "score": 0,
-      "date": "2026-05-18"
+      "date": "2026-05-19"
     },
     {
-      "name": "zunelyat/PyTorch",
-      "repo": "zunelyat/PyTorch",
-      "url": "https://github.com/zunelyat/PyTorch",
-      "description": "Elevating enterprise-grade machine learning with highly concurrent, real-time data processing and adaptive distributed intelligence accelerator.",
+      "name": "hidariako/React",
+      "repo": "hidariako/React",
+      "url": "https://github.com/hidariako/React",
+      "description": "Self-adaptive, predictive analytics-powered ReActAgent orchestrator. featuring machine-learning-integration capabilities with real-time architecture implementing modern event-driven-architecture patterns",
       "description_zh": "",
-      "language": "Python",
-      "stars_today": "12",
+      "language": "JavaScript",
+      "stars_today": "11",
       "score": 0,
-      "date": "2026-05-18"
+      "date": "2026-05-19"
     }
   ]
 }
