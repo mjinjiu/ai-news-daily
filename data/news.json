@@ -3,9 +3,9 @@
     "weekStart": "2026-05-18",
     "weekEnd": "2026-05-24",
     "weekLabel": "5.18 — 5.24",
-    "total": 10,
-    "updatedAt": "2026-05-18T08:42:02+08:00",
-    "date": "2026-05-18"
+    "total": 20,
+    "updatedAt": "2026-05-19T08:42:03+08:00",
+    "date": "2026-05-19"
   },
   "breaking": [
     {
@@ -33,6 +33,32 @@
       "source": "量子位",
       "category": "breaking",
       "url": "https://www.qbitai.com/2026/05/418964.html"
+    },
+    {
+      "id": "news-2026-05-19-001",
+      "title_zh": "重塑主流PC，第三代英特尔酷睿开启全民AI轻薄本时代",
+      "title_en": "",
+      "summary_zh": "芯片与系统级双重创新",
+      "summary_en": "",
+      "excerpt_zh": "芯片与系统级双重创新",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "breaking",
+      "url": "https://www.qbitai.com/2026/05/419585.html"
+    },
+    {
+      "id": "news-2026-05-19-002",
+      "title_zh": "AI水论文封一年，署名连坐！arXiv最严新规来了，陶哲轩附议",
+      "title_en": "",
+      "summary_zh": "生成论文远比消化容易",
+      "summary_en": "",
+      "excerpt_zh": "生成论文远比消化容易",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "breaking",
+      "url": "https://www.qbitai.com/2026/05/419528.html"
     }
   ],
   "daily": [
@@ -139,6 +165,110 @@
       "source": "量子位",
       "category": "industry",
       "url": "https://www.qbitai.com/2026/05/418518.html"
+    },
+    {
+      "id": "news-2026-05-19-003",
+      "title_zh": "openJiuwen社区开源新招：重磅发布JiuwenSwarm，拉开群体智能“养蜂”序幕",
+      "title_en": "",
+      "summary_zh": "底层范式变了",
+      "summary_en": "",
+      "excerpt_zh": "底层范式变了",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419515.html"
+    },
+    {
+      "id": "news-2026-05-19-004",
+      "title_zh": "华为“养”出半个具身智能创业圈",
+      "title_en": "",
+      "summary_zh": "正在经历一次罕见的人才外溢。",
+      "summary_en": "",
+      "excerpt_zh": "正在经历一次罕见的人才外溢。",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419414.html"
+    },
+    {
+      "id": "news-2026-05-19-005",
+      "title_zh": "上交x创智x瑞金联合发布CX-Mind：胸片诊断进入“可验证推理”时代",
+      "title_en": "",
+      "summary_zh": "五项维度全部排名第一",
+      "summary_en": "",
+      "excerpt_zh": "五项维度全部排名第一",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419396.html"
+    },
+    {
+      "id": "news-2026-05-19-006",
+      "title_zh": "8B模型做生物实验：实验步骤顺序不乱、剂量无幻觉｜ICLR 2026",
+      "title_en": "",
+      "summary_zh": "超越GPT-4o",
+      "summary_en": "",
+      "excerpt_zh": "超越GPT-4o",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419386.html"
+    },
+    {
+      "id": "news-2026-05-19-007",
+      "title_zh": "信通院&清华提出FedRE：用「纠缠」搞定联邦学习三难困境 | CVPR 26",
+      "title_en": "",
+      "summary_zh": "隐私和性能我全都要",
+      "summary_en": "",
+      "excerpt_zh": "隐私和性能我全都要",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419373.html"
+    },
+    {
+      "id": "news-2026-05-19-008",
+      "title_zh": "黄仁勋北京必吃榜我们都尝了！后海酒吧老板：他答应以后每年来一次",
+      "title_en": "",
+      "summary_zh": "老黄严选北京游",
+      "summary_en": "",
+      "excerpt_zh": "老黄严选北京游",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419278.html"
+    },
+    {
+      "id": "news-2026-05-19-009",
+      "title_zh": "LeCun炮轰Hinton：他认可LLM就是想摆烂退休了！",
+      "title_en": "",
+      "summary_zh": "Lecun这次是真跟Hinton爆了……",
+      "summary_en": "",
+      "excerpt_zh": "Lecun这次是真跟Hinton爆了……",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419272.html"
+    },
+    {
+      "id": "news-2026-05-19-010",
+      "title_zh": "30万奖金池，这道汉语方言对话题等你来解丨第十一届信也科技杯全球AI算法大赛",
+      "title_en": "",
+      "summary_zh": "更有NLPCC2026直通名额",
+      "summary_en": "",
+      "excerpt_zh": "更有NLPCC2026直通名额",
+      "excerpt_en": "",
+      "date": "05-19",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419256.html"
     }
   ],
   "sources": [
