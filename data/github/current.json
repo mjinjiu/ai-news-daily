@@ -1,5 +1,5 @@
 {
-  "date": "2026-05-19",
+  "date": "2026-05-20",
   "total_scanned": 15,
   "high_value": [
     {
@@ -9,20 +9,20 @@
       "description": "AI coding agent optimized for small LLMs. 87% benchmark with 4B-active model.",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "500",
-      "score": 5,
-      "date": "2026-05-19"
+      "stars_today": "718",
+      "score": 7,
+      "date": "2026-05-20"
     },
     {
-      "name": "mikesheehan54/Claude-Code-Design-AI",
-      "repo": "mikesheehan54/Claude-Code-Design-AI",
-      "url": "https://github.com/mikesheehan54/Claude-Code-Design-AI",
-      "description": "Claude Design: AI UI/UX architect. Screenshot to React, Figma components, Tailwind CSS generator. Prototyping agent, design systems, wireframe renderer. SVG icon creator, dark mode toggle, responsive layout tool. Front-end code export, shadcn/ui integration, vector assets, branding assistant.",
+      "name": "AbhishekK130804/Claude-Mythos-AI-Anthropic-App",
+      "repo": "AbhishekK130804/Claude-Mythos-AI-Anthropic-App",
+      "url": "https://github.com/AbhishekK130804/Claude-Mythos-AI-Anthropic-App",
+      "description": "Claude pro free Mythos design Opus Cowork  Sonnet AI Anthropic App: download free PC android apk iOS, Anthropic Claude API key setup, Claude roleplay mythos client, SillyTavern Claude prompt formatting, custom system prompt jailbreak, Mythos AI creative writing app, Claude 3.5 Sonnet Opus API cost, open source LLM frontend, Claude reverse proxy ",
       "description_zh": "",
-      "language": "TypeScript",
-      "stars_today": "429",
+      "language": "C#",
+      "stars_today": "470",
       "score": 4,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "BharathKumarSuresh/claude-design-system-hooks",
@@ -31,9 +31,9 @@
       "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "423",
+      "stars_today": "425",
       "score": 4,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "2508965-ship-it/harmonist-orchestral",
@@ -42,9 +42,9 @@
       "description": "🚀 Multi-Agent Orchestration Engine 2026 – Build & Deploy AI Swarms with Claude Code",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "421",
+      "stars_today": "422",
       "score": 4,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "Scratch-191/Canva-Pro-Toolkit",
@@ -55,7 +55,7 @@
       "language": "Unknown",
       "stars_today": "420",
       "score": 4,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     }
   ],
   "all_projects": [
@@ -66,20 +66,20 @@
       "description": "AI coding agent optimized for small LLMs. 87% benchmark with 4B-active model.",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "500",
-      "score": 5,
-      "date": "2026-05-19"
+      "stars_today": "718",
+      "score": 7,
+      "date": "2026-05-20"
     },
     {
-      "name": "mikesheehan54/Claude-Code-Design-AI",
-      "repo": "mikesheehan54/Claude-Code-Design-AI",
-      "url": "https://github.com/mikesheehan54/Claude-Code-Design-AI",
-      "description": "Claude Design: AI UI/UX architect. Screenshot to React, Figma components, Tailwind CSS generator. Prototyping agent, design systems, wireframe renderer. SVG icon creator, dark mode toggle, responsive layout tool. Front-end code export, shadcn/ui integration, vector assets, branding assistant.",
+      "name": "AbhishekK130804/Claude-Mythos-AI-Anthropic-App",
+      "repo": "AbhishekK130804/Claude-Mythos-AI-Anthropic-App",
+      "url": "https://github.com/AbhishekK130804/Claude-Mythos-AI-Anthropic-App",
+      "description": "Claude pro free Mythos design Opus Cowork  Sonnet AI Anthropic App: download free PC android apk iOS, Anthropic Claude API key setup, Claude roleplay mythos client, SillyTavern Claude prompt formatting, custom system prompt jailbreak, Mythos AI creative writing app, Claude 3.5 Sonnet Opus API cost, open source LLM frontend, Claude reverse proxy ",
       "description_zh": "",
-      "language": "TypeScript",
-      "stars_today": "429",
+      "language": "C#",
+      "stars_today": "470",
       "score": 4,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "BharathKumarSuresh/claude-design-system-hooks",
@@ -88,9 +88,9 @@
       "description": "🚀 Ultimate Claude Code AI Design Skills & Hooks Bundle 2026 – Free Install",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "423",
+      "stars_today": "425",
       "score": 4,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "2508965-ship-it/harmonist-orchestral",
@@ -99,9 +99,9 @@
       "description": "🚀 Multi-Agent Orchestration Engine 2026 – Build & Deploy AI Swarms with Claude Code",
       "description_zh": "",
       "language": "Unknown",
-      "stars_today": "421",
+      "stars_today": "422",
       "score": 4,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "Scratch-191/Canva-Pro-Toolkit",
@@ -112,18 +112,7 @@
       "language": "Unknown",
       "stars_today": "420",
       "score": 4,
-      "date": "2026-05-19"
-    },
-    {
-      "name": "simonlin1212/TradingAgents-astock",
-      "repo": "simonlin1212/TradingAgents-astock",
-      "url": "https://github.com/simonlin1212/TradingAgents-astock",
-      "description": "A股多Agent投研框架 — 适配A股数据源(龙虎榜/游资/解禁等)，7位分析师基于A股规则的辩论决策，基于TradingAgents深度改造，适配大A。A-share multi-agent investment research framework — 7 AI analysts, bull/bear debate, risk assessment。",
-      "description_zh": "",
-      "language": "Python",
-      "stars_today": "350",
-      "score": 3,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "agentic-in/elephant-agent",
@@ -132,9 +121,9 @@
       "description": "Personal-Model First Self Evolving AI Agent 🐘",
       "description_zh": "",
       "language": "Python",
-      "stars_today": "316",
+      "stars_today": "340",
       "score": 3,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "trading-2028/polymarket-ai-trading",
@@ -143,9 +132,9 @@
       "description": "Polymarket Polymarket AI trading AI trading prediction markets prediction markets paper trading paper trading OpenAI OpenAI Node.js Node.js Express Express Docker Docker CLOB CLOB mean reversion mean reversion dashboard dashboard crypto bot crypto bot SQLite SQLite automated trading automated trading API API research trading research trading",
       "description_zh": "",
       "language": "HTML",
-      "stars_today": "280",
-      "score": 2,
-      "date": "2026-05-19"
+      "stars_today": "303",
+      "score": 3,
+      "date": "2026-05-20"
     },
     {
       "name": "dex-original/okx-agent-trade-kit",
@@ -154,9 +143,20 @@
       "description": "okx trading bot okx agent mcp cli cryptocurrency okx api automated trading typescript okx trading bot model context protocol cursor ai trading crypto spot futures okx trading bot npm pnpm okx mcp open source quant defi cex okx trading bot algorithmic trading crypto bot okx trading bot okx api mcp okx trading bot crypto mcp",
       "description_zh": "",
       "language": "TypeScript",
-      "stars_today": "266",
-      "score": 2,
-      "date": "2026-05-19"
+      "stars_today": "302",
+      "score": 3,
+      "date": "2026-05-20"
+    },
+    {
+      "name": "husu/loom",
+      "repo": "husu/loom",
+      "url": "https://github.com/husu/loom",
+      "description": "一个写接口文档的AI Agent。支持使用Vibe coding 的方式，编写接口文档，同时自带友好的文档查看工具与接口Mock工具",
+      "description_zh": "",
+      "language": "Unknown",
+      "stars_today": "300",
+      "score": 3,
+      "date": "2026-05-20"
     },
     {
       "name": "Callous-0923/agent-study",
@@ -165,20 +165,9 @@
       "description": "36章AI Agent全栈课程：从ReAct循环到Claude Code逆向、MCP/A2A协议、RAG、DSPy、生产可观测性——全部为可运行Python文件，面试导向。",
       "description_zh": "",
       "language": "HTML",
-      "stars_today": "265",
+      "stars_today": "287",
       "score": 2,
-      "date": "2026-05-19"
-    },
-    {
-      "name": "justxor/MachineLearningRoadmap",
-      "repo": "justxor/MachineLearningRoadmap",
-      "url": "https://github.com/justxor/MachineLearningRoadmap",
-      "description": "Полный Roadmap по машинному обучению 2026 ",
-      "description_zh": "",
-      "language": "Unknown",
-      "stars_today": "59",
-      "score": 0,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
       "name": "rajchandran006-ops/RFD-Classification-Machine-Learning-Project",
@@ -189,40 +178,51 @@
       "language": "Jupyter Notebook",
       "stars_today": "55",
       "score": 0,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
-      "name": "zowilyhter/HarvestPitch",
-      "repo": "zowilyhter/HarvestPitch",
-      "url": "https://github.com/zowilyhter/HarvestPitch",
-      "description": "Real-Time HarvestPitch platform featuring data-stream-processing technology and advanced machine-learning-integration for modern Service",
+      "name": "bb1nfosec/vaathi",
+      "repo": "bb1nfosec/vaathi",
+      "url": "https://github.com/bb1nfosec/vaathi",
+      "description": "🛡️ Vaathi — India's Open Source Cybersecurity Learning OS. From zero to ethical hacker — in your language, at your pace, on your machine.",
       "description_zh": "",
-      "language": "JavaScript",
-      "stars_today": "19",
+      "language": "Python",
+      "stars_today": "7",
       "score": 0,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
-      "name": "olienath/ParlerT",
-      "repo": "olienath/ParlerT",
-      "url": "https://github.com/olienath/ParlerT",
-      "description": "Machine-learning augmented contextual-intelligence platform leveraging natural-language-processing for intelligent, scalable, distributed integrations as a master system integrator.",
+      "name": "Mohammed-razin-cr/Student-Performance-Analysis-EPIC",
+      "repo": "Mohammed-razin-cr/Student-Performance-Analysis-EPIC",
+      "url": "https://github.com/Mohammed-razin-cr/Student-Performance-Analysis-EPIC",
+      "description": "EPIC is an AI-powered student performance and placement platform. Built with Next.js, Python, and Firebase, it uses a Machine Learning SVM model to predict academic outcomes and identify at-risk students. It also empowers students with interactive Gemini AI career roadmaps, automated ATS resume scanning, and real-time live job board tracking.",
       "description_zh": "",
       "language": "JavaScript",
-      "stars_today": "15",
+      "stars_today": "5",
       "score": 0,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
     },
     {
-      "name": "hidariako/React",
-      "repo": "hidariako/React",
-      "url": "https://github.com/hidariako/React",
-      "description": "Self-adaptive, predictive analytics-powered ReActAgent orchestrator. featuring machine-learning-integration capabilities with real-time architecture implementing modern event-driven-architecture patterns",
+      "name": "DhyutiLABS/DhyutimaanPI",
+      "repo": "DhyutiLABS/DhyutimaanPI",
+      "url": "https://github.com/DhyutiLABS/DhyutimaanPI",
+      "description": "Your personal Physics informed Machine learning AI scientist ",
       "description_zh": "",
-      "language": "JavaScript",
-      "stars_today": "11",
+      "language": "Unknown",
+      "stars_today": "4",
       "score": 0,
-      "date": "2026-05-19"
+      "date": "2026-05-20"
+    },
+    {
+      "name": "MariSelvam-Git/BMW-Car-Sales-Prediction-and-Analysis-using-Machine-Learning",
+      "repo": "MariSelvam-Git/BMW-Car-Sales-Prediction-and-Analysis-using-Machine-Learning",
+      "url": "https://github.com/MariSelvam-Git/BMW-Car-Sales-Prediction-and-Analysis-using-Machine-Learning",
+      "description": "Developed a Machine Learning-based BMW Car Sales Prediction and Analysis system using Python. The project analyzes sales data, identifies market trends, and predicts future sales performance using data preprocessing, visualization, and predictive modeling techniques to support data-driven business decisions.",
+      "description_zh": "",
+      "language": "Jupyter Notebook",
+      "stars_today": "3",
+      "score": 0,
+      "date": "2026-05-20"
     }
   ]
 }
