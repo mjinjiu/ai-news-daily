@@ -3,9 +3,9 @@
     "weekStart": "2026-05-18",
     "weekEnd": "2026-05-24",
     "weekLabel": "5.18 — 5.24",
-    "total": 20,
-    "updatedAt": "2026-05-19T08:42:03+08:00",
-    "date": "2026-05-19"
+    "total": 30,
+    "updatedAt": "2026-05-20T08:42:02+08:00",
+    "date": "2026-05-20"
   },
   "breaking": [
     {
@@ -59,6 +59,32 @@
       "source": "量子位",
       "category": "breaking",
       "url": "https://www.qbitai.com/2026/05/419528.html"
+    },
+    {
+      "id": "news-2026-05-20-001",
+      "title_zh": "抢先李飞飞！世界模型能多人联机玩FPS游戏了",
+      "title_en": "",
+      "summary_zh": "所谓的真实……真的重要吗？",
+      "summary_en": "",
+      "excerpt_zh": "所谓的真实……真的重要吗？",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "breaking",
+      "url": "https://www.qbitai.com/2026/05/420083.html"
+    },
+    {
+      "id": "news-2026-05-20-002",
+      "title_zh": "国产GPU开始造世界！国内首个全栈具身智能仿真平台来了",
+      "title_en": "",
+      "summary_zh": "发布MT Lambda",
+      "summary_en": "",
+      "excerpt_zh": "发布MT Lambda",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "breaking",
+      "url": "https://www.qbitai.com/2026/05/420084.html"
     }
   ],
   "daily": [
@@ -269,6 +295,110 @@
       "source": "量子位",
       "category": "industry",
       "url": "https://www.qbitai.com/2026/05/419256.html"
+    },
+    {
+      "id": "news-2026-05-20-003",
+      "title_zh": "Cursor新模型，你怎么还在套Kimi？马斯克你怎么还吆喝上了？？",
+      "title_en": "",
+      "summary_zh": "1/10成本、Opus 4.7级表现",
+      "summary_en": "",
+      "excerpt_zh": "1/10成本、Opus 4.7级表现",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419990.html"
+    },
+    {
+      "id": "news-2026-05-20-004",
+      "title_zh": "L2++「五冠王」文远知行：自动驾驶版的张雪机车，专治各种不服",
+      "title_en": "",
+      "summary_zh": "赛车有张雪，智驾有文远",
+      "summary_en": "",
+      "excerpt_zh": "赛车有张雪，智驾有文远",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419913.html"
+    },
+    {
+      "id": "news-2026-05-20-005",
+      "title_zh": "5.20 明天见！拿好这份参会指南｜AIGC2026峰会",
+      "title_en": "",
+      "summary_zh": "提前查好路况，定好闹钟，明天线下见！",
+      "summary_en": "",
+      "excerpt_zh": "提前查好路况，定好闹钟，明天线下见！",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419901.html"
+    },
+    {
+      "id": "news-2026-05-20-006",
+      "title_zh": "Qwen最新3.7 Max预览版空降！两代超大杯并行迭代，林俊旸走了但还在加速",
+      "title_en": "",
+      "summary_zh": "文本领域、视觉领域双双国产第一",
+      "summary_en": "",
+      "excerpt_zh": "文本领域、视觉领域双双国产第一",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419822.html"
+    },
+    {
+      "id": "news-2026-05-20-007",
+      "title_zh": "百度无人车新纪录：周订单破35万！李彦宏：开始单城盈利了",
+      "title_en": "",
+      "summary_zh": "落地全球27城",
+      "summary_en": "",
+      "excerpt_zh": "落地全球27城",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419597.html"
+    },
+    {
+      "id": "news-2026-05-20-008",
+      "title_zh": "重塑主流PC，第三代英特尔酷睿开启全民AI轻薄本时代",
+      "title_en": "",
+      "summary_zh": "芯片与系统级双重创新",
+      "summary_en": "",
+      "excerpt_zh": "芯片与系统级双重创新",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419585.html"
+    },
+    {
+      "id": "news-2026-05-20-009",
+      "title_zh": "AI水论文封一年，署名连坐！arXiv最严新规来了，陶哲轩附议",
+      "title_en": "",
+      "summary_zh": "生成论文远比消化容易",
+      "summary_en": "",
+      "excerpt_zh": "生成论文远比消化容易",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419528.html"
+    },
+    {
+      "id": "news-2026-05-20-010",
+      "title_zh": "openJiuwen社区开源新招：重磅发布JiuwenSwarm，拉开群体智能“养蜂”序幕",
+      "title_en": "",
+      "summary_zh": "底层范式变了",
+      "summary_en": "",
+      "excerpt_zh": "底层范式变了",
+      "excerpt_en": "",
+      "date": "05-20",
+      "source": "量子位",
+      "category": "industry",
+      "url": "https://www.qbitai.com/2026/05/419515.html"
     }
   ],
   "sources": [
